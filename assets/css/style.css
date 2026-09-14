@@ -214,6 +214,38 @@ a {
   color: white;
 }
 
+.nav nav .nav-signup {
+  padding: 10px 18px;
+
+  border-radius: 999px;
+
+  background: var(--accent);
+  color: white;
+
+  font-weight: 900;
+
+  box-shadow:
+    0 6px 20px rgba(241, 107, 58, 0.30);
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.nav nav .nav-signup:hover {
+  background: var(--accent-dark);
+  color: white;
+
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 8px 24px rgba(241, 107, 58, 0.40);
+}
+
+.nav nav .nav-signup::after {
+  display: none;
+}
 .nav nav a::after {
   content: "";
 
@@ -433,6 +465,12 @@ a {
 
   margin-bottom: 44px;
 }
+
+  .nav nav .nav-signup {
+    padding: 7px 13px;
+
+    font-size: 0.78rem;
+  }
 
 .section-heading h2 {
   margin: 0 0 14px;
