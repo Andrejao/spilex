@@ -1,0 +1,24 @@
+- navn: "Asmodee Nordics"
+  gruppe: "sponsor"
+  logo: "/assets/images/logos/asmodee_logo.png"
+  url: "https://www.asmodeenordics.com"
+
+- navn: "Hyggeonkel"
+  gruppe: "sponsor"
+  logo: "/assets/images/logos/hyggeonkel_logo.png"
+  url: "https://www.hyggeonkel.dk"
+
+- navn: "Spilbræt.dk"
+  gruppe: "sponsor"
+  logo: "/assets/images/logos/spilbraet_logo.png"
+  url: "https://www.spilbraet.dk"
+
+- navn: "FGU"
+  gruppe: "samarbejdspartner"
+  logo: "/assets/images/logos/fgu_logo.png"
+  url: ""
+
+- navn: "Ungdomsskolen"
+  gruppe: "samarbejdspartner"
+  logo: "/assets/images/logos/ungdomsskolen_logo.png"
+  url: ""
