@@ -58,111 +58,72 @@ a {
 
 /* Nedtælling */
 
-.countdown-bar {
-  background:
-    linear-gradient(
-      90deg,
-      #0b1919,
-      #163737,
-      #0b1919
-    );
+/* Nedtælling */
 
+.countdown-bar {
+  background: #0b1518;
   color: white;
 
-  border-bottom: 1px solid rgba(255,255,255,0.1);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
 .countdown-inner {
-  min-height: 92px;
+  min-height: 44px;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
 
-  gap: 30px;
+  gap: 24px;
 }
 
-.countdown-label {
+.countdown-message {
   display: flex;
   align-items: center;
-  gap: 10px;
 
-  font-size: 0.82rem;
+  gap: 9px;
+
+  font-size: 0.93rem;
+  font-weight: 500;
+
+  color: rgba(255,255,255,0.78);
+}
+
+.countdown-message strong {
+  color: #ffffff;
   font-weight: 800;
 
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-
-  color: rgba(255,255,255,0.72);
-}
-
-.countdown-dot {
-  width: 9px;
-  height: 9px;
-
-  border-radius: 50%;
-
-  background: var(--accent);
-
-  box-shadow:
-    0 0 0 5px rgba(230,95,53,0.12),
-    0 0 18px rgba(230,95,53,0.55);
-}
-
-.countdown {
-  display: flex;
-  align-items: center;
-
-  gap: 12px;
-}
-
-.countdown-unit {
-  min-width: 64px;
-
-  text-align: center;
-}
-
-.countdown-unit strong {
-  display: block;
-
-  font-size: 2rem;
-  line-height: 1;
-
   font-variant-numeric: tabular-nums;
-  letter-spacing: -0.04em;
 }
 
-.countdown-unit span {
-  display: block;
+.countdown-icon {
+  width: 17px;
+  height: 17px;
 
-  margin-top: 5px;
+  flex: 0 0 auto;
 
-  font-size: 0.65rem;
-  font-weight: 700;
-
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-
-  color: rgba(255,255,255,0.48);
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
-.countdown-separator {
-  margin-top: -16px;
-
-  font-size: 1.5rem;
-  font-weight: 300;
+.countdown-cta {
+  flex: 0 0 auto;
 
   color: var(--accent);
+
+  font-size: 0.88rem;
+  font-weight: 850;
+
+  text-decoration: none;
 }
 
-.countdown-live {
-  font-size: 1.25rem;
-  font-weight: 900;
-
+.countdown-cta:hover {
   color: #ffffff;
+  text-decoration: underline;
 }
-
-
 /* Navigation */
 
 .site-header {
@@ -654,35 +615,35 @@ a {
 
 @media (max-width: 760px) {
 
-  .countdown-inner {
+ .countdown-inner {
     min-height: auto;
 
-    padding-top: 14px;
-    padding-bottom: 14px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+
+    align-items: flex-start;
+
+    gap: 6px;
 
     flex-direction: column;
-
-    gap: 10px;
   }
 
-  .countdown-label {
-    font-size: 0.68rem;
+  .countdown-message {
+    font-size: 0.78rem;
+    line-height: 1.4;
   }
 
-  .countdown {
-    gap: 6px;
+  .countdown-icon {
+    width: 15px;
+    height: 15px;
+
+    margin-top: 2px;
   }
 
-  .countdown-unit {
-    min-width: 50px;
-  }
+  .countdown-cta {
+    margin-left: 24px;
 
-  .countdown-unit strong {
-    font-size: 1.55rem;
-  }
-
-  .countdown-separator {
-    font-size: 1.1rem;
+    font-size: 0.78rem;
   }
 
   .nav {
