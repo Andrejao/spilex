@@ -112,38 +112,47 @@
 
 
 <!-- Nedtælling -->
-<div class="countdown-bar">
-  <div class="container countdown-inner">
+<script>
+  const eventDate = new Date("2026-11-14T10:00:00+01:00");
 
-    <div class="countdown-message">
+  function updateCountdown() {
+    const difference = eventDate - new Date();
 
-      <svg
-        class="countdown-icon"
-        viewBox="0 0 24 24"
-        aria-hidden="true"
-      >
-        <path
-          d="M7 2v3M17 2v3M3.5 9h17M5 4h14a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z"
-        />
-      </svg>
+    const countdownBar =
+      document.querySelector(".countdown-bar");
 
-      <span>
-        Viborg Brætspilsdag begynder om
-        <strong><span id="days">--</span> dage</strong>,
-        <strong><span id="hours">--</span> timer</strong>,
-        <strong><span id="minutes">--</span> min</strong>
-        og
-        <strong><span id="seconds">--</span> sek.</strong>
-      </span>
+    if (difference <= 0) {
+      document.querySelector(".countdown-message span").innerHTML =
+        "<strong>Viborg Brætspilsdag er i gang!</strong>";
 
-    </div>
+      return;
+    }
 
-    <a class="countdown-cta" href="#">
-      Tilmeld dig nu!
-    </a>
+    const days = Math.floor(
+      difference / (1000 * 60 * 60 * 24)
+    );
 
-  </div>
-</div>
+    const hours = Math.floor(
+      (difference / (1000 * 60 * 60)) % 24
+    );
+
+    const minutes = Math.floor(
+      (difference / (1000 * 60)) % 60
+    );
+
+    const seconds = Math.floor(
+      (difference / 1000) % 60
+    );
+
+    document.getElementById("days").textContent = days;
+    document.getElementById("hours").textContent = hours;
+    document.getElementById("minutes").textContent = minutes;
+    document.getElementById("seconds").textContent = seconds;
+  }
+
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+</script>
 
 </body>
 </html>
