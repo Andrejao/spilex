@@ -1,6 +1,6 @@
 - navn: "Asmodee Nordics"
   gruppe: "sponsor"
-  logo: "/assets/images/logos/asmodee_logo.png"
+  logo: "/assets/images/logos/asmodee_logo.wepb"
   url: "https://www.asmodeenordics.com"
 
 - navn: "Hyggeonkel"
@@ -13,12 +13,17 @@
   logo: "/assets/images/logos/spilbraet_logo.png"
   url: "https://www.spilbraet.dk"
 
-- navn: "FGU"
+- navn: "FGU Viborg"
   gruppe: "samarbejdspartner"
   logo: "/assets/images/logos/fgu_logo.png"
   url: ""
 
-- navn: "Ungdomsskolen"
+- navn: "Viborg Ungdomsskole"
   gruppe: "samarbejdspartner"
   logo: "/assets/images/logos/ungdomsskolen_logo.png"
   url: ""
+
+- navn: "Bilka"
+  gruppe: "sponsor"
+  logo: "/assets/images/logos/bilka_logo.png"
+  url: "https://www.bilka.dk"
