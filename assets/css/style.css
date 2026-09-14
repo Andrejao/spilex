@@ -390,6 +390,125 @@ a {
   color: var(--muted);
 }
 
+/* Undersider */
+
+.page-hero {
+  background: var(--dark);
+  color: white;
+  padding: 80px 0;
+}
+
+.page-hero h1 {
+  margin: 0 0 16px;
+  font-size: clamp(2.8rem, 7vw, 5rem);
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+
+.page-hero p:not(.eyebrow) {
+  max-width: 700px;
+  margin: 0;
+  color: rgba(255,255,255,0.75);
+  font-size: 1.15rem;
+}
+
+
+/* Aktiviteter */
+
+.activity-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.activity-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 26px;
+}
+
+.activity-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.activity-time {
+  font-weight: 850;
+  color: var(--dark);
+}
+
+.activity-badge {
+  padding: 5px 10px;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 850;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.activity-badge.open {
+  background: #e5f3e9;
+  color: #27623a;
+}
+
+.activity-badge.signup {
+  background: #f5e8e2;
+  color: var(--accent-dark);
+}
+
+.activity-card h3 {
+  margin: 0 0 8px;
+  font-size: 1.35rem;
+}
+
+.activity-card p {
+  color: var(--muted);
+}
+
+.activity-host {
+  margin: 0 0 12px;
+  font-size: 0.9rem;
+  font-weight: 750;
+  color: var(--dark) !important;
+}
+
+.booking-callout {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+
+  margin-top: 50px;
+  padding: 32px;
+
+  border-radius: var(--radius);
+
+  background: var(--dark);
+  color: white;
+}
+
+.booking-callout h2 {
+  margin: 0 0 5px;
+}
+
+.booking-callout p {
+  margin: 0;
+  color: rgba(255,255,255,0.72);
+}
+
+.button-dark {
+  background: var(--dark);
+  color: white;
+}
+
+.section-action {
+  margin-top: 36px;
+}
+
 /* Mobil */
 
 @media (max-width: 760px) {
@@ -436,5 +555,17 @@ a {
 
   .program-content {
     padding-left: 0;
+  }
+    .activity-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .booking-callout {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .page-hero {
+    padding: 60px 0;
   }
 }
