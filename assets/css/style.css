@@ -568,4 +568,103 @@ a {
   .page-hero {
     padding: 60px 0;
   }
+
+  /* Nedtælling */
+
+.countdown-bar {
+  background:
+    linear-gradient(
+      90deg,
+      #0b1919,
+      #163737,
+      #0b1919
+    );
+
+  color: white;
+
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.countdown-inner {
+  min-height: 92px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 30px;
+}
+
+.countdown-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  font-size: 0.82rem;
+  font-weight: 800;
+
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+
+  color: rgba(255,255,255,0.72);
+}
+
+.countdown-dot {
+  width: 9px;
+  height: 9px;
+
+  border-radius: 50%;
+
+  background: var(--accent);
+
+  box-shadow:
+    0 0 0 5px rgba(230,95,53,0.12),
+    0 0 18px rgba(230,95,53,0.55);
+}
+
+.countdown {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+}
+
+.countdown-unit {
+  min-width: 64px;
+
+  text-align: center;
+}
+
+.countdown-unit strong {
+  display: block;
+
+  font-size: 2rem;
+  line-height: 1;
+
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.04em;
+}
+
+.countdown-unit span {
+  display: block;
+
+  margin-top: 5px;
+
+  font-size: 0.65rem;
+  font-weight: 700;
+
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+
+  color: rgba(255,255,255,0.48);
+}
+
+.countdown-separator {
+  margin-top: -16px;
+
+  font-size: 1.5rem;
+  font-weight: 300;
+
+  color: var(--accent);
+}
 }
