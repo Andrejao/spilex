@@ -1,0 +1,52 @@
+---
+layout: default
+title: Program
+description: Hovedprogrammet for Viborg Brætspilsdag 2026.
+---
+
+<section class="page-hero">
+  <div class="container">
+    <p class="eyebrow">14. november 2026</p>
+    <h1>Dagens program</h1>
+    <p>
+      Her finder du dagens overordnede program. De enkelte spil,
+      turneringer og øvrige aktiviteter finder du under Aktiviteter.
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+
+    <div class="program-list">
+
+      {% for punkt in site.data.hovedprogram %}
+
+      <div class="program-item">
+
+        <div class="program-time">
+          {{ punkt.tid }}
+        </div>
+
+        <div class="program-content">
+          <h3>{{ punkt.titel }}</h3>
+
+          {% if punkt.beskrivelse %}
+          <p>{{ punkt.beskrivelse }}</p>
+          {% endif %}
+        </div>
+
+      </div>
+
+      {% endfor %}
+
+    </div>
+
+    <div class="section-action">
+      <a class="button button-dark" href="{{ '/aktiviteter.html' | relative_url }}">
+        Se alle aktiviteter
+      </a>
+    </div>
+
+  </div>
+</section>
