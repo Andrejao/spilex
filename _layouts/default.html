@@ -17,6 +17,58 @@
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>
 
+  <script>
+  const eventDate = new Date("2026-11-14T10:00:00+01:00");
+
+  function updateCountdown() {
+    const now = new Date();
+    const difference = eventDate - now;
+
+    const countdown = document.getElementById("countdown");
+
+    if (difference <= 0) {
+      countdown.innerHTML = `
+        <div class="countdown-live">
+          Viborg Brætspilsdag er i gang!
+        </div>
+      `;
+      return;
+    }
+
+    const days = Math.floor(
+      difference / (1000 * 60 * 60 * 24)
+    );
+
+    const hours = Math.floor(
+      (difference / (1000 * 60 * 60)) % 24
+    );
+
+    const minutes = Math.floor(
+      (difference / (1000 * 60)) % 60
+    );
+
+    const seconds = Math.floor(
+      (difference / 1000) % 60
+    );
+
+    document.getElementById("days").textContent =
+      String(days);
+
+    document.getElementById("hours").textContent =
+      String(hours).padStart(2, "0");
+
+    document.getElementById("minutes").textContent =
+      String(minutes).padStart(2, "0");
+
+    document.getElementById("seconds").textContent =
+      String(seconds).padStart(2, "0");
+  }
+
+  updateCountdown();
+
+  setInterval(updateCountdown, 1000);
+</script>
+  
 <body
 
      <strong id="hours">--</strong>
