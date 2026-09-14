@@ -38,49 +38,48 @@ description: En hel dag med brætspil, rollespil og fællesskab i Viborg.
 
 <section class="section" id="program">
 
+<section class="section" id="program">
+
   <div class="container">
 
     <div class="section-heading">
       <p class="eyebrow">14. november 2026</p>
 
-      <h2>
-        En hel dag omkring bordet
-      </h2>
+      <h2>Dagens program</h2>
 
       <p>
-        Kom forbi hele dagen eller vælg de aktiviteter,
-        der passer dig.
+        Programmet opdateres løbende frem mod dagen.
       </p>
     </div>
 
 
-    <div class="cards">
+    <div class="program-list">
 
-      <article class="card">
-        <h3>Åbne spilleborde</h3>
+      {% for punkt in site.data.program %}
 
-        <p>
-          Find et spil, nogle medspillere og sæt dig til bordet.
-        </p>
-      </article>
+        <div class="program-item">
 
+          <div class="program-time">
+            {{ punkt.tid }}
+          </div>
 
-      <article class="card">
-        <h3>Bookbare spil</h3>
+          <div class="program-content">
 
-        <p>
-          Book plads på udvalgte spil og aktiviteter i løbet af dagen.
-        </p>
-      </article>
+            <h3>
+              {{ punkt.titel }}
+            </h3>
 
+            {% if punkt.beskrivelse %}
+              <p>
+                {{ punkt.beskrivelse }}
+              </p>
+            {% endif %}
 
-      <article class="card">
-        <h3>Konkurrencer</h3>
+          </div>
 
-        <p>
-          Turneringer, lodtrækninger og andre aktiviteter undervejs.
-        </p>
-      </article>
+        </div>
+
+      {% endfor %}
 
     </div>
 
