@@ -1,0 +1,23 @@
+- tid: "10.00"
+  titel: "Dørene åbner"
+  beskrivelse: "Velkomst ved byrådsmedlem i Viborg og første lodtrækning."
+
+- tid: "10.15"
+  titel: "Aktiviteterne begynder"
+  beskrivelse: "Åbne aktiviteter og aktiviteter med tilmelding går i gang."
+
+- tid: "19.30"
+  titel: "Lodtrækning og præmier"
+  beskrivelse: "Lodtrækning og uddeling af præmier til vindere."
+
+- tid: "21.30"
+  titel: "Sidste planlagte aktiviteter slutter"
+  beskrivelse: "Der kan fortsat spilles ved de åbne borde."
+
+- tid: "23.30"
+  titel: "Brætspilsbiblioteket lukker"
+  beskrivelse: "Lånte spil afleveres tilbage."
+
+- tid: "00.00"
+  titel: "Viborg Brætspilsdag slutter"
+  beskrivelse: "Tak for i dag."
