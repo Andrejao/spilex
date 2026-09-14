@@ -15,6 +15,7 @@
   --radius: 20px;
 }
 
+
 /* Grundindstillinger */
 
 * {
@@ -27,14 +28,17 @@ html {
 
 body {
   margin: 0;
+
   background: var(--bg);
   color: var(--text);
+
   font-family:
     Inter,
     -apple-system,
     BlinkMacSystemFont,
     "Segoe UI",
     sans-serif;
+
   line-height: 1.6;
 }
 
@@ -49,6 +53,113 @@ a {
 .container {
   width: min(var(--max-width), calc(100% - 40px));
   margin: 0 auto;
+}
+
+
+/* Nedtælling */
+
+.countdown-bar {
+  background:
+    linear-gradient(
+      90deg,
+      #0b1919,
+      #163737,
+      #0b1919
+    );
+
+  color: white;
+
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.countdown-inner {
+  min-height: 92px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 30px;
+}
+
+.countdown-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  font-size: 0.82rem;
+  font-weight: 800;
+
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+
+  color: rgba(255,255,255,0.72);
+}
+
+.countdown-dot {
+  width: 9px;
+  height: 9px;
+
+  border-radius: 50%;
+
+  background: var(--accent);
+
+  box-shadow:
+    0 0 0 5px rgba(230,95,53,0.12),
+    0 0 18px rgba(230,95,53,0.55);
+}
+
+.countdown {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+}
+
+.countdown-unit {
+  min-width: 64px;
+
+  text-align: center;
+}
+
+.countdown-unit strong {
+  display: block;
+
+  font-size: 2rem;
+  line-height: 1;
+
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.04em;
+}
+
+.countdown-unit span {
+  display: block;
+
+  margin-top: 5px;
+
+  font-size: 0.65rem;
+  font-weight: 700;
+
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+
+  color: rgba(255,255,255,0.48);
+}
+
+.countdown-separator {
+  margin-top: -16px;
+
+  font-size: 1.5rem;
+  font-weight: 300;
+
+  color: var(--accent);
+}
+
+.countdown-live {
+  font-size: 1.25rem;
+  font-weight: 900;
+
+  color: #ffffff;
 }
 
 
@@ -84,6 +195,7 @@ a {
 
 .nav nav a {
   text-decoration: none;
+
   font-weight: 650;
   opacity: 0.78;
 }
@@ -184,6 +296,12 @@ a {
 
 .button-secondary {
   border: 1px solid rgba(255,255,255,0.35);
+
+  color: white;
+}
+
+.button-dark {
+  background: var(--dark);
   color: white;
 }
 
@@ -218,6 +336,10 @@ a {
   color: var(--muted);
 
   font-size: 1.08rem;
+}
+
+.section-action {
+  margin-top: 36px;
 }
 
 
@@ -291,36 +413,21 @@ a {
 }
 
 
-/* Footer */
-
-.site-footer {
-  background: #0e2020;
-  color: rgba(255,255,255,0.72);
-
-  padding: 60px 0;
-}
-
-.site-footer strong {
-  color: white;
-
-  letter-spacing: 0.12em;
-}
-
-.site-footer p {
-  margin: 8px 0 0;
-}
 /* Program */
 
 .program-list {
   position: relative;
 
   display: grid;
+
   gap: 0;
 
   margin-top: 40px;
 }
 
 .program-item {
+  position: relative;
+
   display: grid;
 
   grid-template-columns: 150px 1fr;
@@ -328,8 +435,6 @@ a {
   gap: 28px;
 
   padding: 0 0 34px;
-
-  position: relative;
 }
 
 .program-item::before {
@@ -367,11 +472,11 @@ a {
 }
 
 .program-time {
+  padding-top: 1px;
+
   font-weight: 850;
 
   color: var(--dark);
-
-  padding-top: 1px;
 }
 
 .program-content {
@@ -390,16 +495,19 @@ a {
   color: var(--muted);
 }
 
+
 /* Undersider */
 
 .page-hero {
+  padding: 80px 0;
+
   background: var(--dark);
   color: white;
-  padding: 80px 0;
 }
 
 .page-hero h1 {
   margin: 0 0 16px;
+
   font-size: clamp(2.8rem, 7vw, 5rem);
   line-height: 1;
   letter-spacing: -0.05em;
@@ -407,8 +515,11 @@ a {
 
 .page-hero p:not(.eyebrow) {
   max-width: 700px;
+
   margin: 0;
+
   color: rgba(255,255,255,0.75);
+
   font-size: 1.15rem;
 }
 
@@ -417,51 +528,64 @@ a {
 
 .activity-grid {
   display: grid;
+
   grid-template-columns: repeat(2, 1fr);
+
   gap: 18px;
 }
 
 .activity-card {
+  padding: 26px;
+
   background: var(--surface);
+
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  padding: 26px;
 }
 
 .activity-card-top {
   display: flex;
   align-items: center;
   justify-content: space-between;
+
   gap: 12px;
+
   margin-bottom: 18px;
 }
 
 .activity-time {
   font-weight: 850;
+
   color: var(--dark);
 }
 
 .activity-badge {
   padding: 5px 10px;
+
   border-radius: 999px;
+
   font-size: 0.72rem;
   font-weight: 850;
+
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
 
 .activity-badge.open {
   background: #e5f3e9;
+
   color: #27623a;
 }
 
 .activity-badge.signup {
   background: #f5e8e2;
+
   color: var(--accent-dark);
 }
 
 .activity-card h3 {
   margin: 0 0 8px;
+
   font-size: 1.35rem;
 }
 
@@ -471,8 +595,10 @@ a {
 
 .activity-host {
   margin: 0 0 12px;
+
   font-size: 0.9rem;
   font-weight: 750;
+
   color: var(--dark) !important;
 }
 
@@ -480,6 +606,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
+
   gap: 30px;
 
   margin-top: 50px;
@@ -497,79 +624,37 @@ a {
 
 .booking-callout p {
   margin: 0;
+
   color: rgba(255,255,255,0.72);
 }
 
-.button-dark {
-  background: var(--dark);
-  color: white;
+
+/* Footer */
+
+.site-footer {
+  padding: 60px 0;
+
+  background: #0e2020;
+
+  color: rgba(255,255,255,0.72);
 }
 
-.section-action {
-  margin-top: 36px;
+.site-footer strong {
+  color: white;
+
+  letter-spacing: 0.12em;
 }
+
+.site-footer p {
+  margin: 8px 0 0;
+}
+
 
 /* Mobil */
 
 @media (max-width: 760px) {
 
-  .nav {
-    min-height: 66px;
-  }
-
-  .nav nav {
-    gap: 14px;
-
-    font-size: 0.88rem;
-  }
-
-  .hero {
-    padding: 75px 0 85px;
-  }
-
-  .cards,
-  .practical {
-    grid-template-columns: 1fr;
-  }
-
-  .section {
-    padding: 65px 0;
-  }
-
-    .program-item {
-    grid-template-columns: 1fr;
-    gap: 6px;
-
-    padding-left: 28px;
-  }
-
-  .program-item::before {
-    left: 0;
-    top: 7px;
-  }
-
-  .program-item::after {
-    left: 4px;
-    top: 17px;
-  }
-
-  .program-content {
-    padding-left: 0;
-  }
-    .activity-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .booking-callout {
-    align-items: flex-start;
-    flex-direction: column;
-  }
-
-  .page-hero {
-    padding: 60px 0;
-  }
-
-    .countdown-inner {
+  .countdown-inner {
     min-height: auto;
 
     padding-top: 14px;
@@ -600,108 +685,63 @@ a {
     font-size: 1.1rem;
   }
 
-  /* Nedtælling */
+  .nav {
+    min-height: 66px;
+  }
 
-.countdown-bar {
-  background:
-    linear-gradient(
-      90deg,
-      #0b1919,
-      #163737,
-      #0b1919
-    );
+  .nav nav {
+    gap: 14px;
 
-  color: white;
+    font-size: 0.88rem;
+  }
 
-  border-bottom: 1px solid rgba(255,255,255,0.1);
-}
+  .hero {
+    padding: 75px 0 85px;
+  }
 
-.countdown-inner {
-  min-height: 92px;
+  .cards,
+  .practical {
+    grid-template-columns: 1fr;
+  }
 
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  .section {
+    padding: 65px 0;
+  }
 
-  gap: 30px;
-}
+  .program-item {
+    grid-template-columns: 1fr;
 
-.countdown-label {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+    gap: 6px;
 
-  font-size: 0.82rem;
-  font-weight: 800;
+    padding-left: 28px;
+  }
 
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
+  .program-item::before {
+    left: 0;
+    top: 7px;
+  }
 
-  color: rgba(255,255,255,0.72);
-}
+  .program-item::after {
+    left: 4px;
+    top: 17px;
+  }
 
-.countdown-dot {
-  width: 9px;
-  height: 9px;
+  .program-content {
+    padding-left: 0;
+  }
 
-  border-radius: 50%;
+  .activity-grid {
+    grid-template-columns: 1fr;
+  }
 
-  background: var(--accent);
+  .booking-callout {
+    align-items: flex-start;
 
-  box-shadow:
-    0 0 0 5px rgba(230,95,53,0.12),
-    0 0 18px rgba(230,95,53,0.55);
-}
+    flex-direction: column;
+  }
 
-.countdown {
-  display: flex;
-  align-items: center;
-
-  gap: 12px;
-}
-
-.countdown-unit {
-  min-width: 64px;
-
-  text-align: center;
-}
-
-.countdown-unit strong {
-  display: block;
-
-  font-size: 2rem;
-  line-height: 1;
-
-  font-variant-numeric: tabular-nums;
-  letter-spacing: -0.04em;
-}
-
-.countdown-unit span {
-  display: block;
-
-  margin-top: 5px;
-
-  font-size: 0.65rem;
-  font-weight: 700;
-
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-
-  color: rgba(255,255,255,0.48);
-}
-
-.countdown-separator {
-  margin-top: -16px;
-
-  font-size: 1.5rem;
-  font-weight: 300;
-
-  color: var(--accent);
-}
-  .countdown-live {
-  font-size: 1.25rem;
-  font-weight: 900;
-  color: #ffffff;
-}
+  .page-hero {
+    padding: 60px 0;
+  }
 
 }
