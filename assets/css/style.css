@@ -16,6 +16,11 @@
 }
 
 /* Grundindstillinger */
+.countdown-live {
+  font-size: 1.25rem;
+  font-weight: 900;
+  color: #ffffff;
+}
 
 * {
   box-sizing: border-box;
