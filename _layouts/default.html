@@ -1,123 +1,747 @@
-<!DOCTYPE html>
-<html lang="{{ site.lang | default: 'da' }}">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+:root {
+  --bg: #f6f3ed;
+  --surface: #ffffff;
+  --text: #171717;
+  --muted: #686868;
+  --line: #dedbd4;
 
-  <title>
-    {% if page.title %}
-      {{ page.title }} · {{ site.title }}
-    {% else %}
-      {{ site.title }}
-    {% endif %}
-  </title>
+  --dark: #142b2b;
+  --dark-soft: #1e3b3b;
 
-  <meta name="description" content="{{ page.description | default: site.description }}">
+  --accent: #e65f35;
+  --accent-dark: #be4523;
 
-  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-</head>
+  --max-width: 1120px;
+  --radius: 20px;
+}
 
-  <script>
-  const eventDate = new Date("2026-11-14T10:00:00+01:00");
 
-  function updateCountdown() {
-    const now = new Date();
-    const difference = eventDate - now;
+/* Grundindstillinger */
 
-    const countdown = document.getElementById("countdown");
+* {
+  box-sizing: border-box;
+}
 
-    if (difference <= 0) {
-      countdown.innerHTML = `
-        <div class="countdown-live">
-          Viborg Brætspilsdag er i gang!
-        </div>
-      `;
-      return;
-    }
+html {
+  scroll-behavior: smooth;
+}
 
-    const days = Math.floor(
-      difference / (1000 * 60 * 60 * 24)
+body {
+  margin: 0;
+
+  background: var(--bg);
+  color: var(--text);
+
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+}
+
+.container {
+  width: min(var(--max-width), calc(100% - 40px));
+  margin: 0 auto;
+}
+
+
+/* Nedtælling */
+
+.countdown-bar {
+  background:
+    linear-gradient(
+      90deg,
+      #0b1919,
+      #163737,
+      #0b1919
     );
 
-    const hours = Math.floor(
-      (difference / (1000 * 60 * 60)) % 24
+  color: white;
+
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.countdown-inner {
+  min-height: 92px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 30px;
+}
+
+.countdown-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  font-size: 0.82rem;
+  font-weight: 800;
+
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+
+  color: rgba(255,255,255,0.72);
+}
+
+.countdown-dot {
+  width: 9px;
+  height: 9px;
+
+  border-radius: 50%;
+
+  background: var(--accent);
+
+  box-shadow:
+    0 0 0 5px rgba(230,95,53,0.12),
+    0 0 18px rgba(230,95,53,0.55);
+}
+
+.countdown {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+}
+
+.countdown-unit {
+  min-width: 64px;
+
+  text-align: center;
+}
+
+.countdown-unit strong {
+  display: block;
+
+  font-size: 2rem;
+  line-height: 1;
+
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.04em;
+}
+
+.countdown-unit span {
+  display: block;
+
+  margin-top: 5px;
+
+  font-size: 0.65rem;
+  font-weight: 700;
+
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+
+  color: rgba(255,255,255,0.48);
+}
+
+.countdown-separator {
+  margin-top: -16px;
+
+  font-size: 1.5rem;
+  font-weight: 300;
+
+  color: var(--accent);
+}
+
+.countdown-live {
+  font-size: 1.25rem;
+  font-weight: 900;
+
+  color: #ffffff;
+}
+
+
+/* Navigation */
+
+.site-header {
+  background: var(--dark);
+  color: white;
+}
+
+.nav {
+  min-height: 76px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 30px;
+}
+
+.logo {
+  text-decoration: none;
+
+  font-size: 1.35rem;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+}
+
+.nav nav {
+  display: flex;
+  gap: 28px;
+}
+
+.nav nav a {
+  text-decoration: none;
+
+  font-weight: 650;
+  opacity: 0.78;
+}
+
+.nav nav a:hover {
+  opacity: 1;
+}
+
+
+/* Hero */
+
+.hero {
+  background:
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(255,255,255,0.12),
+      transparent 25%
+    ),
+    linear-gradient(
+      135deg,
+      var(--dark),
+      var(--dark-soft)
     );
 
-    const minutes = Math.floor(
-      (difference / (1000 * 60)) % 60
-    );
+  color: white;
 
-    const seconds = Math.floor(
-      (difference / 1000) % 60
-    );
+  padding: 110px 0 120px;
+}
 
-    document.getElementById("days").textContent =
-      String(days);
+.hero-content {
+  max-width: 820px;
+}
 
-    document.getElementById("hours").textContent =
-      String(hours).padStart(2, "0");
+.eyebrow {
+  margin: 0 0 16px;
 
-    document.getElementById("minutes").textContent =
-      String(minutes).padStart(2, "0");
+  font-size: 0.8rem;
+  font-weight: 800;
 
-    document.getElementById("seconds").textContent =
-      String(seconds).padStart(2, "0");
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+
+  color: #e8a68e;
+}
+
+.hero h1 {
+  margin: 0;
+
+  max-width: 780px;
+
+  font-size: clamp(3rem, 8vw, 6.2rem);
+  line-height: 0.96;
+  letter-spacing: -0.055em;
+}
+
+.hero-text {
+  max-width: 680px;
+
+  margin: 28px 0 0;
+
+  font-size: clamp(1.05rem, 2vw, 1.3rem);
+
+  color: rgba(255,255,255,0.8);
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 12px;
+
+  margin-top: 34px;
+}
+
+
+/* Knapper */
+
+.button {
+  display: inline-block;
+
+  padding: 13px 20px;
+
+  border-radius: 999px;
+
+  text-decoration: none;
+
+  font-weight: 800;
+}
+
+.button-primary {
+  background: var(--accent);
+  color: white;
+}
+
+.button-primary:hover {
+  background: var(--accent-dark);
+}
+
+.button-secondary {
+  border: 1px solid rgba(255,255,255,0.35);
+
+  color: white;
+}
+
+.button-dark {
+  background: var(--dark);
+  color: white;
+}
+
+
+/* Sektioner */
+
+.section {
+  padding: 90px 0;
+}
+
+.section-white {
+  background: var(--surface);
+}
+
+.section-heading {
+  max-width: 720px;
+
+  margin-bottom: 40px;
+}
+
+.section-heading h2 {
+  margin: 0 0 12px;
+
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+}
+
+.section-heading p {
+  margin: 0;
+
+  color: var(--muted);
+
+  font-size: 1.08rem;
+}
+
+.section-action {
+  margin-top: 36px;
+}
+
+
+/* Kort */
+
+.cards {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 18px;
+}
+
+.card {
+  background: var(--surface);
+
+  padding: 28px;
+
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.card h3 {
+  margin: 0 0 8px;
+
+  font-size: 1.25rem;
+}
+
+.card p {
+  margin: 0;
+
+  color: var(--muted);
+}
+
+
+/* Praktisk information */
+
+.practical {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 1px;
+
+  overflow: hidden;
+
+  background: var(--line);
+
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.practical-item {
+  background: white;
+
+  padding: 28px;
+}
+
+.practical-label {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: var(--muted);
+
+  font-size: 0.78rem;
+  font-weight: 800;
+
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+
+/* Program */
+
+.program-list {
+  position: relative;
+
+  display: grid;
+
+  gap: 0;
+
+  margin-top: 40px;
+}
+
+.program-item {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns: 150px 1fr;
+
+  gap: 28px;
+
+  padding: 0 0 34px;
+}
+
+.program-item::before {
+  content: "";
+
+  position: absolute;
+
+  left: 161px;
+  top: 8px;
+
+  width: 10px;
+  height: 10px;
+
+  border-radius: 50%;
+
+  background: var(--accent);
+}
+
+.program-item::after {
+  content: "";
+
+  position: absolute;
+
+  left: 165px;
+  top: 18px;
+  bottom: -4px;
+
+  width: 2px;
+
+  background: var(--line);
+}
+
+.program-item:last-child::after {
+  display: none;
+}
+
+.program-time {
+  padding-top: 1px;
+
+  font-weight: 850;
+
+  color: var(--dark);
+}
+
+.program-content {
+  padding-left: 28px;
+}
+
+.program-content h3 {
+  margin: 0 0 6px;
+
+  font-size: 1.25rem;
+}
+
+.program-content p {
+  margin: 0;
+
+  color: var(--muted);
+}
+
+
+/* Undersider */
+
+.page-hero {
+  padding: 80px 0;
+
+  background: var(--dark);
+  color: white;
+}
+
+.page-hero h1 {
+  margin: 0 0 16px;
+
+  font-size: clamp(2.8rem, 7vw, 5rem);
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+
+.page-hero p:not(.eyebrow) {
+  max-width: 700px;
+
+  margin: 0;
+
+  color: rgba(255,255,255,0.75);
+
+  font-size: 1.15rem;
+}
+
+
+/* Aktiviteter */
+
+.activity-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 18px;
+}
+
+.activity-card {
+  padding: 26px;
+
+  background: var(--surface);
+
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.activity-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 12px;
+
+  margin-bottom: 18px;
+}
+
+.activity-time {
+  font-weight: 850;
+
+  color: var(--dark);
+}
+
+.activity-badge {
+  padding: 5px 10px;
+
+  border-radius: 999px;
+
+  font-size: 0.72rem;
+  font-weight: 850;
+
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.activity-badge.open {
+  background: #e5f3e9;
+
+  color: #27623a;
+}
+
+.activity-badge.signup {
+  background: #f5e8e2;
+
+  color: var(--accent-dark);
+}
+
+.activity-card h3 {
+  margin: 0 0 8px;
+
+  font-size: 1.35rem;
+}
+
+.activity-card p {
+  color: var(--muted);
+}
+
+.activity-host {
+  margin: 0 0 12px;
+
+  font-size: 0.9rem;
+  font-weight: 750;
+
+  color: var(--dark) !important;
+}
+
+.booking-callout {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  margin-top: 50px;
+  padding: 32px;
+
+  border-radius: var(--radius);
+
+  background: var(--dark);
+  color: white;
+}
+
+.booking-callout h2 {
+  margin: 0 0 5px;
+}
+
+.booking-callout p {
+  margin: 0;
+
+  color: rgba(255,255,255,0.72);
+}
+
+
+/* Footer */
+
+.site-footer {
+  padding: 60px 0;
+
+  background: #0e2020;
+
+  color: rgba(255,255,255,0.72);
+}
+
+.site-footer strong {
+  color: white;
+
+  letter-spacing: 0.12em;
+}
+
+.site-footer p {
+  margin: 8px 0 0;
+}
+
+
+/* Mobil */
+
+@media (max-width: 760px) {
+
+  .countdown-inner {
+    min-height: auto;
+
+    padding-top: 14px;
+    padding-bottom: 14px;
+
+    flex-direction: column;
+
+    gap: 10px;
   }
 
-  updateCountdown();
+  .countdown-label {
+    font-size: 0.68rem;
+  }
 
-  setInterval(updateCountdown, 1000);
-</script>
-  
-<body
+  .countdown {
+    gap: 6px;
+  }
 
-     <strong id="hours">--</strong>
-        <span>timer</span>
-      </div>
+  .countdown-unit {
+    min-width: 50px;
+  }
 
-      <div class="countdown-separator">:</div>
+  .countdown-unit strong {
+    font-size: 1.55rem;
+  }
 
-      <div class="countdown-unit">
-        <strong id="minutes">--</strong>
-        <span>min</span>
-      </div>
+  .countdown-separator {
+    font-size: 1.1rem;
+  }
 
-      <div class="countdown-separator">:</div>
+  .nav {
+    min-height: 66px;
+  }
 
-      <div class="countdown-unit">
-        <strong id="seconds">--</strong>
-        <span>sek</span>
-      </div>
-    </div>
+  .nav nav {
+    gap: 14px;
 
-  </div>
-</div>
+    font-size: 0.88rem;
+  }
 
-<header class="site-header">
-  <div class="container nav">
-    <a class="logo" href="{{ '/' | relative_url }}">
-      VIBORG BRÆTSPILSDAG
-    </a>
-    
-<nav>
-  <a href="{{ '/program.html' | relative_url }}">Program</a>
-  <a href="{{ '/aktiviteter.html' | relative_url }}">Aktiviteter</a>
-  <a href="{{ '/#praktisk' | relative_url }}">Praktisk</a>
-</nav>
-  
-  </div>
-</header>
+  .hero {
+    padding: 75px 0 85px;
+  }
 
-<main>
-  {{ content }}
-</main>
+  .cards,
+  .practical {
+    grid-template-columns: 1fr;
+  }
 
-<footer class="site-footer">
-  <div class="container">
-    <strong>VIBORG BRÆTSPILSDAG</strong>
-    <p>Brætspil, rollespil og fællesskab i Viborg.</p>
-  </div>
-</footer>
+  .section {
+    padding: 65px 0;
+  }
 
-</body>
-</html>
+  .program-item {
+    grid-template-columns: 1fr;
+
+    gap: 6px;
+
+    padding-left: 28px;
+  }
+
+  .program-item::before {
+    left: 0;
+    top: 7px;
+  }
+
+  .program-item::after {
+    left: 4px;
+    top: 17px;
+  }
+
+  .program-content {
+    padding-left: 0;
+  }
+
+  .activity-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .booking-callout {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+  .page-hero {
+    padding: 60px 0;
+  }
+
+}
