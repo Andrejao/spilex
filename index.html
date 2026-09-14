@@ -38,55 +38,71 @@ description: En hel dag med brætspil, rollespil og fællesskab i Viborg.
 
 <section class="section" id="program">
 
-<section class="section" id="program">
-
   <div class="container">
 
     <div class="section-heading">
+
       <p class="eyebrow">14. november 2026</p>
 
-      <h2>Dagens program</h2>
+      <h2>En hel dag med spil</h2>
 
       <p>
-        Programmet opdateres løbende frem mod dagen.
+        Se dagens overordnede program eller gå direkte til de enkelte aktiviteter.
       </p>
+
     </div>
 
+    <div class="cards">
 
-    <div class="program-list">
+      <article class="card">
+        <h3>Dagens program</h3>
 
-      {% for punkt in site.data.program %}
+        <p>
+          Se åbning, lodtrækninger, sluttider og dagens overordnede rytme.
+        </p>
 
-        <div class="program-item">
+        <p>
+          <a href="{{ '/program.html' | relative_url }}">
+            Se programmet →
+          </a>
+        </p>
+      </article>
 
-          <div class="program-time">
-            {{ punkt.tid }}
-          </div>
 
-          <div class="program-content">
+      <article class="card">
+        <h3>Åbne aktiviteter</h3>
 
-            <h3>
-              {{ punkt.titel }}
-            </h3>
+        <p>
+          Spil og aktiviteter, hvor du bare kan dukke op.
+        </p>
 
-            {% if punkt.beskrivelse %}
-              <p>
-                {{ punkt.beskrivelse }}
-              </p>
-            {% endif %}
+        <p>
+          <a href="{{ '/aktiviteter.html' | relative_url }}">
+            Se aktiviteter →
+          </a>
+        </p>
+      </article>
 
-          </div>
 
-        </div>
+      <article class="card">
+        <h3>Book en plads</h3>
 
-      {% endfor %}
+        <p>
+          Turneringer og planlagte spilsessioner med begrænsede pladser.
+        </p>
+
+        <p>
+          <a href="{{ '/aktiviteter.html' | relative_url }}">
+            Se aktiviteter med tilmelding →
+          </a>
+        </p>
+      </article>
 
     </div>
 
   </div>
 
 </section>
-
 
 <section class="section section-white" id="praktisk">
 
