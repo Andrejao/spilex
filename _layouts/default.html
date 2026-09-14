@@ -27,47 +27,38 @@
 <body>
 
   <!-- Nedtælling -->
-  <div class="countdown-bar">
-    <div class="container countdown-inner">
+<div class="countdown-bar">
+  <div class="container countdown-inner">
 
-      <div class="countdown-label">
-        <span class="countdown-dot"></span>
+    <div class="countdown-message">
+
+      <svg
+        class="countdown-icon"
+        viewBox="0 0 24 24"
+        aria-hidden="true"
+      >
+        <path
+          d="M7 2v3M17 2v3M3.5 9h17M5 4h14a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z"
+        />
+      </svg>
+
+      <span>
         Viborg Brætspilsdag begynder om
-      </div>
-
-      <div class="countdown" id="countdown">
-
-        <div class="countdown-unit">
-          <strong id="days">--</strong>
-          <span>dage</span>
-        </div>
-
-        <div class="countdown-separator">:</div>
-
-        <div class="countdown-unit">
-          <strong id="hours">--</strong>
-          <span>timer</span>
-        </div>
-
-        <div class="countdown-separator">:</div>
-
-        <div class="countdown-unit">
-          <strong id="minutes">--</strong>
-          <span>min</span>
-        </div>
-
-        <div class="countdown-separator">:</div>
-
-        <div class="countdown-unit">
-          <strong id="seconds">--</strong>
-          <span>sek</span>
-        </div>
-
-      </div>
+        <strong><span id="days">--</span> dage</strong>,
+        <strong><span id="hours">--</span> timer</strong>,
+        <strong><span id="minutes">--</span> min</strong>
+        og
+        <strong><span id="seconds">--</span> sek.</strong>
+      </span>
 
     </div>
-  </div>
 
+    <a class="countdown-cta" href="#">
+      Tilmeld dig nu!
+    </a>
+
+  </div>
+</div>
 
   <!-- Navigation -->
   <header class="site-header">
