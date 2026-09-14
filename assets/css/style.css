@@ -569,6 +569,37 @@ a {
     padding: 60px 0;
   }
 
+    .countdown-inner {
+    min-height: auto;
+
+    padding-top: 14px;
+    padding-bottom: 14px;
+
+    flex-direction: column;
+
+    gap: 10px;
+  }
+
+  .countdown-label {
+    font-size: 0.68rem;
+  }
+
+  .countdown {
+    gap: 6px;
+  }
+
+  .countdown-unit {
+    min-width: 50px;
+  }
+
+  .countdown-unit strong {
+    font-size: 1.55rem;
+  }
+
+  .countdown-separator {
+    font-size: 1.1rem;
+  }
+
   /* Nedtælling */
 
 .countdown-bar {
