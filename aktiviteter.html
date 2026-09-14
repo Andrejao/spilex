@@ -1,0 +1,145 @@
+---
+layout: default
+title: Aktiviteter
+description: Se aktiviteter med og uden tilmelding til Viborg Brætspilsdag 2026.
+---
+
+<section class="page-hero">
+  <div class="container">
+
+    <p class="eyebrow">Viborg Brætspilsdag 2026</p>
+
+    <h1>Aktiviteter</h1>
+
+    <p>
+      Nogle aktiviteter kan du bare møde op til.
+      Andre har et begrænset antal pladser og kræver tilmelding.
+    </p>
+
+  </div>
+</section>
+
+
+<section class="section">
+
+  <div class="container">
+
+    <div class="section-heading">
+      <p class="eyebrow">Bare mød op</p>
+      <h2>Åbne aktiviteter</h2>
+      <p>
+        Disse aktiviteter kræver ikke forhåndstilmelding.
+      </p>
+    </div>
+
+
+    <div class="activity-grid">
+
+      {% for aktivitet in site.data.aabne_aktiviteter %}
+
+      <article class="activity-card">
+
+        <div class="activity-card-top">
+
+          <span class="activity-time">
+            {{ aktivitet.tid }}
+          </span>
+
+          <span class="activity-badge open">
+            Ingen tilmelding
+          </span>
+
+        </div>
+
+        <h3>{{ aktivitet.titel }}</h3>
+
+        {% if aktivitet.vaert != "" %}
+        <p class="activity-host">
+          Vært: {{ aktivitet.vaert }}
+        </p>
+        {% endif %}
+
+        <p>
+          {{ aktivitet.beskrivelse }}
+        </p>
+
+      </article>
+
+      {% endfor %}
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="section section-white">
+
+  <div class="container">
+
+    <div class="section-heading">
+      <p class="eyebrow">Begrænsede pladser</p>
+      <h2>Aktiviteter med tilmelding</h2>
+      <p>
+        Disse aktiviteter har et begrænset antal pladser.
+        Du skal derfor booke en plads.
+      </p>
+    </div>
+
+
+    <div class="activity-grid">
+
+      {% for aktivitet in site.data.tilmeldingsaktiviteter %}
+
+      <article class="activity-card">
+
+        <div class="activity-card-top">
+
+          <span class="activity-time">
+            {{ aktivitet.start }}–{{ aktivitet.slut }}
+          </span>
+
+          <span class="activity-badge signup">
+            {{ aktivitet.kategori }}
+          </span>
+
+        </div>
+
+        <h3>{{ aktivitet.titel }}</h3>
+
+        {% if aktivitet.vaert != "" %}
+        <p class="activity-host">
+          Vært: {{ aktivitet.vaert }}
+        </p>
+        {% endif %}
+
+        <p>
+          {{ aktivitet.beskrivelse }}
+        </p>
+
+      </article>
+
+      {% endfor %}
+
+    </div>
+
+
+    <div class="booking-callout">
+
+      <div>
+        <h2>Vil du sikre dig en plads?</h2>
+        <p>
+          Aktiviteter med tilmelding bookes via vores bookingsystem.
+        </p>
+      </div>
+
+      <a class="button button-primary" href="#">
+        Book aktivitet
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
