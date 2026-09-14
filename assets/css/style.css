@@ -95,18 +95,17 @@ a {
 
   font-variant-numeric: tabular-nums;
 }
+.countdown-dot {
+  width: 8px;
+  height: 8px;
 
-.countdown-icon {
-  width: 17px;
-  height: 17px;
+  flex: 0 0 8px;
 
-  flex: 0 0 auto;
+  border-radius: 50%;
 
-  fill: none;
-  stroke: var(--accent);
-  stroke-width: 2;
-  stroke-linecap: round;
-  stroke-linejoin: round;
+  background: var(--accent);
+
+  box-shadow: 0 0 10px rgba(230, 95, 53, 0.55);
 }
 
 .countdown-cta {
