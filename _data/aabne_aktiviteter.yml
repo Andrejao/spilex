@@ -33,7 +33,9 @@
 - tid: "14.00–16.00"
   titel: "Krester præsenterer sit brætspil"
   vaert: "Krester"
-  beskrivelse: "Prøv et brætspil under udvikling og oplev spiludvikling på tæt hold. Der vil være konkurrencer og præmier. Mere information følger."
-  image: "/assets/images/nyheder/krester-praesenterer-sit-spil.jpg"
-  image_alt: "Prototype til et brætspil med kort, brikker og komponenter på et bord"
-  artikel: "/nyheder/krester-praesenterer-sit-spil/"
+  beskrivelse: "Prøv et brætspil under udvikling og oplev spiludvikling på tæt hold. Mere information følger."
+
+- tid: "14.00–16.00"
+  titel: "Hvor fedt er skak?"
+  vaert: "Viborg Skakklub"
+  beskrivelse: "Kan du slå Viborgs bedste i skak? Mere information følger."
