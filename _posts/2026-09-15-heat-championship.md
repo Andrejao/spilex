@@ -10,7 +10,7 @@ teaser: "Et intenst racerløb, hvor du hele tiden balancerer fart, timing og ris
 kategori: "Turnering"
 vaert: "Bruno"
 start: "10.30"
-slut: "13.30"
+slut: "14.00"
 niveau: 2
 niveau_tekst: "Let at lære – med plads til taktik"
 ---
@@ -53,7 +53,7 @@ Kendskab til Heat er en fordel i en turnering, men spillet er langt mere tilgæn
 
 ## Heat Championship på Viborg Brætspilsdag
 
-**Tid:** 10.30–13.30  
+**Tid:** 10.30–14.00  
 **Vært:** Bruno  
 **Kategori:** Turnering  
 **Niveau:** Let at lære – med plads til taktik  
