@@ -83,4 +83,4 @@ Der er begrænsede pladser til turneringen.
 
 Du skal være tilmeldt Viborg Brætspilsdag for at kunne booke en plads til aktiviteten.
 
-[**Tilmeld dig Viborg Brætspilsdag →**](DIT-TILMELDINGSLINK)
+[**Tilmeld dig Viborg Brætspilsdag →**](https://forms.gle/UPNvN1MyRNQc24eW9)
