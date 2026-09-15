@@ -1022,6 +1022,37 @@ a {
   padding-top: 0;
 }
 
+
+/* =========================================================
+   NYHEDER
+   ========================================================= */
+
+.post-image-wrap {
+  margin-top: 36px;
+}
+
+.post-image {
+  display: block;
+
+  width: 100%;
+  aspect-ratio: 16 / 7;
+
+  object-fit: cover;
+  object-position: center;
+
+  border-radius: 22px;
+}
+
+.news-card-image {
+  display: block;
+
+  width: 100%;
+  aspect-ratio: 16 / 7;
+
+  object-fit: cover;
+  object-position: center;
+}
+
 /* =========================================================
    SPONSORER OG SAMARBEJDSPARTNERE
    ========================================================= */
