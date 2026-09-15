@@ -4,6 +4,7 @@ title: "KLASK-turnering med præmier"
 date: 2026-09-15
 type: aktivitet
 image: "/assets/images/nyheder/klask.jpg"
+permalink: /nyheder/klask-turnering/
 teaser: "Magneter, reflekser og meget kort vej fra fuld kontrol til total katastrofe."
 kategori: "Turnering"
 start: "12.00"
