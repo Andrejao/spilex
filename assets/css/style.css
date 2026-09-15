@@ -770,6 +770,10 @@ a {
   gap: 20px;
 }
 
+.activity-card-open {
+  overflow: hidden;
+}
+
 .activity-card {
   position: relative;
 
