@@ -160,6 +160,112 @@ a {
   }
 }
 
+
+.first-time-page {
+  padding: 70px 0 100px;
+}
+
+.intro-copy {
+  max-width: 760px;
+  margin-bottom: 60px;
+
+  font-size: 1.15rem;
+  line-height: 1.75;
+}
+
+.first-time-guide {
+  max-width: 900px;
+}
+
+.guide-step {
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  gap: 24px;
+
+  padding: 36px 0;
+
+  border-top: 1px solid var(--line);
+}
+
+.guide-step:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.guide-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 48px;
+  height: 48px;
+
+  border-radius: 50%;
+
+  background: var(--accent);
+  color: #fff;
+
+  font-weight: 800;
+  font-size: 1.1rem;
+}
+
+.guide-step h2 {
+  margin: 4px 0 14px;
+}
+
+.guide-step p {
+  max-width: 720px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.first-time-reassurance {
+  margin-top: 80px;
+  padding: 40px;
+
+  background: var(--dark);
+  color: white;
+
+  border-radius: var(--radius-lg);
+}
+
+.reassurance-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+
+  margin-top: 28px;
+}
+
+.reassurance-grid div {
+  padding: 22px;
+
+  background: rgba(255,255,255,0.08);
+  border-radius: var(--radius-sm);
+}
+
+.reassurance-grid strong,
+.reassurance-grid span {
+  display: block;
+}
+
+.reassurance-grid span {
+  margin-top: 7px;
+  opacity: 0.8;
+}
+
+@media (max-width: 650px) {
+
+  .guide-step {
+    grid-template-columns: 1fr;
+  }
+
+  .reassurance-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
 /* =========================================================
    NEDTÆLLING
    ========================================================= */
