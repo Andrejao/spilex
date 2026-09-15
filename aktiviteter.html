@@ -36,38 +36,62 @@ description: Se aktiviteter med og uden tilmelding til Viborg Brætspilsdag 2026
 
     <div class="activity-grid">
 
-      {% for aktivitet in site.data.aabne_aktiviteter %}
+{% for aktivitet in site.data.aabne_aktiviteter %}
 
-      <article class="activity-card">
+<article class="activity-card activity-card-open">
 
-        <div class="activity-card-top">
+  {% if aktivitet.image %}
+  <a
+    class="activity-banner"
+    href="{{ aktivitet.artikel | relative_url }}"
+  >
+    <img
+      class="activity-card-image"
+      src="{{ aktivitet.image | relative_url }}"
+      alt="{{ aktivitet.image_alt | default: aktivitet.titel }}"
+      loading="lazy"
+    >
+  </a>
+  {% endif %}
 
-          <span class="activity-time">
-            {{ aktivitet.tid }}
-          </span>
+  <div class="activity-card-top">
 
-          <span class="activity-badge open">
-            Ingen tilmelding
-          </span>
+    <span class="activity-time">
+      {{ aktivitet.tid }}
+    </span>
 
-        </div>
+    <span class="activity-badge open">
+      Ingen tilmelding
+    </span>
 
-        <h3>{{ aktivitet.titel }}</h3>
+  </div>
 
-        {% if aktivitet.vaert != "" %}
-        <p class="activity-host">
-          Vært: {{ aktivitet.vaert }}
-        </p>
-        {% endif %}
+  <h3>{{ aktivitet.titel }}</h3>
 
-        <p>
-          {{ aktivitet.beskrivelse }}
-        </p>
+  {% if aktivitet.vaert != "" %}
+  <p class="activity-host">
+    Vært: {{ aktivitet.vaert }}
+  </p>
+  {% endif %}
 
-      </article>
+  <p>
+    {{ aktivitet.beskrivelse }}
+  </p>
 
-      {% endfor %}
+  {% if aktivitet.artikel %}
+  <div class="activity-actions">
+    <a
+      class="activity-read-more"
+      href="{{ aktivitet.artikel | relative_url }}"
+    >
+      Læs mere →
+    </a>
+  </div>
+  {% endif %}
 
+</article>
+
+{% endfor %}
     </div>
 
   </div>
