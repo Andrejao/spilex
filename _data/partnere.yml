@@ -1,8 +1,3 @@
-- navn: "Asmodee Nordics"
-  gruppe: "sponsor"
-  logo: "/assets/images/logos/asmodee_logo.png"
-  url: "https://www.asmodeenordics.com"
-
 - navn: "Hyggeonkel"
   gruppe: "sponsor"
   logo: "/assets/images/logos/hyggeonkel_logo.png"
@@ -27,3 +22,8 @@
   gruppe: "sponsor"
   logo: "/assets/images/logos/bilka_logo.png"
   url: "https://www.bilka.dk"
+
+- navn: "Asmodee Nordics"
+  gruppe: "sponsor"
+  logo: "/assets/images/logos/asmodee_logo.png"
+  url: "https://www.asmodeenordics.com"
