@@ -45,11 +45,10 @@ Flere af spillene kan også udforskes sammen med andre.
 
 ## Praktisk
 
-**Tid:** 10.30–15.00  
+**Tid:** 10.30–14.00  
 **Vært:** Thomas / The Lone Boardgamer  
 **Tilmelding til aktiviteten:** Ikke nødvendig  
-**Forkundskaber:** Ingen  
-**Antal spil:** Omkring 13–14 forskellige solobrætspil
+**Forkundskaber:** Ingen.
 
 Du skal blot være tilmeldt Viborg Brætspilsdag.
 
