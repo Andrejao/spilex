@@ -1035,7 +1035,7 @@ a {
   display: block;
 
   width: 100%;
-  aspect-ratio: 16 / 4;
+  aspect-ratio: 16 / 2;
 
   object-fit: cover;
   object-position: center;
@@ -1047,7 +1047,7 @@ a {
   display: block;
 
   width: 100%;
-  aspect-ratio: 16 / 4;
+  aspect-ratio: 16 / 2;
 
   object-fit: cover;
   object-position: center;
