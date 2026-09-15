@@ -100,13 +100,12 @@ description: Se aktiviteter med og uden tilmelding til Viborg Brætspilsdag 2026
     class="activity-banner"
     href="{{ aktivitet.artikel | relative_url }}"
   >
-    <img
-      class="activity-card-image"
-      src="{{ aktivitet.image | relative_url }}"
-      alt="{{ aktivitet.image_alt | default: aktivitet.titel }}"
-      style="object-position: {{ aktivitet.image_position | default: 'center' }};"
-      loading="lazy"
-    >
+ <img
+  class="activity-card-image"
+  src="{{ aktivitet.image | relative_url }}"
+  alt="{{ aktivitet.image_alt | default: aktivitet.titel }}"
+  loading="lazy"
+>
   </a>
   {% endif %}
 
