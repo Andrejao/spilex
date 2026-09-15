@@ -794,6 +794,51 @@ a {
     0 20px 50px rgba(22,35,31,0.11);
 }
 
+.activity-card-signup {
+  overflow: hidden;
+}
+
+.activity-banner {
+  display: block;
+
+  margin:
+    -28px
+    -28px
+    20px
+    -28px;
+
+  text-decoration: none;
+}
+
+.activity-card-image {
+  display: block;
+
+  width: 100%;
+  aspect-ratio: 16 / 2;
+
+  object-fit: cover;
+}
+
+.activity-actions {
+  margin-top: 18px;
+}
+
+.activity-read-more {
+  display: inline-block;
+
+  font-size: 0.92rem;
+  font-weight: 800;
+
+  color: var(--dark);
+
+  text-decoration: none;
+}
+
+.activity-read-more:hover {
+  color: var(--accent-dark);
+  text-decoration: underline;
+}
+
 .activity-card-top {
   display: flex;
   align-items: center;
