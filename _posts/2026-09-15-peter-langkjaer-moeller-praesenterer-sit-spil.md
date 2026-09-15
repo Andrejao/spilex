@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Mød spiludvikler Peter Langkjær Møller og prøv hans spil"
+title: "Mød spiludvikler Peter Langkjær Møller og prøv hans spil, Stew Orleans"
 date: 2026-09-15
 type: aktivitet
 permalink: /nyheder/peter-langkjaer-moeller/
@@ -18,9 +18,16 @@ Brætspil kommer ikke ud af ingenting.
 
 Bag hvert spil ligger idéer, testspil, ændringer, mærkelige problemer, gode løsninger og sandsynligvis en del regler, der engang lød bedre på papir.
 
-Til Viborg Brætspilsdag kan du møde **Peter Langkjær Møller**, som kommer og præsenterer sit eget spil.
+Til Viborg Brætspilsdag kan du møde **Peter Langkjær Møller**, som kommer og præsenterer sit eget spil, Stew Orleans.
 
 Du får mulighed for selv at prøve spillet og møde udvikleren bag det.
+
+## Om Stew Orleans
+Stew Orleans er et let tilgængeligt familiespil, der handler om at være den spiller der laver den bedste stuvning, i den New Orleanske tradition. Spillerne samler ingredienser fra markedet og kombinerer dem på kryds og tværs, for at skabe synergier og tiltrække middagsgæster. Ingrediens-kortene lægges diagonalt ovenpå hinanden, og når spillet er slut har hver spiller en komplet cirkel af kort der udgør deres stuvning.
+
+Alder: 10+
+Spilletid: 15 minutter pr. spiller
+Antal spillere: 2-5
 
 ## Mere end bare at spille
 
