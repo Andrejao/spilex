@@ -8,7 +8,7 @@ image: "/assets/images/nyheder/solo-braetspil.jpg"
 image_alt: "Udvalg af solobrætspil klar til at blive prøvet"
 teaser: "Brætspil behøver ikke et helt bord fuld af mennesker. Thomas fra The Lone Boardgamer åbner døren til en kæmpe del af hobbyen: solospil."
 kategori: "Åben aktivitet"
-tid: "10.30–15.00"
+tid: "10.30–14.00"
 vaert: "Thomas / The Lone Boardgamer"
 ---
 
@@ -16,9 +16,18 @@ vaert: "Thomas / The Lone Boardgamer"
 
 Til Viborg Brætspilsdag får vi besøg af **Thomas, The Lone Boardgamer**, som åbner døren til en del af brætspilshobbyen, mange stadig ikke ved, hvor stor og spændende er: **solobrætspil**.
 
-Der vil være omkring **13–14 forskellige spil** at vælge mellem, så du kan prøve flere forskellige typer oplevelser.
-
 Du behøver ikke kende spillene på forhånd. Kom forbi, få en introduktion, spil nogle runder eller kast dig ud i et helt spil. Thomas hjælper dig i gang og guider undervejs.
+
+## Hvilke spil kan du prøve?
+
+Planen er lige nu, at Thomas blandt andet tager disse spil med:
+
+- **Final Girl**
+- **Under Falling Skies**
+- **Conservas**
+- måske også **Kingdom Legacy**
+
+Udvalget kan ændre sig frem mod dagen.
 
 ## Er det kun for folk, der spiller alene?
 
