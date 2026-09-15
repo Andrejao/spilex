@@ -1,0 +1,76 @@
+---
+layout: default
+title: Nyheder
+description: Nyheder, aktiviteter, gæster og historier fra Viborg Brætspilsdag.
+---
+
+<section class="page-hero">
+  <div class="container">
+
+    <p class="eyebrow">Viborg Brætspilsdag</p>
+
+    <h1>Nyheder</h1>
+
+    <p>
+      Aktiviteter, gæster, spil, præmier og nyt fra arbejdet
+      med Viborg Brætspilsdag.
+    </p>
+
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container">
+
+    <div class="news-grid">
+
+      {% for post in site.posts %}
+
+      <article class="news-card">
+
+        {% if post.image %}
+        <a href="{{ post.url | relative_url }}">
+          <img
+            class="news-card-image"
+            src="{{ post.image | relative_url }}"
+            alt="{{ post.title }}"
+          >
+        </a>
+        {% endif %}
+
+        <div class="news-card-content">
+
+          <p class="news-type">
+            {{ post.type | default: "Nyhed" }}
+          </p>
+
+          <h2>
+            <a href="{{ post.url | relative_url }}">
+              {{ post.title }}
+            </a>
+          </h2>
+
+          {% if post.teaser %}
+          <p>
+            {{ post.teaser }}
+          </p>
+          {% endif %}
+
+          <a
+            class="news-read"
+            href="{{ post.url | relative_url }}"
+          >
+            Læs mere →
+          </a>
+
+        </div>
+
+      </article>
+
+      {% endfor %}
+
+    </div>
+
+  </div>
+</section>
