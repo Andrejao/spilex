@@ -25,8 +25,9 @@ Du behøver ikke kende spillene på forhånd. Og du kan både tage en ven med **
 Der er allerede planlagt blandt andet:
 
 - **Zenith**
+- - **Star Wars: The Deckbuilding Game**
 - **Splendor Duel**
-- **Mindbug: Beyond**
+- **Mindbug: Beyond Eternity**
 - **Mindbug: First Contact**
 - **The Lord of the Rings: Duel for Middle-earth**
 - **Agent Avenue**
