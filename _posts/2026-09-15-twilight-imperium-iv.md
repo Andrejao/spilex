@@ -27,11 +27,6 @@ Spillerne konkurrerer om sejrspoint ved at opfylde offentlige og hemmelige mål.
 
 Galaksen bygges op forskelligt fra spil til spil, og de asymmetriske civilisationer betyder, at spillerne ikke angriber opgaven på samme måde.
 
-## Hvordan føles det at spille?
-
-Twilight Imperium er mindre en hurtig konkurrence og mere en hel dags fælles science-fiction-fortælling.
-
-Der er lange planer, forhandlinger, overraskelser og øjeblikke, hvor en beslutning fra flere timer tidligere pludselig viser sig at være enten genial eller katastrofal.
 
 ## Hvor krævende er spillet?
 
@@ -40,6 +35,8 @@ Der er lange planer, forhandlinger, overraskelser og øjeblikke, hvor en beslutn
 Twilight Imperium er blandt dagens mest krævende spil. Der er mange regler, mange muligheder og en meget lang spilletid. Du skal derfor have lyst til at investere både tid og koncentration i én stor oplevelse.
 
 Du behøver ikke være ekspert, men det er en fordel, hvis du tidligere har spillet moderne strategispil og er komfortabel med at lære et omfattende regelsæt.
+
+Vi spiller med udvidelserne Prophecy of King og Thunder's Edge.
 
 ## Twilight Imperium passer godt til dig, hvis du…
 
