@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Et par hundrede brætspil står klar til dig"
+title: "Gå på opdagelse i et par hundrede brætspil - se et udvalg nedenfor"
 date: 2026-09-15
 type: aktivitet
 permalink: /nyheder/braetspilsbibliotek/
@@ -10,14 +10,6 @@ teaser: "Har du ikke taget et spil med? Intet problem. Gå på opdagelse i bræt
 kategori: "Åben aktivitet"
 tid: "Hele dagen"
 ---
-
-## Gå på opdagelse i et par hundrede brætspil
-
-Du behøver ikke komme til Viborg Brætspilsdag med en plan. Du behøver faktisk heller ikke komme med et spil.
-
-Dagens **åbne brætspilsbibliotek** rummer et par hundrede spil, som deltagerne kan låne og tage med hen til et af de åbne borde.
-
-Find noget, du allerede elsker, eller brug dagen på at prøve noget, du aldrig selv ville have købt.
 
 ## Hvordan fungerer det?
 
