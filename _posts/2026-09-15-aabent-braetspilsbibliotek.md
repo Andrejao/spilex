@@ -60,9 +60,7 @@ Vi har et par hundrede spil til rådighed, og der kan både komme flere til og s
 Et konkret spil kan naturligvis også være udlånt til et andet bord, når du kommer.
 
 ---
-## 🧠 Store strategispil
-
-Hvis du gerne vil bruge et par timer på planer, økonomi, positionering og den stille erkendelse af, at den beslutning du tog for 45 minutter siden muligvis ødelagde alt:
+## Større spil
 
 - Brass: Birmingham
 - Ark Nova
@@ -82,9 +80,7 @@ Hvis du gerne vil bruge et par timer på planer, økonomi, positionering og den 
 
 ---
 
-## ⚔️ Eventyr, monstre & episke co-op-spil
-
-Her kæmper I mod spillet, monstre, zombier, imperier, ørkenen – og sommetider bare jeres egne beslutninger.
+## Eventyr, monstre & episke co-op-spil
 
 - Arkham Horror: The Card Game
 - Mage Knight
@@ -100,9 +96,7 @@ Her kæmper I mod spillet, monstre, zombier, imperier, ørkenen – og sommetide
 
 ---
 
-## 🌿 Moderne publikumsfavoritter
-
-Spil, der har fundet vej til rigtig mange spilleborde – og med god grund.
+## Moderne favoritter
 
 - Lost Ruins of Arnak
 - Wingspan
@@ -122,11 +116,8 @@ Spil, der har fundet vej til rigtig mange spilleborde – og med god grund.
 
 ---
 
-## ⚔️ Virkelig gode spil for to
+## Ggode spil for to
 
-To personer er rigeligt.
-
-Her finder du spil, der fungerer særligt godt, når der kun sidder én modstander – eller samarbejdspartner – på den anden side af bordet.
 
 - The Lord of the Rings: Duel for Middle-earth
 - 7 Wonders Duel
@@ -148,11 +139,7 @@ Har du lyst til specifikt at lære spil for to, har vi også en åben aktivitet 
 
 ---
 
-## 🤝 Samarbejd – eller gå ned sammen
-
-Nogle gange er personen på den anden side af bordet ikke problemet.
-
-Spillet er.
+## Samarbejdsspil
 
 - The Crew: Mission Deep Sea
 - The Crew: The Quest for Planet Nine
@@ -175,11 +162,7 @@ Det er også en ret glimrende måde at opdage, hvem i vennegruppen der siger *"v
 
 ---
 
-## 🕵️ Party, bluff & socialt kaos
-
-Her behøver ingen at sidde stille og optimere en produktionsmotor i tre timer.
-
-Til gengæld kan det blive nødvendigt at lyve direkte til sine venner.
+##  Party, bluff & socialt kaos
 
 - Decrypto
 - Just One
@@ -199,9 +182,7 @@ Til gengæld kan det blive nødvendigt at lyve direkte til sine venner.
 
 ---
 
-## 👨‍👩‍👧 Spil som næsten alle kan gå til
-
-Vil du bare have et godt spil på bordet uden en halv times regelgennemgang, er der masser at vælge mellem.
+## Spil der er lette at lære
 
 - Ticket to Ride: Europe
 - Carcassonne
@@ -223,11 +204,7 @@ Det er et godt sted at begynde, hvis du ikke spiller brætspil særlig tit – e
 
 ---
 
-## 💥 Fysisk, hurtigt & lidt idiotisk
-
-Ikke alt behøver være elegant strategi.
-
-Nogle gange skal man bare slå til noget, styre noget, reagere hurtigt eller sende en spillebrik i en retning, som fysikken åbenlyst ikke havde godkendt.
+## Behændighedsspil
 
 - KLASK
 - PitchCar
@@ -246,22 +223,16 @@ Nogle gange skal man bare slå til noget, styre noget, reagere hurtigt eller sen
 
 ---
 
-## 👹 Tematiske, sære & mindeværdige
-
-Nogle spil er interessante, fordi de gør noget lidt anderledes.
-
-Andre fordi præmissen er vidunderligt mærkelig.
+## Tematiske
 
 - Blood Bowl: Team Manager
 - Last Night on Earth: The Zombie Game
 - Betrayal at House on the Hill
-- Photosynthesis
 - Dragon Castle
 - Terror in Meeple City
 - King of Monster Island
 - Risk: The Lord of the Rings Trilogy Edition
 - TIME Stories Revolution: The Hadal Project
-- HeroQuest Advanced Quest
 - Star Wars Villainous
 - Disney Villainous
 - Human Punishment: The Beginning
@@ -269,11 +240,7 @@ Andre fordi præmissen er vidunderligt mærkelig.
 
 ---
 
-## ⚡ Korte, skæve & "én gang til"
-
-Du har måske kun 20 minutter.
-
-Eller også havde du egentlig kun 20 minutter, indtil nogen foreslog en revanche.
+##  Korte spil
 
 - For Sale
 - Cabo
