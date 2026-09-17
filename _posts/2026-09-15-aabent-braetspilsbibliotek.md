@@ -242,3 +242,151 @@ Det er et godt sted at begynde, hvis du ikke spiller brætspil særlig tit – e
 - Taco Cat Goat Cheese Pizza
 
 ---
+
+<details class="faq-item">
+  <summary>Spillene i alfabetisk rækkefølge</summary>
+
+  <ul>
+    <li>7 Wonders</li>
+    <li>7 Wonders Duel</li>
+    <li>Agricola – Revised Edition</li>
+    <li>Ark Nova</li>
+    <li>Arkham Horror: The Card Game</li>
+    <li>Azul</li>
+    <li>Azul: Stained Glass of Sintra</li>
+    <li>Betrayal at House on the Hill</li>
+    <li>Blood Bowl: Team Manager</li>
+    <li>Bomb Busters</li>
+    <li>Brass: Birmingham</li>
+    <li>Bärenpark</li>
+    <li>Cabo</li>
+    <li>Calico</li>
+    <li>Carcassonne</li>
+    <li>Cascadia</li>
+    <li>Castle Panic</li>
+    <li>Catan</li>
+    <li>Chronicles of Crime</li>
+    <li>Clank!: Catacombs</li>
+    <li>Codenames: Duet</li>
+    <li>Concept</li>
+    <li>Copenhagen</li>
+    <li>Coup</li>
+    <li>Cthulhu: Death May Die</li>
+    <li>Decrypto</li>
+    <li>Descent: Journeys in the Dark</li>
+    <li>Disney Villainous</li>
+    <li>Dixit</li>
+    <li>Dominion</li>
+    <li>Dragon Castle</li>
+    <li>Dune: Imperium</li>
+    <li>Everdell</li>
+    <li>Faraway</li>
+    <li>Finspan</li>
+    <li>Flash Point</li>
+    <li>Flip 7</li>
+    <li>For Sale</li>
+    <li>Forbidden Desert</li>
+    <li>Formula D</li>
+    <li>Gaia Project</li>
+    <li>Great Western Trail</li>
+    <li>Hanabi</li>
+    <li>Hansa Teutonica</li>
+    <li>Happy Little Dinosaurs</li>
+    <li>Harmonies</li>
+    <li>Hellboy: The Board Game</li>
+    <li>Here to Slay</li>
+    <li>HINT</li>
+    <li>Hive</li>
+    <li>Horrified</li>
+    <li>Human Punishment: The Beginning</li>
+    <li>Jaipur</li>
+    <li>Jungle Speed</li>
+    <li>Just One</li>
+    <li>King of Monster Island</li>
+    <li>King of Tokyo</li>
+    <li>King of Tokyo: Duel</li>
+    <li>Kingdomino Origins</li>
+    <li>KLASK</li>
+    <li>Last Night on Earth: The Zombie Game</li>
+    <li>Lawyer Up</li>
+    <li>Living Forest</li>
+    <li>Lost Ruins of Arnak</li>
+    <li>Love Letter</li>
+    <li>Mage Knight</li>
+    <li>Magic Maze</li>
+    <li>Magical Athlete</li>
+    <li>Massive Darkness 2: Hellscape</li>
+    <li>Match Madness</li>
+    <li>Mice and Mystics</li>
+    <li>MicroMacro: Crime City</li>
+    <li>My Island</li>
+    <li>Mysterium</li>
+    <li>Nova Luna</li>
+    <li>Oriflamme</li>
+    <li>Paleo</li>
+    <li>Pandemic</li>
+    <li>Patchwork</li>
+    <li>PitchCar</li>
+    <li>Port Royal</li>
+    <li>Power Grid</li>
+    <li>Power Hungry Pets</li>
+    <li>Prime Climb</li>
+    <li>Pylos</li>
+    <li>Quacks</li>
+    <li>Quoridor</li>
+    <li>Qwirkle</li>
+    <li>Regicide</li>
+    <li>Risk: The Lord of the Rings Trilogy Edition</li>
+    <li>River Dragons</li>
+    <li>Robinson Crusoe</li>
+    <li>RoboRally</li>
+    <li>Root</li>
+    <li>Rumble Nation</li>
+    <li>Sagrada</li>
+    <li>SCOUT</li>
+    <li>Scythe</li>
+    <li>Sea Salt & Paper</li>
+    <li>Sheriff of Nottingham</li>
+    <li>Sky Team</li>
+    <li>Smart10</li>
+    <li>Spicy</li>
+    <li>Splendor</li>
+    <li>Splendor Duel</li>
+    <li>Star Wars Villainous</li>
+    <li>Star Wars: Imperial Assault</li>
+    <li>Star Wars: The Deckbuilding Game</li>
+    <li>Suburbia</li>
+    <li>Sushi Go Party!</li>
+    <li>Taco Cat Goat Cheese Pizza</li>
+    <li>Take it Easy!</li>
+    <li>Terraforming Mars</li>
+    <li>Terror in Meeple City</li>
+    <li>That’s Not a Hat</li>
+    <li>The Castles of Burgundy</li>
+    <li>The Crew: Mission Deep Sea</li>
+    <li>The Crew: The Quest for Planet Nine</li>
+    <li>The Fox in the Forest</li>
+    <li>The Gang</li>
+    <li>The Lord of the Rings: Duel for Middle-earth</li>
+    <li>The Resistance: Avalon</li>
+    <li>Through the Ages: A New Story of Civilization</li>
+    <li>Ticket to Ride: Europe</li>
+    <li>TIME Stories Revolution: The Hadal Project</li>
+    <li>Tokaido Duo</li>
+    <li>Trio</li>
+    <li>Tsuro: Phoenix Rising</li>
+    <li>Tumblin-Dice</li>
+    <li>Twilight Struggle</li>
+    <li>Ultimate Werewolf</li>
+    <li>Unlock!: Game Adventures</li>
+    <li>Unmatched: Cobble & Fog</li>
+    <li>Virus!</li>
+    <li>Viticulture Essential Edition</li>
+    <li>War of the Ring: Second Edition</li>
+    <li>Watergate</li>
+    <li>Wavelength</li>
+    <li>When I Dream</li>
+    <li>Wingspan</li>
+  </ul>
+
+</details>
