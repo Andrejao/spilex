@@ -21,14 +21,6 @@ tid: "Hele dagen"
 
 Du behøver ikke reservere et spil på forhånd.
 
-## Hvad hvis jeg ikke ved, hvad jeg skal vælge?
-
-Så hjælper vi. Fortæl os bare nogenlunde, hvad du har lyst til: **hurtigt eller langt, hyggeligt eller strategisk, samarbejde eller konkurrence, to spillere eller et helt bord.**
-
-## Kan jeg komme alene?
-
-Ja. De åbne borde og biblioteket er netop tænkt som et sted, hvor du kan finde både spil og mennesker at spille med.
-
 ## Praktisk
 
 **Tid:** Hele dagen  
