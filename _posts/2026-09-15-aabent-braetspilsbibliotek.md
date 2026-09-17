@@ -49,13 +49,15 @@ Brætspilsbiblioteket lukker kl. 23.30, hvor lånte spil skal være afleveret.
 [**Tilmeld dig Viborg Brætspilsdag →**](https://forms.gle/Y7BBFADUbf5gTkfv7)
 
 
+![Et udvalg af spil fra brætspilsbiblioteket]({{ '/assets/images/nyheder/aabentbibliotek.jpg' | relative_url }})
+
 ## Udvalg af brætspil du kan låne:
 
 Listen er **ikke den komplette liste over brætspilsbiblioteket**.
 
 Vi har et par hundrede spil til rådighed, og der kan både komme flere til og ske ændringer frem mod arrangementet.
 
-Et konkret spil kan naturligvis også være udlånt til et andet bord, når du kommer. Til gengæld burde problemet "der er intet at spille" være nogenlunde effektivt udryddet.
+Et konkret spil kan naturligvis også være udlånt til et andet bord, når du kommer.
 
 ---
 ## 🧠 Store strategispil
