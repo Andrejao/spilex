@@ -14,7 +14,11 @@
   titel: "Aftensmad"
   beskrivelse: "Vi laver fælles bestilling af take-away. Koordinering/tilmelding sker tættere på datoen. Du får særskilt e-mail om dette."
   
-- tid: "19.30"
+- tid: "19.00 - 20.30"
+  titel: "Klask-turnering"
+  beskrivelse: "Husk at melde dig til via bookinglinket! Der er et begrænset antal pladser."
+
+- tid: "20.30"
   titel: "Lodtrækning og præmier"
   beskrivelse: "Lodtrækning og uddeling af præmier til alle vinderne."
 
