@@ -113,6 +113,47 @@
     </div>
 
 
+    
+    {% assign tak = tak | where: "gruppe", "tak" %}
+
+    {% if tak.size > 0 %}
+
+    <div class="tak-group">
+
+      <h3>Særligt tak til</h3>
+
+      <div class="logo-grid">
+
+        {% for tak in sponsorer %}
+
+          {% if tak.url != "" %}
+          <a
+            class="logo-card"
+            href="{{ tak.url }}"
+            target="_blank"
+            rel="noopener"
+            aria-label="{{ tak.navn }}"
+          >
+          {% else %}
+          <div class="logo-card">
+          {% endif %}
+
+            <img
+              src="{{ tak.logo | relative_url }}"
+              alt="{{ tak.navn }}"
+              loading="lazy"
+            >
+
+          {% if tak.url != "" %}
+          </a>
+          {% else %}
+          </div>
+          {% endif %}
+
+        {% endfor %}
+
+      </div>
+
     {% assign sponsorer = site.data.partnere | where: "gruppe", "sponsor" %}
 
     {% if sponsorer.size > 0 %}
