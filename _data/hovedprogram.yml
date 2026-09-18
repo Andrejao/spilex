@@ -1,11 +1,19 @@
 - tid: "10.00"
   titel: "Dørene åbner"
-  beskrivelse: "Velkomst ved byrådsmedlem i Viborg og første lodtrækning."
+  beskrivelse: "Velkomst ved byrådsmedlem i Viborg."
 
 - tid: "10.15"
   titel: "Aktiviteterne begynder"
   beskrivelse: "Åbne aktiviteter og aktiviteter med tilmelding går i gang."
 
+- tid: "12.30"
+  titel: "Frokost"
+  beskrivelse: "Rugbrød, pålæg og grøn. Kræver særskilt tilmelding og koster 25 kroner (inkluderer fri kaffe og te resten af dagen)."
+
+- tid: "18.00"
+  titel: "Aftensmad"
+  beskrivelse: "Fælles bestilling af take-away. Koordinering/tilmelding sker tættere på datoen."
+  
 - tid: "19.30"
   titel: "Lodtrækning og præmier"
   beskrivelse: "Lodtrækning og uddeling af præmier til vindere."
