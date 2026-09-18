@@ -114,37 +114,37 @@
 
 
     
-    {% assign tak = tak | where: "gruppe", "tak" %}
+{% assign tak = site.data.partnere | where: "gruppe", "tak" %}
 
     {% if tak.size > 0 %}
 
-    <div class="tak-group">
+    <div class="partner-group">
 
-      <h3>Særligt tak til</h3>
+      <h3>En særlig tak til</h3>
 
       <div class="logo-grid">
 
-        {% for tak in sponsorer %}
+        {% for partner in tak %}
 
-          {% if tak.url != "" %}
+          {% if partner.url != "" %}
           <a
             class="logo-card"
-            href="{{ tak.url }}"
+            href="{{ partner.url }}"
             target="_blank"
             rel="noopener"
-            aria-label="{{ tak.navn }}"
+            aria-label="{{ partner.navn }}"
           >
           {% else %}
           <div class="logo-card">
           {% endif %}
 
             <img
-              src="{{ tak.logo | relative_url }}"
-              alt="{{ tak.navn }}"
+              src="{{ partner.logo | relative_url }}"
+              alt="{{ partner.navn }}"
               loading="lazy"
             >
 
-          {% if tak.url != "" %}
+          {% if partner.url != "" %}
           </a>
           {% else %}
           </div>
@@ -153,6 +153,10 @@
         {% endfor %}
 
       </div>
+
+    </div>
+
+    {% endif %}
 
     {% assign sponsorer = site.data.partnere | where: "gruppe", "sponsor" %}
 
@@ -256,7 +260,7 @@
       </strong>
 
       <p>
-        Brætspil, rollespil og fællesskab i Viborg.
+        Find os på Facebook: <a href="https://www.facebook.com/viborgbraetspilsdag">Viborg Brætspilsdag</a>
       </p>
 
     </div>
