@@ -17,7 +17,7 @@ erfaring: "Ingen erfaring nødvendig"
 
 ## Magneter, reflekser og en lille smule kaos
 
-KLASK er et hurtigt dansk behændighedsspil, der befinder sig et sted mellem airhockey, bordfodbold og noget, man får lyst til at spille igen med det samme.
+KLASK er et hurtigt dansk-udviklet behændighedsspil, der befinder sig et sted mellem airhockey, bordfodbold og noget, man får lyst til at spille igen med det samme.
 
 To spillere står over for hinanden med hver sin magnetstyrede spillebrik. Ved hjælp af en magnet under bordet styrer du din brik på spillefladen og forsøger at få bolden i modstanderens mål.
 
@@ -72,7 +72,7 @@ Det oprindelige KLASK er et spil for to personer, og producenten angiver en typi
 
 ## KLASK-turnering på Viborg Brætspilsdag
 
-**Tid:** 12.00–16.00  
+**Tid:** 19.00–20.30  
 **Type:** Turnering  
 **Erfaring:** Ingen nødvendig  
 **Regler:** Vi hjælper dig i gang  
