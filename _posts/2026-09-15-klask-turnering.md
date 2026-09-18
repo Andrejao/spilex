@@ -7,8 +7,8 @@ image: "/assets/images/nyheder/klask.jpg"
 permalink: /nyheder/klask-turnering/
 teaser: "Magneter, reflekser og meget kort vej fra fuld kontrol til total katastrofe."
 kategori: "Turnering"
-start: "12.00"
-slut: "16.00"
+start: "19.00"
+slut: "20.30"
 niveau: 1
 niveau_tekst: "Meget let at gå til"
 regler: "Reglerne forklares på dagen"
