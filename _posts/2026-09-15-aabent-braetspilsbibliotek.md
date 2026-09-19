@@ -390,5 +390,3 @@ Det er et godt sted at begynde, hvis du ikke spiller brætspil særlig tit – e
   </ul>
 
 </details>
-
-![Lån et spil]({{ '/assets/images/stemning/stemning4.jpg' | relative_url }})
