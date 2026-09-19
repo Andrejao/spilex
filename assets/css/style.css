@@ -295,29 +295,62 @@ a {
   box-shadow: 0 24px 60px rgba(0, 0, 0, 0.12);
 }
 
-.first-time-home-photo .section-heading {
-  max-width: 760px;
-  margin-bottom: 36px;
+
+
+
+
+/* =========================================================
+   BAGGRUNDSBILLEDER
+   ========================================================= */
+
+.section-photo {
+  position: relative;
+
+  background-image:
+    linear-gradient(
+      rgba(16, 44, 43, 0.35),
+      rgba(16, 44, 43, 0.35)
+    ),
+    var(--section-bg);
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-.first-time-home-photo .section-heading h2 {
-  margin-bottom: 14px;
+
+/* INDHOLD OVEN PÅ BILLEDET */
+
+.section-photo-panel {
+  padding: 44px;
+
+  background: rgba(246, 242, 233, 0.88);
+  backdrop-filter: blur(4px);
+
+  border-radius: 28px;
+
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.12);
 }
 
-.first-time-home-photo .section-heading p {
-  max-width: 760px;
+
+/* KONKRETE BAGGRUNDSBILLEDER */
+
+.photo-1 {
+  --section-bg: url("/assets/images/stemning/stemning1.jpg");
+}
+.photo-2 {
+  --section-bg: url("/assets/images/stemning/stemning2.jpg");
+}
+.photo-3 {
+  --section-bg: url("/assets/images/stemning/stemning3.jpg");
+}
+.photo-4 {
+  --section-bg: url("/assets/images/stemning/stemning4.jpg");
+}
+.photo-5 {
+  --section-bg: url("/assets/images/stemning/stemning5.jpg");
 }
 
-@media (max-width: 760px) {
-  .first-time-home-photo {
-    padding: 60px 0;
-  }
-
-  .first-time-home-panel {
-    padding: 26px;
-    border-radius: 20px;
-  }
-}
 /* =========================================================
    NEDTÆLLING
    ========================================================= */
