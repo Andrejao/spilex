@@ -75,7 +75,149 @@ a {
   margin: 0 auto;
 }
 
+/* =========================================================
+   TILMELDINGS CTA
+   ========================================================= */
 
+.signup-cta-section {
+  padding: 90px 0;
+}
+
+.signup-cta-panel {
+  max-width: 900px;
+  margin: 0 auto;
+
+  padding: 54px 58px;
+
+  background: rgba(246, 242, 233, 0.94);
+  backdrop-filter: blur(6px);
+}
+
+.signup-cta-panel h2 {
+  max-width: 780px;
+
+  margin: 8px 0 18px;
+
+  font-size: clamp(2rem, 4vw, 3.6rem);
+  line-height: 1.03;
+  letter-spacing: -0.04em;
+}
+
+.signup-cta-lead {
+  max-width: 720px;
+
+  margin: 0;
+
+  font-size: 1.15rem;
+  line-height: 1.7;
+
+  color: var(--muted);
+}
+
+.signup-cta-reasons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 18px;
+
+  margin: 30px 0 36px;
+}
+
+.signup-cta-reasons span {
+  font-size: 0.95rem;
+  font-weight: 700;
+
+  color: var(--dark);
+}
+
+.signup-cta-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+
+  padding-top: 28px;
+
+  border-top: 1px solid var(--line);
+}
+
+.signup-cta-price {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.signup-cta-price strong {
+  font-size: 2.2rem;
+  line-height: 1;
+
+  color: var(--dark);
+}
+
+.signup-cta-price span {
+  color: var(--muted);
+}
+
+.signup-cta-action {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.signup-cta-button {
+  padding: 15px 26px;
+
+  font-size: 1rem;
+}
+
+.signup-cta-action small {
+  color: var(--muted);
+}
+
+.signup-cta-final {
+  max-width: 680px;
+
+  margin: 34px 0 0;
+
+  font-size: 0.98rem;
+  line-height: 1.65;
+
+  color: var(--muted);
+}
+
+
+/* MOBIL */
+
+@media (max-width: 700px) {
+
+  .signup-cta-section {
+    padding: 60px 0;
+  }
+
+  .signup-cta-panel {
+    padding: 32px 26px;
+  }
+
+  .signup-cta-panel h2 {
+    font-size: 2.15rem;
+  }
+
+  .signup-cta-bottom {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .signup-cta-action {
+    width: 100%;
+    align-items: flex-start;
+  }
+
+  .signup-cta-button {
+    width: 100%;
+    text-align: center;
+  }
+
+}
 
 
 /* =========================================================
