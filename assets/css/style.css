@@ -265,7 +265,59 @@ a {
 
 }
 
+.first-time-home-photo {
+  position: relative;
 
+  padding: 90px 0;
+
+  background:
+    linear-gradient(
+      rgba(20, 43, 43, 0.35),
+      rgba(20, 43, 43, 0.35)
+    ),
+    url("/assets/images/stemning/foerste-gang.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.first-time-home-panel {
+  max-width: 980px;
+
+  padding: 44px;
+
+  border-radius: 28px;
+
+  background: rgba(246, 243, 237, 0.88);
+  backdrop-filter: blur(4px);
+
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.12);
+}
+
+.first-time-home-photo .section-heading {
+  max-width: 760px;
+  margin-bottom: 36px;
+}
+
+.first-time-home-photo .section-heading h2 {
+  margin-bottom: 14px;
+}
+
+.first-time-home-photo .section-heading p {
+  max-width: 760px;
+}
+
+@media (max-width: 760px) {
+  .first-time-home-photo {
+    padding: 60px 0;
+  }
+
+  .first-time-home-panel {
+    padding: 26px;
+    border-radius: 20px;
+  }
+}
 /* =========================================================
    NEDTÆLLING
    ========================================================= */
