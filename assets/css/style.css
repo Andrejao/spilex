@@ -351,6 +351,19 @@ a {
   --section-bg: url("/assets/images/stemning/stemning5.jpg");
 }
 
+/* BAGGRUNDSBILLEDEBOKSEN BAGVED */
+
+.section-photo-panel {
+  padding: 44px;
+
+  background: rgba(246, 242, 233, 0.88);
+  backdrop-filter: blur(4px);
+
+  border-radius: 28px;
+
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.12);
+}
+
 /* =========================================================
    NEDTÆLLING
    ========================================================= */
