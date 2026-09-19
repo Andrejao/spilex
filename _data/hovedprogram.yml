@@ -1,6 +1,10 @@
 - tid: "10.00"
   titel: "Dørene åbner"
-  beskrivelse: "Velkomst ved byrådsmedlem i Viborg."
+  beskrivelse: "Kom bare indenfor."
+
+- tid: "10.05"
+  titel: "Velkomst"
+  beskrivelse: "En kort velkomst ved byrådsmedlem i Viborg og første lodtrækning."
 
 - tid: "10.15"
   titel: "Aktiviteterne begynder"
@@ -8,11 +12,11 @@
 
 - tid: "12.30 - 14.00"
   titel: "Frokost"
-  beskrivelse: "Rugbrød, pålæg og grønt. Kræver særskilt tilmelding senest d. 7. november og koster 25 kroner (inkluderer fri kaffe og te resten af dagen). Betaling sker til MobilePay Box 0745GZ (husk navn)."
+  beskrivelse: "Rugbrød, pålæg og grønt med videre som frokost-buffet. Det kræver særskilt tilmelding senest d. 7. november og koster 25 kroner (inkluderer fri kaffe og te resten af dagen). Betaling sker til MobilePay Box 0745GZ (husk navn)."
 
 - tid: "18.00"
   titel: "Aftensmad"
-  beskrivelse: "Vi laver fælles bestilling af take-away. Koordinering/tilmelding sker tættere på datoen. Du får særskilt e-mail om dette."
+  beskrivelse: "Vi laver fælles bestilling af take-away, hvis du ønsker det. Koordinering/tilmelding sker tættere på datoen. Du får særskilt e-mail om dette."
   
 - tid: "19.00 - 20.30"
   titel: "Klask-turnering"
@@ -20,7 +24,7 @@
 
 - tid: "20.30"
   titel: "Lodtrækning og præmier"
-  beskrivelse: "Lodtrækning og uddeling af præmier til alle vinderne."
+  beskrivelse: "Lodtrækning og uddeling af præmier til alle de heldige og vinderne."
 
 - tid: "23.30"
   titel: "Brætspilsbiblioteket og aktiviteter rundes stille og roligt af"
