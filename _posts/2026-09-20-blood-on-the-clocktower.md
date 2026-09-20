@@ -11,7 +11,7 @@ teaser: "En dæmon gemmer sig blandt spillerne. Nogle forsøger at afsløre den.
 kategori: "Social deduction"
 vaert: "Ian"
 niveau: 1
-niveau_tekst: "Begyndervenligt"
+niveau_tekst: "Begyndervenligt" 
 ---
 
 ## En dæmon gemmer sig blandt jer
