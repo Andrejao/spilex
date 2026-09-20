@@ -14,7 +14,7 @@ slut: "15.30"
 niveau_tekst: "For begyndere"
 ---
 
-## Prøv Dungeons & Dragons
+## Tumult på troldmandsskolen - Dungeons & Dragons for begyndere
 
 Er du helt ny til **Dungeons & Dragons*, eller har du lyst til at prøve det for første gang?
 
