@@ -140,10 +140,7 @@
   image_alt: "Horrified sat op på bord"
   image_position: "center"
   artikel: "/nyheder/horrified/"
-
   
-  image_position: "center"
-  artikel: "/nyheder/queen-alice/"
 - kategori: "Strategi"
   start: "17.00"
   slut: "20.00"
@@ -152,6 +149,8 @@
   beskrivelse: "Lær at spille Queen Alice."
   image: "/assets/images/nyheder/queen-alice.jpg"
   image_alt: "Queen Alice sat op på bord"
+  image_position: "center"
+  artikel: "/nyheder/queen-alice/"
 
   - kategori: "Rollespil"
   start: "10.30"
