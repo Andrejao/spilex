@@ -141,6 +141,9 @@
   image_position: "center"
   artikel: "/nyheder/horrified/"
 
+  
+  image_position: "center"
+  artikel: "/nyheder/queen-alice/"
 - kategori: "Strategi"
   start: "17.00"
   slut: "20.00"
@@ -149,5 +152,26 @@
   beskrivelse: "Lær at spille Queen Alice."
   image: "/assets/images/nyheder/queen-alice.jpg"
   image_alt: "Queen Alice sat op på bord"
+
+  - kategori: "Rollespil"
+  start: "10-30"
+  slut: "15.30"
+  titel: "Dungeons & Dragons"
+  vaert: "Peter"
+  beskrivelse: "Prøv Dungeons & Dragons i et begyndervenligt scenarie med færdige karakterer."
+  image: "/assets/images/stemning/stemning5.jpg"
+  image_alt: "Dungeons & Dragons-rollespil på et spillekort"
   image_position: "center"
-  artikel: "/nyheder/queen-alice/"
+  artikel: "/nyheder/dungeons-and-dragons/"
+
+  - kategori: "Social deduction"
+  start: "10.30"
+  slut: "12.30"
+  titel: "Blood on the Clocktower"
+  vaert: "Ian"
+  beskrivelse: "Et socialt mysteriespil med hemmelige roller, bluff, mistanke og en dæmon skjult blandt spillerne."
+  image: "/assets/images/nyheder/blood.jpg"
+  image_alt: "Blood on the Clocktower"
+  image_position: "center"
+  artikel: "/nyheder/blood-on-the-clocktower/"
+
