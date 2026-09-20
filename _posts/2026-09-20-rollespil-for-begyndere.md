@@ -15,7 +15,7 @@ niveau_tekst: "For begyndere"
 
 ## Prøv Dungeons & Dragons
 
-Er dy helt ny til **Dungeons & Dragons*, eller har du lyst til at prøve det for første gang?
+Er du helt ny til **Dungeons & Dragons*, eller har du lyst til at prøve det for første gang?
 
 Så er det her bordet for dig.
 
