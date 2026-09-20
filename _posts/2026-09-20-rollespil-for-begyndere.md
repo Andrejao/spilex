@@ -14,17 +14,10 @@ slut: "15.30"
 niveau_tekst: "For begyndere"
 ---
 
-## Tumult på troldmandsskolen - Dungeons & Dragons for begyndere
-
-Er du helt ny til **Dungeons & Dragons*, eller har du lyst til at prøve det for første gang?
-
-Så er det her bordet for dig.
-
+## Direkte ind i eventyret
 Peter tager op til **fire spillere** med på et lille D&D-scenarie på et af sine egne maps. Du behøver hverken kende reglerne, have lavet en karakter eller have spillet rollespil før.
 
 Du møder bare op.
-
-## Direkte ind i eventyret
 
 Alle får en **færdiglavet karakter**, som er klar til brug. Peter styrer spillet og scenariet, og så handler det ellers om at komme i gang og opleve, hvordan Dungeons & Dragons fungerer ved bordet.
 
