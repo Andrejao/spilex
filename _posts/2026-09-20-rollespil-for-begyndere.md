@@ -4,6 +4,7 @@ title: "Dungeons & Dragons – for nye og begyndere"
 date: 2026-09-20
 type: aktivitet
 permalink: /nyheder/dungeons-and-dragons/
+image: "/assets/images/stemning/stemning5.jpg"
 teaser: "Har du aldrig prøvet Dungeons & Dragons før? Peter tager fire begyndere med på et lille scenarie med færdige karakterer – så I kan gå direkte i gang."
 kategori: "Rollespil"
 vaert: "Peter"
