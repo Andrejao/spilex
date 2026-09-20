@@ -12,7 +12,7 @@ niveau: 1
 start: "10.30"
 slut: "15.30"
 niveau_tekst: "For begyndere"
----
+--- 
 
 ## Direkte ind i eventyret
 Peter tager op til **fire spillere** med på et lille D&D-scenarie på et af sine egne maps. Du behøver hverken kende reglerne, have lavet en karakter eller have spillet rollespil før.
