@@ -4,6 +4,7 @@ title: "Blood on the Clocktower – hvem kan du stole på?"
 date: 2026-09-20
 type: aktivitet
 permalink: /nyheder/blood-on-the-clocktower/
+image: "/assets/images/nyheder/blood.jpg"
 start: tidspunkt kommer
 slut: tidspunkt kommer
 teaser: "En dæmon gemmer sig blandt spillerne. Nogle forsøger at afsløre den. Andre lyver, bluffer og sender mistanken i den helt forkerte retning."
