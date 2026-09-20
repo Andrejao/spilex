@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Dungeons & Dragons – for nye og begyndere"
+title: "Tumult på troldmandsskolen - Dungeons & Dragons for begyndere"
 date: 2026-09-20
 type: aktivitet
 permalink: /nyheder/dungeons-and-dragons/
