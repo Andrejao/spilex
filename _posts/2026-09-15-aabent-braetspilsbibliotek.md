@@ -4,7 +4,7 @@ title: "Gå på opdagelse i et par hundrede brætspil - se et udvalg nedenfor"
 date: 2026-09-15
 type: aktivitet
 permalink: /nyheder/braetspilsbibliotek/
-image: "/assets/images/nyheder/braetspilsbibliotek.jpg"
+image: "/assets/images/nyheder/bibliotek2.jpg"
 image_alt: "Mange forskellige brætspil samlet i et brætspilsbibliotek"
 teaser: "Har du ikke taget et spil med? Intet problem. Gå på opdagelse i brætspilsbiblioteket, lån et spil og find et bord."
 kategori: "Åben aktivitet"
