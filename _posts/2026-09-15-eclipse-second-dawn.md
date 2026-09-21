@@ -10,7 +10,7 @@ teaser: "Udforsk galaksen, udvikl teknologi, design rumskibe og kæmp om kontrol
 kategori: "Strategi"
 vaert: "Jan"
 start: "10.30"
-slut: "13.30"
+slut: "14.30"
 niveau: 4
 niveau_tekst: "Strategisk krævende"
 ---
