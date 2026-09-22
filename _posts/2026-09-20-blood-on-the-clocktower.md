@@ -104,6 +104,7 @@ Erfarne spillere kan stadig få masser ud af spillet, men det er muligt at sætt
 ## Blood on the Clocktower på Viborg Brætspilsdag
 
 **Vært:** Ian  
+**Sprog** Dansk  
 **Kategori:** Social deduction  
 **Format:** Fælles scenarie  
 **Niveau:** Begyndervenligt  
