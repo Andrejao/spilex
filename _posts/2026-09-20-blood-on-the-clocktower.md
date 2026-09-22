@@ -7,7 +7,7 @@ permalink: /nyheder/blood-on-the-clocktower/
 image: "/assets/images/nyheder/blood.jpg"
 start: tidspunkt kommer
 slut: tidspunkt kommer
-teaser: "En dæmon gemmer sig blandt spillerne. Nogle forsøger at afsløre den. Andre lyver, bluffer og sender mistanken i den helt forkerte retning."
+teaser: "En dæmon gemmer sig blandt spillerne. Nogle forsøger at afsløre den. Andre lyver, bluffer og sender mistanken i den helt forkerte retning (vi spiller på dansk)."
 kategori: "Social deduction"
 vaert: "Ian"
 niveau: 1
