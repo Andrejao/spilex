@@ -44,13 +44,11 @@ Vi har et par hundrede spil til rådighed, og der kan både komme flere til og s
 Et konkret spil kan naturligvis også være udlånt til et andet bord, når du kommer.
 
 ---
-## Nyt, hypet & prisbelønnet
+## Nyt & prisbelønnet
 
 Nogle af de spil, der fylder rigtig meget i brætspilsverdenen lige nu:
 
 - Galactic Cruise
-- Timespan
-- Queen Alice
 - Drillers
 - Arcs
 - Everdell Silverfrost
@@ -84,8 +82,6 @@ Nogle af de spil, der fylder rigtig meget i brætspilsverdenen lige nu:
 - Keyflower
 - Arcs
 - Galactic Cruise
-- Timespan
-- Queen Alice
 - Drillers
 
 ---
@@ -447,7 +443,6 @@ Har du lyst til specifikt at lære spil for to, har vi også en åben aktivitet 
   <li>Pylos</li>
   <li>Quackle</li>
   <li>Quacks</li>
-  <li>Queen Alice</li>
   <li>Quoridor</li>
   <li>Qwirkle</li>
   <li>Qwixx</li>
@@ -499,7 +494,6 @@ Har du lyst til specifikt at lære spil for to, har vi også en åben aktivitet 
   <li>Through the Ages: A New Story of Civilization</li>
   <li>Ticket to Ride: Europe</li>
   <li>TIME Stories Revolution: The Hadal Project</li>
-  <li>Timespan</li>
   <li>Tokaido Duo</li>
   <li>Trio</li>
   <li>Tsuro: Phoenix Rising</li>
