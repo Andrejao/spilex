@@ -1,4 +1,3 @@
-```md
 ---
 layout: post
 title: "The Game Makers – lav verdens største brætspil"
