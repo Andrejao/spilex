@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "The Game Makers – lav verdens største brætspil"
-date: 2026-09-30
+date: 2026-09-29
 type: aktivitet
 permalink: /nyheder/the-game-makers/
 image: "/assets/images/nyheder/the-game-makers.jpg"
