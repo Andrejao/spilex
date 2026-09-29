@@ -10,7 +10,7 @@ teaser: "Prøv et helt nyt strategispil om at lave brætspil: Byg din egen spilp
 kategori: "Strategi"
 vaert: "Maria"
 start: "14.00"
-slut: "17.00"
+slut: "16.00"
 niveau: 3
 niveau_tekst: "Mellem-tung strategisk oplevelse"
 ---
