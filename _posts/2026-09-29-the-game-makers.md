@@ -9,8 +9,8 @@ image_alt: "The Game Makers-brætspillet, hvor spillerne producerer kendte bræt
 teaser: "Prøv et helt nyt strategispil om at lave brætspil: Byg din egen spilproduktion og producer mere end 300 virkelige titler."
 kategori: "Strategi"
 vaert: "Maria"
-start: ""
-slut: ""
+start: "14.00"
+slut: "17.00"
 niveau: 3
 niveau_tekst: "Mellem-tung strategisk oplevelse"
 ---
