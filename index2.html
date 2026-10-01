@@ -72,9 +72,6 @@ description: 14 timers spil, turneringer, rollespil, store strategispil, åbne b
   .vbd2 .vbd-hero h1 span { display: block; color: var(--lime); }
   .vbd2 .vbd-hero-copy { max-width: 750px; margin: 24px 0 0; color: rgba(255,255,255,.82); font-size: clamp(1.08rem, 2vw, 1.34rem); line-height: 1.55; }
   .vbd2 .vbd-hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
-  .vbd2 .vbd-hero-proof { margin-top: 30px; display: flex; flex-wrap: wrap; gap: 10px 18px; color: rgba(255,255,255,.72); font-size: .94rem; }
-  .vbd2 .vbd-hero-proof span { display: inline-flex; align-items: center; gap: 7px; }
-  .vbd2 .vbd-hero-proof span::before { content: "✓"; color: var(--lime); font-weight: 900; }
 
   .vbd2 .vbd-hero-stack { position: relative; min-height: 470px; }
   .vbd2 .vbd-ticket {
@@ -89,39 +86,51 @@ description: 14 timers spil, turneringer, rollespil, store strategispil, åbne b
   .vbd2 .vbd-ticket strong { display: block; font-size: clamp(1.3rem, 3vw, 2rem); line-height: 1.05; letter-spacing: -.035em; }
   .vbd2 .vbd-ticket p { margin: 8px 0 0; line-height: 1.45; opacity: .78; }
 
-  /* QUICK FACTS */
-  .vbd2 .vbd-factbar { margin-top: -38px; position: relative; z-index: 3; }
-  .vbd2 .vbd-facts { display: grid; grid-template-columns: repeat(4, 1fr); background: var(--white); border-radius: 24px; box-shadow: var(--shadow); border: 1px solid rgba(23,32,28,.07); overflow: hidden; }
-  .vbd2 .vbd-fact { padding: 26px 28px; border-right: 1px solid var(--line); }
-  .vbd2 .vbd-fact:last-child { border-right: 0; }
-  .vbd2 .vbd-fact b { display: block; font-size: 1.6rem; line-height: 1; letter-spacing: -.04em; color: var(--green); }
-  .vbd2 .vbd-fact span { display: block; margin-top: 7px; font-size: .92rem; color: var(--muted); }
 
-  /* EXPERIENCE / ACTIVITIES */
-  .vbd2 .vbd-showcase { background: var(--paper); }
-  .vbd2 .vbd-showcase-head { display: grid; grid-template-columns: 1fr .65fr; gap: 50px; align-items: end; }
-  .vbd2 .vbd-showcase-head .vbd-lead { margin-left: auto; }
-  .vbd2 .vbd-category-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 16px; margin-top: 48px; }
-  .vbd2 .vbd-feature {
-    position: relative; padding: 28px; border-radius: var(--radius); min-height: 245px;
-    overflow: hidden; border: 1px solid var(--line); background: var(--white);
-    display: flex; flex-direction: column; justify-content: space-between;
+
+  .vbd2 .vbd-hero-extra {
+    max-width: 720px; margin-top: 24px; padding: 18px 20px 19px;
+    border: 1px solid rgba(255,255,255,.15); border-radius: 18px;
+    background: rgba(255,255,255,.07); backdrop-filter: blur(10px);
   }
-  .vbd2 .vbd-feature::after { content: attr(data-mark); position: absolute; right: 16px; bottom: -14px; font-size: 6rem; line-height: 1; opacity: .08; font-weight: 900; }
-  .vbd2 .vbd-feature:nth-child(1) { grid-column: span 7; background: var(--navy); color: white; border-color: transparent; }
-  .vbd2 .vbd-feature:nth-child(2) { grid-column: span 5; background: var(--amber); border-color: transparent; }
-  .vbd2 .vbd-feature:nth-child(3) { grid-column: span 4; }
-  .vbd2 .vbd-feature:nth-child(4) { grid-column: span 4; background: var(--green); color: white; border-color: transparent; }
-  .vbd2 .vbd-feature:nth-child(5) { grid-column: span 4; }
-  .vbd2 .vbd-feature h3 { margin: 0; font-size: clamp(1.45rem, 2.4vw, 2rem); line-height: 1.02; letter-spacing: -.035em; }
-  .vbd2 .vbd-feature:nth-child(1) h3, .vbd2 .vbd-feature:nth-child(4) h3 { color: white; }
-  .vbd2 .vbd-feature p { margin: 13px 0 0; line-height: 1.55; opacity: .78; max-width: 650px; }
-  .vbd2 .vbd-tag { display: inline-flex; width: fit-content; padding: 7px 10px; border-radius: 999px; background: rgba(23,32,28,.08); font-size: .76rem; font-weight: 850; text-transform: uppercase; letter-spacing: .08em; }
-  .vbd2 .vbd-feature:nth-child(1) .vbd-tag, .vbd2 .vbd-feature:nth-child(4) .vbd-tag { background: rgba(255,255,255,.14); }
+  .vbd2 .vbd-hero-extra span {
+    display: block; margin-bottom: 6px; color: var(--lime); font-size: .72rem;
+    font-weight: 900; letter-spacing: .12em; text-transform: uppercase;
+  }
+  .vbd2 .vbd-hero-extra strong { display: block; color: #fff; font-size: 1.12rem; letter-spacing: -.02em; }
+  .vbd2 .vbd-hero-extra p { margin: 6px 0 0; color: rgba(255,255,255,.7); line-height: 1.5; font-size: .94rem; }
 
-  .vbd2 .vbd-activity-marquee { margin-top: 20px; display: flex; flex-wrap: wrap; gap: 9px; }
-  .vbd2 .vbd-chip { padding: 10px 13px; border: 1px solid var(--line); border-radius: 999px; background: rgba(255,255,255,.54); font-size: .9rem; font-weight: 720; }
-  .vbd2 .vbd-showcase-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+  /* THREE FEATURED ACTIVITIES */
+  .vbd2 .vbd-spotlights { background: linear-gradient(180deg, #f7f3e9 0%, #efe8da 100%); }
+  .vbd2 .vbd-spotlight-head { display: grid; grid-template-columns: 1.05fr .65fr; gap: 54px; align-items: end; }
+  .vbd2 .vbd-spotlight-head .vbd-lead { margin-left: auto; }
+  .vbd2 .vbd-spotlight-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 48px; }
+  .vbd2 .vbd-spotlight-card {
+    min-height: 500px; padding: 28px; border-radius: 30px; text-decoration: none;
+    position: relative; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between;
+    isolation: isolate; box-shadow: 0 24px 60px rgba(23,32,28,.11);
+    transition: transform .2s ease, box-shadow .2s ease;
+  }
+  .vbd2 .vbd-spotlight-card:hover { transform: translateY(-6px); box-shadow: 0 30px 70px rgba(23,32,28,.17); }
+  .vbd2 .vbd-spotlight-card::before,
+  .vbd2 .vbd-spotlight-card::after { content: ""; position: absolute; z-index: -1; border-radius: 50%; }
+  .vbd2 .vbd-spotlight-card::before { width: 330px; height: 330px; right: -150px; top: -100px; border: 1px solid currentColor; opacity: .13; }
+  .vbd2 .vbd-spotlight-card::after { width: 190px; height: 190px; right: -65px; bottom: -70px; background: currentColor; opacity: .06; }
+  .vbd2 .vbd-spotlight-ti { background: #172d31; color: #fff; }
+  .vbd2 .vbd-spotlight-clock { background: #d8efb1; color: #173226; }
+  .vbd2 .vbd-spotlight-race { background: #f4c463; color: #312818; }
+  .vbd2 .vbd-spotlight-no { font-size: .76rem; font-weight: 950; letter-spacing: .14em; opacity: .55; }
+  .vbd2 .vbd-spotlight-content { margin-top: auto; }
+  .vbd2 .vbd-spotlight-type { display: inline-flex; margin-bottom: 12px; font-size: .72rem; font-weight: 900; text-transform: uppercase; letter-spacing: .12em; opacity: .72; }
+  .vbd2 .vbd-spotlight-card h3 { margin: 0; font-size: clamp(2rem, 3.2vw, 3rem); line-height: .95; letter-spacing: -.055em; color: inherit; }
+  .vbd2 .vbd-spotlight-card p { margin: 18px 0 26px; line-height: 1.62; opacity: .78; }
+  .vbd2 .vbd-spotlight-link { display: inline-flex; font-weight: 900; border-bottom: 1px solid currentColor; padding-bottom: 3px; }
+  .vbd2 .vbd-spotlight-all {
+    margin-top: 18px; padding: 22px 24px; border-radius: 22px; background: var(--white); border: 1px solid var(--line);
+    display: flex; align-items: center; justify-content: space-between; gap: 24px;
+  }
+  .vbd2 .vbd-spotlight-all strong { display: block; font-size: 1.12rem; }
+  .vbd2 .vbd-spotlight-all span { display: block; margin-top: 5px; color: var(--muted); line-height: 1.5; }
 
   /* DAY FLOW */
   .vbd2 .vbd-flow-section { background: #172d31; color: white; }
@@ -146,14 +155,6 @@ description: 14 timers spil, turneringer, rollespil, store strategispil, åbne b
   .vbd2 .vbd-step p { margin: 8px 0 0; color: var(--muted); line-height: 1.55; font-size: .94rem; }
   .vbd2 .vbd-first-actions { margin-top: 24px; }
 
-  /* PROGRAM LINKS */
-  .vbd2 .vbd-links { background: var(--white); }
-  .vbd2 .vbd-link-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 40px; }
-  .vbd2 .vbd-link-card { min-height: 230px; padding: 28px; border: 1px solid var(--line); border-radius: var(--radius); background: #fff; display: flex; flex-direction: column; }
-  .vbd2 .vbd-link-card:nth-child(2) { background: var(--lime); }
-  .vbd2 .vbd-link-card h3 { margin: 0; font-size: 1.55rem; letter-spacing: -.03em; }
-  .vbd2 .vbd-link-card p { color: var(--muted); line-height: 1.55; }
-  .vbd2 .vbd-link-card a { margin-top: auto; font-weight: 850; text-decoration: none; color: var(--green); }
 
   /* PRACTICAL */
   .vbd2 .vbd-practical-section { background: #e8e0d1; }
@@ -177,26 +178,17 @@ description: 14 timers spil, turneringer, rollespil, store strategispil, åbne b
   .vbd2 .faq-item > p { margin: 0; padding: 0 20px 16px; color: var(--muted); line-height: 1.62; }
   .vbd2 .faq-item a { color: var(--green); }
 
-  /* FINAL CTA */
-  .vbd2 .vbd-final { background: var(--green); color: white; text-align: center; }
-  .vbd2 .vbd-final h2 { color: white; max-width: 820px; margin: 0 auto; }
-  .vbd2 .vbd-final p { max-width: 690px; margin: 18px auto 0; color: rgba(255,255,255,.76); font-size: 1.12rem; line-height: 1.6; }
-  .vbd2 .vbd-final-actions { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
 
   @media (max-width: 900px) {
-    .vbd2 .vbd-hero-grid, .vbd2 .vbd-showcase-head, .vbd2 .vbd-first-grid { grid-template-columns: 1fr; }
+    .vbd2 .vbd-hero-grid, .vbd2 .vbd-spotlight-head, .vbd2 .vbd-first-grid { grid-template-columns: 1fr; }
     .vbd2 .vbd-hero-stack { min-height: 390px; max-width: 560px; }
-    .vbd2 .vbd-facts { grid-template-columns: 1fr 1fr; }
-    .vbd2 .vbd-fact:nth-child(2) { border-right: 0; }
-    .vbd2 .vbd-fact:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
-    .vbd2 .vbd-category-grid { grid-template-columns: 1fr 1fr; }
-    .vbd2 .vbd-feature:nth-child(n) { grid-column: span 1; }
-    .vbd2 .vbd-feature:nth-child(1) { grid-column: 1 / -1; }
+    .vbd2 .vbd-spotlight-grid { grid-template-columns: 1fr; }
+    .vbd2 .vbd-spotlight-card { min-height: 380px; }
+    .vbd2 .vbd-spotlight-all { align-items: flex-start; flex-direction: column; }
     .vbd2 .vbd-flow { grid-template-columns: 1fr; gap: 22px; }
     .vbd2 .vbd-flow::before { display: none; }
     .vbd2 .vbd-flow-item { display: grid; grid-template-columns: 70px 1fr; text-align: left; gap: 16px; align-items: center; padding: 0; }
     .vbd2 .vbd-flow-dot { margin: 0; }
-    .vbd2 .vbd-link-grid { grid-template-columns: 1fr; }
     .vbd2 .faq-list { grid-template-columns: 1fr; }
   }
 
@@ -211,10 +203,9 @@ description: 14 timers spil, turneringer, rollespil, store strategispil, åbne b
     .vbd2 .vbd-ticket:nth-child(1) { right: 7%; }
     .vbd2 .vbd-ticket:nth-child(2) { top: 108px; }
     .vbd2 .vbd-ticket:nth-child(3) { top: 220px; right: 8%; }
-    .vbd2 .vbd-facts, .vbd2 .vbd-category-grid, .vbd2 .vbd-steps, .vbd2 .vbd-practical-grid { grid-template-columns: 1fr; }
-    .vbd2 .vbd-fact { border-right: 0; border-bottom: 1px solid var(--line); }
-    .vbd2 .vbd-fact:last-child { border-bottom: 0; }
-    .vbd2 .vbd-feature:nth-child(n) { grid-column: 1; }
+    .vbd2 .vbd-spotlight-card { min-height: 340px; padding: 24px; border-radius: 24px; }
+    .vbd2 .vbd-spotlight-all { padding: 20px; }
+    .vbd2 .vbd-steps, .vbd2 .vbd-practical-grid { grid-template-columns: 1fr; }
     .vbd2 .vbd-first-card { border-radius: 24px; }
   }
 </style>
@@ -231,15 +222,14 @@ description: 14 timers spil, turneringer, rollespil, store strategispil, åbne b
           lær-at-spille, åbne borde, konkurrencer, præmier og et brætspilsbibliotek med et par hundrede spil.
           Kom alene, med en ven eller med hele spillegruppen.
         </p>
+        <div class="vbd-hero-extra">
+          <span>Også på dagen</span>
+          <strong>Prototyper, Essen og Game Makers</strong>
+          <p>STEW ORLEANS!, Rumstratego, spil fra Essen, The Game Makers og andre ting, der ikke bare er endnu en omgang Matador.</p>
+        </div>
         <div class="vbd-hero-actions">
           <a class="vbd-btn vbd-btn-primary" href="https://forms.gle/TMsNkFnj3yws4MDw8">Tilmeld dig dagen →</a>
           <a class="vbd-btn vbd-btn-ghost" href="{{ '/aktiviteter.html' | relative_url }}">Se alle aktiviteter</a>
-        </div>
-        <div class="vbd-hero-proof">
-          <span>Begyndere er velkomne</span>
-          <span>Drop-in hele dagen</span>
-          <span>Bookbare specialaktiviteter</span>
-          <span>50 kr. for hele dagen</span>
         </div>
       </div>
 
@@ -263,98 +253,57 @@ description: 14 timers spil, turneringer, rollespil, store strategispil, åbne b
     </div>
   </section>
 
-  <div class="vbd-factbar">
-    <div class="vbd-wrap vbd-facts">
-      <div class="vbd-fact"><b>14 timer</b><span>Kl. 10.00–00.00</span></div>
-      <div class="vbd-fact"><b>20+ aktiviteter</b><span>Drop-in, booking og turneringer</span></div>
-      <div class="vbd-fact"><b>Et par hundrede spil</b><span>I det åbne brætspilsbibliotek</span></div>
-      <div class="vbd-fact"><b>50 kr.</b><span>Adgang til hele arrangementet</span></div>
-    </div>
-  </div>
-
-  <section class="vbd-section vbd-showcase" id="oplevelser">
+  <section class="vbd-section vbd-spotlights" id="oplevelser">
     <div class="vbd-wrap">
-      <div class="vbd-showcase-head">
+      <div class="vbd-spotlight-head">
         <div>
-          <p class="vbd-kicker">Hvad sker der egentlig?</p>
-          <h2>Mere end du kan nå.<br>Det er lidt meningen.</h2>
+          <p class="vbd-kicker">Tre smagsprøver</p>
+          <h2>Nogle dage spiller man et spil.<br>Her kan et spil blive hele dagen.</h2>
         </div>
         <p class="vbd-lead">
-          Du behøver ikke planlægge hele dagen hjemmefra. Nogle aktiviteter booker du på forhånd,
-          andre går du bare hen til. Og mellem dem er der åbne borde og et bibliotek fyldt med spil.
+          Programmet spænder meget bredere end de tre her, men de viser meget godt, hvor forskellig dagen kan være.
+          Gå efter det episke, det sociale eller det konkurrenceprægede. Eller ignorer planen fuldstændigt og find noget andet.
         </p>
       </div>
 
-      <div class="vbd-category-grid">
-        <article class="vbd-feature" data-mark="♟">
-          <div>
-            <span class="vbd-tag">De store spil</span>
-            <h3>En hel dag kan godt forsvinde i ét spil</h3>
-            <p>Twilight Imperium IV, Eclipse: Second Dawn for the Galaxy, Root, Rebirth, Luthier, Queen Alice og flere planlagte spilsessioner.</p>
+      <div class="vbd-spotlight-grid">
+        <a class="vbd-spotlight-card vbd-spotlight-ti" href="{{ '/aktiviteter.html' | relative_url }}">
+          <div class="vbd-spotlight-no">01</div>
+          <div class="vbd-spotlight-content">
+            <span class="vbd-spotlight-type">Episk strategi</span>
+            <h3>Twilight Imperium IV</h3>
+            <p>Et af dagens helt store bordprojekter. Politik, alliancer, krig, handel og en spilleoplevelse, der ikke undskylder for at fylde dagen.</p>
+            <span class="vbd-spotlight-link">Se aktivitet og booking →</span>
           </div>
-        </article>
+        </a>
 
-        <article class="vbd-feature" data-mark="⚡">
-          <div>
-            <span class="vbd-tag">Turnering & konkurrence</span>
-            <h3>KLASK, Heat og præmier</h3>
-            <p>KLASK-turnering med præmier, Heat Championship, konkurrencer og lodtrækninger i løbet af dagen.</p>
+        <a class="vbd-spotlight-card vbd-spotlight-clock" href="{{ '/aktiviteter.html' | relative_url }}">
+          <div class="vbd-spotlight-no">02</div>
+          <div class="vbd-spotlight-content">
+            <span class="vbd-spotlight-type">Social deduction</span>
+            <h3>Blood on the Clocktower</h3>
+            <p>Bluff, mistanke og samtaler, hvor næsten alle lyver om et eller andet. En helt anden spiloplevelse end den klassiske aften omkring et bræt.</p>
+            <span class="vbd-spotlight-link">Se aktivitet og booking →</span>
           </div>
-        </article>
+        </a>
 
-        <article class="vbd-feature" data-mark="?">
-          <div>
-            <span class="vbd-tag">Rollespil & social deduction</span>
-            <h3>D&D og Blood on the Clocktower</h3>
-            <p>Prøv Dungeons & Dragons for begyndere eller kast dig ud i mistanke, bluff og anklager i Blood on the Clocktower.</p>
+        <a class="vbd-spotlight-card vbd-spotlight-race" href="{{ '/aktiviteter.html' | relative_url }}">
+          <div class="vbd-spotlight-no">03</div>
+          <div class="vbd-spotlight-content">
+            <span class="vbd-spotlight-type">Turnering & tempo</span>
+            <h3>Heat Championship</h3>
+            <p>Pres bilen, ram svingene og jagt placeringerne. Et hurtigt, synligt og konkurrencepræget indslag midt i en dag med meget mere end tunge strategispil.</p>
+            <span class="vbd-spotlight-link">Se aktivitet og booking →</span>
           </div>
-        </article>
-
-        <article class="vbd-feature" data-mark="∞">
-          <div>
-            <span class="vbd-tag">Bare duk op</span>
-            <h3>Åbne borde hele dagen</h3>
-            <p>Lån et spil, find et bord, spil solo, prøv spil for to eller spørg en frivillig, hvad der passer til jer.</p>
-          </div>
-        </article>
-
-        <article class="vbd-feature" data-mark="★">
-          <div>
-            <span class="vbd-tag">Nyt & anderledes</span>
-            <h3>Prototyper, Essen og Game Makers</h3>
-            <p>STEW ORLEANS!, Rumstratego, spil fra Essen, The Game Makers og andre ting, der ikke bare er endnu en omgang Matador.</p>
-          </div>
-        </article>
+        </a>
       </div>
 
-      <div class="vbd-activity-marquee" aria-label="Udvalg af aktiviteter">
-        <span class="vbd-chip">Twilight Imperium IV</span>
-        <span class="vbd-chip">Heat Championship</span>
-        <span class="vbd-chip">Dungeons & Dragons</span>
-        <span class="vbd-chip">Blood on the Clocktower</span>
-        <span class="vbd-chip">Eclipse</span>
-        <span class="vbd-chip">KLASK</span>
-        <span class="vbd-chip">Rebirth</span>
-        <span class="vbd-chip">Dead of Winter</span>
-        <span class="vbd-chip">Wyrmspan</span>
-        <span class="vbd-chip">Root</span>
-        <span class="vbd-chip">Luthier</span>
-        <span class="vbd-chip">Ave Caesar</span>
-        <span class="vbd-chip">Viking Raiders</span>
-        <span class="vbd-chip">The Gang</span>
-        <span class="vbd-chip">Horrified</span>
-        <span class="vbd-chip">Queen Alice</span>
-        <span class="vbd-chip">The Game Makers</span>
-        <span class="vbd-chip">STEW ORLEANS!</span>
-        <span class="vbd-chip">Rumstratego</span>
-        <span class="vbd-chip">Solo-spil</span>
-        <span class="vbd-chip">Spil for to</span>
-        <span class="vbd-chip">Åbent bibliotek</span>
-      </div>
-
-      <div class="vbd-showcase-actions">
-        <a class="vbd-btn vbd-btn-dark" href="{{ '/aktiviteter.html' | relative_url }}">Se hele aktivitetsoversigten →</a>
-        <a class="vbd-btn vbd-btn-light" href="{{ '/aktiviteter.html' | relative_url }}#tilmelding">Se aktiviteter med booking</a>
+      <div class="vbd-spotlight-all">
+        <div>
+          <strong>Og det er kun tre af dem.</strong>
+          <span>Der er også D&D, KLASK, Eclipse, Root, Rebirth, åbne borde, bibliotek, solo-spil, spil for to, Game Makers og meget mere.</span>
+        </div>
+        <a class="vbd-btn vbd-btn-dark" href="{{ '/aktiviteter.html' | relative_url }}">Se alle aktiviteter →</a>
       </div>
     </div>
   </section>
@@ -411,32 +360,6 @@ description: 14 timers spil, turneringer, rollespil, store strategispil, åbne b
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="vbd-section vbd-links">
-    <div class="vbd-wrap">
-      <p class="vbd-kicker">Planlæg så meget eller lidt du vil</p>
-      <h2>Tre veje ind i dagen.</h2>
-      <p class="vbd-lead">Vil du bare dukke op, lægge en minutiøs slagplan eller sikre dig en bestemt plads? Alle tre dele virker.</p>
-
-      <div class="vbd-link-grid">
-        <article class="vbd-link-card">
-          <h3>Dagens program</h3>
-          <p>Se åbning, lodtrækninger, sluttider og dagens overordnede rytme.</p>
-          <a href="{{ '/program.html' | relative_url }}">Se programmet →</a>
-        </article>
-        <article class="vbd-link-card">
-          <h3>Alle aktiviteter</h3>
-          <p>Se hele udvalget af spil, rollespil, turneringer, drop-in og særlige aktiviteter.</p>
-          <a href="{{ '/aktiviteter.html' | relative_url }}">Se aktiviteter →</a>
-        </article>
-        <article class="vbd-link-card">
-          <h3>Book en plads</h3>
-          <p>Find turneringer og planlagte spilsessioner med begrænsede pladser.</p>
-          <a href="{{ '/aktiviteter.html' | relative_url }}#tilmelding">Se aktiviteter med tilmelding →</a>
-        </article>
       </div>
     </div>
   </section>
@@ -868,18 +791,6 @@ description: 14 timers spil, turneringer, rollespil, store strategispil, åbne b
   </div>
 
 
-    </div>
-  </section>
-
-  <section class="vbd-section vbd-final">
-    <div class="vbd-wrap">
-      <p class="vbd-kicker" style="color:#d8efb1; justify-content:center;">14. november · Viborg</p>
-      <h2>Du behøver ikke kunne noget på forhånd. Du skal bare have lyst til at spille.</h2>
-      <p>Kom alene, tag en ven med eller saml hele gruppen. Vi sørger for rammerne, spillene, aktiviteterne og folk, der kan hjælpe dig i gang.</p>
-      <div class="vbd-final-actions">
-        <a class="vbd-btn vbd-btn-primary" href="https://forms.gle/TMsNkFnj3yws4MDw8">Tilmeld dig Viborg Brætspilsdag →</a>
-        <a class="vbd-btn vbd-btn-ghost" href="{{ '/aktiviteter.html' | relative_url }}">Se alle aktiviteter</a>
-      </div>
     </div>
   </section>
 
