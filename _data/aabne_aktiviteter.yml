@@ -1,4 +1,4 @@
-  - tid: "10.30–14.00"
+- tid: "10.30–14.00"
   titel: "Lær solo-brætspil"
   vaert: "Thomas / The Lone Boardgamer"
   beskrivelse: "Oplev solobrætspil med hjælp fra Thomas. Der vil være forskellige spil at vælge mellem, og du behøver ikke kende dem på forhånd."
@@ -29,7 +29,6 @@
   image: "/assets/images/nyheder/space-skirmish.jpg"
   image_alt: "Spiludvikling med prototypekomponenter"
   artikel: "/nyheder/space-skirmish/"
-
 
 - tid: "Hele dagen"
   titel: "Åbent brætspilsbibliotek"
