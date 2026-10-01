@@ -58,12 +58,16 @@
   <header class="site-header">
     <div class="container nav">
 
-      <a
-        class="logo"
-        href="{{ '/' | relative_url }}"
-      >
-        VIBORG BRÆTSPILSDAG
-      </a>
+     <a
+  class="logo"
+  href="{{ '/' | relative_url }}"
+  aria-label="Viborg Brætspilsdag"
+>
+  <img
+    src="{{ '/assets/images/Viborg-br-Logo.png' | relative_url }}"
+    alt="Viborg Brætspilsdag"
+  >
+</a>
 
      <nav>
   <a href="{{ '/program.html' | relative_url }}">
