@@ -23,11 +23,11 @@
   artikel: "/nyheder/peter-langkjaer-moeller/"
 
 - tid: "14.00–16.00"
-  titel: "Klar til Rumstratego?"
-  vaert: "Krester"
-  beskrivelse: "Prøv et brætspil under udvikling og oplev spiludvikling på tæt hold. Mere information følger."
+  titel: "Space Skirmish - prøv en tidlig prototype"
+  vaert: "Kresten Kjær Sørensen"
+  beskrivelse: "Prøv en tidlig prototype af det taktiske duelspil Space Skirmish, hvor to hold robotter kæmper om at ødelægge modstanderens landingsfartøj."
   image: "/assets/images/nyheder/space-skirmish.jpg"
-  image_alt: "Spiludvikling med prototypekomponenter"
+  image_alt: "Prototype af Space Skirmish med robotter på et sekskantet spillebræt"
   artikel: "/nyheder/space-skirmish/"
 
 - tid: "Hele dagen"
