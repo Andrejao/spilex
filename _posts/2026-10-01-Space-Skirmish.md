@@ -23,7 +23,7 @@ Problemet er bare, at du ikke er alene.
 
 Din modstander har landet sit eget hold, og nu gælder det om at ødelægge deres landingsfartøj, før de ødelægger dit.
 
-Space Skirmish er et nyt strategispil for to spillere, som stadig er under udvikling. På Viborg Brætspilsdag kan du prøve en tidlig prototype og samtidig være med til at forme spillet.
+Space Skirmish er et nyt strategispil for to spillere. På Viborg Brætspilsdag kan du prøve en tidlig prototype og samtidig være med til at forme spillet.
 
 ## Stratego - bare ude i rummet
 
@@ -49,7 +49,7 @@ Dine idéer og erfaringer fra spillet kan altså ende med at få betydning for d
 
 ## Hvordan føles det at spille?
 
-Space Skirmish er et kort, taktisk duellspil.
+Space Skirmish er et kort, taktisk duelspil.
 
 Du skal læse modstanderen, udnytte dine forskellige robotters egenskaber og finde en vej gennem forsvaret, samtidig med at dit eget landingsfartøj skal beskyttes.
 
@@ -86,3 +86,11 @@ Du behøver ikke kende spillet på forhånd. Kresten introducerer reglerne og hj
 Kom forbi i tidsrummet, prøv Space Skirmish og hjælp måske med at gøre næste version endnu bedre.
 
 [**Tilmeld dig Viborg Brætspilsdag →**]({{ site.signup_url }})
+
+**Se billeder af spillet her:**
+<img width="356" height="453" alt="skirm2" src="https://github.com/user-attachments/assets/bd1fa763-c698-40a4-8377-4d9fbd348291" />
+<img width="619" height="424" alt="Skirm1" src="https://github.com/user-attachments/assets/c4dfdb0b-e382-4e9f-abd1-e2ffc4c6e106" />
+<img width="627" height="328" alt="skirm3" src="https://github.com/user-attachments/assets/3571aa43-a2ea-49bd-b63a-29cac2de6264" />
+
+
+
