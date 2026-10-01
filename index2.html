@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Viborg Brætspilsdag 2026
-description: 14 timers spil, turneringer, rollespil, store strategispil, åbne borde og et brætspilsbibliotek med et par hundrede spil i Viborg.
+description: En afslappet dag med spil, hygge, fællesskab og masser af forskellige aktiviteter i Viborg.
 ---
 
 <style>
@@ -102,35 +102,38 @@ description: 14 timers spil, turneringer, rollespil, store strategispil, åbne b
 
   /* THREE FEATURED ACTIVITIES */
   .vbd2 .vbd-spotlights { background: linear-gradient(180deg, #f7f3e9 0%, #efe8da 100%); }
-  .vbd2 .vbd-spotlight-head { display: grid; grid-template-columns: 1.05fr .65fr; gap: 54px; align-items: end; }
-  .vbd2 .vbd-spotlight-head .vbd-lead { margin-left: auto; }
-  .vbd2 .vbd-spotlight-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 48px; }
+  .vbd2 .vbd-spotlight-head { max-width: 760px; }
+  .vbd2 .vbd-spotlight-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 34px; }
   .vbd2 .vbd-spotlight-card {
-    min-height: 500px; padding: 28px; border-radius: 30px; text-decoration: none;
-    position: relative; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between;
-    isolation: isolate; box-shadow: 0 24px 60px rgba(23,32,28,.11);
+    min-height: 520px; border-radius: 30px; text-decoration: none; overflow: hidden;
+    display: flex; flex-direction: column; box-shadow: 0 24px 60px rgba(23,32,28,.11);
     transition: transform .2s ease, box-shadow .2s ease;
   }
   .vbd2 .vbd-spotlight-card:hover { transform: translateY(-6px); box-shadow: 0 30px 70px rgba(23,32,28,.17); }
-  .vbd2 .vbd-spotlight-card::before,
-  .vbd2 .vbd-spotlight-card::after { content: ""; position: absolute; z-index: -1; border-radius: 50%; }
-  .vbd2 .vbd-spotlight-card::before { width: 330px; height: 330px; right: -150px; top: -100px; border: 1px solid currentColor; opacity: .13; }
-  .vbd2 .vbd-spotlight-card::after { width: 190px; height: 190px; right: -65px; bottom: -70px; background: currentColor; opacity: .06; }
+  .vbd2 .vbd-spotlight-image { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; display: block; }
+  .vbd2 .vbd-spotlight-content { padding: 26px 28px 28px; display: flex; flex-direction: column; flex: 1; }
   .vbd2 .vbd-spotlight-ti { background: #172d31; color: #fff; }
   .vbd2 .vbd-spotlight-clock { background: #d8efb1; color: #173226; }
   .vbd2 .vbd-spotlight-race { background: #f4c463; color: #312818; }
-  .vbd2 .vbd-spotlight-no { font-size: .76rem; font-weight: 950; letter-spacing: .14em; opacity: .55; }
-  .vbd2 .vbd-spotlight-content { margin-top: auto; }
   .vbd2 .vbd-spotlight-type { display: inline-flex; margin-bottom: 12px; font-size: .72rem; font-weight: 900; text-transform: uppercase; letter-spacing: .12em; opacity: .72; }
   .vbd2 .vbd-spotlight-card h3 { margin: 0; font-size: clamp(2rem, 3.2vw, 3rem); line-height: .95; letter-spacing: -.055em; color: inherit; }
   .vbd2 .vbd-spotlight-card p { margin: 18px 0 26px; line-height: 1.62; opacity: .78; }
-  .vbd2 .vbd-spotlight-link { display: inline-flex; font-weight: 900; border-bottom: 1px solid currentColor; padding-bottom: 3px; }
+  .vbd2 .vbd-spotlight-link { display: inline-flex; align-self: flex-start; margin-top: auto; font-weight: 900; border-bottom: 1px solid currentColor; padding-bottom: 3px; }
   .vbd2 .vbd-spotlight-all {
     margin-top: 18px; padding: 22px 24px; border-radius: 22px; background: var(--white); border: 1px solid var(--line);
     display: flex; align-items: center; justify-content: space-between; gap: 24px;
   }
   .vbd2 .vbd-spotlight-all strong { display: block; font-size: 1.12rem; }
   .vbd2 .vbd-spotlight-all span { display: block; margin-top: 5px; color: var(--muted); line-height: 1.5; }
+
+  .vbd2 .vbd-people-photo {
+    background: var(--paper-2); padding: 0 0 92px;
+  }
+  .vbd2 .vbd-people-photo-frame {
+    min-height: 410px; border-radius: 34px; overflow: hidden; box-shadow: var(--shadow);
+    background: linear-gradient(90deg, rgba(23,32,28,.08), rgba(23,32,28,0)),
+                url("{{ '/assets/images/stemning/stemning1.jpg' | relative_url }}") center 46% / cover no-repeat;
+  }
 
   /* DAY FLOW */
   .vbd2 .vbd-flow-section { background: #172d31; color: white; }
@@ -143,6 +146,7 @@ description: 14 timers spil, turneringer, rollespil, store strategispil, åbne b
   .vbd2 .vbd-flow-dot { width: 68px; height: 68px; margin: 0 auto 18px; border-radius: 50%; display: grid; place-items: center; background: var(--lime); color: #173226; font-weight: 900; box-shadow: 0 0 0 8px #172d31; position: relative; z-index: 1; }
   .vbd2 .vbd-flow-item h3 { color: white; margin: 0; font-size: 1.05rem; }
   .vbd2 .vbd-flow-item p { margin: 7px 0 0; color: rgba(255,255,255,.62); font-size: .9rem; line-height: 1.45; }
+  .vbd2 .vbd-program-actions { margin-top: 34px; display: flex; justify-content: center; }
 
   /* FIRST TIME */
   .vbd2 .vbd-first { background: linear-gradient(180deg, #f7f3e9 0%, #efe8da 100%); }
@@ -203,7 +207,9 @@ description: 14 timers spil, turneringer, rollespil, store strategispil, åbne b
     .vbd2 .vbd-ticket:nth-child(1) { right: 7%; }
     .vbd2 .vbd-ticket:nth-child(2) { top: 108px; }
     .vbd2 .vbd-ticket:nth-child(3) { top: 220px; right: 8%; }
-    .vbd2 .vbd-spotlight-card { min-height: 340px; padding: 24px; border-radius: 24px; }
+    .vbd2 .vbd-spotlight-card { min-height: 0; border-radius: 24px; }
+    .vbd2 .vbd-spotlight-content { padding: 22px 22px 24px; }
+    .vbd2 .vbd-people-photo-frame { min-height: 280px; border-radius: 24px; }
     .vbd2 .vbd-spotlight-all { padding: 20px; }
     .vbd2 .vbd-steps, .vbd2 .vbd-practical-grid { grid-template-columns: 1fr; }
     .vbd2 .vbd-first-card { border-radius: 24px; }
@@ -216,10 +222,10 @@ description: 14 timers spil, turneringer, rollespil, store strategispil, åbne b
     <div class="vbd-wrap vbd-hero-grid">
       <div>
         <p class="vbd-kicker">14. november 2026 · Viborg</p>
-        <h1>Én dag.<span>Virkelig meget spil.</span></h1>
+        <h1>Viborg Brætspilsdag 2026</h1>
         <p class="vbd-hero-copy">
-          Viborg Brætspilsdag er 14 timer med store strategispil, turneringer, rollespil, social deduction,
-          lær-at-spille, åbne borde, konkurrencer, præmier og et brætspilsbibliotek med et par hundrede spil.
+          En afslappet dag med massevis af brætspil, rollespil, konkurrencer, lær-at-spille,
+          åbne borde, hygge og fællesskab. Book noget på forhånd, eller tag dagen, som den kommer.
           Kom alene, med en ven eller med hele spillegruppen.
         </p>
         <div class="vbd-hero-extra">
@@ -256,61 +262,60 @@ description: 14 timers spil, turneringer, rollespil, store strategispil, åbne b
   <section class="vbd-section vbd-spotlights" id="oplevelser">
     <div class="vbd-wrap">
       <div class="vbd-spotlight-head">
-        <div>
-          <p class="vbd-kicker">Tre smagsprøver</p>
-          <h2>Nogle dage spiller man et spil.<br>Her kan et spil blive hele dagen.</h2>
-        </div>
-        <p class="vbd-lead">
-          Programmet spænder meget bredere end de tre her, men de viser meget godt, hvor forskellig dagen kan være.
-          Gå efter det episke, det sociale eller det konkurrenceprægede. Eller ignorer planen fuldstændigt og find noget andet.
-        </p>
+        <h2>Aktiviteter du kan prøve</h2>
       </div>
 
       <div class="vbd-spotlight-grid">
-        <a class="vbd-spotlight-card vbd-spotlight-ti" href="{{ '/aktiviteter.html' | relative_url }}">
-          <div class="vbd-spotlight-no">01</div>
+        <a class="vbd-spotlight-card vbd-spotlight-ti" href="{{ '/nyheder/twilight-imperium-iv/' | relative_url }}">
+          <img class="vbd-spotlight-image" src="{{ '/assets/images/nyheder/twilight-imperium-iv.jpg' | relative_url }}" alt="Twilight Imperium IV">
           <div class="vbd-spotlight-content">
             <span class="vbd-spotlight-type">Episk strategi</span>
             <h3>Twilight Imperium IV</h3>
-            <p>Et af dagens helt store bordprojekter. Politik, alliancer, krig, handel og en spilleoplevelse, der ikke undskylder for at fylde dagen.</p>
-            <span class="vbd-spotlight-link">Se aktivitet og booking →</span>
+            <p>Politik, alliancer, krig og handel i et af dagens helt store bordprojekter.</p>
+            <span class="vbd-spotlight-link">Læs mere →</span>
           </div>
         </a>
 
-        <a class="vbd-spotlight-card vbd-spotlight-clock" href="{{ '/aktiviteter.html' | relative_url }}">
-          <div class="vbd-spotlight-no">02</div>
+        <a class="vbd-spotlight-card vbd-spotlight-clock" href="{{ '/nyheder/blood-on-the-clocktower/' | relative_url }}">
+          <img class="vbd-spotlight-image" src="{{ '/assets/images/nyheder/blood.jpg' | relative_url }}" alt="Blood on the Clocktower">
           <div class="vbd-spotlight-content">
             <span class="vbd-spotlight-type">Social deduction</span>
             <h3>Blood on the Clocktower</h3>
-            <p>Bluff, mistanke og samtaler, hvor næsten alle lyver om et eller andet. En helt anden spiloplevelse end den klassiske aften omkring et bræt.</p>
-            <span class="vbd-spotlight-link">Se aktivitet og booking →</span>
+            <p>Bluff, mistanke og samtaler, hvor næsten alle lyver om et eller andet.</p>
+            <span class="vbd-spotlight-link">Læs mere →</span>
           </div>
         </a>
 
-        <a class="vbd-spotlight-card vbd-spotlight-race" href="{{ '/aktiviteter.html' | relative_url }}">
-          <div class="vbd-spotlight-no">03</div>
+        <a class="vbd-spotlight-card vbd-spotlight-race" href="{{ '/nyheder/heat-championship/' | relative_url }}">
+          <img class="vbd-spotlight-image" src="{{ '/assets/images/nyheder/heat-championship.jpg' | relative_url }}" alt="Heat Championship">
           <div class="vbd-spotlight-content">
             <span class="vbd-spotlight-type">Turnering & tempo</span>
             <h3>Heat Championship</h3>
-            <p>Pres bilen, ram svingene og jagt placeringerne. Et hurtigt, synligt og konkurrencepræget indslag midt i en dag med meget mere end tunge strategispil.</p>
-            <span class="vbd-spotlight-link">Se aktivitet og booking →</span>
+            <p>Pres bilen, ram svingene og jagt placeringerne i dagens Heat-turnering.</p>
+            <span class="vbd-spotlight-link">Læs mere →</span>
           </div>
         </a>
       </div>
 
       <div class="vbd-spotlight-all">
         <div>
-          <strong>Og det er kun tre af dem.</strong>
-          <span>Der er også D&D, KLASK, Eclipse, Root, Rebirth, åbne borde, bibliotek, solo-spil, spil for to, Game Makers og meget mere.</span>
+          <strong>Der er meget mere på programmet.</strong>
+          <span>Se alle aktiviteter, åbne borde, turneringer, rollespil og bookbare spil.</span>
         </div>
         <a class="vbd-btn vbd-btn-dark" href="{{ '/aktiviteter.html' | relative_url }}">Se alle aktiviteter →</a>
       </div>
     </div>
   </section>
 
+  <section class="vbd-people-photo" aria-label="Stemning fra brætspil">
+    <div class="vbd-wrap">
+      <div class="vbd-people-photo-frame" role="img" aria-label="Mennesker samlet omkring brætspil"></div>
+    </div>
+  </section>
+
   <section class="vbd-section vbd-flow-section" id="program">
     <div class="vbd-wrap">
-      <p class="vbd-kicker">Dagens rytme</p>
+      <p class="vbd-kicker">Program</p>
       <h2>Fra første brik til sidste spil.</h2>
       <p class="vbd-lead">Kom i et par timer eller bliv hængende hele dagen. De åbne borde og biblioteket gør, at du altid kan finde noget mellem dine bookede aktiviteter.</p>
 
@@ -320,6 +325,9 @@ description: 14 timers spil, turneringer, rollespil, store strategispil, åbne b
         <div class="vbd-flow-item"><div class="vbd-flow-dot">Dagen</div><div><h3>Spil, konkurrencer & præmier</h3><p>Bookede sessioner, åbne borde, bibliotek og lodtrækninger.</p></div></div>
         <div class="vbd-flow-item"><div class="vbd-flow-dot">21.30</div><div><h3>Planlagte aktiviteter slutter</h3><p>Men de frie borde og biblioteket er ikke færdige.</p></div></div>
         <div class="vbd-flow-item"><div class="vbd-flow-dot">00.00</div><div><h3>Tak for i dag</h3><p>Biblioteket lukker 23.30. Arrangementet slutter ved midnat.</p></div></div>
+      </div>
+      <div class="vbd-program-actions">
+        <a class="vbd-btn vbd-btn-primary" href="{{ '/program.html' | relative_url }}">Se hele programmet →</a>
       </div>
     </div>
   </section>
