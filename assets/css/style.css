@@ -437,7 +437,7 @@ a {
       rgba(20, 43, 43, 0.35),
       rgba(20, 43, 43, 0.35)
     ),
-    url("/assets/images/stemning/foerste-gang.jpg");
+    url("/assets/images/stemning/stemning2.jpg");
 
   background-size: cover;
   background-position: center;
@@ -2391,7 +2391,7 @@ a.logo-card:hover {
       rgba(16,44,43,0.48) 75%,
       rgba(16,44,43,0.30) 100%
     ),
-    url("/assets/images/stemning/foerste-gang.jpg")
+    url("/assets/images/stemning/stemning2.jpg")
     center 43% / cover no-repeat;
 }
 
