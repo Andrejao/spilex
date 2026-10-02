@@ -2904,3 +2904,578 @@ a.logo-card:hover {
   }
 
 }
+
+/* =========================================================
+   FØRSTE GANG – NY SIDE
+   ========================================================= */
+
+
+/* HERO */
+
+.first-visit-hero {
+  position: relative;
+  min-height: 510px;
+  overflow: hidden;
+  color: white;
+
+  background:
+    linear-gradient(
+      105deg,
+      rgba(16,44,43,0.98) 0%,
+      rgba(16,44,43,0.96) 30%,
+      rgba(16,44,43,0.83) 51%,
+      rgba(16,44,43,0.42) 76%,
+      rgba(16,44,43,0.24) 100%
+    ),
+    url("/assets/images/stemning/stemning4.jpg")
+    center 45% / cover no-repeat;
+}
+
+
+.first-visit-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background:
+    radial-gradient(
+      circle at 83% 20%,
+      rgba(241,107,58,0.17),
+      transparent 28%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(0,0,0,0),
+      rgba(0,0,0,0.10)
+    );
+
+  pointer-events: none;
+}
+
+
+.first-visit-hero .container {
+  position: relative;
+  z-index: 2;
+
+  padding-top: 100px;
+  padding-bottom: 125px;
+}
+
+
+.first-visit-hero-content {
+  max-width: 720px;
+}
+
+
+.first-visit-hero h1 {
+  max-width: 760px;
+
+  margin: 0;
+
+  color: white;
+
+  font-size: clamp(3.6rem, 8vw, 6.5rem);
+  line-height: 0.92;
+  letter-spacing: -0.06em;
+}
+
+
+.first-visit-hero-text {
+  max-width: 680px;
+
+  margin: 28px 0 0;
+
+  color: rgba(255,255,255,0.84);
+
+  font-size: clamp(1.06rem, 2vw, 1.22rem);
+  line-height: 1.7;
+}
+
+
+.first-visit-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 12px;
+
+  margin-top: 34px;
+}
+
+
+/* HURTIGE VEJE */
+
+.first-visit-jump-wrap {
+  position: relative;
+  z-index: 5;
+
+  margin-top: -44px;
+}
+
+
+.first-visit-jump {
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 16px;
+}
+
+
+.first-visit-jump-card {
+  min-height: 116px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding: 23px 24px;
+
+  background: rgba(255,255,255,0.98);
+
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+
+  box-shadow:
+    0 18px 50px rgba(22,35,31,0.10);
+
+  text-decoration: none;
+
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease,
+    border-color 0.18s ease;
+}
+
+
+.first-visit-jump-card:hover {
+  transform: translateY(-4px);
+
+  border-color: rgba(241,107,58,0.30);
+
+  box-shadow:
+    0 24px 60px rgba(22,35,31,0.14);
+}
+
+
+.first-visit-jump-card strong {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: var(--dark);
+
+  font-size: 1.06rem;
+}
+
+
+.first-visit-jump-card span {
+  color: var(--muted);
+
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
+
+
+.first-visit-jump-arrow {
+  width: 40px;
+  height: 40px;
+
+  flex: 0 0 40px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+
+  background: var(--surface-soft);
+
+  color: var(--dark) !important;
+
+  font-weight: 900;
+}
+
+
+/* INTRO */
+
+.first-visit-intro {
+  padding-top: 120px;
+}
+
+
+.first-visit-intro-grid {
+  display: grid;
+
+  grid-template-columns: 0.9fr 1.1fr;
+
+  gap: 80px;
+
+  align-items: start;
+}
+
+
+.first-visit-intro-grid h2 {
+  margin: 0;
+
+  font-size: clamp(2.4rem, 5vw, 4.2rem);
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+
+
+.first-visit-intro-copy {
+  max-width: 680px;
+
+  font-size: 1.08rem;
+}
+
+
+.first-visit-intro-copy p:first-child {
+  margin-top: 0;
+}
+
+
+/* FØR DAGEN */
+
+.first-visit-feature-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 20px;
+}
+
+
+.first-visit-feature-card {
+  position: relative;
+
+  padding: 34px;
+
+  background: var(--bg);
+
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+
+  box-shadow:
+    0 12px 35px rgba(22,35,31,0.05);
+}
+
+
+.first-visit-number {
+  width: 42px;
+  height: 42px;
+
+  display: grid;
+  place-items: center;
+
+  margin-bottom: 22px;
+
+  border-radius: 50%;
+
+  background: var(--accent);
+  color: white;
+
+  font-size: 0.95rem;
+  font-weight: 900;
+}
+
+
+.first-visit-feature-card h3,
+.first-visit-day-card h3 {
+  margin: 0 0 14px;
+
+  color: var(--dark);
+
+  font-size: 1.4rem;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+}
+
+
+.first-visit-feature-card p,
+.first-visit-day-card p {
+  color: var(--muted);
+}
+
+
+.first-visit-link {
+  display: inline-block;
+
+  margin-top: 10px;
+
+  color: var(--dark);
+
+  font-weight: 800;
+  text-decoration: none;
+}
+
+
+.first-visit-link:hover {
+  color: var(--accent-dark);
+}
+
+
+/* PÅ DAGEN */
+
+.first-visit-day {
+  background: var(--surface-soft);
+}
+
+
+.first-visit-day-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 18px;
+}
+
+
+.first-visit-day-card {
+  padding: 30px;
+
+  background: white;
+
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+
+.first-visit-arrival {
+  grid-column: 1 / -1;
+
+  display: grid;
+
+  grid-template-columns: auto 1fr;
+
+  gap: 24px;
+
+  padding: 34px;
+}
+
+
+.first-visit-arrival .first-visit-number {
+  margin: 0;
+}
+
+
+.first-visit-address {
+  display: flex;
+  flex-direction: column;
+
+  max-width: 420px;
+
+  margin: 22px 0;
+
+  padding: 20px 22px;
+
+  background: var(--bg);
+
+  border-left: 4px solid var(--accent);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+
+
+.first-visit-address strong {
+  margin: 4px 0;
+
+  color: var(--dark);
+
+  font-size: 1.15rem;
+}
+
+
+.first-visit-address span {
+  color: var(--muted);
+}
+
+
+/* KORT FORTALT */
+
+.first-visit-reassurance {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 14px;
+}
+
+
+.first-visit-reassurance > div {
+  padding: 25px 26px;
+
+  background: var(--bg);
+
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+}
+
+
+.first-visit-reassurance strong,
+.first-visit-reassurance span {
+  display: block;
+}
+
+
+.first-visit-reassurance strong {
+  margin-bottom: 7px;
+
+  color: var(--dark);
+}
+
+
+.first-visit-reassurance span {
+  color: var(--muted);
+
+  font-size: 0.95rem;
+}
+
+
+/* CTA */
+
+.first-visit-cta-section {
+  background: var(--bg);
+}
+
+
+.first-visit-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 60px;
+
+  padding: 48px 52px;
+
+  border-radius: var(--radius-lg);
+
+  color: white;
+
+  background:
+    radial-gradient(
+      circle at 85% 15%,
+      rgba(241,107,58,0.22),
+      transparent 28%
+    ),
+    linear-gradient(
+      135deg,
+      var(--dark),
+      var(--dark-2)
+    );
+}
+
+
+.first-visit-cta h2 {
+  max-width: 720px;
+
+  margin: 0 0 12px;
+
+  color: white;
+
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1;
+}
+
+
+.first-visit-cta p:not(.eyebrow) {
+  margin: 0;
+
+  color: rgba(255,255,255,0.72);
+}
+
+
+/* TABLET */
+
+@media (max-width: 900px) {
+
+  .first-visit-jump {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .first-visit-jump-card:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .first-visit-intro-grid {
+    grid-template-columns: 1fr;
+
+    gap: 30px;
+  }
+
+}
+
+
+/* MOBIL */
+
+@media (max-width: 760px) {
+
+  .first-visit-hero {
+    min-height: auto;
+
+    background:
+      linear-gradient(
+        rgba(16,44,43,0.76),
+        rgba(16,44,43,0.66)
+      ),
+      url("/assets/images/stemning/stemning4.jpg")
+      center / cover no-repeat;
+  }
+
+
+  .first-visit-hero .container {
+    padding-top: 70px;
+    padding-bottom: 100px;
+  }
+
+
+  .first-visit-hero h1 {
+    font-size: clamp(3.4rem, 17vw, 5rem);
+  }
+
+
+  .first-visit-jump-wrap {
+    margin-top: -30px;
+  }
+
+
+  .first-visit-jump {
+    grid-template-columns: 1fr;
+  }
+
+
+  .first-visit-jump-card:last-child {
+    grid-column: auto;
+  }
+
+
+  .first-visit-jump-card {
+    min-height: 0;
+
+    padding: 19px 20px;
+  }
+
+
+  .first-visit-feature-grid,
+  .first-visit-day-grid,
+  .first-visit-reassurance {
+    grid-template-columns: 1fr;
+  }
+
+
+  .first-visit-arrival {
+    grid-column: auto;
+    grid-template-columns: 1fr;
+  }
+
+
+  .first-visit-cta {
+    align-items: flex-start;
+    flex-direction: column;
+
+    gap: 28px;
+
+    padding: 34px 28px;
+  }
+
+}
