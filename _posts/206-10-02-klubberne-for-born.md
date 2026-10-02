@@ -11,33 +11,20 @@ kategori: "Åben aktivitet"
 tid: "En del af dagen"
 ---
 
-Vi er rigtig glade for, at **Klubberne i Viborg** bliver en del af Viborg Brætspilsdag.
+Vi er rigtig glade for, at **Klubberne i Viborg** kommer og deltager til Viborg Brætspilsdag.
 
-I tæt samarbejde med os laver de aktiviteter for børn og unge en del af dagen. Der bliver blandt andet mulighed for **rollespil, figurmaling og andre spilaktiviteter**.
-
-Nogle aktiviteter bliver åbne, så man bare kan kigge forbi, mens andre får faste tidspunkter eller et begrænset antal pladser.
-
-## Godt at vide
-
-Viborg Brætspilsdag er **primært et arrangement for voksne**.
-
-Deltagere under 15 år er meget velkomne, men skal **være i følgeskab med en voksen under hele arrangementet**.
-
-Den voksne har fortsat ansvaret for den unge deltager, også når vedkommende deltager i aktiviteter hos Klubberne.
-
-Klubbernes aktiviteter er derfor ikke et særskilt pasnings- eller børnetilbud, men en del af dagens program for de børn og unge, der deltager i Viborg Brætspilsdag sammen med en voksen.
-
-## Aktiviteter
-
-Der arbejdes blandt andet med:
+De laver særskilte aktiviteter for børn og unge en del af dagen, blandt andet:
 
 - rollespil
 - figurmaling
 - spil og andre aktiviteter
 - åbne aktiviteter, hvor man kan kigge forbi
-- aktiviteter med faste tidspunkter eller begrænsede pladser
+- aktiviteter med faste tidspunkter og begrænsede pladser
 
-Der kommer mere information om det konkrete program, aldersgrupper, tidspunkter og eventuel tilmelding, når det hele er på plads.
+Der kommer mere information om det konkrete program, aldersgrupper, tidspunkter og eventuel tilmelding.
+
+## Godt at vide
+Viborg Brætspilsdag er målrettet voksne, og deltagere under 15 år skal fortsat under hele arrangementet være i følgeskab med en voksen, der har ansvaret for den unge deltager, også når vedkommende deltager i aktiviteter hos Klubberne. 
 
 ## Praktisk
 
