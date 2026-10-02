@@ -8,161 +8,253 @@ description: Se aktiviteter med og uden tilmelding til Viborg Brætspilsdag 2026
   .activities-page {
     --activity-green: #244c3a;
     --activity-green-dark: #173328;
+    --activity-lime: #d8efb1;
     --activity-cream: #f6f1e8;
+    --activity-soft: #faf8f3;
     --activity-border: rgba(23, 51, 40, 0.12);
     --activity-shadow: 0 18px 45px rgba(25, 43, 35, 0.08);
   }
 
+  /* HERO */
   .activities-page .activities-hero {
     position: relative;
+    min-height: 470px;
+    display: flex;
+    align-items: center;
     overflow: hidden;
-    padding: 5.5rem 0 4.5rem;
-    background:
-      radial-gradient(circle at 80% 20%, rgba(255,255,255,.12), transparent 28%),
-      linear-gradient(135deg, #173328 0%, #244c3a 55%, #315f49 100%);
     color: white;
+
+    background:
+      radial-gradient(
+        circle at 15% 85%,
+        rgba(52,118,94,.42),
+        transparent 34%
+      ),
+      linear-gradient(
+        120deg,
+        #12242b 0%,
+        #17332f 46%,
+        #23483a 100%
+      );
   }
 
+  /* Mennesker i højre side */
+  .activities-page .activities-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 0 35%;
+
+    background:
+      linear-gradient(
+        90deg,
+        #142c2d 0%,
+        rgba(20,44,45,.87) 12%,
+        rgba(20,44,45,.48) 42%,
+        rgba(20,44,45,.20) 75%,
+        rgba(20,44,45,.30) 100%
+      ),
+      url("{{ '/assets/images/stemning/stemning1.jpg' | relative_url }}")
+      center 44% / cover no-repeat;
+
+    opacity: .82;
+    filter: saturate(.85) contrast(1.02);
+  }
+
+  /* diskret struktur */
   .activities-page .activities-hero::after {
     content: "";
     position: absolute;
     inset: 0;
+
     background:
-      linear-gradient(120deg, transparent 0 60%, rgba(255,255,255,.04) 60% 61%, transparent 61% 100%);
+      radial-gradient(
+        circle at 84% 19%,
+        rgba(216,239,177,.18),
+        transparent 24%
+      ),
+      linear-gradient(
+        180deg,
+        rgba(0,0,0,.04),
+        rgba(0,0,0,.10)
+      );
+
     pointer-events: none;
   }
 
   .activities-page .activities-hero .container {
     position: relative;
-    z-index: 1;
+    z-index: 2;
+    width: 100%;
+    padding-top: 5.5rem;
+    padding-bottom: 6.3rem;
+  }
+
+  .activities-page .activities-hero-content {
+    max-width: 720px;
   }
 
   .activities-page .activities-hero .eyebrow {
-    color: rgba(255,255,255,.72);
+    color: var(--activity-lime);
   }
 
   .activities-page .activities-hero h1 {
-    max-width: 800px;
-    margin-bottom: 1rem;
+    color: white;
+    margin: 0 0 1.25rem;
+    font-size: clamp(3.4rem, 7vw, 6rem);
+    line-height: .95;
+    letter-spacing: -.055em;
   }
 
   .activities-page .activities-hero-text {
-    max-width: 760px;
-    font-size: 1.12rem;
-    line-height: 1.7;
+    max-width: 700px;
+    margin: 0;
+
+    font-size: clamp(1.05rem, 1.7vw, 1.22rem);
+    line-height: 1.65;
     color: rgba(255,255,255,.88);
   }
 
+  /* QUICK NAVIGATION */
   .activities-page .activity-jump-wrap {
     position: relative;
     z-index: 5;
-    margin-top: -2rem;
+    margin-top: -2.4rem;
   }
 
   .activities-page .activity-jump {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 1rem;
   }
 
   .activities-page .activity-jump-card {
+    min-height: 120px;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 1rem;
-    padding: 1.35rem 1.5rem;
-    background: white;
+    gap: 1.25rem;
+
+    padding: 1.45rem 1.5rem;
+
+    background: rgba(255,255,255,.97);
     border: 1px solid var(--activity-border);
-    border-radius: 18px;
-    box-shadow: var(--activity-shadow);
+    border-radius: 20px;
+
+    box-shadow:
+      0 20px 55px rgba(25,43,35,.10);
+
     color: inherit;
     text-decoration: none;
-    transition: transform .18s ease, box-shadow .18s ease;
+
+    transition:
+      transform .18s ease,
+      box-shadow .18s ease,
+      border-color .18s ease;
   }
 
   .activities-page .activity-jump-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 22px 50px rgba(25, 43, 35, 0.12);
+    transform: translateY(-4px);
+    box-shadow: 0 25px 60px rgba(25,43,35,.15);
+    border-color: rgba(36,76,58,.24);
   }
 
   .activities-page .activity-jump-card strong {
     display: block;
-    font-size: 1.05rem;
-    margin-bottom: .2rem;
+
+    margin-bottom: .35rem;
+
+    color: var(--activity-green-dark);
+    font-size: 1.08rem;
+    line-height: 1.25;
   }
 
   .activities-page .activity-jump-card span {
-    color: #5f6d66;
-    font-size: .94rem;
+    color: #64716b;
+    font-size: .93rem;
+    line-height: 1.45;
   }
 
   .activities-page .activity-jump-arrow {
     flex: 0 0 auto;
-    width: 38px;
-    height: 38px;
+
+    width: 42px;
+    height: 42px;
+
     display: grid;
     place-items: center;
+
     border-radius: 999px;
+
     background: var(--activity-cream);
-    font-size: 1.2rem;
+    color: var(--activity-green-dark) !important;
+
+    font-size: 1.15rem;
+    font-weight: 800;
   }
 
+  /* SECTIONS */
   .activities-page #aabne,
   .activities-page #tilmelding {
     scroll-margin-top: 90px;
   }
 
   .activities-page .activity-section-heading {
-    display: flex;
-    align-items: end;
-    justify-content: space-between;
-    gap: 2rem;
-    margin-bottom: 2rem;
+    max-width: 760px;
+    margin-bottom: 2.2rem;
   }
 
-  .activities-page .activity-section-heading-text {
-    max-width: 720px;
+  .activities-page .activity-section-heading h2 {
+    margin-bottom: .7rem;
   }
 
-  .activities-page .activity-section-count {
-    flex: 0 0 auto;
-    padding: .55rem .85rem;
-    border-radius: 999px;
-    background: var(--activity-cream);
-    font-size: .9rem;
-    font-weight: 700;
-    color: var(--activity-green-dark);
+  .activities-page .section-soft {
+    background: var(--activity-soft);
   }
 
+  /* CARDS */
   .activities-page .activity-grid {
     align-items: stretch;
   }
 
   .activities-page .activity-card {
     overflow: hidden;
-    border-radius: 18px;
+
+    border-radius: 20px;
     border: 1px solid var(--activity-border);
+
     background: white;
-    box-shadow: 0 8px 26px rgba(25, 43, 35, 0.06);
-    transition: transform .18s ease, box-shadow .18s ease;
+
+    box-shadow:
+      0 9px 28px rgba(25,43,35,.06);
+
+    transition:
+      transform .18s ease,
+      box-shadow .18s ease;
   }
 
   .activities-page .activity-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 18px 42px rgba(25, 43, 35, 0.11);
+
+    box-shadow:
+      0 20px 45px rgba(25,43,35,.11);
   }
 
   .activities-page .activity-banner {
     display: block;
     overflow: hidden;
-    background: #e9ece9;
+
+    background: #e8ebe8;
   }
 
   .activities-page .activity-card-image {
+    display: block;
+
     width: 100%;
     aspect-ratio: 16 / 9;
+
     object-fit: cover;
-    display: block;
+
     transition: transform .3s ease;
   }
 
@@ -171,31 +263,34 @@ description: Se aktiviteter med og uden tilmelding til Viborg Brætspilsdag 2026
   }
 
   .activities-page .activity-card-body {
-    padding: 1.3rem 1.35rem 1.4rem;
+    padding: 1.35rem 1.4rem 1.5rem;
   }
 
   .activities-page .activity-card-top {
-    margin-bottom: .8rem;
+    margin-bottom: .85rem;
   }
 
   .activities-page .activity-card h3 {
     margin-top: 0;
     margin-bottom: .45rem;
+
     line-height: 1.25;
   }
 
   .activities-page .activity-host {
     margin-top: 0;
-    color: #65716c;
+
+    color: #66736d;
     font-size: .94rem;
   }
 
   .activities-page .activity-actions {
-    margin-top: 1.1rem;
+    margin-top: 1.15rem;
   }
 
   .activities-page .activity-read-more {
-    font-weight: 700;
+    color: var(--activity-green);
+    font-weight: 750;
     text-decoration: none;
   }
 
@@ -203,58 +298,124 @@ description: Se aktiviteter med og uden tilmelding til Viborg Brætspilsdag 2026
     text-decoration: underline;
   }
 
-  .activities-page .activities-divider {
-    height: 1px;
-    background: var(--activity-border);
-    margin: 0;
-  }
-
+  /* BOOKING */
   .activities-page .booking-callout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+
     margin-top: 3.5rem;
-    border-radius: 20px;
-    padding: 2rem;
+    padding: 2rem 2.2rem;
+
+    border-radius: 22px;
+
     background:
-      linear-gradient(135deg, #173328 0%, #244c3a 100%);
+      radial-gradient(
+        circle at 85% 10%,
+        rgba(216,239,177,.13),
+        transparent 35%
+      ),
+      linear-gradient(
+        135deg,
+        #173328 0%,
+        #244c3a 100%
+      );
+
     color: white;
   }
 
+  .activities-page .booking-callout h2 {
+    color: white;
+    margin: 0 0 .45rem;
+  }
+
   .activities-page .booking-callout p {
-    color: rgba(255,255,255,.82);
+    max-width: 680px;
+    margin: 0;
+
+    color: rgba(255,255,255,.80);
   }
 
   .activities-page .booking-callout .button-primary {
+    flex: 0 0 auto;
     white-space: nowrap;
   }
 
-  .activities-page .section-soft {
-    background: #faf8f3;
+  /* TABLET */
+  @media (max-width: 900px) {
+
+    .activities-page .activities-hero::before {
+      inset: 20% -12% 0 18%;
+      opacity: .62;
+    }
+
+    .activities-page .activity-jump {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .activities-page .activity-jump-card:last-child {
+      grid-column: 1 / -1;
+    }
   }
 
-  @media (max-width: 760px) {
+  /* MOBILE */
+  @media (max-width: 620px) {
+
     .activities-page .activities-hero {
-      padding: 4rem 0 4.25rem;
+      min-height: auto;
+    }
+
+    .activities-page .activities-hero::before {
+      inset: 34% -18% 0 10%;
+
+      background:
+        linear-gradient(
+          180deg,
+          rgba(20,44,45,.87) 0%,
+          rgba(20,44,45,.35) 45%,
+          rgba(20,44,45,.50) 100%
+        ),
+        url("{{ '/assets/images/stemning/stemning1.jpg' | relative_url }}")
+        center / cover no-repeat;
+
+      opacity: .62;
+    }
+
+    .activities-page .activities-hero .container {
+      padding-top: 4.2rem;
+      padding-bottom: 6rem;
+    }
+
+    .activities-page .activities-hero h1 {
+      font-size: clamp(3.2rem, 16vw, 4.5rem);
+    }
+
+    .activities-page .activity-jump-wrap {
+      margin-top: -2rem;
     }
 
     .activities-page .activity-jump {
       grid-template-columns: 1fr;
     }
 
-    .activities-page .activity-section-heading {
-      display: block;
+    .activities-page .activity-jump-card:last-child {
+      grid-column: auto;
     }
 
-    .activities-page .activity-section-count {
-      display: inline-block;
-      margin-top: .75rem;
+    .activities-page .activity-jump-card {
+      min-height: 0;
+      padding: 1.2rem 1.25rem;
     }
 
     .activities-page .booking-callout {
       display: block;
+      padding: 1.6rem;
     }
 
     .activities-page .booking-callout .button {
       display: inline-flex;
-      margin-top: 1rem;
+      margin-top: 1.25rem;
     }
   }
 </style>
@@ -262,277 +423,401 @@ description: Se aktiviteter med og uden tilmelding til Viborg Brætspilsdag 2026
 
 <div class="activities-page">
 
-<section class="activities-hero">
-  <div class="container">
 
-    <p class="eyebrow">Viborg Brætspilsdag 2026</p>
+  <!-- HERO -->
+  <section class="activities-hero">
 
-    <h1>Aktiviteter</h1>
+    <div class="container">
 
-    <p class="activities-hero-text">
-      Der er masser at vælge imellem på dagen.
-      Nogle aktiviteter kan du bare møde op til, mens andre har et begrænset antal pladser og kræver booking.
-      Der kommer løbende flere aktiviteter frem mod dagen.
-    </p>
+      <div class="activities-hero-content">
+
+        <p class="eyebrow">
+          Viborg Brætspilsdag 2026
+        </p>
+
+        <h1>
+          Aktiviteter
+        </h1>
+
+        <p class="activities-hero-text">
+          Der er masser at vælge imellem på dagen.
+          Nogle aktiviteter kan du bare møde op til, mens andre har et begrænset antal pladser og kræver booking.
+          Der kommer løbende flere aktiviteter frem mod dagen.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- HURTIGE VEJE -->
+  <div class="activity-jump-wrap">
+
+    <div class="container">
+
+      <nav
+        class="activity-jump"
+        aria-label="Gå direkte til aktivitetstype"
+      >
+
+        <a
+          class="activity-jump-card"
+          href="#aabne"
+        >
+          <div>
+            <strong>Åbne aktiviteter</strong>
+            <span>
+              Kig forbi og vær med uden særskilt booking.
+            </span>
+          </div>
+
+          <span
+            class="activity-jump-arrow"
+            aria-hidden="true"
+          >
+            ↓
+          </span>
+        </a>
+
+
+        <a
+          class="activity-jump-card"
+          href="#tilmelding"
+        >
+          <div>
+            <strong>Aktiviteter med tilmelding</strong>
+            <span>
+              Book en plads til aktiviteter med begrænset kapacitet.
+            </span>
+          </div>
+
+          <span
+            class="activity-jump-arrow"
+            aria-hidden="true"
+          >
+            ↓
+          </span>
+        </a>
+
+
+        <a
+          class="activity-jump-card"
+          href="{{ '/program.html' | relative_url }}"
+        >
+          <div>
+            <strong>Se dagens program</strong>
+            <span>
+              Få overblik over dagen fra vi åbner til vi lukker.
+            </span>
+          </div>
+
+          <span
+            class="activity-jump-arrow"
+            aria-hidden="true"
+          >
+            →
+          </span>
+        </a>
+
+      </nav>
+
+    </div>
 
   </div>
-</section>
 
 
-<div class="activity-jump-wrap">
-  <div class="container">
+  <!-- ÅBNE AKTIVITETER -->
+  <section
+    id="aabne"
+    class="section"
+  >
 
-    <nav class="activity-jump" aria-label="Gå direkte til aktivitetstype">
+    <div class="container">
 
-      <a class="activity-jump-card" href="#aabne">
-        <div>
-          <strong>Åbne aktiviteter</strong>
-          <span>
-            {{ site.data.aabne_aktiviteter | size }} aktiviteter · bare mød op
-          </span>
-        </div>
-        <span class="activity-jump-arrow" aria-hidden="true">↓</span>
-      </a>
+      <div class="activity-section-heading">
 
-      <a class="activity-jump-card" href="#tilmelding">
-        <div>
-          <strong>Aktiviteter med tilmelding</strong>
-          <span>
-            {{ site.data.tilmeldingsaktiviteter | size }} aktiviteter · begrænsede pladser
-          </span>
-        </div>
-        <span class="activity-jump-arrow" aria-hidden="true">↓</span>
-      </a>
+        <p class="eyebrow">
+          Bare mød op
+        </p>
 
-    </nav>
+        <h2>
+          Åbne aktiviteter
+        </h2>
 
-  </div>
-</div>
-
-
-<section id="aabne" class="section">
-
-  <div class="container">
-
-    <div class="activity-section-heading">
-
-      <div class="activity-section-heading-text">
-        <p class="eyebrow">Bare mød op</p>
-        <h2>Åbne aktiviteter</h2>
         <p>
           Disse aktiviteter kræver ikke særskilt booking.
           Du skal blot være tilmeldt Viborg Brætspilsdag.
         </p>
+
       </div>
 
-      <div class="activity-section-count">
-        {{ site.data.aabne_aktiviteter | size }} aktiviteter
-      </div>
 
-    </div>
+      <div class="activity-grid">
 
-
-    <div class="activity-grid">
 
 {% for aktivitet in site.data.aabne_aktiviteter %}
 
-<article class="activity-card activity-card-open">
+        <article class="activity-card activity-card-open">
 
-  {% if aktivitet.image %}
-    {% if aktivitet.artikel %}
-    <a
-      class="activity-banner"
-      href="{{ aktivitet.artikel | relative_url }}"
-    >
-      <img
-        class="activity-card-image"
-        src="{{ aktivitet.image | relative_url }}"
-        alt="{{ aktivitet.image_alt | default: aktivitet.titel }}"
-        loading="lazy"
-      >
-    </a>
-    {% else %}
-      <div class="activity-banner">
-        <img
-          class="activity-card-image"
-          src="{{ aktivitet.image | relative_url }}"
-          alt="{{ aktivitet.image_alt | default: aktivitet.titel }}"
-          loading="lazy"
-        >
-      </div>
-    {% endif %}
-  {% endif %}
 
-  <div class="activity-card-body">
+          {% if aktivitet.image %}
 
-    <div class="activity-card-top">
+            {% if aktivitet.artikel %}
 
-      <span class="activity-time">
-        {{ aktivitet.tid }}
-      </span>
+            <a
+              class="activity-banner"
+              href="{{ aktivitet.artikel | relative_url }}"
+            >
 
-      <span class="activity-badge open">
-        Ingen tilmelding
-      </span>
+              <img
+                class="activity-card-image"
+                src="{{ aktivitet.image | relative_url }}"
+                alt="{{ aktivitet.image_alt | default: aktivitet.titel }}"
+                loading="lazy"
+              >
 
-    </div>
+            </a>
 
-    <h3>{{ aktivitet.titel }}</h3>
+            {% else %}
 
-    {% if aktivitet.vaert != "" %}
-    <p class="activity-host">
-      Vært: {{ aktivitet.vaert }}
-    </p>
-    {% endif %}
+            <div class="activity-banner">
 
-    <p>
-      {{ aktivitet.beskrivelse }}
-    </p>
+              <img
+                class="activity-card-image"
+                src="{{ aktivitet.image | relative_url }}"
+                alt="{{ aktivitet.image_alt | default: aktivitet.titel }}"
+                loading="lazy"
+              >
 
-    {% if aktivitet.artikel %}
-    <div class="activity-actions">
-      <a
-        class="activity-read-more"
-        href="{{ aktivitet.artikel | relative_url }}"
-      >
-        Læs mere →
-      </a>
-    </div>
-    {% endif %}
+            </div>
 
-  </div>
+            {% endif %}
 
-</article>
+          {% endif %}
+
+
+          <div class="activity-card-body">
+
+            <div class="activity-card-top">
+
+              <span class="activity-time">
+                {{ aktivitet.tid }}
+              </span>
+
+              <span class="activity-badge open">
+                Ingen tilmelding
+              </span>
+
+            </div>
+
+
+            <h3>
+              {{ aktivitet.titel }}
+            </h3>
+
+
+            {% if aktivitet.vaert != "" %}
+
+            <p class="activity-host">
+              Vært: {{ aktivitet.vaert }}
+            </p>
+
+            {% endif %}
+
+
+            <p>
+              {{ aktivitet.beskrivelse }}
+            </p>
+
+
+            {% if aktivitet.artikel %}
+
+            <div class="activity-actions">
+
+              <a
+                class="activity-read-more"
+                href="{{ aktivitet.artikel | relative_url }}"
+              >
+                Læs mere →
+              </a>
+
+            </div>
+
+            {% endif %}
+
+          </div>
+
+        </article>
 
 {% endfor %}
 
+
+      </div>
+
     </div>
 
-  </div>
-
-</section>
+  </section>
 
 
-<section id="tilmelding" class="section section-soft">
+  <!-- AKTIVITETER MED TILMELDING -->
+  <section
+    id="tilmelding"
+    class="section section-soft"
+  >
 
-  <div class="container">
+    <div class="container">
 
-    <div class="activity-section-heading">
+      <div class="activity-section-heading">
 
-      <div class="activity-section-heading-text">
-        <p class="eyebrow">Begrænsede pladser</p>
-        <h2>Aktiviteter med tilmelding</h2>
+        <p class="eyebrow">
+          Begrænsede pladser
+        </p>
+
+        <h2>
+          Aktiviteter med tilmelding
+        </h2>
+
         <p>
           Disse aktiviteter har et begrænset antal pladser og skal bookes på forhånd.
           Du får adgang til bookingsystemet, når du er tilmeldt dagen, og din betaling er registreret.
         </p>
+
       </div>
 
-      <div class="activity-section-count">
-        {{ site.data.tilmeldingsaktiviteter | size }} aktiviteter
-      </div>
 
-    </div>
+      <div class="activity-grid">
 
-
-    <div class="activity-grid">
 
 {% for aktivitet in site.data.tilmeldingsaktiviteter %}
 
-<article class="activity-card activity-card-signup">
+        <article class="activity-card activity-card-signup">
 
-  {% if aktivitet.image %}
-    {% if aktivitet.artikel %}
-    <a
-      class="activity-banner"
-      href="{{ aktivitet.artikel | relative_url }}"
-    >
-      <img
-        class="activity-card-image"
-        src="{{ aktivitet.image | relative_url }}"
-        alt="{{ aktivitet.image_alt | default: aktivitet.titel }}"
-        loading="lazy"
-      >
-    </a>
-    {% else %}
-      <div class="activity-banner">
-        <img
-          class="activity-card-image"
-          src="{{ aktivitet.image | relative_url }}"
-          alt="{{ aktivitet.image_alt | default: aktivitet.titel }}"
-          loading="lazy"
-        >
-      </div>
-    {% endif %}
-  {% endif %}
 
-  <div class="activity-card-body">
+          {% if aktivitet.image %}
 
-    <div class="activity-card-top">
+            {% if aktivitet.artikel %}
 
-      <span class="activity-time">
-        {{ aktivitet.start }}–{{ aktivitet.slut }}
-      </span>
+            <a
+              class="activity-banner"
+              href="{{ aktivitet.artikel | relative_url }}"
+            >
 
-      <span class="activity-badge signup">
-        {{ aktivitet.kategori }}
-      </span>
+              <img
+                class="activity-card-image"
+                src="{{ aktivitet.image | relative_url }}"
+                alt="{{ aktivitet.image_alt | default: aktivitet.titel }}"
+                loading="lazy"
+              >
 
-    </div>
+            </a>
 
-    <h3>{{ aktivitet.titel }}</h3>
+            {% else %}
 
-    {% if aktivitet.vaert != "" %}
-    <p class="activity-host">
-      Vært: {{ aktivitet.vaert }}
-    </p>
-    {% endif %}
+            <div class="activity-banner">
 
-    <p>
-      {{ aktivitet.beskrivelse }}
-    </p>
+              <img
+                class="activity-card-image"
+                src="{{ aktivitet.image | relative_url }}"
+                alt="{{ aktivitet.image_alt | default: aktivitet.titel }}"
+                loading="lazy"
+              >
 
-    {% if aktivitet.artikel %}
-    <div class="activity-actions">
-      <a
-        class="activity-read-more"
-        href="{{ aktivitet.artikel | relative_url }}"
-      >
-        Læs mere →
-      </a>
-    </div>
-    {% endif %}
+            </div>
 
-  </div>
+            {% endif %}
 
-</article>
+          {% endif %}
+
+
+          <div class="activity-card-body">
+
+            <div class="activity-card-top">
+
+              <span class="activity-time">
+                {{ aktivitet.start }}–{{ aktivitet.slut }}
+              </span>
+
+              <span class="activity-badge signup">
+                {{ aktivitet.kategori }}
+              </span>
+
+            </div>
+
+
+            <h3>
+              {{ aktivitet.titel }}
+            </h3>
+
+
+            {% if aktivitet.vaert != "" %}
+
+            <p class="activity-host">
+              Vært: {{ aktivitet.vaert }}
+            </p>
+
+            {% endif %}
+
+
+            <p>
+              {{ aktivitet.beskrivelse }}
+            </p>
+
+
+            {% if aktivitet.artikel %}
+
+            <div class="activity-actions">
+
+              <a
+                class="activity-read-more"
+                href="{{ aktivitet.artikel | relative_url }}"
+              >
+                Læs mere →
+              </a>
+
+            </div>
+
+            {% endif %}
+
+          </div>
+
+        </article>
 
 {% endfor %}
 
-    </div>
 
-
-    <div class="booking-callout">
-
-      <div>
-        <h2>Vil du sikre dig en plads?</h2>
-        <p>
-          Aktiviteter med begrænset antal pladser bookes via vores bookingsystem.
-          Du får adgang, når du er tilmeldt Viborg Brætspilsdag.
-        </p>
       </div>
 
-      <a
-        class="button button-primary"
-        href="https://forms.gle/FL5Y5bpgTQKusDPx7"
-      >
-        Tilmeld dig dagen
-      </a>
+
+      <!-- TILMELDING -->
+      <div class="booking-callout">
+
+        <div>
+
+          <h2>
+            Vil du sikre dig en plads?
+          </h2>
+
+          <p>
+            Aktiviteter med begrænset antal pladser bookes via vores bookingsystem.
+            Du får adgang, når du er tilmeldt Viborg Brætspilsdag.
+          </p>
+
+        </div>
+
+
+        <a
+          class="button button-primary"
+          href="https://forms.gle/FL5Y5bpgTQKusDPx7"
+        >
+          Tilmeld dig dagen
+        </a>
+
+      </div>
 
     </div>
 
-  </div>
-
-</section>
+  </section>
 
 </div>
