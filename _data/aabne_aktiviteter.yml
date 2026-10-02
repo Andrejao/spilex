@@ -38,6 +38,22 @@
   image_alt: "Mange forskellige brætspil samlet i et brætspilsbibliotek"
   artikel: "/nyheder/braetspilsbibliotek/"
 
+- tid: "Tid kommer"
+  titel: "Warhammer-showcase"
+  vaert: "Mithril"
+  beskrivelse: "Warhammer med figurer, terræn og spil på bordet. Kig forbi, se hobbyen på tæt hold og få en snak om både spil og miniaturer."
+  image: "/assets/images/nyheder/warhammer-showcase.jpg"
+  image_alt: "Warhammer-figurer og terræn opstillet på et spillebord"
+  artikel: "/nyheder/warhammer-showcase/"
+
+- tid: "Tid kommer"
+  titel: "Star Wars: Legion"
+  vaert: "Mithril"
+  beskrivelse: "Se Star Wars: Legion i aktion med miniaturer, terræn og kampe på spillebordet. Du behøver ikke kende spillet på forhånd."
+  image: "/assets/images/nyheder/star-wars-legion.jpg"
+  image_alt: "Star Wars Legion-miniaturer og terræn opstillet på et spillebord"
+  artikel: "/nyheder/star-wars-legion/"
+  
 - tid: "En del af dagen"
   titel: "Klubberne – aktiviteter for børn og unge"
   vaert: "Klubberne i Viborg"
