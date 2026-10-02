@@ -65,13 +65,11 @@ Det er en **lær-at-spille-session**, og Maria gennemgår reglerne og hjælper j
 
 ## The Game Makers passer godt til dig, hvis du…
 
-- elsker brætspil nok til, at et brætspil om at producere brætspil lyder som en glimrende idé
 - kan lide engine building, ressourcehåndtering og effektivisering
 - synes det er tilfredsstillende at udvikle noget, der bliver stærkere gennem spillet
 - kan lide kort og komponenter, der kan bruges på flere forskellige måder
 - synes det er sjovt at genkende rigtige moderne brætspil undervejs
 - gerne vil prøve en stor Kickstarter-udgivelse
-- har lyst til et strategispil med substans uden at bevæge dig helt op i den tungeste ende
 
 ## The Game Makers på Viborg Brætspilsdag
 
