@@ -23,8 +23,11 @@ De laver særskilte aktiviteter for børn og unge en del af dagen, blandt andet:
 
 Der kommer mere information om det konkrete program, aldersgrupper, tidspunkter og eventuel tilmelding.
 
+## Om klubberne
+Ungdomsklubber er et tilbud til alle unge fra 7. klassetrin til 18 år. senest opdateret 18. februar 2026 Ungdomsklubberne tilbyder udover mulighed for socialt samvær med jævnaldrende en lang række aktiviteter inden for sport, udeliv, musik og lejrture. Læs mere om klubberne på https://viborg.dk/oplevelser-og-fritid/aktiviteter-og-faellesskaber/fritidsaktiviteter/ungdomsklubber/.
+
 ## Godt at vide
-Viborg Brætspilsdag er målrettet voksne, og deltagere under 15 år skal fortsat under hele arrangementet være i følgeskab med en voksen, der har ansvaret for den unge deltager, også når vedkommende deltager i aktiviteter hos Klubberne. 
+Viborg Brætspilsdag er målrettet voksne. Deltagere under 15 år skal fortsat under hele arrangementet være i følgeskab med en voksen, der har ansvaret for den unge deltager, også når vedkommende deltager i aktiviteter hos Klubberne. 
 
 ## Praktisk
 
