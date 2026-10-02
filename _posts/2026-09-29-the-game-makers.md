@@ -17,7 +17,7 @@ niveau_tekst: "Mellem-tung strategisk oplevelse"
 
 ## Et brætspil om at lave brætspil
 
-**The Game Makers** er et helt nyt strategispil fra 2026 med en temmelig passende idé til Viborg Brætspilsdag:
+**The Game Makers** er et helt nyt strategispil fra 2026.
 
 Du driver en brætspilsproducent og konkurrerer om at fremstille nogle af verdens mest kendte brætspil.
 
