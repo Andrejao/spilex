@@ -1860,3 +1860,454 @@ a.logo-card:hover {
   }
 
 }
+
+
+/* =========================================================
+   AKTIVITETSSIDE – NYT DESIGN
+   ========================================================= */
+
+
+/* HERO */
+
+.activities-page .activities-hero {
+  position: relative;
+  min-height: 470px;
+  overflow: hidden;
+
+  color: white;
+
+  background:
+    radial-gradient(
+      circle at 15% 85%,
+      rgba(52, 118, 94, 0.42),
+      transparent 34%
+    ),
+    linear-gradient(
+      120deg,
+      #12242b 0%,
+      #17332f 46%,
+      #23483a 100%
+    );
+}
+
+
+/* Foto med mennesker i højre side */
+
+.activities-page .activities-hero::before {
+  content: "";
+
+  position: absolute;
+  inset: 0 0 0 35%;
+
+  background:
+    linear-gradient(
+      90deg,
+      #142c2d 0%,
+      rgba(20, 44, 45, 0.88) 12%,
+      rgba(20, 44, 45, 0.50) 42%,
+      rgba(20, 44, 45, 0.20) 75%,
+      rgba(20, 44, 45, 0.28) 100%
+    ),
+    url("/assets/images/stemning/stemning1.jpg")
+    center 44% / cover no-repeat;
+
+  opacity: 0.84;
+
+  filter:
+    saturate(0.88)
+    contrast(1.03);
+}
+
+
+.activities-page .activities-hero::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    radial-gradient(
+      circle at 84% 18%,
+      rgba(241, 107, 58, 0.13),
+      transparent 24%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(0,0,0,0.02),
+      rgba(0,0,0,0.10)
+    );
+
+  pointer-events: none;
+}
+
+
+/*
+  Brug samme bredde som resten af din side.
+  Din normale container er 1160px.
+*/
+
+.activities-page .activities-hero .container {
+  position: relative;
+  z-index: 2;
+
+  width: min(var(--max-width), calc(100% - 48px));
+  margin: 0 auto;
+
+  padding-top: 90px;
+  padding-bottom: 105px;
+}
+
+
+.activities-page .activities-hero-content {
+  max-width: 650px;
+}
+
+
+.activities-page .activities-hero .eyebrow {
+  color: #d8efb1;
+}
+
+
+.activities-page .activities-hero h1 {
+  margin: 0 0 24px;
+
+  color: white;
+
+  font-size: clamp(3.4rem, 7vw, 6rem);
+  line-height: 0.95;
+  letter-spacing: -0.055em;
+}
+
+
+.activities-page .activities-hero-text {
+  max-width: 640px;
+
+  margin: 0;
+
+  color: rgba(255,255,255,0.84);
+
+  font-size: clamp(1.05rem, 1.7vw, 1.2rem);
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   HURTIGE VEJE
+   ========================================================= */
+
+.activities-page .activity-jump-wrap {
+  position: relative;
+  z-index: 5;
+
+  margin-top: -38px;
+}
+
+
+.activities-page .activity-jump {
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 16px;
+}
+
+
+.activities-page .activity-jump-card {
+  min-height: 115px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding: 22px 24px;
+
+  background: rgba(255,255,255,0.97);
+
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+
+  box-shadow:
+    0 18px 50px rgba(22,35,31,0.10);
+
+  color: inherit;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease,
+    border-color 0.18s ease;
+}
+
+
+.activities-page .activity-jump-card:hover {
+  transform: translateY(-4px);
+
+  border-color: rgba(241,107,58,0.30);
+
+  box-shadow:
+    0 24px 60px rgba(22,35,31,0.14);
+}
+
+
+.activities-page .activity-jump-card strong {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: var(--dark);
+
+  font-size: 1.05rem;
+  line-height: 1.3;
+}
+
+
+.activities-page .activity-jump-card span {
+  color: var(--muted);
+
+  font-size: 0.91rem;
+  line-height: 1.5;
+}
+
+
+.activities-page .activity-jump-arrow {
+  width: 40px;
+  height: 40px;
+
+  flex: 0 0 40px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+
+  background: var(--surface-soft);
+
+  color: var(--dark) !important;
+
+  font-weight: 900;
+}
+
+
+/* =========================================================
+   AKTIVITETSSEKTIONER
+   ========================================================= */
+
+.activities-page #aabne,
+.activities-page #tilmelding {
+  scroll-margin-top: 100px;
+}
+
+
+.activities-page .activity-section-heading {
+  max-width: 760px;
+
+  margin-bottom: 40px;
+}
+
+
+.activities-page .activity-section-heading h2 {
+  margin: 0 0 12px;
+
+  font-size: clamp(2.1rem, 5vw, 3.5rem);
+
+  line-height: 1;
+
+  letter-spacing: -0.045em;
+}
+
+
+.activities-page .activity-section-heading p {
+  margin: 0;
+
+  color: var(--muted);
+
+  font-size: 1.05rem;
+}
+
+
+.activities-page .section-soft {
+  background: #faf8f3;
+}
+
+
+/* =========================================================
+   AKTIVITETSKORT – OVERRIDES
+   ========================================================= */
+
+.activities-page .activity-card {
+  padding: 0;
+
+  overflow: hidden;
+
+  border-radius: var(--radius);
+}
+
+
+.activities-page .activity-banner {
+  width: 100%;
+  height: auto;
+
+  margin: 0;
+
+  overflow: hidden;
+}
+
+
+.activities-page .activity-card-image {
+  width: 100%;
+  height: auto;
+
+  aspect-ratio: 16 / 9;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.3s ease;
+}
+
+
+.activities-page .activity-card:hover .activity-card-image {
+  transform: scale(1.025);
+}
+
+
+.activities-page .activity-card-body {
+  padding: 26px 28px 28px;
+}
+
+
+.activities-page .activity-card-top {
+  margin-bottom: 16px;
+}
+
+
+.activities-page .activity-card h3 {
+  margin-bottom: 8px;
+}
+
+
+.activities-page .activity-actions {
+  margin-top: 18px;
+}
+
+
+/* =========================================================
+   BOOKING-BOKS
+   ========================================================= */
+
+.activities-page .booking-callout {
+  margin-top: 56px;
+
+  padding: 38px 40px;
+
+  background:
+    radial-gradient(
+      circle at 85% 10%,
+      rgba(241,107,58,0.18),
+      transparent 32%
+    ),
+    linear-gradient(
+      135deg,
+      var(--dark),
+      var(--dark-2)
+    );
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .activities-page .activities-hero::before {
+    inset: 15% -10% 0 20%;
+
+    opacity: 0.65;
+  }
+
+
+  .activities-page .activity-jump {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+
+  .activities-page .activity-jump-card:last-child {
+    grid-column: 1 / -1;
+  }
+
+}
+
+
+/* =========================================================
+   MOBIL
+   ========================================================= */
+
+@media (max-width: 760px) {
+
+  .activities-page .activities-hero {
+    min-height: auto;
+  }
+
+
+  .activities-page .activities-hero::before {
+    inset: 32% -20% 0 8%;
+
+    background:
+      linear-gradient(
+        180deg,
+        rgba(20,44,45,0.88) 0%,
+        rgba(20,44,45,0.38) 48%,
+        rgba(20,44,45,0.55) 100%
+      ),
+      url("/assets/images/stemning/stemning1.jpg")
+      center / cover no-repeat;
+
+    opacity: 0.65;
+  }
+
+
+  .activities-page .activities-hero .container {
+    width: min(100% - 30px, var(--max-width));
+
+    padding-top: 65px;
+    padding-bottom: 90px;
+  }
+
+
+  .activities-page .activities-hero h1 {
+    font-size: clamp(3.2rem, 15vw, 4.6rem);
+  }
+
+
+  .activities-page .activity-jump-wrap {
+    margin-top: -30px;
+  }
+
+
+  .activities-page .activity-jump {
+    grid-template-columns: 1fr;
+  }
+
+
+  .activities-page .activity-jump-card:last-child {
+    grid-column: auto;
+  }
+
+
+  .activities-page .activity-jump-card {
+    min-height: auto;
+
+    padding: 19px 20px;
+  }
+
+
+  .activities-page .activity-card-body {
+    padding: 22px;
+  }
+
+}
