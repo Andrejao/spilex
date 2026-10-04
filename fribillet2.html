@@ -1,0 +1,3245 @@
+---
+layout: null
+permalink: /fribillet/
+sitemap: false
+---
+
+<!doctype html>
+<html lang="da">
+<head>
+  <meta charset="utf-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
+
+  <title>Fribillet til Viborg Brætspilsdag 2026</title>
+
+  <!-- =====================================================
+       SIDEN SKAL IKKE INDEKSERES
+       ===================================================== -->
+
+  <meta
+    name="robots"
+    content="noindex, nofollow, noarchive, nosnippet, noimageindex"
+  >
+
+  <meta
+    name="googlebot"
+    content="noindex, nofollow, noarchive, nosnippet, noimageindex"
+  >
+
+  <meta
+    name="bingbot"
+    content="noindex, nofollow, noarchive, nosnippet, noimageindex"
+  >
+
+  <!-- Deling virker stadig, hvis nogen aktivt sender linket -->
+  <meta
+    property="og:title"
+    content="Fribillet til Viborg Brætspilsdag 2026"
+  >
+
+  <meta
+    property="og:description"
+    content="Få en af de begrænsede fribilletter til en hel dag med brætspil i Viborg den 14. november."
+  >
+
+  <meta
+    property="og:image"
+    content="https://viborgbraetspil.dk/assets/images/delebillede2.jpg"
+  >
+
+  <meta
+    property="og:url"
+    content="https://viborgbraetspil.dk/fribillet/"
+  >
+
+  <meta
+    property="og:type"
+    content="website"
+  >
+
+  <meta
+    name="twitter:card"
+    content="summary_large_image"
+  >
+
+  <style>
+
+    /* =====================================================
+       DESIGN
+       ===================================================== */
+
+    :root {
+      --green-950: #102c24;
+      --green-900: #15382e;
+      --green-800: #1c473a;
+      --green-700: #285b4a;
+      --green-100: #e6efe9;
+      --green-050: #f1f6f3;
+
+      --cream: #f4efe5;
+      --cream-2: #ece5d7;
+      --paper: #fffdf8;
+
+      --gold: #c9a55d;
+      --gold-soft: #faf4e5;
+
+      --text: #202621;
+      --muted: #68716b;
+      --border: #ddd8cd;
+
+      --success: #246842;
+      --success-bg: #e7f3ea;
+
+      --danger: #983f38;
+      --danger-bg: #f8e8e6;
+
+      --shadow:
+        0 22px 70px rgba(18, 49, 39, .11);
+
+      --radius-lg: 26px;
+      --radius-md: 16px;
+      --radius-sm: 10px;
+    }
+
+
+    * {
+      box-sizing: border-box;
+    }
+
+
+    html {
+      scroll-behavior: smooth;
+      background: var(--cream);
+    }
+
+
+    body {
+      margin: 0;
+
+      color: var(--text);
+
+      background:
+        radial-gradient(
+          circle at 15% 0%,
+          rgba(30, 71, 58, .11),
+          transparent 34%
+        ),
+        var(--cream);
+
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+      line-height: 1.6;
+
+      -webkit-font-smoothing: antialiased;
+    }
+
+
+    img {
+      max-width: 100%;
+    }
+
+
+    a {
+      color: var(--green-800);
+      font-weight: 700;
+    }
+
+
+    a:hover {
+      color: var(--green-700);
+    }
+
+
+    button,
+    input {
+      font: inherit;
+    }
+
+
+    button,
+    a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+
+    .page {
+      width: min(900px, calc(100% - 28px));
+      margin: 0 auto;
+      padding: 28px 0 75px;
+    }
+
+
+    /* =====================================================
+       LOGO
+       ===================================================== */
+
+    .logo-link {
+      display: block;
+      width: fit-content;
+      margin: 0 auto 25px;
+    }
+
+
+    .logo {
+      display: block;
+
+      width: auto;
+      max-width: 270px;
+      max-height: 74px;
+
+      object-fit: contain;
+    }
+
+
+    /* =====================================================
+       WRAPPER
+       ===================================================== */
+
+    .site-card {
+      overflow: hidden;
+
+      border:
+        1px solid rgba(23, 56, 46, .10);
+
+      border-radius:
+        var(--radius-lg);
+
+      background:
+        var(--paper);
+
+      box-shadow:
+        var(--shadow);
+    }
+
+
+    /* =====================================================
+       HERO
+       ===================================================== */
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+
+      padding:
+        clamp(35px, 7vw, 62px)
+        clamp(25px, 7vw, 58px)
+        clamp(35px, 7vw, 55px);
+
+      background:
+        linear-gradient(
+          135deg,
+          var(--green-950),
+          var(--green-800)
+        );
+
+      color: white;
+    }
+
+
+    .hero::before {
+      content: "";
+
+      position: absolute;
+
+      width: 310px;
+      height: 310px;
+
+      right: -125px;
+      top: -145px;
+
+      border:
+        1px solid rgba(255,255,255,.12);
+
+      border-radius: 50%;
+
+      box-shadow:
+        0 0 0 42px rgba(255,255,255,.025),
+        0 0 0 84px rgba(255,255,255,.015);
+    }
+
+
+    .eyebrow {
+      position: relative;
+      z-index: 1;
+
+      margin: 0 0 11px;
+
+      color: #dec88f;
+
+      font-size: .79rem;
+      font-weight: 850;
+
+      letter-spacing: .105em;
+      text-transform: uppercase;
+    }
+
+
+    h1 {
+      position: relative;
+      z-index: 1;
+
+      max-width: 730px;
+
+      margin: 0 0 19px;
+
+      font-size:
+        clamp(2.4rem, 8vw, 4.7rem);
+
+      line-height: .98;
+      letter-spacing: -.05em;
+    }
+
+
+    .hero-lead {
+      position: relative;
+      z-index: 1;
+
+      max-width: 690px;
+
+      margin: 0;
+
+      color: rgba(255,255,255,.91);
+
+      font-size:
+        clamp(1.02rem, 2.5vw, 1.17rem);
+    }
+
+
+    .hero-facts {
+      position: relative;
+      z-index: 1;
+
+      display: flex;
+      flex-wrap: wrap;
+
+      gap: 8px;
+
+      margin-top: 25px;
+    }
+
+
+    .hero-fact {
+      padding:
+        7px 11px;
+
+      border:
+        1px solid rgba(255,255,255,.18);
+
+      border-radius:
+        999px;
+
+      background:
+        rgba(255,255,255,.065);
+
+      color:
+        rgba(255,255,255,.95);
+
+      font-size: .87rem;
+      font-weight: 720;
+    }
+
+
+    /* =====================================================
+       EVENT PHOTO
+       ===================================================== */
+
+    .event-image {
+      position: relative;
+
+      width: 100%;
+      max-height: 360px;
+
+      overflow: hidden;
+
+      background: var(--green-950);
+    }
+
+
+    .event-image img {
+      display: block;
+
+      width: 100%;
+      height: 360px;
+
+      object-fit: cover;
+
+      filter:
+        saturate(.92)
+        contrast(1.02);
+    }
+
+
+    .event-image::after {
+      content: "";
+
+      position: absolute;
+      inset: 0;
+
+      pointer-events: none;
+
+      background:
+        linear-gradient(
+          to bottom,
+          rgba(16,44,36,.03),
+          rgba(16,44,36,.14)
+        );
+    }
+
+
+    /* =====================================================
+       CONTENT
+       ===================================================== */
+
+    .content {
+      padding:
+        clamp(27px, 6vw, 52px);
+    }
+
+
+    h2 {
+      margin:
+        0
+        0
+        11px;
+
+      color:
+        var(--green-900);
+
+      font-size:
+        clamp(1.3rem, 3vw, 1.55rem);
+
+      line-height: 1.25;
+    }
+
+
+    h3 {
+      color:
+        var(--green-900);
+    }
+
+
+    p {
+      margin-top: 0;
+    }
+
+
+    .intro {
+      max-width: 760px;
+
+      margin-bottom: 0;
+
+      font-size: 1.08rem;
+    }
+
+
+    /* =====================================================
+       PROOF
+       ===================================================== */
+
+    .proof-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 12px;
+
+      margin:
+        30px 0;
+    }
+
+
+    .proof {
+      padding: 20px;
+
+      border:
+        1px solid var(--border);
+
+      border-radius:
+        var(--radius-md);
+
+      background:
+        white;
+    }
+
+
+    .proof-number {
+      display: block;
+
+      margin-bottom: 3px;
+
+      color:
+        var(--green-900);
+
+      font-size: 1.08rem;
+      font-weight: 850;
+    }
+
+
+    .proof-text {
+      display: block;
+
+      color:
+        var(--muted);
+
+      font-size: .91rem;
+      line-height: 1.42;
+    }
+
+
+    /* =====================================================
+       WHY FREE
+       ===================================================== */
+
+    .local-box {
+      margin:
+        30px 0;
+
+      padding:
+        23px 25px;
+
+      border-radius:
+        var(--radius-md);
+
+      background:
+        var(--green-100);
+    }
+
+
+    .local-box strong {
+      color:
+        var(--green-900);
+    }
+
+
+    .local-box p:last-child {
+      margin-bottom: 0;
+    }
+
+
+    /* =====================================================
+       COMMITMENT / NO SHOW
+       ===================================================== */
+
+    .commitment-box {
+      margin:
+        28px 0;
+
+      padding:
+        22px 24px;
+
+      border:
+        1px solid #ddc47e;
+
+      border-radius:
+        var(--radius-md);
+
+      background:
+        var(--gold-soft);
+    }
+
+
+    .commitment-box h2 {
+      font-size: 1.22rem;
+    }
+
+
+    .commitment-box p:last-child {
+      margin-bottom: 0;
+    }
+
+
+    /* =====================================================
+       TICKET COMPARISON
+       ===================================================== */
+
+    .ticket-heading {
+      margin-top: 38px;
+    }
+
+
+    .ticket-options {
+      display: grid;
+
+      grid-template-columns:
+        1fr 1fr;
+
+      gap: 14px;
+
+      margin:
+        18px 0
+        34px;
+    }
+
+
+    .ticket-option {
+      position: relative;
+
+      padding: 24px;
+
+      border:
+        1px solid var(--border);
+
+      border-radius:
+        17px;
+
+      background:
+        white;
+    }
+
+
+    .ticket-option.support {
+      border:
+        2px solid var(--green-800);
+
+      background:
+        linear-gradient(
+          180deg,
+          #ffffff,
+          var(--green-050)
+        );
+    }
+
+
+    .ticket-tag {
+      display: inline-block;
+
+      margin-bottom: 11px;
+
+      padding:
+        4px 9px;
+
+      border-radius:
+        999px;
+
+      background:
+        var(--green-100);
+
+      color:
+        var(--green-900);
+
+      font-size: .74rem;
+      font-weight: 850;
+
+      letter-spacing: .045em;
+      text-transform: uppercase;
+    }
+
+
+    .ticket-name {
+      display: block;
+
+      margin-bottom: 2px;
+
+      color:
+        var(--green-900);
+
+      font-size: 1.25rem;
+      font-weight: 850;
+    }
+
+
+    .ticket-price {
+      display: block;
+
+      margin-bottom: 14px;
+
+      font-size: 1.05rem;
+      font-weight: 800;
+    }
+
+
+    .ticket-option ul {
+      margin:
+        0
+        0
+        20px;
+
+      padding-left: 20px;
+
+      color:
+        var(--muted);
+    }
+
+
+    .ticket-option li {
+      margin-bottom: 5px;
+    }
+
+
+    .ticket-link {
+      display: inline-block;
+
+      padding:
+        10px 14px;
+
+      border-radius: 9px;
+
+      background:
+        var(--green-900);
+
+      color: white;
+
+      text-decoration: none;
+    }
+
+
+    .ticket-link:hover {
+      background:
+        var(--green-700);
+
+      color: white;
+    }
+
+
+    /* =====================================================
+       AVAILABILITY
+       ===================================================== */
+
+    .availability {
+      margin:
+        37px 0
+        22px;
+
+      padding:
+        17px 19px;
+
+      border-radius:
+        12px;
+
+      background:
+        var(--green-900);
+
+      color:
+        white;
+    }
+
+
+    .availability-main {
+      display: block;
+
+      color: white;
+
+      font-size: 1.03rem;
+      font-weight: 850;
+    }
+
+
+    .availability-sub {
+      display: block;
+
+      margin-top: 2px;
+
+      color:
+        rgba(255,255,255,.78);
+
+      font-size: .85rem;
+    }
+
+
+    .availability.sold-out {
+      background:
+        #554f49;
+    }
+
+
+    /* =====================================================
+       FORM
+       ===================================================== */
+
+    .form-intro {
+      color:
+        var(--muted);
+    }
+
+
+    form {
+      display: grid;
+
+      gap: 18px;
+
+      margin-top: 22px;
+    }
+
+
+    .field {
+      display: grid;
+      gap: 7px;
+    }
+
+
+    label {
+      font-weight: 750;
+    }
+
+
+    .field-help {
+      margin:
+        -1px 0 0;
+
+      color:
+        var(--muted);
+
+      font-size: .84rem;
+    }
+
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"] {
+      width: 100%;
+
+      min-height: 51px;
+
+      padding:
+        12px 14px;
+
+      border:
+        1px solid #bbc1ba;
+
+      border-radius:
+        var(--radius-sm);
+
+      background:
+        white;
+
+      color:
+        var(--text);
+
+      font: inherit;
+    }
+
+
+    input:focus {
+      outline:
+        3px solid rgba(36,91,74,.15);
+
+      border-color:
+        var(--green-700);
+    }
+
+
+    .checkbox {
+      display: flex;
+
+      align-items: flex-start;
+
+      gap: 11px;
+
+      font-size: .93rem;
+      font-weight: 400;
+
+      line-height: 1.5;
+    }
+
+
+    .checkbox input {
+      flex:
+        0 0 auto;
+
+      width: 19px;
+      height: 19px;
+
+      margin-top: 3px;
+    }
+
+
+    .optional {
+      color:
+        var(--muted);
+
+      font-size: .84rem;
+    }
+
+
+    .honeypot {
+      position: absolute !important;
+
+      width: 1px !important;
+      height: 1px !important;
+
+      overflow: hidden !important;
+
+      clip:
+        rect(1px, 1px, 1px, 1px) !important;
+
+      white-space: nowrap !important;
+    }
+
+
+    .submit {
+      min-height: 57px;
+
+      margin-top: 5px;
+
+      padding:
+        13px 22px;
+
+      border: 0;
+
+      border-radius:
+        11px;
+
+      background:
+        var(--green-900);
+
+      color:
+        white;
+
+      font: inherit;
+      font-weight: 850;
+
+      cursor: pointer;
+
+      transition:
+        background .15s ease,
+        transform .15s ease;
+    }
+
+
+    .submit:hover {
+      background:
+        var(--green-700);
+    }
+
+
+    .submit:active {
+      transform:
+        translateY(1px);
+    }
+
+
+    .submit:disabled {
+      opacity: .5;
+      cursor: not-allowed;
+    }
+
+
+    /* =====================================================
+       MESSAGES
+       ===================================================== */
+
+    .message {
+      display: none;
+
+      margin-top: 21px;
+
+      padding:
+        19px 21px;
+
+      border-radius:
+        13px;
+    }
+
+
+    .message.success {
+      display: block;
+
+      background:
+        var(--success-bg);
+
+      color:
+        var(--success);
+    }
+
+
+    .message.error {
+      display: block;
+
+      background:
+        var(--danger-bg);
+
+      color:
+        var(--danger);
+    }
+
+
+    /* =====================================================
+       AFTER BOOKING
+       ===================================================== */
+
+    .after-booking {
+      display: none;
+
+      margin-top: 17px;
+
+      padding: 24px;
+
+      border:
+        1px solid var(--border);
+
+      border-radius:
+        var(--radius-md);
+
+      background:
+        var(--green-050);
+    }
+
+
+    .after-booking.show {
+      display: block;
+    }
+
+
+    .after-booking h2 {
+      font-size: 1.28rem;
+    }
+
+
+    .event-details {
+      margin:
+        15px 0;
+
+      padding:
+        14px 16px;
+
+      border-radius:
+        10px;
+
+      background:
+        white;
+    }
+
+
+    .after-actions {
+      display: flex;
+      flex-wrap: wrap;
+
+      gap: 9px;
+
+      margin-top: 17px;
+    }
+
+
+    .secondary-button {
+      display: inline-block;
+
+      padding:
+        10px 14px;
+
+      border:
+        1px solid var(--green-800);
+
+      border-radius:
+        9px;
+
+      background:
+        white;
+
+      color:
+        var(--green-900);
+
+      text-decoration:
+        none;
+
+      cursor:
+        pointer;
+
+      font:
+        inherit;
+
+      font-weight:
+        750;
+    }
+
+
+    .secondary-button:hover {
+      background:
+        var(--green-100);
+
+      color:
+        var(--green-900);
+    }
+
+
+    /* =====================================================
+       OTHER OPTIONS
+       ===================================================== */
+
+    .divider {
+      height: 1px;
+
+      margin:
+        40px 0;
+
+      background:
+        var(--border);
+    }
+
+
+    .links-grid {
+      display: grid;
+
+      grid-template-columns:
+        1fr 1fr;
+
+      gap: 14px;
+    }
+
+
+    .link-card {
+      display: block;
+
+      padding:
+        21px;
+
+      border:
+        1px solid var(--border);
+
+      border-radius:
+        var(--radius-md);
+
+      background:
+        #f8f8f4;
+
+      color:
+        var(--text);
+
+      text-decoration:
+        none;
+
+      transition:
+        transform .15s ease,
+        background .15s ease;
+    }
+
+
+    .link-card:hover {
+      transform:
+        translateY(-2px);
+
+      background:
+        var(--green-100);
+    }
+
+
+    .link-card strong {
+      display: block;
+
+      margin-bottom: 5px;
+
+      color:
+        var(--green-900);
+    }
+
+
+    .link-card span {
+      display: block;
+
+      color:
+        var(--muted);
+
+      font-size: .91rem;
+      line-height: 1.45;
+    }
+
+
+    /* =====================================================
+       PRIVACY
+       ===================================================== */
+
+    .privacy {
+      margin-top: 31px;
+
+      color:
+        var(--muted);
+
+      font-size: .85rem;
+      line-height: 1.58;
+    }
+
+
+    footer {
+      margin-top: 27px;
+
+      text-align: center;
+
+      color:
+        var(--muted);
+
+      font-size: .83rem;
+    }
+
+
+    /* =====================================================
+       MOBILE
+       ===================================================== */
+
+    @media (max-width: 700px) {
+
+      .page {
+        padding-top: 19px;
+      }
+
+
+      .proof-grid,
+      .ticket-options,
+      .links-grid {
+        grid-template-columns:
+          1fr;
+      }
+
+
+      .event-image img {
+        height: 260px;
+      }
+
+    }
+
+
+    /* =====================================================
+       REDUCED MOTION
+       ===================================================== */
+
+    @media (
+      prefers-reduced-motion:
+      reduce
+    ) {
+
+      html {
+        scroll-behavior:
+          auto;
+      }
+
+
+      * {
+        transition:
+          none !important;
+      }
+
+    }
+
+  </style>
+</head>
+
+
+
+<body>
+
+
+<main class="page">
+
+
+  <!-- =====================================================
+       LOGO
+       ===================================================== -->
+
+  <a
+    class="logo-link"
+    href="https://viborgbraetspil.dk/"
+  >
+
+    <img
+      class="logo"
+      src="/assets/images/Viborg-br-Logo.png"
+      alt="Viborg Brætspilsdag"
+    >
+
+  </a>
+
+
+
+  <article class="site-card">
+
+
+    <!-- ===================================================
+         HERO
+         =================================================== -->
+
+    <header class="hero">
+
+
+      <p class="eyebrow">
+        Viborg Brætspilsdag 2026
+      </p>
+
+
+      <h1>
+        En hel dag med brætspil i Viborg
+      </h1>
+
+
+      <p class="hero-lead">
+
+        Få en af de begrænsede fribilletter til
+        Viborg Brætspilsdag.
+
+        Kom alene, med en ven eller med hele spillegruppen
+        til en afslappet dag med spil, nye mennesker og
+        masser at prøve.
+
+      </p>
+
+
+      <div class="hero-facts">
+
+        <span class="hero-fact">
+          14. november 2026
+        </span>
+
+        <span class="hero-fact">
+          Kl. 10.00–00.00
+        </span>
+
+        <span class="hero-fact">
+          Reberbanen 11+13
+        </span>
+
+        <span class="hero-fact">
+          Viborg
+        </span>
+
+      </div>
+
+
+    </header>
+
+
+
+    <!-- ===================================================
+         ÆGTE VISUELT BEVIS
+
+         Skift kun billedstien her, hvis du hellere vil
+         bruge et andet stemningsbillede.
+         =================================================== -->
+
+    <div
+      class="event-image"
+      id="eventImage"
+    >
+
+      <img
+        src="/assets/images/delebillede2.jpg"
+        alt="Stemning fra Viborg Brætspilsdag"
+        loading="eager"
+
+        onerror="
+          document.getElementById('eventImage').style.display='none';
+        "
+      >
+
+    </div>
+
+
+
+    <div class="content">
+
+
+      <!-- =================================================
+           VALUE
+           ================================================= -->
+
+      <p class="intro">
+
+        På dagen kan du gå på opdagelse i et stort
+        brætspilsbibliotek, sætte dig ved et åbent bord,
+        lære nye spil, konkurrere, prøve rollespil eller
+        booke en af aktiviteterne med begrænsede pladser.
+
+      </p>
+
+
+
+      <!-- =================================================
+           KONKRETE BEVISER
+           ================================================= -->
+
+      <div class="proof-grid">
+
+
+        <div class="proof">
+
+          <span class="proof-number">
+            Et par hundrede spil
+          </span>
+
+          <span class="proof-text">
+            i det åbne brætspilsbibliotek
+          </span>
+
+        </div>
+
+
+        <div class="proof">
+
+          <span class="proof-number">
+            Spil hele dagen
+          </span>
+
+          <span class="proof-text">
+            fra korte spil til tung strategi, rollespil og turneringer
+          </span>
+
+        </div>
+
+
+        <div class="proof">
+
+          <span class="proof-number">
+            Du må gerne komme alene
+          </span>
+
+          <span class="proof-text">
+            vi hjælper med at finde et spil eller nogen at spille med
+          </span>
+
+        </div>
+
+
+      </div>
+
+
+
+      <!-- =================================================
+           WHY FREE?
+           ================================================= -->
+
+      <div class="local-box">
+
+        <strong>
+          Hvorfor giver vi fribilletter væk?
+        </strong>
+
+        <p style="margin-top:8px;">
+
+          Fordi vi gerne vil have så mange lokale som muligt
+          til at opdage Viborg Brætspilsdag.
+
+          Måske spiller du allerede brætspil hver uge.
+          Måske er du bare nysgerrig.
+
+          Begge dele er helt fint.
+
+        </p>
+
+      </div>
+
+
+
+      <!-- =================================================
+           NO-SHOW / COMMITMENT
+           ================================================= -->
+
+      <div class="commitment-box">
+
+        <h2>
+          Tag kun en fribillet, hvis du regner med at komme
+        </h2>
+
+        <p>
+
+          Der er kun et begrænset antal gratis pladser.
+
+          Reservér derfor ikke en billet bare
+          “for en sikkerheds skyld”.
+
+          Hvis dine planer senere ændrer sig, så giv os
+          besked. Så kan en anden få glæde af pladsen.
+
+        </p>
+
+      </div>
+
+
+
+      <!-- =================================================
+           NORMAL BILLET VS. FRIBILLET
+           ================================================= -->
+
+      <h2 class="ticket-heading">
+        Vil du booke aktiviteter allerede nu?
+      </h2>
+
+
+      <p>
+
+        Der er én forskel mellem en almindelig billet og
+        en fribillet: hvornår du får adgang til de
+        aktiviteter, der har begrænsede pladser.
+
+      </p>
+
+
+      <div class="ticket-options">
+
+
+        <div class="ticket-option support">
+
+          <span class="ticket-tag">
+            Tidlig adgang
+          </span>
+
+          <span class="ticket-name">
+            Almindelig billet
+          </span>
+
+          <span class="ticket-price">
+            50 kr.
+          </span>
+
+          <ul>
+
+            <li>
+              Adgang til hele Viborg Brætspilsdag
+            </li>
+
+            <li>
+              Aktivitetsbooking med det samme
+            </li>
+
+            <li>
+              Du støtter samtidig afholdelsen af dagen
+            </li>
+
+          </ul>
+
+
+          <a
+            class="ticket-link"
+            href="{{ site.signup_url }}"
+          >
+            Køb almindelig billet →
+          </a>
+
+        </div>
+
+
+
+        <div class="ticket-option">
+
+          <span class="ticket-tag">
+            Begrænset antal
+          </span>
+
+          <span class="ticket-name">
+            Fribillet
+          </span>
+
+          <span class="ticket-price">
+            0 kr.
+          </span>
+
+          <ul>
+
+            <li>
+              Adgang til hele Viborg Brætspilsdag
+            </li>
+
+            <li>
+              Aktivitetsbooking åbner 31. oktober
+            </li>
+
+            <li>
+              Ingen betalingsoplysninger kræves
+            </li>
+
+          </ul>
+
+        </div>
+
+
+      </div>
+
+
+
+      <!-- =================================================
+           LIVE TÆLLER
+
+           GET /api/fribilletter/status
+
+           Forventet JSON:
+
+           {
+             "capacity": 100,
+             "reserved": 63,
+             "remaining": 37,
+             "sold_out": false
+           }
+
+           ================================================= -->
+
+      <div
+        id="availability"
+        class="availability"
+        aria-live="polite"
+      >
+
+        <span
+          id="availabilityMain"
+          class="availability-main"
+        >
+          Henter antal ledige fribilletter…
+        </span>
+
+        <span
+          id="availabilitySub"
+          class="availability-sub"
+        >
+          Fribilletter uddeles efter først-til-mølle-princippet.
+        </span>
+
+      </div>
+
+
+
+      <!-- =================================================
+           FORMULAR
+           ================================================= -->
+
+      <section
+        id="bookingSection"
+      >
+
+
+        <h2>
+          Reservér din fribillet
+        </h2>
+
+
+        <p class="form-intro">
+
+          Det tager under et minut.
+
+          Vi skal bare bruge navn, e-mail og telefonnummer.
+
+        </p>
+
+
+
+        <form
+          id="ticketForm"
+          novalidate
+        >
+
+
+          <!-- Anti-spam honeypot -->
+          <div
+            class="honeypot"
+            aria-hidden="true"
+          >
+
+            <label for="website">
+              Hjemmeside
+            </label>
+
+            <input
+              id="website"
+              name="website"
+              type="text"
+              tabindex="-1"
+              autocomplete="off"
+            >
+
+          </div>
+
+
+
+          <div class="field">
+
+            <label for="name">
+              Navn
+            </label>
+
+            <input
+              id="name"
+              name="name"
+              type="text"
+              autocomplete="name"
+              maxlength="120"
+              required
+            >
+
+          </div>
+
+
+
+          <div class="field">
+
+            <label for="email">
+              E-mail
+            </label>
+
+            <input
+              id="email"
+              name="email"
+              type="email"
+              autocomplete="email"
+              maxlength="200"
+              required
+            >
+
+            <p class="field-help">
+
+              Vi sender praktisk information og
+              bookinglinket hertil.
+
+            </p>
+
+          </div>
+
+
+
+          <div class="field">
+
+            <label for="phone">
+              Telefonnummer
+            </label>
+
+            <input
+              id="phone"
+              name="phone"
+              type="tel"
+              autocomplete="tel"
+              inputmode="tel"
+              maxlength="30"
+              required
+            >
+
+            <p class="field-help">
+
+              Brug det samme nummer senere, når du
+              booker aktiviteter.
+
+            </p>
+
+          </div>
+
+
+
+          <!-- Commitment -->
+
+          <label class="checkbox">
+
+            <input
+              id="attendanceCommitment"
+              type="checkbox"
+              required
+            >
+
+            <span>
+
+              Jeg reserverer fribilletten, fordi jeg
+              forventer at deltage den 14. november.
+
+              Hvis mine planer ændrer sig, giver jeg
+              besked, så en anden kan få pladsen.
+
+            </span>
+
+          </label>
+
+
+
+          <!-- Bookingregler -->
+
+          <label class="checkbox">
+
+            <input
+              id="bookingTerms"
+              type="checkbox"
+              required
+            >
+
+            <span>
+
+              Jeg er indforstået med, at aktivitetsbooking
+              for fribilletter først åbner den
+              <strong>31. oktober 2026</strong>.
+
+            </span>
+
+          </label>
+
+
+
+          <!-- Privacy -->
+
+          <label class="checkbox">
+
+            <input
+              id="privacyConsent"
+              type="checkbox"
+              required
+            >
+
+            <span>
+
+              Jeg accepterer, at Viborg Brætspilsdag
+              bruger mine oplysninger til administration
+              af min billet, aktivitetsbooking og praktisk
+              kommunikation om arrangementet.
+
+            </span>
+
+          </label>
+
+
+
+          <!-- 2027: særskilt og frivilligt -->
+
+          <label class="checkbox">
+
+            <input
+              id="nextYearConsent"
+              type="checkbox"
+            >
+
+            <span>
+
+              Ja tak, send mig én mail, når tilmeldingen
+              til Viborg Brætspilsdag 2027 åbner.
+
+              <span class="optional">
+                (valgfrit)
+              </span>
+
+            </span>
+
+          </label>
+
+
+
+          <button
+            id="submitButton"
+            class="submit"
+            type="submit"
+          >
+            Reservér fribillet
+          </button>
+
+
+        </form>
+
+
+      </section>
+
+
+
+      <!-- =================================================
+           SERVER-/FORMULARBESKED
+           ================================================= -->
+
+      <div
+        id="message"
+        class="message"
+        role="status"
+        aria-live="polite"
+      ></div>
+
+
+
+      <!-- =================================================
+           EFTER RESERVATION
+
+           Vises kun efter succes.
+           ================================================= -->
+
+      <section
+        id="afterBooking"
+        class="after-booking"
+      >
+
+
+        <h2>
+          Din plads er reserveret
+        </h2>
+
+
+        <p>
+
+          Gem gerne datoen med det samme.
+
+          Dit bookinglink til aktiviteterne kommer
+          på mail den <strong>31. oktober</strong>.
+
+        </p>
+
+
+        <div class="event-details">
+
+          <strong>
+            Viborg Brætspilsdag 2026
+          </strong>
+
+          <br>
+
+          Lørdag 14. november
+
+          <br>
+
+          Kl. 10.00–00.00
+
+          <br>
+
+          Ungdomsskolen
+
+          <br>
+
+          Reberbanen 11+13, 8800 Viborg
+
+        </div>
+
+
+        <div class="after-actions">
+
+
+          <button
+            id="calendarButton"
+            class="secondary-button"
+            type="button"
+          >
+            Føj til kalender
+          </button>
+
+
+          <button
+            id="shareButton"
+            class="secondary-button"
+            type="button"
+          >
+            Send fribilletlinket til en ven
+          </button>
+
+
+          <a
+            class="secondary-button"
+            href="https://facebook.com/viborgbraetspilsdag"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Følg os på Facebook
+          </a>
+
+
+        </div>
+
+
+        <p
+          id="shareStatus"
+          class="field-help"
+          style="margin-top:12px;"
+        ></p>
+
+
+      </section>
+
+
+
+      <div class="divider"></div>
+
+
+
+      <!-- =================================================
+           ALTERNATIV: FRIVILLIG
+           ================================================= -->
+
+      <div class="links-grid">
+
+
+        <a
+          class="link-card"
+          href="/frivillig/"
+        >
+
+          <strong>
+            Vil du være med til at lave dagen?
+          </strong>
+
+          <span>
+
+            Som frivillig får du gratis adgang til
+            Viborg Brætspilsdag og bliver en del af
+            holdet bag arrangementet.
+
+          </span>
+
+        </a>
+
+
+
+        <a
+          class="link-card"
+          href="https://facebook.com/viborgbraetspilsdag"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+
+          <strong>
+            Følg Viborg Brætspilsdag
+          </strong>
+
+          <span>
+
+            Vi offentliggør løbende nye spil,
+            aktiviteter og nyheder frem mod dagen.
+
+          </span>
+
+        </a>
+
+
+      </div>
+
+
+
+      <div class="divider"></div>
+
+
+
+      <!-- =================================================
+           AFBUD
+           ================================================= -->
+
+      <h2>
+        Kan du alligevel ikke komme?
+      </h2>
+
+
+      <p>
+
+        Så skriv meget gerne til
+
+        <a href="mailto:viborgbraetspil@gmail.com">
+          viborgbraetspil@gmail.com
+        </a>.
+
+        Så kan vi give din gratis plads videre til en anden.
+
+      </p>
+
+
+
+      <p>
+
+        Program, parkering, mad, FAQ og øvrig praktisk
+        information finder du på
+
+        <a href="https://viborgbraetspil.dk/#praktisk">
+          viborgbraetspil.dk
+        </a>.
+
+      </p>
+
+
+
+      <!-- =================================================
+           PRIVACY
+           ================================================= -->
+
+      <p class="privacy">
+
+        <strong>
+          Om dine oplysninger:
+        </strong>
+
+        Vi bruger navn, e-mail og telefonnummer til at
+        administrere din fribillet, aktivitetsbooking og
+        praktisk kommunikation om Viborg Brætspilsdag.
+
+        Oplysningerne videregives ikke til sponsorer eller
+        andre eksterne parter til markedsføring og slettes,
+        når de ikke længere er nødvendige for administration
+        og opfølgning på arrangementet.
+
+        Hvis du særskilt vælger at få besked om 2027,
+        bruger vi din e-mail til denne påmindelse.
+
+        Du kan altid kontakte os på
+        <a href="mailto:viborgbraetspil@gmail.com">
+          viborgbraetspil@gmail.com
+        </a>.
+
+      </p>
+
+
+    </div>
+
+
+  </article>
+
+
+
+  <footer>
+
+    Viborg Brætspilsdag 2026 ·
+    Et lokalt og frivilligt arrangeret initiativ
+
+  </footer>
+
+
+</main>
+
+
+
+<script>
+
+/* ==========================================================
+   KONFIGURATION
+   ==========================================================
+
+   Når databasen/Worker'en er lavet, skal de to endpoints
+   eksistere:
+
+   GET  /api/fribilletter/status
+   POST /api/fribilletter
+
+   Hvis Worker'en kører på SAMME domæne, behøver denne
+   konfiguration ikke ændres.
+
+   Hvis den ligger på et andet domæne, ændrer vi blot
+   API_BASE.
+
+   ========================================================== */
+
+
+const API_BASE = "";
+
+
+/*
+  GET:
+  /api/fribilletter/status
+
+  POST:
+  /api/fribilletter
+*/
+
+const STATUS_ENDPOINT =
+  API_BASE + "/api/fribilletter/status";
+
+const BOOK_ENDPOINT =
+  API_BASE + "/api/fribilletter";
+
+
+/*
+  Hvis backend ikke er bygget endnu, sæt denne til true,
+  så du kan prøve design og success-flow lokalt.
+
+  VIGTIGT:
+  Sæt den til false, når databasen kobles på.
+*/
+
+const DEMO_MODE = false;
+
+
+
+/* ==========================================================
+   DOM
+   ========================================================== */
+
+const form =
+  document.getElementById("ticketForm");
+
+const bookingSection =
+  document.getElementById("bookingSection");
+
+const submitButton =
+  document.getElementById("submitButton");
+
+const message =
+  document.getElementById("message");
+
+const availability =
+  document.getElementById("availability");
+
+const availabilityMain =
+  document.getElementById("availabilityMain");
+
+const availabilitySub =
+  document.getElementById("availabilitySub");
+
+const afterBooking =
+  document.getElementById("afterBooking");
+
+const shareButton =
+  document.getElementById("shareButton");
+
+const shareStatus =
+  document.getElementById("shareStatus");
+
+const calendarButton =
+  document.getElementById("calendarButton");
+
+
+
+/* ==========================================================
+   SOURCE / ATTRIBUTION
+   ==========================================================
+
+   Du kan bruge fx:
+
+   /fribillet/?src=facebook
+
+   /fribillet/?src=projekt-mithril
+
+   /fribillet/?src=naeste-traek
+
+   /fribillet/?src=flyer-viborg
+
+   Der gemmes både src og eventuelle UTM-parametre.
+
+   ========================================================== */
+
+
+const params =
+  new URLSearchParams(
+    window.location.search
+  );
+
+
+function cleanTrackingValue(value) {
+
+  if (!value) {
+    return "";
+  }
+
+  return String(value)
+    .trim()
+    .slice(0, 200);
+
+}
+
+
+const incomingTracking = {
+
+  source:
+    cleanTrackingValue(
+      params.get("src")
+    ),
+
+  utm_source:
+    cleanTrackingValue(
+      params.get("utm_source")
+    ),
+
+  utm_medium:
+    cleanTrackingValue(
+      params.get("utm_medium")
+    ),
+
+  utm_campaign:
+    cleanTrackingValue(
+      params.get("utm_campaign")
+    ),
+
+  utm_content:
+    cleanTrackingValue(
+      params.get("utm_content")
+    ),
+
+  utm_term:
+    cleanTrackingValue(
+      params.get("utm_term")
+    )
+
+};
+
+
+/*
+  Gem første kendte kilde.
+
+  Så mister vi den ikke ved reload.
+*/
+
+const TRACKING_KEY =
+  "viborgbraetspil_free_ticket_source";
+
+
+let tracking = {};
+
+
+try {
+
+  const oldTracking =
+    JSON.parse(
+      localStorage.getItem(
+        TRACKING_KEY
+      ) || "{}"
+    );
+
+
+  tracking = {
+    ...oldTracking
+  };
+
+
+  /*
+    Nye eksplicitte trackingparametre
+    må gerne udfylde tomme felter.
+  */
+
+  Object.keys(incomingTracking)
+    .forEach(function(key) {
+
+      if (
+        incomingTracking[key] &&
+        !tracking[key]
+      ) {
+
+        tracking[key] =
+          incomingTracking[key];
+
+      }
+
+    });
+
+
+  if (!tracking.source) {
+
+    tracking.source =
+      document.referrer
+        ? "referral"
+        : "direct";
+
+  }
+
+
+  if (
+    document.referrer &&
+    !tracking.referrer
+  ) {
+
+    tracking.referrer =
+      document.referrer.slice(
+        0,
+        500
+      );
+
+  }
+
+
+  localStorage.setItem(
+    TRACKING_KEY,
+    JSON.stringify(tracking)
+  );
+
+}
+catch (_) {
+
+  tracking = {
+    ...incomingTracking,
+    source:
+      incomingTracking.source ||
+      "direct"
+  };
+
+}
+
+
+
+/* ==========================================================
+   BESKEDER
+   ========================================================== */
+
+
+function showMessage(
+  type,
+  html
+) {
+
+  message.className =
+    "message " + type;
+
+  message.innerHTML =
+    html;
+
+}
+
+
+function clearMessage() {
+
+  message.className =
+    "message";
+
+  message.textContent =
+    "";
+
+}
+
+
+
+/* ==========================================================
+   TELEFONNORMALISERING
+   ========================================================== */
+
+
+function normalizePhone(value) {
+
+  /*
+    Gem kun cifre.
+
+    +45 61 31 11 10
+    bliver fx:
+    4561311110
+
+    Backend kan vælge at fjerne dansk 45-prefix.
+  */
+
+  return String(value || "")
+    .replace(/\D/g, "");
+
+}
+
+
+
+/* ==========================================================
+   LIVE ANTAL FRIBILLETTER
+   ========================================================== */
+
+
+async function loadAvailability() {
+
+
+  if (DEMO_MODE) {
+
+    availabilityMain.textContent =
+      "Der er fribilletter tilbage.";
+
+    availabilitySub.textContent =
+      "Live tæller kobles på databasen bagefter.";
+
+    return;
+
+  }
+
+
+  try {
+
+
+    const response =
+      await fetch(
+        STATUS_ENDPOINT,
+        {
+          method: "GET",
+
+          headers: {
+            "Accept":
+              "application/json"
+          },
+
+          cache:
+            "no-store"
+        }
+      );
+
+
+    if (!response.ok) {
+
+      throw new Error(
+        "Status kunne ikke hentes."
+      );
+
+    }
+
+
+    const data =
+      await response.json();
+
+
+    const remaining =
+      Number(data.remaining);
+
+
+    const capacity =
+      Number(data.capacity);
+
+
+    const soldOut =
+      Boolean(data.sold_out) ||
+      remaining <= 0;
+
+
+    if (soldOut) {
+
+      availability.classList.add(
+        "sold-out"
+      );
+
+
+      availabilityMain.textContent =
+        "Alle fribilletter er reserveret.";
+
+
+      availabilitySub.textContent =
+        "Du kan stadig købe en almindelig billet eller melde dig som frivillig.";
+
+
+      disableBookingForm();
+
+      return;
+
+    }
+
+
+    availability.classList.remove(
+      "sold-out"
+    );
+
+
+    if (
+      Number.isFinite(remaining)
+    ) {
+
+
+      availabilityMain.textContent =
+        remaining === 1
+          ? "Der er 1 fribillet tilbage."
+          : "Der er " +
+            remaining +
+            " fribilletter tilbage.";
+
+
+      if (
+        Number.isFinite(capacity) &&
+        capacity > 0
+      ) {
+
+        availabilitySub.textContent =
+          "Fribilletter uddeles efter først-til-mølle-princippet.";
+
+      }
+
+    }
+
+    else {
+
+      availabilityMain.textContent =
+        "Der er stadig fribilletter tilbage.";
+
+    }
+
+
+  }
+
+  catch (error) {
+
+
+    /*
+      Formularen må stadig fungere,
+      selvom statustælleren fejler.
+
+      Serveren afgør altid ved POST,
+      om der faktisk er pladser.
+    */
+
+    availabilityMain.textContent =
+      "Der er et begrænset antal fribilletter.";
+
+    availabilitySub.textContent =
+      "Den aktuelle tæller kunne ikke hentes lige nu.";
+
+
+  }
+
+}
+
+
+
+/* ==========================================================
+   DISABLE FORM VED UDSOLGT
+   ========================================================== */
+
+
+function disableBookingForm() {
+
+  submitButton.disabled =
+    true;
+
+  submitButton.textContent =
+    "Fribilletter udsolgt";
+
+}
+
+
+
+/* ==========================================================
+   FORM SUBMIT
+   ========================================================== */
+
+
+form.addEventListener(
+  "submit",
+  async function(event) {
+
+
+    event.preventDefault();
+
+
+    clearMessage();
+
+
+    /*
+      Native browser-validation.
+    */
+
+    if (!form.reportValidity()) {
+      return;
+    }
+
+
+    /*
+      Honeypot.
+    */
+
+    const website =
+      document
+        .getElementById("website")
+        .value
+        .trim();
+
+
+    if (website) {
+
+      /*
+        Lad botten tro, det lykkedes.
+      */
+
+      form.reset();
+
+      showSuccessFlow();
+
+      return;
+
+    }
+
+
+
+    submitButton.disabled =
+      true;
+
+
+    submitButton.textContent =
+      "Reserverer…";
+
+
+
+    const payload = {
+
+
+      name:
+        document
+          .getElementById("name")
+          .value
+          .trim(),
+
+
+      email:
+        document
+          .getElementById("email")
+          .value
+          .trim()
+          .toLowerCase(),
+
+
+      phone:
+        normalizePhone(
+          document
+            .getElementById("phone")
+            .value
+        ),
+
+
+      attendance_commitment:
+        document
+          .getElementById(
+            "attendanceCommitment"
+          )
+          .checked,
+
+
+      booking_terms:
+        document
+          .getElementById(
+            "bookingTerms"
+          )
+          .checked,
+
+
+      privacy_consent:
+        document
+          .getElementById(
+            "privacyConsent"
+          )
+          .checked,
+
+
+      next_year_consent:
+        document
+          .getElementById(
+            "nextYearConsent"
+          )
+          .checked,
+
+
+      ticket_type:
+        "free",
+
+
+      event:
+        "viborg-braetspilsdag-2026",
+
+
+      source:
+        tracking.source || "direct",
+
+
+      utm_source:
+        tracking.utm_source || "",
+
+
+      utm_medium:
+        tracking.utm_medium || "",
+
+
+      utm_campaign:
+        tracking.utm_campaign || "",
+
+
+      utm_content:
+        tracking.utm_content || "",
+
+
+      utm_term:
+        tracking.utm_term || "",
+
+
+      referrer:
+        tracking.referrer || "",
+
+
+      page:
+        window.location.pathname,
+
+
+      submitted_at:
+        new Date().toISOString()
+
+
+    };
+
+
+
+    try {
+
+
+      /*
+        DEMO MODE
+      */
+
+      if (DEMO_MODE) {
+
+        await new Promise(
+          resolve =>
+            setTimeout(
+              resolve,
+              550
+            )
+        );
+
+
+        form.reset();
+
+        showSuccessFlow();
+
+        return;
+
+      }
+
+
+
+      const response =
+        await fetch(
+          BOOK_ENDPOINT,
+          {
+
+            method:
+              "POST",
+
+            headers: {
+
+              "Content-Type":
+                "application/json",
+
+              "Accept":
+                "application/json"
+
+            },
+
+            body:
+              JSON.stringify(payload)
+
+          }
+        );
+
+
+
+      let data = {};
+
+
+      try {
+
+        data =
+          await response.json();
+
+      }
+
+      catch (_) {}
+
+
+
+      /*
+        Eksempel:
+
+        409:
+        {
+          "code": "duplicate",
+          "error": "..."
+        }
+      */
+
+      if (!response.ok) {
+
+
+        if (
+          response.status === 409 &&
+          data.code === "duplicate"
+        ) {
+
+          throw new Error(
+            "Der er allerede reserveret en fribillet med denne e-mail eller dette telefonnummer."
+          );
+
+        }
+
+
+        if (
+          response.status === 409 &&
+          data.code === "sold_out"
+        ) {
+
+          disableBookingForm();
+
+          throw new Error(
+            "Alle fribilletter er desværre blevet reserveret."
+          );
+
+        }
+
+
+        throw new Error(
+
+          data.error ||
+
+          "Vi kunne ikke reservere fribilletten. Prøv igen."
+
+        );
+
+      }
+
+
+
+      form.reset();
+
+
+      showSuccessFlow();
+
+
+
+      /*
+        Opdater tælleren med serverens
+        aktuelle tal.
+      */
+
+      if (
+        typeof data.remaining ===
+        "number"
+      ) {
+
+        updateRemaining(
+          data.remaining
+        );
+
+      }
+
+      else {
+
+        loadAvailability();
+
+      }
+
+
+
+    }
+
+    catch (error) {
+
+
+      showMessage(
+
+        "error",
+
+        "<strong>Det lykkedes ikke.</strong><br>" +
+        escapeHtml(
+          error.message ||
+          "Prøv igen om lidt."
+        )
+
+      );
+
+
+    }
+
+    finally {
+
+
+      if (
+        !submitButton.textContent
+          .includes("udsolgt")
+      ) {
+
+        submitButton.disabled =
+          false;
+
+        submitButton.textContent =
+          "Reservér fribillet";
+
+      }
+
+
+    }
+
+
+  }
+);
+
+
+
+/* ==========================================================
+   SUCCESS FLOW
+   ========================================================== */
+
+
+function showSuccessFlow() {
+
+
+  showMessage(
+
+    "success",
+
+    "<strong>Sådan. Din fribillet er reserveret.</strong><br>" +
+
+    "Vi sender adgang til aktivitetsbookingen til din e-mail den 31. oktober 2026."
+
+  );
+
+
+  bookingSection.style.display =
+    "none";
+
+
+  afterBooking.classList.add(
+    "show"
+  );
+
+
+  message.scrollIntoView({
+    behavior: "smooth",
+    block: "center"
+  });
+
+}
+
+
+
+/* ==========================================================
+   UPDATE REMAINING
+   ========================================================== */
+
+
+function updateRemaining(
+  remaining
+) {
+
+
+  remaining =
+    Number(remaining);
+
+
+  if (
+    !Number.isFinite(remaining)
+  ) {
+    return;
+  }
+
+
+  if (
+    remaining <= 0
+  ) {
+
+    availability.classList.add(
+      "sold-out"
+    );
+
+
+    availabilityMain.textContent =
+      "Alle fribilletter er nu reserveret.";
+
+
+    availabilitySub.textContent =
+      "Tak for den store interesse.";
+
+
+    disableBookingForm();
+
+    return;
+
+  }
+
+
+  availabilityMain.textContent =
+    remaining === 1
+      ? "Der er 1 fribillet tilbage."
+      : "Der er " +
+        remaining +
+        " fribilletter tilbage.";
+
+}
+
+
+
+/* ==========================================================
+   HTML ESCAPE
+   ========================================================== */
+
+
+function escapeHtml(value) {
+
+  const div =
+    document.createElement("div");
+
+  div.textContent =
+    String(value || "");
+
+  return div.innerHTML;
+
+}
+
+
+
+/* ==========================================================
+   KALENDER
+   ========================================================== */
+
+
+calendarButton.addEventListener(
+  "click",
+  function() {
+
+
+    /*
+      Europe/Copenhagen benyttes,
+      så kalenderen kender lokal tid.
+    */
+
+    const ics = [
+
+      "BEGIN:VCALENDAR",
+
+      "VERSION:2.0",
+
+      "PRODID:-//Viborg Brætspilsdag//2026//DA",
+
+      "CALSCALE:GREGORIAN",
+
+      "METHOD:PUBLISH",
+
+      "BEGIN:VEVENT",
+
+      "UID:viborg-braetspilsdag-2026@viborgbraetspil.dk",
+
+      "DTSTAMP:20261004T080000Z",
+
+      "DTSTART;TZID=Europe/Copenhagen:20261114T100000",
+
+      "DTEND;TZID=Europe/Copenhagen:20261115T000000",
+
+      "SUMMARY:Viborg Brætspilsdag 2026",
+
+      "LOCATION:Ungdomsskolen\\, Reberbanen 11+13\\, 8800 Viborg",
+
+      "DESCRIPTION:En hel dag med brætspil\\, aktiviteter\\, turneringer og fællesskab. Se mere på https://viborgbraetspil.dk/",
+
+      "URL:https://viborgbraetspil.dk/",
+
+      "END:VEVENT",
+
+      "END:VCALENDAR"
+
+    ].join("\r\n");
+
+
+
+    const blob =
+      new Blob(
+        [ics],
+        {
+          type:
+            "text/calendar;charset=utf-8"
+        }
+      );
+
+
+    const url =
+      URL.createObjectURL(blob);
+
+
+    const link =
+      document.createElement("a");
+
+
+    link.href =
+      url;
+
+
+    link.download =
+      "viborg-braetspilsdag-2026.ics";
+
+
+    document.body.appendChild(
+      link
+    );
+
+
+    link.click();
+
+
+    link.remove();
+
+
+    setTimeout(
+      function() {
+        URL.revokeObjectURL(url);
+      },
+      1000
+    );
+
+
+  }
+);
+
+
+
+/* ==========================================================
+   DEL MED EN VEN
+   ========================================================== */
+
+
+shareButton.addEventListener(
+  "click",
+  async function() {
+
+
+    /*
+      Del altid ren URL uden trackingparametre.
+    */
+
+    const shareUrl =
+      window.location.origin +
+      window.location.pathname;
+
+
+
+    const shareData = {
+
+      title:
+        "Fribillet til Viborg Brætspilsdag",
+
+      text:
+        "Der er et begrænset antal fribilletter til Viborg Brætspilsdag den 14. november.",
+
+      url:
+        shareUrl
+
+    };
+
+
+
+    try {
+
+
+      if (
+        navigator.share
+      ) {
+
+
+        await navigator.share(
+          shareData
+        );
+
+
+      }
+
+      else if (
+        navigator.clipboard
+      ) {
+
+
+        await navigator.clipboard.writeText(
+          shareUrl
+        );
+
+
+        shareStatus.textContent =
+          "Linket er kopieret.";
+
+
+      }
+
+      else {
+
+
+        shareStatus.textContent =
+          shareUrl;
+
+
+      }
+
+
+    }
+
+    catch (_) {
+
+      /*
+        Typisk fordi brugeren lukker
+        delingsdialogen.
+      */
+
+    }
+
+
+  }
+);
+
+
+
+/* ==========================================================
+   INITIAL LOAD
+   ========================================================== */
+
+
+loadAvailability();
+
+
+</script>
+
+
+</body>
+</html>
