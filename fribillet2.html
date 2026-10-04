@@ -177,7 +177,169 @@ sitemap: false
       padding: 28px 0 75px;
     }
 
+/* =========================================================
+   PARTNERE – kompakt og rolig visning
+   ========================================================= */
 
+.partners-section {
+  padding: 3rem 0;
+}
+
+.partners-heading {
+  max-width: 680px;
+  margin: 0 auto 2.5rem;
+  text-align: center;
+}
+
+.partners-heading h2 {
+  margin-bottom: .6rem;
+}
+
+.partners-heading p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* Grupperne */
+
+.partner-group {
+  margin-top: 2.5rem;
+}
+
+.partner-group h3 {
+  margin: 0 0 1.2rem;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 700;
+  opacity: .8;
+}
+
+
+/* Selve logo-grid'et */
+
+.partners-section .logo-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  gap: 14px 18px;
+
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+
+/* Små, diskrete logo-kort */
+
+.partners-section .logo-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 135px;
+  height: 76px;
+
+  padding: 12px 15px;
+
+  border: 1px solid rgba(0, 0, 0, .08);
+  border-radius: 12px;
+
+  background: #fff;
+
+  box-shadow: none;
+
+  transition:
+    transform .15s ease,
+    border-color .15s ease;
+}
+
+.partners-section a.logo-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(0, 0, 0, .18);
+}
+
+
+/* DET VIGTIGE:
+   Logoerne får aldrig lov at blive gigantiske */
+
+.partners-section .logo-card img {
+  display: block;
+
+  width: auto;
+  height: auto;
+
+  max-width: 105px;
+  max-height: 45px;
+
+  object-fit: contain;
+}
+
+
+/* =========================================================
+   "SÆRLIG TAK" – må gerne være lidt mere fremtrædende
+   ========================================================= */
+
+.partner-group-featured {
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+
+.partner-group-featured h3 {
+  font-size: 1.05rem;
+  color: inherit;
+  opacity: 1;
+}
+
+.partner-group-featured .logo-card {
+  width: 160px;
+  height: 90px;
+
+  padding: 14px 18px;
+}
+
+.partner-group-featured .logo-card img {
+  max-width: 125px;
+  max-height: 58px;
+}
+
+
+/* =========================================================
+   MOBIL
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .partners-section {
+    padding: 2.5rem 0;
+  }
+
+  .partners-section .logo-grid {
+    gap: 10px;
+  }
+
+  .partners-section .logo-card {
+    width: 105px;
+    height: 64px;
+    padding: 9px 10px;
+  }
+
+  .partners-section .logo-card img {
+    max-width: 84px;
+    max-height: 36px;
+  }
+
+  .partner-group-featured .logo-card {
+    width: 125px;
+    height: 72px;
+  }
+
+  .partner-group-featured .logo-card img {
+    max-width: 98px;
+    max-height: 44px;
+  }
+
+}
     /* =====================================================
        LOGO
        ===================================================== */
@@ -3384,3 +3546,6 @@ loadAvailability();
 
 </body>
 </html>
+
+
+
