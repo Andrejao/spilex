@@ -2790,10 +2790,6 @@ async function loadAvailability() {
       Number(data.remaining);
 
 
-    const capacity =
-      Number(data.capacity);
-
-
     const soldOut =
       Boolean(data.sold_out) ||
       remaining <= 0;
@@ -2809,6 +2805,9 @@ async function loadAvailability() {
       availabilityMain.textContent =
         "Alle fribilletter er reserveret.";
 
+
+      availabilitySub.hidden =
+        false;
 
       availabilitySub.textContent =
         "Du kan stadig købe en almindelig billet eller melde dig som frivillig.";
@@ -2826,34 +2825,70 @@ async function loadAvailability() {
     );
 
 
+    /*
+      Vis altid, hvilken kilde fribilletten kommer fra.
+    */
+
+    const sourceName =
+      String(data.source || "")
+        .trim();
+
+
+    availabilityMain.textContent =
+      sourceName
+        ? "Denne fribillet kommer fra " +
+          sourceName +
+          "."
+        : "Denne fribillet kommer via dette link.";
+
+
+    /*
+      Vis kun et konkret antal, hvis denne src-kode
+      har en max_uses-værdi i databasen.
+
+      max_uses = NULL:
+      Ingen tæller vises.
+
+      max_uses = et tal:
+      Vis præcis hvor mange billetter der er tilbage
+      via netop dette link.
+    */
+
+    const hasSourceLimit =
+      data.source_limit !== null &&
+      data.source_limit !== undefined;
+
+
+    const sourceRemaining =
+      Number(data.source_remaining);
+
+
     if (
-      Number.isFinite(remaining)
+      hasSourceLimit &&
+      Number.isFinite(sourceRemaining)
     ) {
 
+      availabilitySub.hidden =
+        false;
 
-availabilityMain.textContent =
-  "Der er stadig fribilletter tilbage.";
-   
-
-      if (
-        Number.isFinite(capacity) &&
-        capacity > 0
-      ) {
-
-        availabilitySub.textContent =
-          "Fribilletter uddeles efter først-til-mølle-princippet.";
-
-      }
+      availabilitySub.textContent =
+        sourceRemaining === 1
+          ? "Der er 1 fribillet tilbage via dette link."
+          : "Der er " +
+            sourceRemaining +
+            " fribilletter tilbage via dette link.";
 
     }
 
     else {
 
-      availabilityMain.textContent =
-        "Der er stadig fribilletter tilbage.";
+      availabilitySub.hidden =
+        true;
+
+      availabilitySub.textContent =
+        "";
 
     }
-
 
   }
 
@@ -3337,6 +3372,16 @@ function showSuccessFlow() {
 
 
   bookingSection.style.display =
+    "none";
+
+
+
+  /*
+    Efter reservationen skjules kilde-/tællerboksen,
+    så den ikke kan vise et forældet antal.
+  */
+
+  availability.style.display =
     "none";
 
 
