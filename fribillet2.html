@@ -2190,52 +2190,7 @@ sitemap: false
 
     {% endif %}
 
-    {% assign sponsorer = site.data.partnere | where: "gruppe", "sponsor" %}
-
-    {% if sponsorer.size > 0 %}
-
-    <div class="partner-group">
-
-      <h3>Sponsorer</h3>
-
-      <div class="logo-grid">
-
-        {% for partner in sponsorer %}
-
-          {% if partner.url != "" %}
-          <a
-            class="logo-card"
-            href="{{ partner.url }}"
-            target="_blank"
-            rel="noopener"
-            aria-label="{{ partner.navn }}"
-          >
-          {% else %}
-          <div class="logo-card">
-          {% endif %}
-
-            <img
-              src="{{ partner.logo | relative_url }}"
-              alt="{{ partner.navn }}"
-              loading="lazy"
-            >
-
-          {% if partner.url != "" %}
-          </a>
-          {% else %}
-          </div>
-          {% endif %}
-
-        {% endfor %}
-
-      </div>
-
-    </div>
-
-    {% endif %}
-
-
-    {% assign samarbejdspartnere = site.data.partnere | where: "gruppe", "samarbejdspartner" %}
+       {% assign samarbejdspartnere = site.data.partnere | where: "gruppe", "samarbejdspartner" %}
 
     {% if samarbejdspartnere.size > 0 %}
 
@@ -2280,6 +2235,52 @@ sitemap: false
     {% endif %}
 
   </div>
+    {% assign sponsorer = site.data.partnere | where: "gruppe", "sponsor" %}
+
+    {% if sponsorer.size > 0 %}
+
+    <div class="partner-group">
+
+      <h3>Andre sponsorer</h3>
+
+      <div class="logo-grid">
+
+        {% for partner in sponsorer %}
+
+          {% if partner.url != "" %}
+          <a
+            class="logo-card"
+            href="{{ partner.url }}"
+            target="_blank"
+            rel="noopener"
+            aria-label="{{ partner.navn }}"
+          >
+          {% else %}
+          <div class="logo-card">
+          {% endif %}
+
+            <img
+              src="{{ partner.logo | relative_url }}"
+              alt="{{ partner.navn }}"
+              loading="lazy"
+            >
+
+          {% if partner.url != "" %}
+          </a>
+          {% else %}
+          </div>
+          {% endif %}
+
+        {% endfor %}
+
+      </div>
+
+    </div>
+
+    {% endif %}
+
+
+ 
 
 </section>
   
