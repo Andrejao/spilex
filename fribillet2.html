@@ -1554,7 +1554,7 @@ sitemap: false
       <p>
 
         Inden du booker en fribillet, er det vigtigt, du orienterer dig i program, parkering, mad, FAQ og øvrig praktisk
-        information finder på
+        information på
 
         <a href="https://viborgbraetspil.dk/#praktisk">
           viborgbraetspil.dk
@@ -1574,7 +1574,7 @@ sitemap: false
       <p>
 
         Der er én lille forskel mellem en almindelig billet og
-        en fribillet. Det er, hvornår du får adgang til de
+        en fribillet. Det er, hvornår du får adgang til at kunne booke de
         aktiviteter, der har begrænsede pladser. Du kan læse om aktiviteterne her: <a href="https://viborgbraetspil.dk/aktiviteter.html">viborgbraetspil.dk/aktiviteter</a>.
 
       </p>
@@ -2831,13 +2831,9 @@ async function loadAvailability() {
     ) {
 
 
-      availabilityMain.textContent =
-        remaining === 1
-          ? "Der er 1 fribillet tilbage."
-          : "Der er " +
-            remaining +
-            " fribilletter tilbage.";
-
+ availabilityMain.textContent =
+  "Der er stadig fribilletter tilbage.
+   
 
       if (
         Number.isFinite(capacity) &&
@@ -3403,13 +3399,8 @@ function updateRemaining(
   }
 
 
-  availabilityMain.textContent =
-    remaining === 1
-      ? "Der er 1 fribillet tilbage."
-      : "Der er " +
-        remaining +
-        " fribilletter tilbage.";
-
+availabilityMain.textContent =
+  "Der er stadig fribilletter tilbage.";
 }
 
 
