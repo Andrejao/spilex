@@ -9,3 +9,6 @@ signup_url: "https://viborgbraetspil.dk/tilmelding/"
 
 include:
   - _redirects
+  
+plugins:
+  - jekyll-redirect-from
