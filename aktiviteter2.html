@@ -1,198 +1,1149 @@
 ---
 layout: default
-title: Aktiviteter
-description: Se aktiviteter med og uden tilmelding til Viborg Brætspilsdag 2026.
+title: Aktiviteter · Viborg Brætspilsdag 2026
+description: Find aktiviteter på Viborg Brætspilsdag 2026. Filtrér efter tidspunkt, oplevelse, type og niveau – fra åbne borde og lær-at-spille til turneringer, rollespil, prototyper og tunge strategispil.
+permalink: /aktiviteter.html
 ---
 
-<section class="page-hero">
-  <div class="container">
+<style>
+  .actv {
+    --ink: #17201c;
+    --muted: #637068;
+    --paper: #f7f3e9;
+    --paper-2: #efe8da;
+    --white: #fffdf8;
+    --green: #245d49;
+    --green-dark: #173b30;
+    --green-soft: #e4eee8;
+    --lime: #d8efb1;
+    --amber: #f4c463;
+    --rust: #b95135;
+    --navy: #172d31;
+    --line: rgba(23, 32, 28, .12);
+    --shadow: 0 18px 50px rgba(23, 32, 28, .10);
+    --radius: 24px;
+    color: var(--ink);
+    background: var(--paper);
+  }
 
-    <p class="eyebrow">Viborg Brætspilsdag 2026</p>
+  .actv *,
+  .actv *::before,
+  .actv *::after { box-sizing: border-box; }
 
-    <h1>Aktiviteter</h1>
+  .actv a { color: inherit; }
+  .actv button { font: inherit; }
+  .actv [hidden] { display: none !important; }
 
-    <p>
-      Nogle aktiviteter kan du bare møde op til.
-      Andre har et begrænset antal pladser og kræver særskilt tilmelding.
-      Se alle aktiviteter nedenfor. <b>Hold øje med siden her. Der kommer løbende nye aktiviteter!</b>
-    </p>
+  .actv .wrap {
+    width: min(1180px, calc(100% - 40px));
+    margin: 0 auto;
+  }
 
-  </div>
-</section>
+  /* HERO */
+  .actv .hero {
+    background:
+      radial-gradient(circle at 86% 18%, rgba(216,239,177,.18), transparent 28%),
+      linear-gradient(135deg, #12242b 0%, #183c34 100%);
+    color: #fff;
+    padding: 78px 0 70px;
+  }
 
+  .actv .hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(300px, .85fr);
+    gap: 54px;
+    align-items: end;
+  }
 
-<section class="section">
+  .actv .kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    margin: 0 0 14px;
+    color: var(--lime);
+    font-size: .78rem;
+    font-weight: 900;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+  }
 
-  <div class="container">
+  .actv .kicker::before {
+    content: "";
+    width: 28px;
+    height: 2px;
+    background: currentColor;
+    border-radius: 999px;
+  }
 
-    <div class="section-heading">
-      <p class="eyebrow">Bare mød op</p>
-      <h2>Åbne aktiviteter</h2>
-      <p>
-        Disse aktiviteter kræver ikke forhåndstilmelding (ud over tilmelding til dagen).
-      </p>
-    </div>
+  .actv h1,
+  .actv h2,
+  .actv h3 { text-wrap: balance; }
 
+  .actv h1 {
+    margin: 0;
+    max-width: 780px;
+    color: #fff;
+    font-size: clamp(3rem, 7vw, 6.1rem);
+    line-height: .92;
+    letter-spacing: -.06em;
+  }
 
-    <div class="activity-grid">
+  .actv .hero-lead {
+    max-width: 760px;
+    margin: 24px 0 0;
+    color: rgba(255,255,255,.79);
+    font-size: clamp(1.06rem, 2vw, 1.28rem);
+    line-height: 1.58;
+  }
 
-{% for aktivitet in site.data.aabne_aktiviteter %}
+  .actv .hero-facts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin-top: 24px;
+  }
 
-<article class="activity-card activity-card-open">
+  .actv .hero-fact {
+    padding: 8px 12px;
+    border: 1px solid rgba(255,255,255,.18);
+    border-radius: 999px;
+    background: rgba(255,255,255,.07);
+    color: rgba(255,255,255,.9);
+    font-size: .88rem;
+    font-weight: 800;
+  }
 
-  {% if aktivitet.image %}
-  <a
-    class="activity-banner"
-    href="{{ aktivitet.artikel | relative_url }}"
-  >
-    <img
-      class="activity-card-image"
-      src="{{ aktivitet.image | relative_url }}"
-      alt="{{ aktivitet.image_alt | default: aktivitet.titel }}"
-      loading="lazy"
-    >
-  </a>
-  {% endif %}
+  .actv .hero-side {
+    padding: 24px;
+    border: 1px solid rgba(255,255,255,.13);
+    border-radius: 24px;
+    background: rgba(255,255,255,.07);
+    backdrop-filter: blur(12px);
+  }
 
-  <div class="activity-card-top">
+  .actv .hero-side strong {
+    display: block;
+    margin-bottom: 8px;
+    color: #fff;
+    font-size: 1.14rem;
+  }
 
-    <span class="activity-time">
-      {{ aktivitet.tid }}
-    </span>
+  .actv .hero-side p {
+    margin: 0;
+    color: rgba(255,255,255,.72);
+    line-height: 1.55;
+  }
 
-    <span class="activity-badge open">
-      Ingen tilmelding
-    </span>
+  .actv .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+  }
 
-  </div>
+  .actv .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 0 18px;
+    border: 1px solid transparent;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 850;
+  }
 
-  <h3>{{ aktivitet.titel }}</h3>
+  .actv .btn-primary {
+    background: var(--lime);
+    color: #173226;
+  }
 
-  {% if aktivitet.vaert != "" %}
-  <p class="activity-host">
-    Vært: {{ aktivitet.vaert }}
-  </p>
-  {% endif %}
+  .actv .btn-secondary {
+    border-color: rgba(255,255,255,.25);
+    background: rgba(255,255,255,.07);
+    color: #fff;
+  }
 
-  <p>
-    {{ aktivitet.beskrivelse }}
-  </p>
+  /* SEGMENT-BANNER */
+  .actv .segment-wrap {
+    background: var(--paper-2);
+    padding: 22px 0 0;
+  }
 
-  {% if aktivitet.artikel %}
-  <div class="activity-actions">
-    <a
-      class="activity-read-more"
-      href="{{ aktivitet.artikel | relative_url }}"
-    >
-      Læs mere →
-    </a>
-  </div>
-  {% endif %}
+  .actv .segment-banner {
+    padding: 18px 20px;
+    border: 1px solid rgba(36,93,73,.16);
+    border-radius: 18px;
+    background: var(--white);
+    box-shadow: 0 10px 30px rgba(23,32,28,.06);
+  }
 
-</article>
+  .actv .segment-banner strong {
+    display: block;
+    margin-bottom: 4px;
+    color: var(--green-dark);
+  }
 
-{% endfor %}
-    </div>
+  .actv .segment-banner p {
+    margin: 0;
+    color: var(--muted);
+  }
 
-  </div>
+  /* FILTERS */
+  .actv .filter-section {
+    padding: 36px 0 28px;
+    background: var(--paper-2);
+  }
 
-</section>
+  .actv .filter-panel {
+    padding: 28px;
+    border: 1px solid var(--line);
+    border-radius: 26px;
+    background: var(--white);
+    box-shadow: var(--shadow);
+  }
 
+  .actv .filter-head {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 24px;
+  }
 
-<section id="tilmelding" class="section section-white">
+  .actv .filter-head h2 {
+    margin: 0;
+    color: var(--ink);
+    font-size: clamp(1.9rem, 4vw, 3.1rem);
+    line-height: 1;
+    letter-spacing: -.045em;
+  }
 
-  <div class="container">
+  .actv .filter-head p {
+    max-width: 600px;
+    margin: 10px 0 0;
+    color: var(--muted);
+    line-height: 1.55;
+  }
 
-    <div class="section-heading">
-      <p class="eyebrow">Begrænsede pladser</p>
-      <h2>Aktiviteter med tilmelding</h2>
-      <p>
-        Disse aktiviteter har et begrænset antal pladser.
-        Du skal derfor booke en plads. <b>Du får et særskilt link, når du er tilmeldt dagen, og din betaling er registreret.</b>
-      Husk at holde øje med siden her. Der kommer løbende nye aktiviteter!  
-      </p>
-    </div>
+  .actv .reset-btn {
+    flex: 0 0 auto;
+    min-height: 40px;
+    padding: 0 13px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: transparent;
+    color: var(--green);
+    font-weight: 800;
+    cursor: pointer;
+  }
 
+  .actv .filter-groups {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px 30px;
+  }
 
-    <div class="activity-grid">
+  .actv .filter-group-title {
+    display: block;
+    margin-bottom: 9px;
+    color: var(--ink);
+    font-size: .82rem;
+    font-weight: 900;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+  }
 
-      {% for aktivitet in site.data.tilmeldingsaktiviteter %}
+  .actv .filter-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
 
-<article class="activity-card activity-card-signup">
+  .actv .filter-chip {
+    min-height: 39px;
+    padding: 0 13px;
+    border: 1px solid rgba(23,32,28,.14);
+    border-radius: 999px;
+    background: #fff;
+    color: #344139;
+    font-size: .9rem;
+    font-weight: 800;
+    cursor: pointer;
+    transition: background .15s ease, border-color .15s ease, color .15s ease, transform .15s ease;
+  }
 
-  {% if aktivitet.image %}
-  <a
-    class="activity-banner"
-    href="{{ aktivitet.artikel | relative_url }}"
-  >
- <img
-  class="activity-card-image"
-  src="{{ aktivitet.image | relative_url }}"
-  alt="{{ aktivitet.image_alt | default: aktivitet.titel }}"
-  loading="lazy"
->
-  </a>
-  {% endif %}
+  .actv .filter-chip:hover {
+    transform: translateY(-1px);
+    border-color: rgba(36,93,73,.38);
+  }
 
-  <div class="activity-card-top">
+  .actv .filter-chip[aria-pressed="true"] {
+    border-color: var(--green);
+    background: var(--green);
+    color: #fff;
+  }
 
-    <span class="activity-time">
-      {{ aktivitet.start }}–{{ aktivitet.slut }}
-    </span>
+  .actv .filter-summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    margin-top: 24px;
+    padding-top: 18px;
+    border-top: 1px solid var(--line);
+  }
 
-    <span class="activity-badge signup">
-      {{ aktivitet.kategori }}
-    </span>
+  .actv .result-count {
+    color: var(--muted);
+    font-size: .94rem;
+    font-weight: 750;
+  }
 
-  </div>
+  .actv .result-count strong { color: var(--ink); }
 
-  <h3>{{ aktivitet.titel }}</h3>
+  /* RESULTS */
+  .actv .results {
+    padding: 56px 0 92px;
+    background: var(--paper);
+  }
 
-  {% if aktivitet.vaert != "" %}
-  <p class="activity-host">
-    Vært: {{ aktivitet.vaert }}
-  </p>
-  {% endif %}
+  .actv .activity-section + .activity-section {
+    margin-top: 64px;
+  }
 
-  <p>
-    {{ aktivitet.beskrivelse }}
-  </p>
+  .actv .section-head {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 24px;
+  }
 
-  <div class="activity-actions">
+  .actv .section-head h2 {
+    margin: 0;
+    font-size: clamp(2rem, 4vw, 3.45rem);
+    line-height: 1;
+    letter-spacing: -.045em;
+  }
 
-    {% if aktivitet.artikel %}
-    <a
-      class="activity-read-more"
-      href="{{ aktivitet.artikel | relative_url }}"
-    >
-      Læs mere om spillet →
-    </a>
-    {% endif %}
+  .actv .section-head p {
+    max-width: 620px;
+    margin: 10px 0 0;
+    color: var(--muted);
+    line-height: 1.55;
+  }
 
-  </div>
+  .actv .section-count {
+    flex: 0 0 auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 46px;
+    height: 34px;
+    padding: 0 11px;
+    border-radius: 999px;
+    background: var(--green-soft);
+    color: var(--green-dark);
+    font-weight: 900;
+  }
 
-</article>
+  .actv .activity-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+  }
 
-      {% endfor %}
+  .actv .activity-card {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 22px;
+    border: 1px solid var(--line);
+    border-radius: 22px;
+    background: var(--white);
+    box-shadow: 0 12px 34px rgba(23,32,28,.07);
+  }
 
-    </div>
+  .actv .activity-card[data-access="booking"] {
+    border-top: 4px solid var(--green);
+  }
 
+  .actv .activity-card[data-access="open"] {
+    border-top: 4px solid var(--amber);
+  }
 
-    <div class="booking-callout">
+  .actv .card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
 
+  .actv .access-badge {
+    display: inline-flex;
+    align-items: center;
+    min-height: 28px;
+    padding: 0 9px;
+    border-radius: 999px;
+    font-size: .72rem;
+    font-weight: 900;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+  }
+
+  .actv .access-badge.open {
+    background: #fff1ce;
+    color: #785a16;
+  }
+
+  .actv .access-badge.booking {
+    background: var(--green-soft);
+    color: var(--green-dark);
+  }
+
+  .actv .card-time {
+    color: var(--muted);
+    font-size: .83rem;
+    font-weight: 850;
+    white-space: nowrap;
+  }
+
+  .actv .activity-card h3 {
+    margin: 0;
+    color: var(--ink);
+    font-size: 1.28rem;
+    line-height: 1.12;
+    letter-spacing: -.025em;
+  }
+
+  .actv .activity-card p {
+    margin: 10px 0 0;
+    color: var(--muted);
+    line-height: 1.55;
+    font-size: .93rem;
+  }
+
+  .actv .card-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-top: 16px;
+  }
+
+  .actv .meta-pill {
+    display: inline-flex;
+    align-items: center;
+    min-height: 27px;
+    padding: 0 9px;
+    border-radius: 999px;
+    background: #f1eee7;
+    color: #556159;
+    font-size: .75rem;
+    font-weight: 800;
+  }
+
+  .actv .host {
+    margin-top: 14px;
+    color: #46534b;
+    font-size: .84rem;
+  }
+
+  .actv .host strong { color: var(--ink); }
+
+  .actv .card-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    margin-top: auto;
+    padding-top: 20px;
+  }
+
+  .actv .card-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 40px;
+    padding: 0 12px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: .84rem;
+    font-weight: 850;
+  }
+
+  .actv .card-link.primary {
+    background: var(--green);
+    color: #fff;
+  }
+
+  .actv .card-link.secondary {
+    border: 1px solid var(--line);
+    background: #fff;
+    color: var(--green-dark);
+  }
+
+  .actv .no-booking {
+    color: #6a725d;
+    font-size: .82rem;
+    font-weight: 800;
+  }
+
+  .actv .empty-state {
+    margin-top: 24px;
+    padding: 30px;
+    border: 1px dashed rgba(23,32,28,.22);
+    border-radius: 20px;
+    background: var(--white);
+    text-align: center;
+  }
+
+  .actv .empty-state h3 {
+    margin: 0;
+    font-size: 1.35rem;
+  }
+
+  .actv .empty-state p {
+    margin: 8px auto 0;
+    max-width: 520px;
+    color: var(--muted);
+  }
+
+  .actv .bottom-cta {
+    margin-top: 66px;
+    padding: 30px;
+    border-radius: 28px;
+    background: var(--navy);
+    color: #fff;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 28px;
+    align-items: center;
+  }
+
+  .actv .bottom-cta h2 {
+    margin: 0;
+    color: #fff;
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    line-height: 1;
+    letter-spacing: -.04em;
+  }
+
+  .actv .bottom-cta p {
+    margin: 10px 0 0;
+    color: rgba(255,255,255,.7);
+  }
+
+  .actv .bottom-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 9px;
+  }
+
+  .actv .bottom-actions .btn-secondary {
+    color: #fff;
+  }
+
+  @media (max-width: 980px) {
+    .actv .hero-grid,
+    .actv .bottom-cta { grid-template-columns: 1fr; }
+    .actv .activity-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .actv .bottom-actions { justify-content: flex-start; }
+  }
+
+  @media (max-width: 760px) {
+    .actv .wrap { width: min(100% - 24px, 1180px); }
+    .actv .hero { padding: 56px 0 50px; }
+    .actv .hero-grid { gap: 32px; }
+    .actv .hero h1 { font-size: clamp(3rem, 15vw, 4.6rem); }
+    .actv .filter-panel { padding: 22px; border-radius: 20px; }
+    .actv .filter-head,
+    .actv .section-head { align-items: flex-start; flex-direction: column; }
+    .actv .filter-groups { grid-template-columns: 1fr; gap: 20px; }
+    .actv .activity-grid { grid-template-columns: 1fr; }
+    .actv .results { padding: 44px 0 72px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .actv * { scroll-behavior: auto !important; transition: none !important; }
+  }
+</style>
+
+<div class="actv" id="activityPage">
+
+  <section class="hero">
+    <div class="wrap hero-grid">
       <div>
-        <h2>Vil du sikre dig en plads?</h2>
-        <p>
-          Aktiviteter med tilmelding bookes via vores bookingsystem. Du får adgang hertil, når du er tilmeldt dagen.
+        <p class="kicker">Viborg Brætspilsdag · 14. november 2026</p>
+        <h1>Hvad har du lyst til at spille?</h1>
+        <p class="hero-lead">
+          Du behøver ikke læse dig gennem hele programmet. Filtrér efter tidspunkt,
+          den oplevelse du leder efter, type eller niveau. Nogle aktiviteter kræver booking;
+          andre kan du bare gå hen til på dagen.
         </p>
+        <div class="hero-facts" aria-label="Praktiske oplysninger">
+          <span class="hero-fact">Kl. 10.00–00.00</span>
+          <span class="hero-fact">Reberbanen 11+13</span>
+          <span class="hero-fact">50 kr. for hele dagen</span>
+        </div>
       </div>
 
-      <a class="button button-primary" href="https://forms.gle/FL5Y5bpgTQKusDPx7">
-        Tilmeld dig dagen
-      </a>
-
+      <aside class="hero-side">
+        <strong>Booking er kun nødvendig til nogle aktiviteter.</strong>
+        <p>
+          Du skal være tilmeldt selve Viborg Brætspilsdag, før du kan booke en aktivitet.
+          Åbne aktiviteter, biblioteket og drop-in kræver ingen særskilt booking.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="https://booking.viborgbraetspil.dk/">Book aktiviteter →</a>
+          <a class="btn btn-secondary" href="/tilmelding/">Tilmeld dig dagen</a>
+        </div>
+      </aside>
     </div>
+  </section>
 
+  <div class="segment-wrap">
+    <div class="wrap">
+      <div class="segment-banner" id="segmentBanner" hidden aria-live="polite"></div>
+    </div>
   </div>
 
-</section>
+  <section class="filter-section" aria-labelledby="filterHeading">
+    <div class="wrap">
+      <div class="filter-panel">
+        <div class="filter-head">
+          <div>
+            <h2 id="filterHeading">Find noget, der passer til dig</h2>
+            <p>Vælg højst ét filter i hver række. Du kan kombinere dem på tværs.</p>
+          </div>
+          <button class="reset-btn" id="resetFilters" type="button" hidden>Nulstil filtre</button>
+        </div>
+
+        <div class="filter-groups">
+          <div class="filter-group" aria-label="Filtrér efter tidspunkt">
+            <span class="filter-group-title">Tid</span>
+            <div class="filter-chips">
+              <button class="filter-chip" type="button" data-group="time" data-value="formiddag" aria-pressed="false">Formiddag</button>
+              <button class="filter-chip" type="button" data-group="time" data-value="eftermiddag" aria-pressed="false">Eftermiddag</button>
+              <button class="filter-chip" type="button" data-group="time" data-value="aften" aria-pressed="false">Aften</button>
+            </div>
+          </div>
+
+          <div class="filter-group" aria-label="Filtrér efter hvad du vil">
+            <span class="filter-group-title">Jeg vil</span>
+            <div class="filter-chips">
+              <button class="filter-chip" type="button" data-group="want" data-value="dropin" aria-pressed="false">Bare møde op</button>
+              <button class="filter-chip" type="button" data-group="want" data-value="learn" aria-pressed="false">Lære et spil</button>
+              <button class="filter-chip" type="button" data-group="want" data-value="compete" aria-pressed="false">Konkurrere</button>
+              <button class="filter-chip" type="button" data-group="want" data-value="new" aria-pressed="false">Prøve noget nyt</button>
+            </div>
+          </div>
+
+          <div class="filter-group" aria-label="Filtrér efter type">
+            <span class="filter-group-title">Type</span>
+            <div class="filter-chips">
+              <button class="filter-chip" type="button" data-group="type" data-value="strategi" aria-pressed="false">Strategi</button>
+              <button class="filter-chip" type="button" data-group="type" data-value="familie" aria-pressed="false">Familie</button>
+              <button class="filter-chip" type="button" data-group="type" data-value="rollespil" aria-pressed="false">Rollespil</button>
+              <button class="filter-chip" type="button" data-group="type" data-value="social" aria-pressed="false">Social</button>
+              <button class="filter-chip" type="button" data-group="type" data-value="prototype" aria-pressed="false">Prototype</button>
+              <button class="filter-chip" type="button" data-group="type" data-value="figurspil" aria-pressed="false">Figurspil</button>
+            </div>
+          </div>
+
+          <div class="filter-group" aria-label="Filtrér efter niveau">
+            <span class="filter-group-title">Niveau</span>
+            <div class="filter-chips">
+              <button class="filter-chip" type="button" data-group="level" data-value="let" aria-pressed="false">Let</button>
+              <button class="filter-chip" type="button" data-group="level" data-value="mellem" aria-pressed="false">Mellem</button>
+              <button class="filter-chip" type="button" data-group="level" data-value="tung" aria-pressed="false">Tung</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="filter-summary">
+          <div class="result-count" id="resultCount" aria-live="polite"><strong>26 aktiviteter</strong></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main class="results" id="activityResults">
+    <div class="wrap">
+
+      <section class="activity-section" id="openSection" aria-labelledby="openHeading">
+        <div class="section-head">
+          <div>
+            <h2 id="openHeading">Åbne aktiviteter</h2>
+            <p>Her kan du bare møde op. Ingen særskilt aktivitetsbooking.</p>
+          </div>
+          <span class="section-count" id="openCount">8</span>
+        </div>
+
+        <div class="activity-grid" id="openGrid">
+
+          <article class="activity-card" data-access="open" data-time="formiddag eftermiddag aften" data-want="dropin learn" data-type="social familie strategi" data-level="let mellem tung">
+            <div class="card-top"><span class="access-badge open">Åben aktivitet</span><span class="card-time">Hele dagen</span></div>
+            <h3>Åbent brætspilsbibliotek</h3>
+            <p>Lån et spil fra biblioteket og find et ledigt bord. Der er et par hundrede spil at gå på opdagelse i.</p>
+            <div class="card-meta"><span class="meta-pill">Alle niveauer</span><span class="meta-pill">Drop-in</span></div>
+            <div class="card-actions"><span class="no-booking">Ingen booking nødvendig</span></div>
+          </article>
+
+          <article class="activity-card" data-access="open" data-time="formiddag eftermiddag aften" data-want="dropin learn" data-type="social familie" data-level="let mellem tung">
+            <div class="card-top"><span class="access-badge open">Åben aktivitet</span><span class="card-time">Fra 10.15</span></div>
+            <h3>Brætspil for to personer</h3>
+            <p>Kom forbi, hvis I er to – eller hvis du vil opdage spil, der fungerer særligt godt med to spillere.</p>
+            <div class="card-meta"><span class="meta-pill">Alle niveauer</span><span class="meta-pill">Drop-in</span></div>
+            <div class="host"><strong>Vært:</strong> Josias</div>
+            <div class="card-actions"><span class="no-booking">Ingen booking nødvendig</span></div>
+          </article>
+
+          <article class="activity-card" data-access="open" data-time="formiddag eftermiddag" data-want="dropin learn" data-type="social strategi" data-level="let mellem tung">
+            <div class="card-top"><span class="access-badge open">Åben aktivitet</span><span class="card-time">10.30–14.00</span></div>
+            <h3>Lær solo-brætspil</h3>
+            <p>Prøv brætspil, der er lavet til at fungere alene, og få hjælp til at komme i gang med solo-hobbyen.</p>
+            <div class="card-meta"><span class="meta-pill">Alle niveauer</span><span class="meta-pill">Lær-at-spille</span></div>
+            <div class="host"><strong>Vært:</strong> Thomas / The Lone Boardgamer</div>
+            <div class="card-actions"><span class="no-booking">Ingen booking nødvendig</span></div>
+          </article>
+
+          <article class="activity-card" data-access="open" data-time="eftermiddag" data-want="dropin new" data-type="prototype" data-level="let mellem">
+            <div class="card-top"><span class="access-badge open">Åben aktivitet</span><span class="card-time">12.00–14.00</span></div>
+            <h3>STEW ORLEANS!</h3>
+            <p>Prøv et danskudviklet spil og møde skaberen bag det. En aktivitet for dig, der gerne vil prøve noget, du ikke finder på alle hylder endnu.</p>
+            <div class="card-meta"><span class="meta-pill">Prototype / nyt spil</span><span class="meta-pill">Drop-in</span></div>
+            <div class="host"><strong>Vært:</strong> Peter Langkjær Møller</div>
+            <div class="card-actions"><span class="no-booking">Ingen booking nødvendig</span></div>
+          </article>
+
+          <article class="activity-card" data-access="open" data-time="eftermiddag" data-want="dropin new" data-type="prototype strategi" data-level="mellem">
+            <div class="card-top"><span class="access-badge open">Åben aktivitet</span><span class="card-time">14.00–16.00</span></div>
+            <h3>Space Skirmish</h3>
+            <p>Prøv en tidlig prototype og oplev et spil, mens det stadig er under udvikling.</p>
+            <div class="card-meta"><span class="meta-pill">Prototype</span><span class="meta-pill">Drop-in</span></div>
+            <div class="host"><strong>Vært:</strong> Kresten Kjær Sørensen</div>
+            <div class="card-actions"><span class="no-booking">Ingen booking nødvendig</span></div>
+          </article>
+
+          <article class="activity-card" data-access="open" data-time="" data-want="dropin learn new" data-type="familie rollespil social" data-level="let mellem">
+            <div class="card-top"><span class="access-badge open">Åben aktivitet</span><span class="card-time">En del af dagen</span></div>
+            <h3>Klubberne i Viborg</h3>
+            <p>Rollespil, figurmaling og andre aktiviteter for børn og unge. Børn under 15 år deltager sammen med en voksen.</p>
+            <div class="card-meta"><span class="meta-pill">Børn & unge</span><span class="meta-pill">Drop-in</span></div>
+            <div class="host"><strong>Vært:</strong> Klubberne i Viborg</div>
+            <div class="card-actions"><span class="no-booking">Ingen booking nødvendig</span></div>
+          </article>
+
+          <article class="activity-card" data-access="open" data-time="" data-want="dropin learn new" data-type="figurspil strategi social" data-level="let mellem">
+            <div class="card-top"><span class="access-badge open">Åben aktivitet</span><span class="card-time">Tid kommer</span></div>
+            <h3>Warhammer-showcase</h3>
+            <p>Mithril viser Warhammer frem med hobbyfolk, der kan fortælle om spillet, figurerne og hobbyen omkring det.</p>
+            <div class="card-meta"><span class="meta-pill">Figurspil</span><span class="meta-pill">Showcase</span></div>
+            <div class="host"><strong>Vært:</strong> Mithril</div>
+            <div class="card-actions"><span class="no-booking">Ingen booking nødvendig</span></div>
+          </article>
+
+          <article class="activity-card" data-access="open" data-time="" data-want="dropin learn new" data-type="figurspil strategi social" data-level="let mellem">
+            <div class="card-top"><span class="access-badge open">Åben aktivitet</span><span class="card-time">Tid kommer</span></div>
+            <h3>Star Wars: Legion</h3>
+            <p>Se og oplev Star Wars: Legion som en del af Mithrils åbne figurspilsaktiviteter.</p>
+            <div class="card-meta"><span class="meta-pill">Figurspil</span><span class="meta-pill">Drop-in</span></div>
+            <div class="host"><strong>Vært:</strong> Mithril</div>
+            <div class="card-actions"><span class="no-booking">Ingen booking nødvendig</span></div>
+          </article>
+
+        </div>
+      </section>
+
+      <section class="activity-section" id="bookingSection" aria-labelledby="bookingHeading">
+        <div class="section-head">
+          <div>
+            <h2 id="bookingHeading">Aktiviteter med booking</h2>
+            <p>De her aktiviteter har begrænsede pladser. Tilmeld dig dagen først, og book derefter din plads.</p>
+          </div>
+          <span class="section-count" id="bookingCount">18</span>
+        </div>
+
+        <div class="activity-grid" id="bookingGrid">
+
+          <article class="activity-card" data-access="booking" data-time="formiddag" data-want="" data-type="strategi" data-level="tung">
+            <div class="card-top"><span class="access-badge booking">Booking</span><span class="card-time">10.30–20.00</span></div>
+            <h3>Twilight Imperium IV</h3>
+            <p>En lang strategisession med politik, alliancer, handel, krig og en hel galakse på bordet.</p>
+            <div class="card-meta"><span class="meta-pill">Strategi</span><span class="meta-pill">Tung</span></div>
+            <div class="host"><strong>Vært:</strong> Anders</div>
+            <div class="card-actions">
+              <a class="card-link primary" href="https://booking.viborgbraetspil.dk/">Book plads →</a>
+              <a class="card-link secondary" href="/nyheder/twilight-imperium-iv/">Læs mere</a>
+            </div>
+          </article>
+
+          <article class="activity-card" data-access="booking" data-time="formiddag" data-want="compete" data-type="strategi social" data-level="let mellem">
+            <div class="card-top"><span class="access-badge booking">Booking</span><span class="card-time">10.30–14.30</span></div>
+            <h3>Heat Championship</h3>
+            <p>Turnering, tempo og racerløb. Jag placeringerne og se, hvem der holder hovedet koldt gennem svingene.</p>
+            <div class="card-meta"><span class="meta-pill">Turnering</span><span class="meta-pill">Let–mellem</span></div>
+            <div class="host"><strong>Vært:</strong> Bruno</div>
+            <div class="card-actions">
+              <a class="card-link primary" href="https://booking.viborgbraetspil.dk/">Book plads →</a>
+              <a class="card-link secondary" href="/nyheder/heat-championship/">Læs mere</a>
+            </div>
+          </article>
+
+          <article class="activity-card" data-access="booking" data-time="formiddag" data-want="learn" data-type="strategi" data-level="tung">
+            <div class="card-top"><span class="access-badge booking">Booking</span><span class="card-time">10.30–14.30</span></div>
+            <h3>Eclipse: Second Dawn for the Galaxy</h3>
+            <p>Lær-at-spille med udforskning, udvikling, økonomi og rumkrig i et stort strategispil.</p>
+            <div class="card-meta"><span class="meta-pill">Strategi</span><span class="meta-pill">Tung</span><span class="meta-pill">Lær-at-spille</span></div>
+            <div class="host"><strong>Vært:</strong> Jan</div>
+            <div class="card-actions"><a class="card-link primary" href="https://booking.viborgbraetspil.dk/">Book plads →</a></div>
+          </article>
+
+          <article class="activity-card" data-access="booking" data-time="formiddag" data-want="learn" data-type="strategi" data-level="mellem">
+            <div class="card-top"><span class="access-badge booking">Booking</span><span class="card-time">10.30–13.30</span></div>
+            <h3>Rebirth</h3>
+            <p>En planlagt strategisession, hvor du bliver hjulpet i gang ved bordet.</p>
+            <div class="card-meta"><span class="meta-pill">Strategi</span><span class="meta-pill">Mellem</span><span class="meta-pill">Lær-at-spille</span></div>
+            <div class="host"><strong>Vært:</strong> Danni</div>
+            <div class="card-actions"><a class="card-link primary" href="https://booking.viborgbraetspil.dk/">Book plads →</a></div>
+          </article>
+
+          <article class="activity-card" data-access="booking" data-time="formiddag" data-want="learn" data-type="strategi social" data-level="mellem">
+            <div class="card-top"><span class="access-badge booking">Booking</span><span class="card-time">10.30–13.30</span></div>
+            <h3>Dead of Winter</h3>
+            <p>Samarbejde, svære valg og mistanke i en planlagt session med hjælp til reglerne.</p>
+            <div class="card-meta"><span class="meta-pill">Strategi</span><span class="meta-pill">Mellem</span><span class="meta-pill">Lær-at-spille</span></div>
+            <div class="host"><strong>Vært:</strong> Lynge</div>
+            <div class="card-actions"><a class="card-link primary" href="https://booking.viborgbraetspil.dk/">Book plads →</a></div>
+          </article>
+
+          <article class="activity-card" data-access="booking" data-time="formiddag" data-want="learn" data-type="strategi" data-level="mellem">
+            <div class="card-top"><span class="access-badge booking">Booking</span><span class="card-time">10.30–13.30</span></div>
+            <h3>Wyrmspan</h3>
+            <p>En planlagt strategisession med introduktion til spillet og hjælp til at komme i gang.</p>
+            <div class="card-meta"><span class="meta-pill">Strategi</span><span class="meta-pill">Mellem</span><span class="meta-pill">Lær-at-spille</span></div>
+            <div class="host"><strong>Vært:</strong> Jim</div>
+            <div class="card-actions"><a class="card-link primary" href="https://booking.viborgbraetspil.dk/">Book plads →</a></div>
+          </article>
+
+          <article class="activity-card" data-access="booking" data-time="formiddag" data-want="learn" data-type="strategi" data-level="tung">
+            <div class="card-top"><span class="access-badge booking">Booking</span><span class="card-time">10.30–13.30</span></div>
+            <h3>Root</h3>
+            <p>Asymmetrisk strategi, forskellige fraktioner og meget forskellige måder at vinde på. Du bliver hjulpet i gang.</p>
+            <div class="card-meta"><span class="meta-pill">Strategi</span><span class="meta-pill">Tung</span><span class="meta-pill">Lær-at-spille</span></div>
+            <div class="host"><strong>Vært:</strong> André</div>
+            <div class="card-actions"><a class="card-link primary" href="https://booking.viborgbraetspil.dk/">Book plads →</a></div>
+          </article>
+
+          <article class="activity-card" data-access="booking" data-time="formiddag" data-want="learn new" data-type="social" data-level="let mellem">
+            <div class="card-top"><span class="access-badge booking">Booking</span><span class="card-time">10.30–12.30</span></div>
+            <h3>Blood on the Clocktower</h3>
+            <p>Social deduction med bluff, mistanke og samtaler. Nogen lyver. Resten prøver at finde ud af hvem.</p>
+            <div class="card-meta"><span class="meta-pill">Social deduction</span><span class="meta-pill">Alle</span></div>
+            <div class="host"><strong>Vært:</strong> Ian</div>
+            <div class="card-actions">
+              <a class="card-link primary" href="https://booking.viborgbraetspil.dk/">Book plads →</a>
+              <a class="card-link secondary" href="/nyheder/blood-on-the-clocktower/">Læs mere</a>
+            </div>
+          </article>
+
+          <article class="activity-card" data-access="booking" data-time="formiddag" data-want="learn new" data-type="rollespil social" data-level="let mellem">
+            <div class="card-top"><span class="access-badge booking">Booking</span><span class="card-time">10.30–15.30</span></div>
+            <h3>Dungeons & Dragons</h3>
+            <p>En planlagt rollespilssession, hvor fortælling, valg og samarbejde er vigtigere end at kende alle regler på forhånd.</p>
+            <div class="card-meta"><span class="meta-pill">Rollespil</span><span class="meta-pill">Alle</span></div>
+            <div class="host"><strong>Vært:</strong> Peter</div>
+            <div class="card-actions"><a class="card-link primary" href="https://booking.viborgbraetspil.dk/">Book plads →</a></div>
+          </article>
+
+          <article class="activity-card" data-access="booking" data-time="eftermiddag" data-want="learn" data-type="strategi" data-level="tung">
+            <div class="card-top"><span class="access-badge booking">Booking</span><span class="card-time">14.00–17.00</span></div>
+            <h3>Luthier</h3>
+            <p>En længere strategisession med introduktion til spillet og plads til at fordybe sig.</p>
+            <div class="card-meta"><span class="meta-pill">Strategi</span><span class="meta-pill">Tung</span><span class="meta-pill">Lær-at-spille</span></div>
+            <div class="host"><strong>Vært:</strong> Danni</div>
+            <div class="card-actions"><a class="card-link primary" href="https://booking.viborgbraetspil.dk/">Book plads →</a></div>
+          </article>
+
+          <article class="activity-card" data-access="booking" data-time="eftermiddag" data-want="learn" data-type="strategi familie" data-level="let">
+            <div class="card-top"><span class="access-badge booking">Booking</span><span class="card-time">14.00–15.00</span></div>
+            <h3>Ave Caesar</h3>
+            <p>En kortere og mere tilgængelig strategisession, hvor du bliver sat ind i spillet ved bordet.</p>
+            <div class="card-meta"><span class="meta-pill">Strategi</span><span class="meta-pill">Let</span><span class="meta-pill">Lær-at-spille</span></div>
+            <div class="host"><strong>Vært:</strong> Jim</div>
+            <div class="card-actions"><a class="card-link primary" href="https://booking.viborgbraetspil.dk/">Book plads →</a></div>
+          </article>
+
+          <article class="activity-card" data-access="booking" data-time="eftermiddag" data-want="learn" data-type="familie social" data-level="let">
+            <div class="card-top"><span class="access-badge booking">Booking</span><span class="card-time">14.00–15.00</span></div>
+            <h3>The Gang</h3>
+            <p>Et samarbejdsspil i den lettere ende. Godt til dig, der gerne vil spille sammen frem for mod hinanden.</p>
+            <div class="card-meta"><span class="meta-pill">Familie</span><span class="meta-pill">Let</span><span class="meta-pill">Co-op</span></div>
+            <div class="host"><strong>Vært:</strong> André</div>
+            <div class="card-actions"><a class="card-link primary" href="https://booking.viborgbraetspil.dk/">Book plads →</a></div>
+          </article>
+
+          <article class="activity-card" data-access="booking" data-time="eftermiddag" data-want="learn new" data-type="strategi" data-level="mellem">
+            <div class="card-top"><span class="access-badge booking">Booking</span><span class="card-time">14.00–16.00</span></div>
+            <h3>Timespan</h3>
+            <p>Lær-at-spille med en ny SPIEL Essen 2026-titel for dig, der gerne vil prøve noget frisk fra årets messe.</p>
+            <div class="card-meta"><span class="meta-pill">Strategi</span><span class="meta-pill">Mellem</span><span class="meta-pill">Nyt spil</span></div>
+            <div class="host"><strong>Vært:</strong> Dennis</div>
+            <div class="card-actions"><a class="card-link primary" href="https://booking.viborgbraetspil.dk/">Book plads →</a></div>
+          </article>
+
+          <article class="activity-card" data-access="booking" data-time="eftermiddag" data-want="learn new" data-type="strategi" data-level="mellem">
+            <div class="card-top"><span class="access-badge booking">Booking</span><span class="card-time">14.00–17.00</span></div>
+            <h3>The Game Makers</h3>
+            <p>Lær-at-spille og en mellem-tung strategisk oplevelse blandt de nyere spil på programmet.</p>
+            <div class="card-meta"><span class="meta-pill">Strategi</span><span class="meta-pill">Mellem</span><span class="meta-pill">Nyt spil</span></div>
+            <div class="host"><strong>Vært:</strong> Maria</div>
+            <div class="card-actions"><a class="card-link primary" href="https://booking.viborgbraetspil.dk/">Book plads →</a></div>
+          </article>
+
+          <article class="activity-card" data-access="booking" data-time="eftermiddag" data-want="learn" data-type="familie social" data-level="let">
+            <div class="card-top"><span class="access-badge booking">Booking</span><span class="card-time">15.00–16.00</span></div>
+            <h3>Horrified</h3>
+            <p>Et samarbejdsspil i den mere tilgængelige ende, hvor I arbejder sammen om at håndtere monstrene.</p>
+            <div class="card-meta"><span class="meta-pill">Familie</span><span class="meta-pill">Let</span><span class="meta-pill">Co-op</span></div>
+            <div class="host"><strong>Vært:</strong> André</div>
+            <div class="card-actions"><a class="card-link primary" href="https://booking.viborgbraetspil.dk/">Book plads →</a></div>
+          </article>
+
+          <article class="activity-card" data-access="booking" data-time="eftermiddag" data-want="learn" data-type="strategi familie" data-level="let">
+            <div class="card-top"><span class="access-badge booking">Booking</span><span class="card-time">15.15–16.30</span></div>
+            <h3>Viking Raiders</h3>
+            <p>En kortere strategisession med introduktion ved bordet og lavere indstigning end dagens tungeste spil.</p>
+            <div class="card-meta"><span class="meta-pill">Strategi</span><span class="meta-pill">Let</span><span class="meta-pill">Lær-at-spille</span></div>
+            <div class="host"><strong>Vært:</strong> Jim</div>
+            <div class="card-actions"><a class="card-link primary" href="https://booking.viborgbraetspil.dk/">Book plads →</a></div>
+          </article>
+
+          <article class="activity-card" data-access="booking" data-time="aften" data-want="learn new" data-type="strategi" data-level="tung">
+            <div class="card-top"><span class="access-badge booking">Booking</span><span class="card-time">17.00–20.00</span></div>
+            <h3>Queen Alice</h3>
+            <p>En længere strategisession med et af de spil, der er taget med hjem fra Essen.</p>
+            <div class="card-meta"><span class="meta-pill">Strategi</span><span class="meta-pill">Tung</span><span class="meta-pill">Nyt spil</span></div>
+            <div class="host"><strong>Vært:</strong> Danni</div>
+            <div class="card-actions"><a class="card-link primary" href="https://booking.viborgbraetspil.dk/">Book plads →</a></div>
+          </article>
+
+          <article class="activity-card" data-access="booking" data-time="aften" data-want="compete" data-type="social familie" data-level="let">
+            <div class="card-top"><span class="access-badge booking">Booking</span><span class="card-time">19.00–20.30</span></div>
+            <h3>KLASK-turnering</h3>
+            <p>Knockout-turnering med 16 pladser, tre borde og 15 kampe. Check ind 15 minutter før start.</p>
+            <div class="card-meta"><span class="meta-pill">Turnering</span><span class="meta-pill">Let</span><span class="meta-pill">Konkurrence</span></div>
+            <div class="card-actions"><a class="card-link primary" href="https://booking.viborgbraetspil.dk/">Book plads →</a></div>
+          </article>
+
+        </div>
+      </section>
+
+      <div class="empty-state" id="emptyState" hidden>
+        <h3>Den kombination gav ingen aktiviteter.</h3>
+        <p>Prøv at fjerne ét filter. Der er heldigvis ingen præmie for at filtrere sig helt ud af brætspilsdagen.</p>
+      </div>
+
+      <section class="bottom-cta">
+        <div>
+          <h2>Fundet noget?</h2>
+          <p>Tilmeld dig selve dagen først. Derefter kan du booke aktiviteter med begrænsede pladser.</p>
+        </div>
+        <div class="bottom-actions">
+          <a class="btn btn-primary" href="/tilmelding/">Tilmeld dig · 50 kr. →</a>
+          <a class="btn btn-secondary" href="https://booking.viborgbraetspil.dk/">Gå til booking</a>
+        </div>
+      </section>
+
+    </div>
+  </main>
+</div>
+
+<script>
+(function () {
+  var root = document.getElementById('activityPage');
+  if (!root) return;
+
+  var cards = Array.prototype.slice.call(root.querySelectorAll('.activity-card'));
+  var chips = Array.prototype.slice.call(root.querySelectorAll('.filter-chip'));
+  var reset = document.getElementById('resetFilters');
+  var resultCount = document.getElementById('resultCount');
+  var openCount = document.getElementById('openCount');
+  var bookingCount = document.getElementById('bookingCount');
+  var openSection = document.getElementById('openSection');
+  var bookingSection = document.getElementById('bookingSection');
+  var emptyState = document.getElementById('emptyState');
+  var segmentBanner = document.getElementById('segmentBanner');
+
+  var state = {
+    time: '',
+    want: '',
+    type: '',
+    level: ''
+  };
+
+  function tokens(card, group) {
+    return String(card.getAttribute('data-' + group) || '')
+      .trim()
+      .split(/\s+/)
+      .filter(Boolean);
+  }
+
+  function cardMatches(card) {
+    var groups = ['time', 'want', 'type', 'level'];
+
+    for (var i = 0; i < groups.length; i++) {
+      var group = groups[i];
+      var selected = state[group];
+      if (!selected) continue;
+      if (tokens(card, group).indexOf(selected) === -1) return false;
+    }
+
+    return true;
+  }
+
+  function setChipStates() {
+    chips.forEach(function (chip) {
+      var group = chip.getAttribute('data-group');
+      var value = chip.getAttribute('data-value');
+      chip.setAttribute('aria-pressed', state[group] === value ? 'true' : 'false');
+    });
+  }
+
+  function updateUrl() {
+    var params = new URLSearchParams(window.location.search);
+
+    ['time', 'want', 'type', 'level'].forEach(function (group) {
+      if (state[group]) params.set(group, state[group]);
+      else params.delete(group);
+    });
+
+    if (params.get('segment') !== 'alone') params.delete('segment');
+
+    var query = params.toString();
+    var next = window.location.pathname + (query ? '?' + query : '') + window.location.hash;
+    window.history.replaceState({}, '', next);
+  }
+
+  function applyFilters(options) {
+    options = options || {};
+
+    var visible = 0;
+    var visibleOpen = 0;
+    var visibleBooking = 0;
+
+    cards.forEach(function (card) {
+      var show = cardMatches(card);
+      card.hidden = !show;
+
+      if (show) {
+        visible++;
+        if (card.getAttribute('data-access') === 'open') visibleOpen++;
+        if (card.getAttribute('data-access') === 'booking') visibleBooking++;
+      }
+    });
+
+    openCount.textContent = visibleOpen;
+    bookingCount.textContent = visibleBooking;
+    openSection.hidden = visibleOpen === 0;
+    bookingSection.hidden = visibleBooking === 0;
+    emptyState.hidden = visible !== 0;
+
+    var active = Object.keys(state).filter(function (key) { return !!state[key]; }).length;
+
+    if (active) {
+      resultCount.innerHTML = '<strong>Viser ' + visible + ' af ' + cards.length + ' aktiviteter</strong>';
+      reset.hidden = false;
+    } else {
+      resultCount.innerHTML = '<strong>' + cards.length + ' aktiviteter</strong> · vælg filtre, hvis du vil indsnævre listen';
+      reset.hidden = true;
+    }
+
+    setChipStates();
+
+    if (!options.skipUrl) updateUrl();
+  }
+
+  chips.forEach(function (chip) {
+    chip.addEventListener('click', function () {
+      var group = chip.getAttribute('data-group');
+      var value = chip.getAttribute('data-value');
+      state[group] = state[group] === value ? '' : value;
+      applyFilters();
+    });
+  });
+
+  reset.addEventListener('click', function () {
+    state.time = '';
+    state.want = '';
+    state.type = '';
+    state.level = '';
+    applyFilters();
+  });
+
+  function showSegmentBanner(segment) {
+    var messages = {
+      alone: {
+        title: 'Kommer du alene?',
+        text: 'Det gør andre også. Du behøver ikke finde en gruppe på forhånd. Brug de åbne aktiviteter, vælg en lær-at-spille-session, eller spørg en frivillig – vi hjælper dig med at finde et bord og nogen at spille med.'
+      },
+      beginner: {
+        title: 'Ny i hobbyen?',
+        text: 'Du behøver ikke kende reglerne hjemmefra. Vi har både åbne aktiviteter og planlagte lær-at-spille-sessioner.'
+      },
+      family: {
+        title: 'Leder du efter noget til børn eller familie?',
+        text: 'Listen er filtreret mod de mere familievenlige aktiviteter. Børn under 15 år deltager sammen med en voksen.'
+      },
+      heavy: {
+        title: 'På jagt efter tung strategi?',
+        text: 'Listen er filtreret mod de tungere strategiske oplevelser.'
+      },
+      newgames: {
+        title: 'Vil du prøve noget nyt?',
+        text: 'Her finder du blandt andet nye spil fra Essen og prototyper, der stadig er under udvikling.'
+      },
+      dropin: {
+        title: 'Vil du bare møde op?',
+        text: 'Listen er filtreret til aktiviteter, hvor du ikke behøver reservere en særskilt plads på forhånd.'
+      }
+    };
+
+    if (!messages[segment]) return;
+
+    segmentBanner.innerHTML = '<strong>' + messages[segment].title + '</strong><p>' + messages[segment].text + '</p>';
+    segmentBanner.hidden = false;
+  }
+
+  function readInitialState() {
+    var params = new URLSearchParams(window.location.search);
+    var allowed = {
+      time: ['formiddag', 'eftermiddag', 'aften'],
+      want: ['dropin', 'learn', 'compete', 'new'],
+      type: ['strategi', 'familie', 'rollespil', 'social', 'prototype', 'figurspil'],
+      level: ['let', 'mellem', 'tung']
+    };
+
+    Object.keys(allowed).forEach(function (group) {
+      var value = params.get(group) || '';
+      if (allowed[group].indexOf(value) !== -1) state[group] = value;
+    });
+
+    var segment = params.get('segment') || '';
+
+    if (segment === 'dropin') state.want = 'dropin';
+    if (segment === 'heavy') { state.type = 'strategi'; state.level = 'tung'; }
+    if (segment === 'beginner') state.want = 'learn';
+    if (segment === 'family') state.type = 'familie';
+    if (segment === 'newgames') state.want = 'new';
+
+    showSegmentBanner(segment);
+  }
+
+  readInitialState();
+  applyFilters({ skipUrl: true });
+})();
+</script>
