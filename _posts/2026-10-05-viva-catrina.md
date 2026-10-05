@@ -1,6 +1,4 @@
-from pathlib import Path
-
-content = """---
+---
 layout: post
 title: "Viva Catrina – byg en farverig Día de los Muertos-landsby"
 date: 2026-10-05
