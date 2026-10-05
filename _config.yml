@@ -5,4 +5,7 @@ lang: da
 baseurl: ""
 url: "https://viborgbraetspil.dk"
 
-signup_url: "https://forms.gle/vFq1YZ8MJPWgRhqt8"
+signup_url: "https://viborgbraetspil.dk/tilmelding/"
+
+include:
+  - _redirects
