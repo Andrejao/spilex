@@ -3,7 +3,6 @@ layout: default
 title: Aktiviteter · Viborg Brætspilsdag 2026
 description: Find aktiviteter på Viborg Brætspilsdag 2026. Filtrér efter tidspunkt, oplevelse, type og niveau – fra åbne borde og lær-at-spille til turneringer, rollespil, prototyper og tunge strategispil.
 permalink: /aktiviteter2/
----
 
 <style>
   .actv {
@@ -358,7 +357,7 @@ permalink: /aktiviteter2/
     min-width: 0;
     display: flex;
     flex-direction: column;
-    padding: 22px;
+    overflow: hidden;
     border: 1px solid var(--line);
     border-radius: 22px;
     background: var(--white);
@@ -371,6 +370,34 @@ permalink: /aktiviteter2/
 
   .actv .activity-card[data-access="open"] {
     border-top: 4px solid var(--amber);
+  }
+
+
+  .actv .card-media {
+    display: block;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background: #e7e2d8;
+    text-decoration: none;
+  }
+
+  .actv .card-media img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .25s ease;
+  }
+
+  .actv .activity-card:hover .card-media img {
+    transform: scale(1.025);
+  }
+
+  .actv .card-body {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 20px 22px 22px;
   }
 
   .actv .card-top {
@@ -587,6 +614,7 @@ permalink: /aktiviteter2/
           <span class="hero-fact">Kl. 10.00–00.00</span>
           <span class="hero-fact">Reberbanen 11+13</span>
           <span class="hero-fact">50 kr. for hele dagen</span>
+          <span class="hero-fact">26 aktiviteter</span>
         </div>
       </div>
 
@@ -616,7 +644,7 @@ permalink: /aktiviteter2/
         <div class="filter-head">
           <div>
             <h2 id="filterHeading">Find noget, der passer til dig</h2>
-            <p>Vælg højst ét filter i hver række. Du kan kombinere dem på tværs.</p>
+            <p>Vælg højst ét filter i hver række. Du kan kombinere dem på tværs. Niveau er en grov guide, så du hurtigt kan sortere.</p>
           </div>
           <button class="reset-btn" id="resetFilters" type="button" hidden>Nulstil filtre</button>
         </div>
@@ -684,75 +712,164 @@ permalink: /aktiviteter2/
 
         <div class="activity-grid" id="openGrid">
 
-          <article class="activity-card" data-access="open" data-time="formiddag eftermiddag aften" data-want="dropin learn" data-type="social familie strategi" data-level="let mellem tung">
-            <div class="card-top"><span class="access-badge open">Åben aktivitet</span><span class="card-time">Hele dagen</span></div>
-            <h3>Åbent brætspilsbibliotek</h3>
-            <p>Lån et spil fra biblioteket og find et ledigt bord. Der er et par hundrede spil at gå på opdagelse i.</p>
-            <div class="card-meta"><span class="meta-pill">Alle niveauer</span><span class="meta-pill">Drop-in</span></div>
-            <div class="card-actions"><span class="no-booking">Ingen booking nødvendig</span></div>
+          <article class="activity-card" data-access="open" data-time="formiddag eftermiddag" data-want="dropin learn" data-type="strategi social" data-level="let mellem tung">
+            <a class="card-media" href="/nyheder/solo-braetspil/" aria-label="Læs mere om Lær solo-brætspil">
+              <img src="/assets/images/nyheder/solo-braetspil.jpg" alt="Udvalg af solobrætspil klar til at blive prøvet" loading="lazy" onerror="this.parentElement.hidden=true">
+            </a>
+            <div class="card-body">
+              <div class="card-top"><span class="access-badge open">Åben aktivitet</span><span class="card-time">10.30–14.00</span></div>
+              <h3>Lær solo-brætspil</h3>
+              <p>Oplev solobrætspil med hjælp fra Thomas. Der vil være forskellige spil at vælge mellem, og du behøver ikke kende dem på forhånd.</p>
+              <div class="card-meta">
+                <span class="meta-pill">Solo / lær-at-spille</span>
+                <span class="meta-pill">Alle niveauer</span>
+              </div>
+              <div class="host"><strong>Vært:</strong> Thomas / The Lone Boardgamer</div>
+              <div class="card-actions">
+                <span class="no-booking">Ingen booking nødvendig</span>
+                <a class="card-link secondary" href="/nyheder/solo-braetspil/">Læs mere</a>
+              </div>
+            </div>
           </article>
 
-          <article class="activity-card" data-access="open" data-time="formiddag eftermiddag aften" data-want="dropin learn" data-type="social familie" data-level="let mellem tung">
-            <div class="card-top"><span class="access-badge open">Åben aktivitet</span><span class="card-time">Fra 10.15</span></div>
-            <h3>Brætspil for to personer</h3>
-            <p>Kom forbi, hvis I er to – eller hvis du vil opdage spil, der fungerer særligt godt med to spillere.</p>
-            <div class="card-meta"><span class="meta-pill">Alle niveauer</span><span class="meta-pill">Drop-in</span></div>
-            <div class="host"><strong>Vært:</strong> Josias</div>
-            <div class="card-actions"><span class="no-booking">Ingen booking nødvendig</span></div>
+          <article class="activity-card" data-access="open" data-time="formiddag eftermiddag aften" data-want="dropin learn" data-type="strategi social familie" data-level="let mellem tung">
+            <a class="card-media" href="/nyheder/braetspil-for-to/" aria-label="Læs mere om Brætspil for to personer">
+              <img src="/assets/images/nyheder/braetspil-for-to.jpg" alt="To personer spiller et moderne brætspil over for hinanden" loading="lazy" onerror="this.parentElement.hidden=true">
+            </a>
+            <div class="card-body">
+              <div class="card-top"><span class="access-badge open">Åben aktivitet</span><span class="card-time">Fra 10.15</span></div>
+              <h3>Brætspil for to personer</h3>
+              <p>Prøv stærke topersonersspil med hjælp fra Josias. Tag en ven med eller kom alene – så hjælper vi dig med at finde en at spille med.</p>
+              <div class="card-meta">
+                <span class="meta-pill">Åben aktivitet</span>
+                <span class="meta-pill">Alle niveauer</span>
+              </div>
+              <div class="host"><strong>Vært:</strong> Josias</div>
+              <div class="card-actions">
+                <span class="no-booking">Ingen booking nødvendig</span>
+                <a class="card-link secondary" href="/nyheder/braetspil-for-to/">Læs mere</a>
+              </div>
+            </div>
           </article>
 
-          <article class="activity-card" data-access="open" data-time="formiddag eftermiddag" data-want="dropin learn" data-type="social strategi" data-level="let mellem tung">
-            <div class="card-top"><span class="access-badge open">Åben aktivitet</span><span class="card-time">10.30–14.00</span></div>
-            <h3>Lær solo-brætspil</h3>
-            <p>Prøv brætspil, der er lavet til at fungere alene, og få hjælp til at komme i gang med solo-hobbyen.</p>
-            <div class="card-meta"><span class="meta-pill">Alle niveauer</span><span class="meta-pill">Lær-at-spille</span></div>
-            <div class="host"><strong>Vært:</strong> Thomas / The Lone Boardgamer</div>
-            <div class="card-actions"><span class="no-booking">Ingen booking nødvendig</span></div>
-          </article>
-
-          <article class="activity-card" data-access="open" data-time="eftermiddag" data-want="dropin new" data-type="prototype" data-level="let mellem">
-            <div class="card-top"><span class="access-badge open">Åben aktivitet</span><span class="card-time">12.00–14.00</span></div>
-            <h3>STEW ORLEANS!</h3>
-            <p>Prøv et danskudviklet spil og møde skaberen bag det. En aktivitet for dig, der gerne vil prøve noget, du ikke finder på alle hylder endnu.</p>
-            <div class="card-meta"><span class="meta-pill">Prototype / nyt spil</span><span class="meta-pill">Drop-in</span></div>
-            <div class="host"><strong>Vært:</strong> Peter Langkjær Møller</div>
-            <div class="card-actions"><span class="no-booking">Ingen booking nødvendig</span></div>
+          <article class="activity-card" data-access="open" data-time="eftermiddag" data-want="dropin new compete" data-type="prototype social" data-level="let mellem">
+            <a class="card-media" href="/nyheder/peter-langkjaer-moeller/" aria-label="Læs mere om STEW ORLEANS! Et dansk udviklet spil af Peter Langkjær Møller">
+              <img src="/assets/images/nyheder/peter-langkjaer-moeller.jpg" alt="Spiludvikling med prototypekomponenter på et bord" loading="lazy" onerror="this.parentElement.hidden=true">
+            </a>
+            <div class="card-body">
+              <div class="card-top"><span class="access-badge open">Åben aktivitet</span><span class="card-time">12.00–14.00</span></div>
+              <h3>STEW ORLEANS! Et dansk udviklet spil af Peter Langkjær Møller</h3>
+              <p>Mød spiludvikleren, prøv hans spil og kom tættere på processen bag et brætspil. Der vil også være en konkurrence med præmie.</p>
+              <div class="card-meta">
+                <span class="meta-pill">Prototype / spiludvikling</span>
+                <span class="meta-pill">Let–mellem</span>
+              </div>
+              <div class="host"><strong>Vært:</strong> Peter Langkjær Møller</div>
+              <div class="card-actions">
+                <span class="no-booking">Ingen booking nødvendig</span>
+                <a class="card-link secondary" href="/nyheder/peter-langkjaer-moeller/">Læs mere</a>
+              </div>
+            </div>
           </article>
 
           <article class="activity-card" data-access="open" data-time="eftermiddag" data-want="dropin new" data-type="prototype strategi" data-level="mellem">
-            <div class="card-top"><span class="access-badge open">Åben aktivitet</span><span class="card-time">14.00–16.00</span></div>
-            <h3>Space Skirmish</h3>
-            <p>Prøv en tidlig prototype og oplev et spil, mens det stadig er under udvikling.</p>
-            <div class="card-meta"><span class="meta-pill">Prototype</span><span class="meta-pill">Drop-in</span></div>
-            <div class="host"><strong>Vært:</strong> Kresten Kjær Sørensen</div>
-            <div class="card-actions"><span class="no-booking">Ingen booking nødvendig</span></div>
+            <a class="card-media" href="/nyheder/space-skirmish/" aria-label="Læs mere om Space Skirmish - prøv en tidlig prototype">
+              <img src="/assets/images/nyheder/space-skirmish.jpg" alt="Prototype af Space Skirmish med robotter på et sekskantet spillebræt" loading="lazy" onerror="this.parentElement.hidden=true">
+            </a>
+            <div class="card-body">
+              <div class="card-top"><span class="access-badge open">Åben aktivitet</span><span class="card-time">14.00–16.00</span></div>
+              <h3>Space Skirmish - prøv en tidlig prototype</h3>
+              <p>Prøv en tidlig prototype af det taktiske duelspil Space Skirmish, hvor to hold robotter kæmper om at ødelægge modstanderens landingsfartøj.</p>
+              <div class="card-meta">
+                <span class="meta-pill">Prototype</span>
+                <span class="meta-pill">Mellem</span>
+              </div>
+              <div class="host"><strong>Vært:</strong> Kresten Kjær Sørensen</div>
+              <div class="card-actions">
+                <span class="no-booking">Ingen booking nødvendig</span>
+                <a class="card-link secondary" href="/nyheder/space-skirmish/">Læs mere</a>
+              </div>
+            </div>
           </article>
 
-          <article class="activity-card" data-access="open" data-time="" data-want="dropin learn new" data-type="familie rollespil social" data-level="let mellem">
-            <div class="card-top"><span class="access-badge open">Åben aktivitet</span><span class="card-time">En del af dagen</span></div>
-            <h3>Klubberne i Viborg</h3>
-            <p>Rollespil, figurmaling og andre aktiviteter for børn og unge. Børn under 15 år deltager sammen med en voksen.</p>
-            <div class="card-meta"><span class="meta-pill">Børn & unge</span><span class="meta-pill">Drop-in</span></div>
-            <div class="host"><strong>Vært:</strong> Klubberne i Viborg</div>
-            <div class="card-actions"><span class="no-booking">Ingen booking nødvendig</span></div>
+          <article class="activity-card" data-access="open" data-time="formiddag eftermiddag aften" data-want="dropin learn" data-type="strategi familie social" data-level="let mellem tung">
+            <a class="card-media" href="/nyheder/braetspilsbibliotek/" aria-label="Læs mere om Åbent brætspilsbibliotek">
+              <img src="/assets/images/nyheder/bibliotek2.jpg" alt="Mange forskellige brætspil samlet i et brætspilsbibliotek" loading="lazy" onerror="this.parentElement.hidden=true">
+            </a>
+            <div class="card-body">
+              <div class="card-top"><span class="access-badge open">Åben aktivitet</span><span class="card-time">Hele dagen</span></div>
+              <h3>Åbent brætspilsbibliotek</h3>
+              <p>Gå på opdagelse blandt et par hundrede brætspil, lån et spil og find et ledigt bord. Vi hjælper gerne, hvis du ikke ved, hvad du skal vælge.</p>
+              <div class="card-meta">
+                <span class="meta-pill">Brætspilsbibliotek</span>
+                <span class="meta-pill">Alle niveauer</span>
+              </div>
+              
+              <div class="card-actions">
+                <span class="no-booking">Ingen booking nødvendig</span>
+                <a class="card-link secondary" href="/nyheder/braetspilsbibliotek/">Læs mere</a>
+              </div>
+            </div>
           </article>
 
           <article class="activity-card" data-access="open" data-time="" data-want="dropin learn new" data-type="figurspil strategi social" data-level="let mellem">
-            <div class="card-top"><span class="access-badge open">Åben aktivitet</span><span class="card-time">Tid kommer</span></div>
-            <h3>Warhammer-showcase</h3>
-            <p>Mithril viser Warhammer frem med hobbyfolk, der kan fortælle om spillet, figurerne og hobbyen omkring det.</p>
-            <div class="card-meta"><span class="meta-pill">Figurspil</span><span class="meta-pill">Showcase</span></div>
-            <div class="host"><strong>Vært:</strong> Mithril</div>
-            <div class="card-actions"><span class="no-booking">Ingen booking nødvendig</span></div>
+            <a class="card-media" href="/nyheder/warhammer-showcase/" aria-label="Læs mere om Warhammer-showcase">
+              <img src="/assets/images/nyheder/warhammer-showcase.jpg" alt="Warhammer-figurer og terræn opstillet på et spillebord" loading="lazy" onerror="this.parentElement.hidden=true">
+            </a>
+            <div class="card-body">
+              <div class="card-top"><span class="access-badge open">Åben aktivitet</span><span class="card-time">Tid kommer</span></div>
+              <h3>Warhammer-showcase</h3>
+              <p>Warhammer med figurer, terræn og spil på bordet. Kig forbi, se hobbyen på tæt hold og få en snak om både spil og miniaturer.</p>
+              <div class="card-meta">
+                <span class="meta-pill">Figurspil</span>
+                <span class="meta-pill">Let–mellem</span>
+              </div>
+              <div class="host"><strong>Vært:</strong> Mithril</div>
+              <div class="card-actions">
+                <span class="no-booking">Ingen booking nødvendig</span>
+                <a class="card-link secondary" href="/nyheder/warhammer-showcase/">Læs mere</a>
+              </div>
+            </div>
           </article>
 
           <article class="activity-card" data-access="open" data-time="" data-want="dropin learn new" data-type="figurspil strategi social" data-level="let mellem">
-            <div class="card-top"><span class="access-badge open">Åben aktivitet</span><span class="card-time">Tid kommer</span></div>
-            <h3>Star Wars: Legion</h3>
-            <p>Se og oplev Star Wars: Legion som en del af Mithrils åbne figurspilsaktiviteter.</p>
-            <div class="card-meta"><span class="meta-pill">Figurspil</span><span class="meta-pill">Drop-in</span></div>
-            <div class="host"><strong>Vært:</strong> Mithril</div>
-            <div class="card-actions"><span class="no-booking">Ingen booking nødvendig</span></div>
+            <a class="card-media" href="/nyheder/star-wars-legion/" aria-label="Læs mere om Star Wars: Legion">
+              <img src="/assets/images/nyheder/star-wars-legion.jpg" alt="Star Wars Legion-miniaturer og terræn opstillet på et spillebord" loading="lazy" onerror="this.parentElement.hidden=true">
+            </a>
+            <div class="card-body">
+              <div class="card-top"><span class="access-badge open">Åben aktivitet</span><span class="card-time">Tid kommer</span></div>
+              <h3>Star Wars: Legion</h3>
+              <p>Se Star Wars: Legion i aktion med miniaturer, terræn og kampe på spillebordet. Du behøver ikke kende spillet på forhånd.</p>
+              <div class="card-meta">
+                <span class="meta-pill">Figurspil</span>
+                <span class="meta-pill">Let–mellem</span>
+              </div>
+              <div class="host"><strong>Vært:</strong> Mithril</div>
+              <div class="card-actions">
+                <span class="no-booking">Ingen booking nødvendig</span>
+                <a class="card-link secondary" href="/nyheder/star-wars-legion/">Læs mere</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="activity-card" data-access="open" data-time="" data-want="dropin learn new" data-type="familie rollespil social figurspil" data-level="let mellem">
+            <a class="card-media" href="/nyheder/klubberne/" aria-label="Læs mere om Klubberne – aktiviteter for børn og unge">
+              <img src="/assets/images/nyheder/klubberne.jpg" alt="Børn og unge deltager i rollespil og figurmaling sammen med voksne" loading="lazy" onerror="this.parentElement.hidden=true">
+            </a>
+            <div class="card-body">
+              <div class="card-top"><span class="access-badge open">Åben aktivitet</span><span class="card-time">En del af dagen</span></div>
+              <h3>Klubberne – aktiviteter for børn og unge</h3>
+              <p>Klubberne kommer med blandt andet rollespil, figurmaling og andre spilaktiviteter. Der vil både være åbne aktiviteter og aktiviteter med faste tidspunkter. Viborg Brætspilsdag er primært for voksne; deltagere under 15 år skal være i følgeskab med en voksen under hele arrangementet.</p>
+              <div class="card-meta">
+                <span class="meta-pill">Børn &amp; unge</span>
+                <span class="meta-pill">Let–mellem</span>
+              </div>
+              <div class="host"><strong>Vært:</strong> Klubberne i Viborg</div>
+              <div class="card-actions">
+                <span class="no-booking">Ingen booking nødvendig</span>
+                <a class="card-link secondary" href="/nyheder/klubberne/">Læs mere</a>
+              </div>
+            </div>
           </article>
 
         </div>
@@ -769,174 +886,364 @@ permalink: /aktiviteter2/
 
         <div class="activity-grid" id="bookingGrid">
 
-          <article class="activity-card" data-access="booking" data-time="formiddag" data-want="" data-type="strategi" data-level="tung">
-            <div class="card-top"><span class="access-badge booking">Booking</span><span class="card-time">10.30–20.00</span></div>
-            <h3>Twilight Imperium IV</h3>
-            <p>En lang strategisession med politik, alliancer, handel, krig og en hel galakse på bordet.</p>
-            <div class="card-meta"><span class="meta-pill">Strategi</span><span class="meta-pill">Tung</span></div>
-            <div class="host"><strong>Vært:</strong> Anders</div>
-            <div class="card-actions">
-              <a class="card-link primary" href="https://booking.viborgbraetspil.dk/">Book plads →</a>
-              <a class="card-link secondary" href="/nyheder/twilight-imperium-iv/">Læs mere</a>
+          <article class="activity-card" data-access="booking" data-time="formiddag eftermiddag aften" data-want="" data-type="strategi" data-level="tung">
+            <a class="card-media" href="/nyheder/twilight-imperium-iv/" aria-label="Læs mere om Twilight Imperium IV">
+              <img src="/assets/images/nyheder/twilight-imperium-iv.jpg" alt="Twilight Imperium IV sat op på bord" loading="lazy" style="object-position:center" onerror="this.parentElement.hidden=true">
+            </a>
+            <div class="card-body">
+              <div class="card-top"><span class="access-badge booking">Booking</span><span class="card-time">10.30–20.00</span></div>
+              <h3>Twilight Imperium IV</h3>
+              <p>En stor dag med galaktisk strategi, diplomati, handel og konflikt.</p>
+              <div class="card-meta">
+                <span class="meta-pill">Strategi</span>
+                <span class="meta-pill">Tung</span>
+              </div>
+              <div class="host"><strong>Vært:</strong> Anders</div>
+              <div class="card-actions">
+                <a class="card-link primary" href="https://booking.viborgbraetspil.dk/">Book plads →</a>
+                <a class="card-link secondary" href="/nyheder/twilight-imperium-iv/">Læs mere</a>
+              </div>
             </div>
           </article>
 
-          <article class="activity-card" data-access="booking" data-time="formiddag" data-want="compete" data-type="strategi social" data-level="let mellem">
-            <div class="card-top"><span class="access-badge booking">Booking</span><span class="card-time">10.30–14.30</span></div>
-            <h3>Heat Championship</h3>
-            <p>Turnering, tempo og racerløb. Jag placeringerne og se, hvem der holder hovedet koldt gennem svingene.</p>
-            <div class="card-meta"><span class="meta-pill">Turnering</span><span class="meta-pill">Let–mellem</span></div>
-            <div class="host"><strong>Vært:</strong> Bruno</div>
-            <div class="card-actions">
-              <a class="card-link primary" href="https://booking.viborgbraetspil.dk/">Book plads →</a>
-              <a class="card-link secondary" href="/nyheder/heat-championship/">Læs mere</a>
+          <article class="activity-card" data-access="booking" data-time="formiddag eftermiddag" data-want="compete" data-type="" data-level="let mellem">
+            <a class="card-media" href="/nyheder/heat-championship/" aria-label="Læs mere om Heat Championship">
+              <img src="/assets/images/nyheder/heat-championship.jpg" alt="Heat-brætspillet med biler og racerbane" loading="lazy" style="object-position:center" onerror="this.parentElement.hidden=true">
+            </a>
+            <div class="card-body">
+              <div class="card-top"><span class="access-badge booking">Booking</span><span class="card-time">10.30–14.30</span></div>
+              <h3>Heat Championship</h3>
+              <p>Turnering i Heat med Bruno som vært og præmier til vinderne.</p>
+              <div class="card-meta">
+                <span class="meta-pill">Turnering</span>
+                <span class="meta-pill">Let–mellem</span>
+              </div>
+              <div class="host"><strong>Vært:</strong> Bruno</div>
+              <div class="card-actions">
+                <a class="card-link primary" href="https://booking.viborgbraetspil.dk/">Book plads →</a>
+                <a class="card-link secondary" href="/nyheder/heat-championship/">Læs mere</a>
+              </div>
             </div>
           </article>
 
-          <article class="activity-card" data-access="booking" data-time="formiddag" data-want="learn" data-type="strategi" data-level="tung">
-            <div class="card-top"><span class="access-badge booking">Booking</span><span class="card-time">10.30–14.30</span></div>
-            <h3>Eclipse: Second Dawn for the Galaxy</h3>
-            <p>Lær-at-spille med udforskning, udvikling, økonomi og rumkrig i et stort strategispil.</p>
-            <div class="card-meta"><span class="meta-pill">Strategi</span><span class="meta-pill">Tung</span><span class="meta-pill">Lær-at-spille</span></div>
-            <div class="host"><strong>Vært:</strong> Jan</div>
-            <div class="card-actions"><a class="card-link primary" href="https://booking.viborgbraetspil.dk/">Book plads →</a></div>
-          </article>
-
-          <article class="activity-card" data-access="booking" data-time="formiddag" data-want="learn" data-type="strategi" data-level="mellem">
-            <div class="card-top"><span class="access-badge booking">Booking</span><span class="card-time">10.30–13.30</span></div>
-            <h3>Rebirth</h3>
-            <p>En planlagt strategisession, hvor du bliver hjulpet i gang ved bordet.</p>
-            <div class="card-meta"><span class="meta-pill">Strategi</span><span class="meta-pill">Mellem</span><span class="meta-pill">Lær-at-spille</span></div>
-            <div class="host"><strong>Vært:</strong> Danni</div>
-            <div class="card-actions"><a class="card-link primary" href="https://booking.viborgbraetspil.dk/">Book plads →</a></div>
-          </article>
-
-          <article class="activity-card" data-access="booking" data-time="formiddag" data-want="learn" data-type="strategi social" data-level="mellem">
-            <div class="card-top"><span class="access-badge booking">Booking</span><span class="card-time">10.30–13.30</span></div>
-            <h3>Dead of Winter</h3>
-            <p>Samarbejde, svære valg og mistanke i en planlagt session med hjælp til reglerne.</p>
-            <div class="card-meta"><span class="meta-pill">Strategi</span><span class="meta-pill">Mellem</span><span class="meta-pill">Lær-at-spille</span></div>
-            <div class="host"><strong>Vært:</strong> Lynge</div>
-            <div class="card-actions"><a class="card-link primary" href="https://booking.viborgbraetspil.dk/">Book plads →</a></div>
-          </article>
-
-          <article class="activity-card" data-access="booking" data-time="formiddag" data-want="learn" data-type="strategi" data-level="mellem">
-            <div class="card-top"><span class="access-badge booking">Booking</span><span class="card-time">10.30–13.30</span></div>
-            <h3>Wyrmspan</h3>
-            <p>En planlagt strategisession med introduktion til spillet og hjælp til at komme i gang.</p>
-            <div class="card-meta"><span class="meta-pill">Strategi</span><span class="meta-pill">Mellem</span><span class="meta-pill">Lær-at-spille</span></div>
-            <div class="host"><strong>Vært:</strong> Jim</div>
-            <div class="card-actions"><a class="card-link primary" href="https://booking.viborgbraetspil.dk/">Book plads →</a></div>
-          </article>
-
-          <article class="activity-card" data-access="booking" data-time="formiddag" data-want="learn" data-type="strategi" data-level="tung">
-            <div class="card-top"><span class="access-badge booking">Booking</span><span class="card-time">10.30–13.30</span></div>
-            <h3>Root</h3>
-            <p>Asymmetrisk strategi, forskellige fraktioner og meget forskellige måder at vinde på. Du bliver hjulpet i gang.</p>
-            <div class="card-meta"><span class="meta-pill">Strategi</span><span class="meta-pill">Tung</span><span class="meta-pill">Lær-at-spille</span></div>
-            <div class="host"><strong>Vært:</strong> André</div>
-            <div class="card-actions"><a class="card-link primary" href="https://booking.viborgbraetspil.dk/">Book plads →</a></div>
-          </article>
-
-          <article class="activity-card" data-access="booking" data-time="formiddag" data-want="learn new" data-type="social" data-level="let mellem">
-            <div class="card-top"><span class="access-badge booking">Booking</span><span class="card-time">10.30–12.30</span></div>
-            <h3>Blood on the Clocktower</h3>
-            <p>Social deduction med bluff, mistanke og samtaler. Nogen lyver. Resten prøver at finde ud af hvem.</p>
-            <div class="card-meta"><span class="meta-pill">Social deduction</span><span class="meta-pill">Alle</span></div>
-            <div class="host"><strong>Vært:</strong> Ian</div>
-            <div class="card-actions">
-              <a class="card-link primary" href="https://booking.viborgbraetspil.dk/">Book plads →</a>
-              <a class="card-link secondary" href="/nyheder/blood-on-the-clocktower/">Læs mere</a>
+          <article class="activity-card" data-access="booking" data-time="formiddag eftermiddag" data-want="learn" data-type="rollespil social" data-level="let">
+            <a class="card-media" href="/nyheder/dungeons-and-dragons/" aria-label="Læs mere om Dungeons &amp; Dragons">
+              <img src="/assets/images/stemning/stemning5.jpg" alt="Dungeons &amp; Dragons" loading="lazy" style="object-position:center" onerror="this.parentElement.hidden=true">
+            </a>
+            <div class="card-body">
+              <div class="card-top"><span class="access-badge booking">Booking</span><span class="card-time">10.30–15.30</span></div>
+              <h3>Dungeons &amp; Dragons</h3>
+              <p>Prøv Dungeons &amp; Dragons i et begyndervenligt scenarie med færdige karakterer.</p>
+              <div class="card-meta">
+                <span class="meta-pill">Rollespil</span>
+                <span class="meta-pill">Let</span>
+              </div>
+              <div class="host"><strong>Vært:</strong> Peter</div>
+              <div class="card-actions">
+                <a class="card-link primary" href="https://booking.viborgbraetspil.dk/">Book plads →</a>
+                <a class="card-link secondary" href="/nyheder/dungeons-and-dragons/">Læs mere</a>
+              </div>
             </div>
           </article>
 
-          <article class="activity-card" data-access="booking" data-time="formiddag" data-want="learn new" data-type="rollespil social" data-level="let mellem">
-            <div class="card-top"><span class="access-badge booking">Booking</span><span class="card-time">10.30–15.30</span></div>
-            <h3>Dungeons & Dragons</h3>
-            <p>En planlagt rollespilssession, hvor fortælling, valg og samarbejde er vigtigere end at kende alle regler på forhånd.</p>
-            <div class="card-meta"><span class="meta-pill">Rollespil</span><span class="meta-pill">Alle</span></div>
-            <div class="host"><strong>Vært:</strong> Peter</div>
-            <div class="card-actions"><a class="card-link primary" href="https://booking.viborgbraetspil.dk/">Book plads →</a></div>
+          <article class="activity-card" data-access="booking" data-time="eftermiddag" data-want="new" data-type="strategi" data-level="mellem">
+            <a class="card-media" href="/nyheder/timespan/" aria-label="Læs mere om Timespan">
+              <img src="/assets/images/nyheder/timespan.jpg" alt="Timespan-brætspillet sat op på bord" loading="lazy" style="object-position:center" onerror="this.parentElement.hidden=true">
+            </a>
+            <div class="card-body">
+              <div class="card-top"><span class="access-badge booking">Booking</span><span class="card-time">14.00–16.00</span></div>
+              <h3>Timespan</h3>
+              <p>Nyt fra SPIEL Essen 2026: Prøv Timespan</p>
+              <div class="card-meta">
+                <span class="meta-pill">Strategi</span>
+                <span class="meta-pill">Mellem</span>
+              </div>
+              <div class="host"><strong>Vært:</strong> Dennis</div>
+              <div class="card-actions">
+                <a class="card-link primary" href="https://booking.viborgbraetspil.dk/">Book plads →</a>
+                <a class="card-link secondary" href="/nyheder/timespan/">Læs mere</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="activity-card" data-access="booking" data-time="formiddag eftermiddag" data-want="" data-type="social" data-level="let mellem">
+            <a class="card-media" href="/nyheder/blood-on-the-clocktower/" aria-label="Læs mere om Blood on the Clocktower">
+              <img src="/assets/images/nyheder/blood.jpg" alt="Blood on the Clocktower" loading="lazy" style="object-position:center" onerror="this.parentElement.hidden=true">
+            </a>
+            <div class="card-body">
+              <div class="card-top"><span class="access-badge booking">Booking</span><span class="card-time">10.30–12.30</span></div>
+              <h3>Blood on the Clocktower</h3>
+              <p>Et socialt mysteriespil med hemmelige roller, bluff, mistanke og en dæmon skjult blandt spillerne.</p>
+              <div class="card-meta">
+                <span class="meta-pill">Social deduction</span>
+                <span class="meta-pill">Let–mellem</span>
+              </div>
+              <div class="host"><strong>Vært:</strong> Ian</div>
+              <div class="card-actions">
+                <a class="card-link primary" href="https://booking.viborgbraetspil.dk/">Book plads →</a>
+                <a class="card-link secondary" href="/nyheder/blood-on-the-clocktower/">Læs mere</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="activity-card" data-access="booking" data-time="formiddag eftermiddag" data-want="learn" data-type="strategi" data-level="tung">
+            <a class="card-media" href="/nyheder/eclipse-second-dawn/" aria-label="Læs mere om Eclipse: Second Dawn for the Galaxy">
+              <img src="/assets/images/nyheder/eclipse-second-dawn.jpg" alt="Eclipse: Second Dawn for the Galaxy sat op på bord" loading="lazy" style="object-position:center" onerror="this.parentElement.hidden=true">
+            </a>
+            <div class="card-body">
+              <div class="card-top"><span class="access-badge booking">Booking</span><span class="card-time">10.30–14.30</span></div>
+              <h3>Eclipse: Second Dawn for the Galaxy</h3>
+              <p>Lær at spille Eclipse: Second Dawn for the Galaxy.</p>
+              <div class="card-meta">
+                <span class="meta-pill">Strategi</span>
+                <span class="meta-pill">Tung</span>
+              </div>
+              <div class="host"><strong>Vært:</strong> Jan</div>
+              <div class="card-actions">
+                <a class="card-link primary" href="https://booking.viborgbraetspil.dk/">Book plads →</a>
+                <a class="card-link secondary" href="/nyheder/eclipse-second-dawn/">Læs mere</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="activity-card" data-access="booking" data-time="aften" data-want="compete" data-type="" data-level="let">
+            <a class="card-media" href="/nyheder/klask-turnering/" aria-label="Læs mere om KLASK-turnering">
+              <img src="/assets/images/nyheder/klask.jpg" alt="KLASK-spillet sat op på bord" loading="lazy" style="object-position:center" onerror="this.parentElement.hidden=true">
+            </a>
+            <div class="card-body">
+              <div class="card-top"><span class="access-badge booking">Booking</span><span class="card-time">19.00–20.30</span></div>
+              <h3>KLASK-turnering</h3>
+              <p>Knockout-turnering i KLASK med præmier. Kræver tilmelding.</p>
+              <div class="card-meta">
+                <span class="meta-pill">Turnering</span>
+                <span class="meta-pill">Let</span>
+              </div>
+              
+              <div class="card-actions">
+                <a class="card-link primary" href="https://booking.viborgbraetspil.dk/">Book plads →</a>
+                <a class="card-link secondary" href="/nyheder/klask-turnering/">Læs mere</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="activity-card" data-access="booking" data-time="formiddag eftermiddag" data-want="learn" data-type="strategi" data-level="mellem">
+            <a class="card-media" href="/nyheder/rebirth/" aria-label="Læs mere om Rebirth">
+              <img src="/assets/images/nyheder/rebirth.jpg" alt="Rebirth sat op på bord" loading="lazy" style="object-position:center" onerror="this.parentElement.hidden=true">
+            </a>
+            <div class="card-body">
+              <div class="card-top"><span class="access-badge booking">Booking</span><span class="card-time">10.30–13.30</span></div>
+              <h3>Rebirth</h3>
+              <p>Lær at spille Rebirth med Danni som vært.</p>
+              <div class="card-meta">
+                <span class="meta-pill">Strategi</span>
+                <span class="meta-pill">Mellem</span>
+              </div>
+              <div class="host"><strong>Vært:</strong> Danni</div>
+              <div class="card-actions">
+                <a class="card-link primary" href="https://booking.viborgbraetspil.dk/">Book plads →</a>
+                <a class="card-link secondary" href="/nyheder/rebirth/">Læs mere</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="activity-card" data-access="booking" data-time="formiddag eftermiddag" data-want="learn" data-type="strategi social" data-level="mellem">
+            <a class="card-media" href="/nyheder/dead-of-winter/" aria-label="Læs mere om Dead of Winter">
+              <img src="/assets/images/nyheder/dead-of-winter.jpg" alt="Dead of Winter sat op på bord" loading="lazy" style="object-position:center" onerror="this.parentElement.hidden=true">
+            </a>
+            <div class="card-body">
+              <div class="card-top"><span class="access-badge booking">Booking</span><span class="card-time">10.30–13.30</span></div>
+              <h3>Dead of Winter</h3>
+              <p>Lær at spille Dead of Winter.</p>
+              <div class="card-meta">
+                <span class="meta-pill">Strategi</span>
+                <span class="meta-pill">Mellem</span>
+              </div>
+              <div class="host"><strong>Vært:</strong> Lynge</div>
+              <div class="card-actions">
+                <a class="card-link primary" href="https://booking.viborgbraetspil.dk/">Book plads →</a>
+                <a class="card-link secondary" href="/nyheder/dead-of-winter/">Læs mere</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="activity-card" data-access="booking" data-time="formiddag eftermiddag" data-want="learn" data-type="strategi" data-level="mellem">
+            <a class="card-media" href="/nyheder/wyrmspan/" aria-label="Læs mere om Wyrmspan">
+              <img src="/assets/images/nyheder/wyrmspan.jpg" alt="Wyrmspan sat op på bord" loading="lazy" style="object-position:center" onerror="this.parentElement.hidden=true">
+            </a>
+            <div class="card-body">
+              <div class="card-top"><span class="access-badge booking">Booking</span><span class="card-time">10.30–13.30</span></div>
+              <h3>Wyrmspan</h3>
+              <p>Lær at spille Wyrmspan.</p>
+              <div class="card-meta">
+                <span class="meta-pill">Strategi</span>
+                <span class="meta-pill">Mellem</span>
+              </div>
+              <div class="host"><strong>Vært:</strong> Jim</div>
+              <div class="card-actions">
+                <a class="card-link primary" href="https://booking.viborgbraetspil.dk/">Book plads →</a>
+                <a class="card-link secondary" href="/nyheder/wyrmspan/">Læs mere</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="activity-card" data-access="booking" data-time="formiddag eftermiddag" data-want="learn" data-type="strategi" data-level="tung">
+            <a class="card-media" href="/nyheder/root/" aria-label="Læs mere om Root">
+              <img src="/assets/images/nyheder/root.jpg" alt="Root sat op på bord" loading="lazy" style="object-position:center" onerror="this.parentElement.hidden=true">
+            </a>
+            <div class="card-body">
+              <div class="card-top"><span class="access-badge booking">Booking</span><span class="card-time">10.30–13.30</span></div>
+              <h3>Root</h3>
+              <p>Lær at spille Root.</p>
+              <div class="card-meta">
+                <span class="meta-pill">Strategi</span>
+                <span class="meta-pill">Tung</span>
+              </div>
+              <div class="host"><strong>Vært:</strong> André</div>
+              <div class="card-actions">
+                <a class="card-link primary" href="https://booking.viborgbraetspil.dk/">Book plads →</a>
+                <a class="card-link secondary" href="/nyheder/root/">Læs mere</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="activity-card" data-access="booking" data-time="eftermiddag" data-want="learn" data-type="strategi" data-level="mellem">
+            <a class="card-media" href="/nyheder/the-game-makers/" aria-label="Læs mere om The Game Makers">
+              <img src="/assets/images/nyheder/the-game-makers.jpg" alt="The Game Makers sat op på bord" loading="lazy" style="object-position:center" onerror="this.parentElement.hidden=true">
+            </a>
+            <div class="card-body">
+              <div class="card-top"><span class="access-badge booking">Booking</span><span class="card-time">14.00–17.00</span></div>
+              <h3>The Game Makers</h3>
+              <p>Lær at spille The Game Makers, et strategispil om at udvikle og producere rigtige brætspil.</p>
+              <div class="card-meta">
+                <span class="meta-pill">Strategi</span>
+                <span class="meta-pill">Mellem</span>
+              </div>
+              <div class="host"><strong>Vært:</strong> Maria</div>
+              <div class="card-actions">
+                <a class="card-link primary" href="https://booking.viborgbraetspil.dk/">Book plads →</a>
+                <a class="card-link secondary" href="/nyheder/the-game-makers/">Læs mere</a>
+              </div>
+            </div>
           </article>
 
           <article class="activity-card" data-access="booking" data-time="eftermiddag" data-want="learn" data-type="strategi" data-level="tung">
-            <div class="card-top"><span class="access-badge booking">Booking</span><span class="card-time">14.00–17.00</span></div>
-            <h3>Luthier</h3>
-            <p>En længere strategisession med introduktion til spillet og plads til at fordybe sig.</p>
-            <div class="card-meta"><span class="meta-pill">Strategi</span><span class="meta-pill">Tung</span><span class="meta-pill">Lær-at-spille</span></div>
-            <div class="host"><strong>Vært:</strong> Danni</div>
-            <div class="card-actions"><a class="card-link primary" href="https://booking.viborgbraetspil.dk/">Book plads →</a></div>
+            <a class="card-media" href="/nyheder/luthier/" aria-label="Læs mere om Luthier">
+              <img src="/assets/images/nyheder/luthier.jpg" alt="Luthier sat op på bord" loading="lazy" style="object-position:center" onerror="this.parentElement.hidden=true">
+            </a>
+            <div class="card-body">
+              <div class="card-top"><span class="access-badge booking">Booking</span><span class="card-time">14.00–17.00</span></div>
+              <h3>Luthier</h3>
+              <p>Lær at spille Luthier.</p>
+              <div class="card-meta">
+                <span class="meta-pill">Strategi</span>
+                <span class="meta-pill">Tung</span>
+              </div>
+              <div class="host"><strong>Vært:</strong> Danni</div>
+              <div class="card-actions">
+                <a class="card-link primary" href="https://booking.viborgbraetspil.dk/">Book plads →</a>
+                <a class="card-link secondary" href="/nyheder/luthier/">Læs mere</a>
+              </div>
+            </div>
           </article>
 
           <article class="activity-card" data-access="booking" data-time="eftermiddag" data-want="learn" data-type="strategi familie" data-level="let">
-            <div class="card-top"><span class="access-badge booking">Booking</span><span class="card-time">14.00–15.00</span></div>
-            <h3>Ave Caesar</h3>
-            <p>En kortere og mere tilgængelig strategisession, hvor du bliver sat ind i spillet ved bordet.</p>
-            <div class="card-meta"><span class="meta-pill">Strategi</span><span class="meta-pill">Let</span><span class="meta-pill">Lær-at-spille</span></div>
-            <div class="host"><strong>Vært:</strong> Jim</div>
-            <div class="card-actions"><a class="card-link primary" href="https://booking.viborgbraetspil.dk/">Book plads →</a></div>
-          </article>
-
-          <article class="activity-card" data-access="booking" data-time="eftermiddag" data-want="learn" data-type="familie social" data-level="let">
-            <div class="card-top"><span class="access-badge booking">Booking</span><span class="card-time">14.00–15.00</span></div>
-            <h3>The Gang</h3>
-            <p>Et samarbejdsspil i den lettere ende. Godt til dig, der gerne vil spille sammen frem for mod hinanden.</p>
-            <div class="card-meta"><span class="meta-pill">Familie</span><span class="meta-pill">Let</span><span class="meta-pill">Co-op</span></div>
-            <div class="host"><strong>Vært:</strong> André</div>
-            <div class="card-actions"><a class="card-link primary" href="https://booking.viborgbraetspil.dk/">Book plads →</a></div>
-          </article>
-
-          <article class="activity-card" data-access="booking" data-time="eftermiddag" data-want="learn new" data-type="strategi" data-level="mellem">
-            <div class="card-top"><span class="access-badge booking">Booking</span><span class="card-time">14.00–16.00</span></div>
-            <h3>Timespan</h3>
-            <p>Lær-at-spille med en ny SPIEL Essen 2026-titel for dig, der gerne vil prøve noget frisk fra årets messe.</p>
-            <div class="card-meta"><span class="meta-pill">Strategi</span><span class="meta-pill">Mellem</span><span class="meta-pill">Nyt spil</span></div>
-            <div class="host"><strong>Vært:</strong> Dennis</div>
-            <div class="card-actions"><a class="card-link primary" href="https://booking.viborgbraetspil.dk/">Book plads →</a></div>
-          </article>
-
-          <article class="activity-card" data-access="booking" data-time="eftermiddag" data-want="learn new" data-type="strategi" data-level="mellem">
-            <div class="card-top"><span class="access-badge booking">Booking</span><span class="card-time">14.00–17.00</span></div>
-            <h3>The Game Makers</h3>
-            <p>Lær-at-spille og en mellem-tung strategisk oplevelse blandt de nyere spil på programmet.</p>
-            <div class="card-meta"><span class="meta-pill">Strategi</span><span class="meta-pill">Mellem</span><span class="meta-pill">Nyt spil</span></div>
-            <div class="host"><strong>Vært:</strong> Maria</div>
-            <div class="card-actions"><a class="card-link primary" href="https://booking.viborgbraetspil.dk/">Book plads →</a></div>
-          </article>
-
-          <article class="activity-card" data-access="booking" data-time="eftermiddag" data-want="learn" data-type="familie social" data-level="let">
-            <div class="card-top"><span class="access-badge booking">Booking</span><span class="card-time">15.00–16.00</span></div>
-            <h3>Horrified</h3>
-            <p>Et samarbejdsspil i den mere tilgængelige ende, hvor I arbejder sammen om at håndtere monstrene.</p>
-            <div class="card-meta"><span class="meta-pill">Familie</span><span class="meta-pill">Let</span><span class="meta-pill">Co-op</span></div>
-            <div class="host"><strong>Vært:</strong> André</div>
-            <div class="card-actions"><a class="card-link primary" href="https://booking.viborgbraetspil.dk/">Book plads →</a></div>
+            <a class="card-media" href="/nyheder/ave-caesar/" aria-label="Læs mere om Ave Caesar">
+              <img src="/assets/images/nyheder/ave-caesar.jpg" alt="Ave Caesar sat op på bord" loading="lazy" style="object-position:center" onerror="this.parentElement.hidden=true">
+            </a>
+            <div class="card-body">
+              <div class="card-top"><span class="access-badge booking">Booking</span><span class="card-time">14.00–15.00</span></div>
+              <h3>Ave Caesar</h3>
+              <p>Lær at spille Ave Caesar.</p>
+              <div class="card-meta">
+                <span class="meta-pill">Strategi</span>
+                <span class="meta-pill">Let</span>
+              </div>
+              <div class="host"><strong>Vært:</strong> Jim</div>
+              <div class="card-actions">
+                <a class="card-link primary" href="https://booking.viborgbraetspil.dk/">Book plads →</a>
+                <a class="card-link secondary" href="/nyheder/ave-caesar/">Læs mere</a>
+              </div>
+            </div>
           </article>
 
           <article class="activity-card" data-access="booking" data-time="eftermiddag" data-want="learn" data-type="strategi familie" data-level="let">
-            <div class="card-top"><span class="access-badge booking">Booking</span><span class="card-time">15.15–16.30</span></div>
-            <h3>Viking Raiders</h3>
-            <p>En kortere strategisession med introduktion ved bordet og lavere indstigning end dagens tungeste spil.</p>
-            <div class="card-meta"><span class="meta-pill">Strategi</span><span class="meta-pill">Let</span><span class="meta-pill">Lær-at-spille</span></div>
-            <div class="host"><strong>Vært:</strong> Jim</div>
-            <div class="card-actions"><a class="card-link primary" href="https://booking.viborgbraetspil.dk/">Book plads →</a></div>
+            <a class="card-media" href="/nyheder/viking-raiders/" aria-label="Læs mere om Viking Raiders">
+              <img src="/assets/images/nyheder/viking-raiders.jpg" alt="Viking Raiders sat op på bord" loading="lazy" style="object-position:center" onerror="this.parentElement.hidden=true">
+            </a>
+            <div class="card-body">
+              <div class="card-top"><span class="access-badge booking">Booking</span><span class="card-time">15.15–16.30</span></div>
+              <h3>Viking Raiders</h3>
+              <p>Lær at spille Viking Raiders.</p>
+              <div class="card-meta">
+                <span class="meta-pill">Strategi</span>
+                <span class="meta-pill">Let</span>
+              </div>
+              <div class="host"><strong>Vært:</strong> Jim</div>
+              <div class="card-actions">
+                <a class="card-link primary" href="https://booking.viborgbraetspil.dk/">Book plads →</a>
+                <a class="card-link secondary" href="/nyheder/viking-raiders/">Læs mere</a>
+              </div>
+            </div>
           </article>
 
-          <article class="activity-card" data-access="booking" data-time="aften" data-want="learn new" data-type="strategi" data-level="tung">
-            <div class="card-top"><span class="access-badge booking">Booking</span><span class="card-time">17.00–20.00</span></div>
-            <h3>Queen Alice</h3>
-            <p>En længere strategisession med et af de spil, der er taget med hjem fra Essen.</p>
-            <div class="card-meta"><span class="meta-pill">Strategi</span><span class="meta-pill">Tung</span><span class="meta-pill">Nyt spil</span></div>
-            <div class="host"><strong>Vært:</strong> Danni</div>
-            <div class="card-actions"><a class="card-link primary" href="https://booking.viborgbraetspil.dk/">Book plads →</a></div>
+          <article class="activity-card" data-access="booking" data-time="eftermiddag" data-want="learn" data-type="familie social" data-level="let">
+            <a class="card-media" href="/nyheder/the-gang/" aria-label="Læs mere om The Gang">
+              <img src="/assets/images/nyheder/the-gang.jpg" alt="The Gang sat op på bord" loading="lazy" style="object-position:center" onerror="this.parentElement.hidden=true">
+            </a>
+            <div class="card-body">
+              <div class="card-top"><span class="access-badge booking">Booking</span><span class="card-time">14.00–15.00</span></div>
+              <h3>The Gang</h3>
+              <p>Lær et samarbejdsspil, hvor spillerne arbejder sammen frem for mod hinanden.</p>
+              <div class="card-meta">
+                <span class="meta-pill">Familie</span>
+                <span class="meta-pill">Let</span>
+              </div>
+              <div class="host"><strong>Vært:</strong> André</div>
+              <div class="card-actions">
+                <a class="card-link primary" href="https://booking.viborgbraetspil.dk/">Book plads →</a>
+                <a class="card-link secondary" href="/nyheder/the-gang/">Læs mere</a>
+              </div>
+            </div>
           </article>
 
-          <article class="activity-card" data-access="booking" data-time="aften" data-want="compete" data-type="social familie" data-level="let">
-            <div class="card-top"><span class="access-badge booking">Booking</span><span class="card-time">19.00–20.30</span></div>
-            <h3>KLASK-turnering</h3>
-            <p>Knockout-turnering med 16 pladser, tre borde og 15 kampe. Check ind 15 minutter før start.</p>
-            <div class="card-meta"><span class="meta-pill">Turnering</span><span class="meta-pill">Let</span><span class="meta-pill">Konkurrence</span></div>
-            <div class="card-actions"><a class="card-link primary" href="https://booking.viborgbraetspil.dk/">Book plads →</a></div>
+          <article class="activity-card" data-access="booking" data-time="eftermiddag" data-want="learn" data-type="familie social" data-level="let">
+            <a class="card-media" href="/nyheder/horrified/" aria-label="Læs mere om Horrified">
+              <img src="/assets/images/nyheder/horrified.jpg" alt="Horrified sat op på bord" loading="lazy" style="object-position:center" onerror="this.parentElement.hidden=true">
+            </a>
+            <div class="card-body">
+              <div class="card-top"><span class="access-badge booking">Booking</span><span class="card-time">15.00–16.00</span></div>
+              <h3>Horrified</h3>
+              <p>Lær et samarbejdsspil, hvor spillerne sammen kæmper mod klassiske monstre.</p>
+              <div class="card-meta">
+                <span class="meta-pill">Familie</span>
+                <span class="meta-pill">Let</span>
+              </div>
+              <div class="host"><strong>Vært:</strong> André</div>
+              <div class="card-actions">
+                <a class="card-link primary" href="https://booking.viborgbraetspil.dk/">Book plads →</a>
+                <a class="card-link secondary" href="/nyheder/horrified/">Læs mere</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="activity-card" data-access="booking" data-time="aften" data-want="learn" data-type="strategi" data-level="tung">
+            <a class="card-media" href="/nyheder/queen-alice/" aria-label="Læs mere om Queen Alice">
+              <img src="/assets/images/nyheder/queen-alice.jpg" alt="Queen Alice sat op på bord" loading="lazy" style="object-position:center" onerror="this.parentElement.hidden=true">
+            </a>
+            <div class="card-body">
+              <div class="card-top"><span class="access-badge booking">Booking</span><span class="card-time">17.00–20.00</span></div>
+              <h3>Queen Alice</h3>
+              <p>Lær at spille Queen Alice.</p>
+              <div class="card-meta">
+                <span class="meta-pill">Strategi</span>
+                <span class="meta-pill">Tung</span>
+              </div>
+              <div class="host"><strong>Vært:</strong> Danni</div>
+              <div class="card-actions">
+                <a class="card-link primary" href="https://booking.viborgbraetspil.dk/">Book plads →</a>
+                <a class="card-link secondary" href="/nyheder/queen-alice/">Læs mere</a>
+              </div>
+            </div>
           </article>
 
         </div>
