@@ -169,11 +169,12 @@ permalink: /aktiviteter2/
 
   /* SEGMENT-BANNER */
   .actv .segment-wrap {
-    background: var(--paper-2);
-    padding: 22px 0 0;
+    background: var(--paper);
+    padding: 0;
   }
 
   .actv .segment-banner {
+    margin-top: 22px;
     padding: 18px 20px;
     border: 1px solid rgba(36,93,73,.16);
     border-radius: 18px;
@@ -194,27 +195,26 @@ permalink: /aktiviteter2/
 
   /* FILTERS */
   .actv .filter-section {
-    padding: 24px 0 24px;
-    background: var(--paper-2);
+    padding: 28px 0 26px;
+    background: var(--paper);
   }
 
   .actv .filter-panel {
-    border: 1px solid var(--line);
-    border-radius: 18px;
-    background: var(--white);
-    box-shadow: 0 10px 30px rgba(23,32,28,.06);
-    overflow: hidden;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+    overflow: visible;
   }
 
   .actv .filter-toggle {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    min-height: 42px;
-    padding: 0 16px;
+    gap: 7px;
+    padding: 0;
     color: var(--green-dark);
-    font-size: .84rem;
-    font-weight: 850;
+    font-size: .8rem;
+    font-weight: 900;
+    letter-spacing: .02em;
     cursor: pointer;
     list-style: none;
     user-select: none;
@@ -223,80 +223,142 @@ permalink: /aktiviteter2/
   .actv .filter-toggle::-webkit-details-marker { display: none; }
 
   .actv .filter-toggle::after {
-    content: "+";
-    font-size: 1rem;
-    line-height: 1;
+    content: "−";
     color: var(--green);
+    font-size: .95rem;
+    line-height: 1;
   }
 
-  .actv .filter-panel[open] .filter-toggle::after { content: "−"; }
+  .actv .filter-panel:not([open]) .filter-toggle::after { content: "+"; }
 
   .actv .filter-content {
-    padding: 4px 18px 20px;
-    border-top: 1px solid var(--line);
+    padding: 15px 0 0;
+    border: 0;
   }
 
   .actv .filter-tools {
     display: flex;
-    justify-content: flex-end;
-    margin: 12px 0 16px;
+    justify-content: flex-start;
+    margin: 0 0 12px;
   }
 
   .actv .reset-btn {
-    min-height: 34px;
-    padding: 0 11px;
-    border: 1px solid var(--line);
-    border-radius: 999px;
+    min-height: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
     background: transparent;
-    color: var(--green);
-    font-size: .8rem;
-    font-weight: 800;
+    color: var(--muted);
+    font-size: .78rem;
+    font-weight: 750;
+    text-decoration: underline;
+    text-underline-offset: 3px;
     cursor: pointer;
   }
 
+  .actv .reset-btn:hover { color: var(--green-dark); }
+
   .actv .filter-groups {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 20px 30px;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px 28px;
   }
 
   .actv .filter-group-title {
     display: block;
-    margin-bottom: 9px;
+    margin-bottom: 5px;
     color: var(--ink);
-    font-size: .78rem;
+    font-size: .75rem;
     font-weight: 900;
-    letter-spacing: .06em;
-    text-transform: uppercase;
   }
 
   .actv .filter-chips {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 4px 13px;
   }
 
   .actv .filter-chip {
-    min-height: 38px;
-    padding: 0 13px;
-    border: 1px solid rgba(23,32,28,.14);
-    border-radius: 999px;
-    background: #fff;
-    color: #344139;
-    font-size: .88rem;
-    font-weight: 800;
+    min-height: 0;
+    padding: 2px 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    color: var(--muted);
+    font-size: .85rem;
+    font-weight: 700;
     cursor: pointer;
-    transition: background .15s ease, border-color .15s ease, color .15s ease, transform .15s ease;
+    transition: color .15s ease;
   }
 
   .actv .filter-chip:hover {
-    transform: translateY(-1px);
-    border-color: rgba(36,93,73,.38);
+    color: var(--green-dark);
   }
 
   .actv .filter-chip[aria-pressed="true"] {
-    border-color: var(--green);
-    background: var(--green);
+    background: transparent;
+    color: var(--green-dark);
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+  }
+
+  /* BOOKING-INFO */
+  .actv .booking-callout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 24px;
+    align-items: center;
+    margin-top: 26px;
+    padding: 24px 26px;
+    border-radius: 20px;
+    background: var(--navy);
+    color: #fff;
+    box-shadow: 0 14px 38px rgba(23,45,49,.12);
+  }
+
+  .actv .booking-callout strong {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1rem;
+  }
+
+  .actv .booking-callout p {
+    max-width: 760px;
+    margin: 0;
+    color: rgba(255,255,255,.72);
+    font-size: .9rem;
+    line-height: 1.55;
+  }
+
+  .actv .booking-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 8px;
+  }
+
+  .actv .booking-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 42px;
+    padding: 0 14px;
+    border: 1px solid rgba(255,255,255,.20);
+    border-radius: 11px;
+    text-decoration: none;
+    font-size: .85rem;
+    font-weight: 850;
+  }
+
+  .actv .booking-btn.primary {
+    background: #fff;
+    color: var(--navy);
+    border-color: #fff;
+  }
+
+  .actv .booking-btn.secondary {
+    background: transparent;
     color: #fff;
   }
 
@@ -568,11 +630,19 @@ permalink: /aktiviteter2/
       padding-bottom: 90px;
     }
     .actv .hero h1 { font-size: clamp(3.2rem, 15vw, 4.6rem); }
-    .actv .filter-panel { border-radius: 16px; }
     .actv .section-head { align-items: flex-start; flex-direction: column; }
-    .actv .filter-groups { grid-template-columns: 1fr; gap: 20px; }
+    .actv .filter-groups { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px 24px; }
+    .actv .booking-callout { grid-template-columns: 1fr; }
+    .actv .booking-actions { justify-content: flex-start; }
     .actv .activity-grid { grid-template-columns: 1fr; }
     .actv .results { padding: 44px 0 72px; }
+  }
+
+
+  @media (max-width: 520px) {
+    .actv .filter-groups { grid-template-columns: 1fr; gap: 14px; }
+    .actv .booking-actions { display: grid; grid-template-columns: 1fr; }
+    .actv .booking-btn { width: 100%; }
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -609,7 +679,7 @@ permalink: /aktiviteter2/
 
   <section class="filter-section" aria-label="Filtrér aktiviteter">
     <div class="wrap">
-      <details class="filter-panel" id="filterPanel">
+      <details class="filter-panel" id="filterPanel" open>
         <summary class="filter-toggle">filtrer</summary>
 
         <div class="filter-content">
@@ -659,6 +729,17 @@ permalink: /aktiviteter2/
           </div>
         </div>
       </details>
+
+      <div class="booking-callout">
+        <div>
+          <strong>Booking er kun nødvendig til nogle aktiviteter.</strong>
+          <p>Du skal være tilmeldt selve Viborg Brætspilsdag, før du kan booke en aktivitet. Åbne aktiviteter, biblioteket og drop-in kræver ingen særskilt booking.</p>
+        </div>
+        <div class="booking-actions">
+          <a class="booking-btn primary" href="https://booking.viborgbraetspil.dk/">Book aktiviteter →</a>
+          <a class="booking-btn secondary" href="https://viborgbraetspil.dk/tilmelding/">Tilmeld dig dagen</a>
+        </div>
+      </div>
     </div>
   </section>
 
