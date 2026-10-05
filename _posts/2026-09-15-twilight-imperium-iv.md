@@ -36,11 +36,13 @@ Galaksen bygges op forskelligt fra spil til spil, og de asymmetriske civilisatio
 
 **● ● ● ● — Tung strategisk oplevelse**
 
-Twilight Imperium er blandt dagens mest krævende spil. Der er mange regler, mange muligheder og en meget lang spilletid. Du skal derfor have lyst til at investere både tid og koncentration i én stor oplevelse.
+Twilight Imperium er blandt dagens mest krævende spil. Der er mange regler, mange muligheder og en meget lang spilletid. Du behøver ikke have spillet Twillight Imperium før, men du skal have lyst til at investere både mange timer og koncentration i én stor oplevelse.
 
 Du behøver ikke være ekspert, men det er en fordel, hvis du tidligere har spillet moderne strategispil og er komfortabel med at lære et omfattende regelsæt.
 
 Vi spiller med udvidelserne Prophecy of King og Thunder's Edge.
+
+Det kan anbefales, at du har skimmet reglerne inden dagen, fx her: https://www.youtube.com/watch?v=_u2xEap5hBM
 
 ## Twilight Imperium passer godt til dig, hvis du…
 
