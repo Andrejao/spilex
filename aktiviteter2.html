@@ -730,8 +730,21 @@ permalink: /aktiviteter2/
         </div>
       </details>
 
+      <div class="booking-callout">
+        <div>
+          <strong>Booking er kun nødvendig til nogle aktiviteter.</strong>
+          <p>Du skal være tilmeldt selve Viborg Brætspilsdag, før du kan booke en aktivitet. Åbne aktiviteter, biblioteket og drop-in kræver ingen særskilt booking.</p>
+        </div>
+        <div class="booking-actions">
+          <a class="booking-btn primary" href="https://booking.viborgbraetspil.dk/">Book aktiviteter →</a>
+          <a class="booking-btn secondary" href="/tilmelding/">Tilmeld dig dagen</a>
+        </div>
+      </div>
+
     </div>
   </section>
+
+  {% assign activity_posts = site.posts | where: "type", "aktivitet" %}
 
   <main class="results" id="activityResults">
     <div class="wrap">
@@ -745,137 +758,85 @@ permalink: /aktiviteter2/
         </div>
 
         <div class="activity-grid" id="openGrid">
+          {% for post in activity_posts %}
+            {% assign is_open = false %}
+            {% if post.kategori == "Åben aktivitet" or post.aaben == true or post.booking == false %}
+              {% assign is_open = true %}
+            {% elsif post.tid and post.start == nil %}
+              {% assign is_open = true %}
+            {% endif %}
 
-          <article class="activity-card" data-access="open" data-time="formiddag eftermiddag" data-want="dropin learn" data-type="strategi social" data-level="let mellem tung">
-            <a class="card-media" href="/nyheder/solo-braetspil/" aria-label="Læs mere om Lær solo-brætspil">
-              <img src="/assets/images/nyheder/solo-braetspil.jpg" alt="Udvalg af solobrætspil klar til at blive prøvet" loading="lazy" onerror="this.parentElement.hidden=true">
-            </a>
-            <div class="card-body">
-              <div class="card-top"><span class="access-badge open">Åben aktivitet</span><span class="card-time">10.30–14.00</span></div>
-              <h3>Lær solo-brætspil</h3>
-              <p>Oplev solobrætspil med hjælp fra Thomas. Der vil være forskellige spil at vælge mellem, og du behøver ikke kende dem på forhånd.</p>
-              <div class="host"><strong>Vært:</strong> Thomas / The Lone Boardgamer</div>
-              <div class="card-actions">
-                <span class="no-booking">Ingen booking nødvendig</span>
-                <a class="card-link secondary" href="/nyheder/solo-braetspil/">Læs mere</a>
-              </div>
-            </div>
-          </article>
+            {% if is_open %}
+              {% assign card_teaser = post.teaser %}
+              {% unless card_teaser %}
+                {% assign card_teaser = post.excerpt | strip_html | strip_newlines | truncate: 180 %}
+              {% endunless %}
 
-          <article class="activity-card" data-access="open" data-time="formiddag eftermiddag aften" data-want="dropin learn" data-type="strategi social familie" data-level="let mellem tung">
-            <a class="card-media" href="/nyheder/braetspil-for-to/" aria-label="Læs mere om Brætspil for to personer">
-              <img src="/assets/images/nyheder/braetspil-for-to.jpg" alt="To personer spiller et moderne brætspil over for hinanden" loading="lazy" onerror="this.parentElement.hidden=true">
-            </a>
-            <div class="card-body">
-              <div class="card-top"><span class="access-badge open">Åben aktivitet</span><span class="card-time">Fra 10.15</span></div>
-              <h3>Brætspil for to personer</h3>
-              <p>Prøv stærke topersonersspil med hjælp fra Josias. Tag en ven med eller kom alene – så hjælper vi dig med at finde en at spille med.</p>
-              <div class="host"><strong>Vært:</strong> Josias</div>
-              <div class="card-actions">
-                <span class="no-booking">Ingen booking nødvendig</span>
-                <a class="card-link secondary" href="/nyheder/braetspil-for-to/">Læs mere</a>
-              </div>
-            </div>
-          </article>
+              {% assign card_time = post.tid %}
+              {% unless card_time %}
+                {% if post.start and post.slut %}
+                  {% capture card_time %}{{ post.start }}–{{ post.slut }}{% endcapture %}
+                {% elsif post.start %}
+                  {% capture card_time %}Fra {{ post.start }}{% endcapture %}
+                {% else %}
+                  {% assign card_time = "Tid kommer" %}
+                {% endif %}
+              {% endunless %}
 
-          <article class="activity-card" data-access="open" data-time="eftermiddag" data-want="dropin new compete" data-type="prototype social" data-level="let mellem">
-            <a class="card-media" href="/nyheder/peter-langkjaer-moeller/" aria-label="Læs mere om STEW ORLEANS! Et dansk udviklet spil af Peter Langkjær Møller">
-              <img src="/assets/images/nyheder/peter-langkjaer-moeller.jpg" alt="Spiludvikling med prototypekomponenter på et bord" loading="lazy" onerror="this.parentElement.hidden=true">
-            </a>
-            <div class="card-body">
-              <div class="card-top"><span class="access-badge open">Åben aktivitet</span><span class="card-time">12.00–14.00</span></div>
-              <h3>STEW ORLEANS! Et dansk udviklet spil af Peter Langkjær Møller</h3>
-              <p>Mød spiludvikleren, prøv hans spil og kom tættere på processen bag et brætspil. Der vil også være en konkurrence med præmie.</p>
-              <div class="host"><strong>Vært:</strong> Peter Langkjær Møller</div>
-              <div class="card-actions">
-                <span class="no-booking">Ingen booking nødvendig</span>
-                <a class="card-link secondary" href="/nyheder/peter-langkjaer-moeller/">Læs mere</a>
-              </div>
-            </div>
-          </article>
+              <article
+                class="activity-card"
+                data-access="open"
+                data-time=""
+                data-want="dropin"
+                data-type=""
+                data-level=""
+                data-category="{{ post.kategori | default: '' | downcase | escape }}"
+                data-niveau="{{ post.niveau | default: '' | escape }}"
+                data-start="{{ post.start | default: '' | escape }}"
+                data-end="{{ post.slut | default: '' | escape }}"
+                data-time-label="{{ card_time | strip | escape }}"
+                data-filter-want="{{ post.filter_oplevelse | default: post.oplevelse | default: '' | downcase | escape }}"
+                data-title="{{ post.title | downcase | escape }}"
+                data-teaser="{{ card_teaser | downcase | escape }}"
+              >
+                {% if post.image %}
+                  <a class="card-media" href="{{ post.url | relative_url }}" aria-label="Læs mere om {{ post.title | escape }}">
+                    <img
+                      src="{{ post.image | relative_url }}"
+                      alt="{{ post.image_alt | default: post.title | escape }}"
+                      loading="lazy"
+                      {% if post.image_position %}style="object-position:{{ post.image_position | escape }}"{% endif %}
+                    >
+                  </a>
+                {% endif %}
 
-          <article class="activity-card" data-access="open" data-time="eftermiddag" data-want="dropin new" data-type="prototype strategi" data-level="mellem">
-            <a class="card-media" href="/nyheder/space-skirmish/" aria-label="Læs mere om Space Skirmish - prøv en tidlig prototype">
-              <img src="/assets/images/nyheder/space-skirmish.jpg" alt="Prototype af Space Skirmish med robotter på et sekskantet spillebræt" loading="lazy" onerror="this.parentElement.hidden=true">
-            </a>
-            <div class="card-body">
-              <div class="card-top"><span class="access-badge open">Åben aktivitet</span><span class="card-time">14.00–16.00</span></div>
-              <h3>Space Skirmish - prøv en tidlig prototype</h3>
-              <p>Prøv en tidlig prototype af det taktiske duelspil Space Skirmish, hvor to hold robotter kæmper om at ødelægge modstanderens landingsfartøj.</p>
-              <div class="host"><strong>Vært:</strong> Kresten Kjær Sørensen</div>
-              <div class="card-actions">
-                <span class="no-booking">Ingen booking nødvendig</span>
-                <a class="card-link secondary" href="/nyheder/space-skirmish/">Læs mere</a>
-              </div>
-            </div>
-          </article>
+                <div class="card-body">
+                  <div class="card-top">
+                    <span class="access-badge open">Åben aktivitet</span>
+                    <span class="card-time">{{ card_time | strip }}</span>
+                  </div>
 
-          <article class="activity-card" data-access="open" data-time="formiddag eftermiddag aften" data-want="dropin learn" data-type="strategi familie social" data-level="let mellem tung">
-            <a class="card-media" href="/nyheder/braetspilsbibliotek/" aria-label="Læs mere om Åbent brætspilsbibliotek">
-              <img src="/assets/images/nyheder/bibliotek2.jpg" alt="Mange forskellige brætspil samlet i et brætspilsbibliotek" loading="lazy" onerror="this.parentElement.hidden=true">
-            </a>
-            <div class="card-body">
-              <div class="card-top"><span class="access-badge open">Åben aktivitet</span><span class="card-time">Hele dagen</span></div>
-              <h3>Åbent brætspilsbibliotek</h3>
-              <p>Gå på opdagelse blandt et par hundrede brætspil, lån et spil og find et ledigt bord. Vi hjælper gerne, hvis du ikke ved, hvad du skal vælge.</p>
-              
-              <div class="card-actions">
-                <span class="no-booking">Ingen booking nødvendig</span>
-                <a class="card-link secondary" href="/nyheder/braetspilsbibliotek/">Læs mere</a>
-              </div>
-            </div>
-          </article>
+                  <h3>{{ post.title }}</h3>
 
-          <article class="activity-card" data-access="open" data-time="" data-want="dropin learn new" data-type="figurspil strategi social" data-level="let mellem">
-            <a class="card-media" href="/nyheder/warhammer-showcase/" aria-label="Læs mere om Warhammer-showcase">
-              <img src="/assets/images/nyheder/warhammer-showcase.jpg" alt="Warhammer-figurer og terræn opstillet på et spillebord" loading="lazy" onerror="this.parentElement.hidden=true">
-            </a>
-            <div class="card-body">
-              <div class="card-top"><span class="access-badge open">Åben aktivitet</span><span class="card-time">Tid kommer</span></div>
-              <h3>Warhammer-showcase</h3>
-              <p>Warhammer med figurer, terræn og spil på bordet. Kig forbi, se hobbyen på tæt hold og få en snak om både spil og miniaturer.</p>
-              <div class="host"><strong>Vært:</strong> Mithril</div>
-              <div class="card-actions">
-                <span class="no-booking">Ingen booking nødvendig</span>
-                <a class="card-link secondary" href="/nyheder/warhammer-showcase/">Læs mere</a>
-              </div>
-            </div>
-          </article>
+                  {% if card_teaser %}
+                    <p>{{ card_teaser }}</p>
+                  {% endif %}
 
-          <article class="activity-card" data-access="open" data-time="" data-want="dropin learn new" data-type="figurspil strategi social" data-level="let mellem">
-            <a class="card-media" href="/nyheder/star-wars-legion/" aria-label="Læs mere om Star Wars: Legion">
-              <img src="/assets/images/nyheder/star-wars-legion.jpg" alt="Star Wars Legion-miniaturer og terræn opstillet på et spillebord" loading="lazy" onerror="this.parentElement.hidden=true">
-            </a>
-            <div class="card-body">
-              <div class="card-top"><span class="access-badge open">Åben aktivitet</span><span class="card-time">Tid kommer</span></div>
-              <h3>Star Wars: Legion</h3>
-              <p>Se Star Wars: Legion i aktion med miniaturer, terræn og kampe på spillebordet. Du behøver ikke kende spillet på forhånd.</p>
-              <div class="host"><strong>Vært:</strong> Mithril</div>
-              <div class="card-actions">
-                <span class="no-booking">Ingen booking nødvendig</span>
-                <a class="card-link secondary" href="/nyheder/star-wars-legion/">Læs mere</a>
-              </div>
-            </div>
-          </article>
+                  {% if post.vaert %}
+                    <div class="host"><strong>Vært:</strong> {{ post.vaert }}</div>
+                  {% endif %}
 
-          <article class="activity-card" data-access="open" data-time="" data-want="dropin learn new" data-type="familie rollespil social figurspil" data-level="let mellem">
-            <a class="card-media" href="/nyheder/klubberne/" aria-label="Læs mere om Klubberne – aktiviteter for børn og unge">
-              <img src="/assets/images/nyheder/klubberne.jpg" alt="Børn og unge deltager i rollespil og figurmaling sammen med voksne" loading="lazy" onerror="this.parentElement.hidden=true">
-            </a>
-            <div class="card-body">
-              <div class="card-top"><span class="access-badge open">Åben aktivitet</span><span class="card-time">En del af dagen</span></div>
-              <h3>Klubberne – aktiviteter for børn og unge</h3>
-              <p>Klubberne kommer med blandt andet rollespil, figurmaling og andre spilaktiviteter. Der vil både være åbne aktiviteter og aktiviteter med faste tidspunkter. Viborg Brætspilsdag er primært for voksne; deltagere under 15 år skal være i følgeskab med en voksen under hele arrangementet.</p>
-              <div class="host"><strong>Vært:</strong> Klubberne i Viborg</div>
-              <div class="card-actions">
-                <span class="no-booking">Ingen booking nødvendig</span>
-                <a class="card-link secondary" href="/nyheder/klubberne/">Læs mere</a>
-              </div>
-            </div>
-          </article>
-
+                  <div class="card-actions">
+                    <span class="no-booking">Ingen booking nødvendig</span>
+                    <a class="card-link secondary" href="{{ post.url | relative_url }}">Læs mere</a>
+                  </div>
+                </div>
+              </article>
+            {% endif %}
+          {% endfor %}
         </div>
       </section>
+
 
       <section class="activity-section" id="bookingSection" aria-labelledby="bookingHeading">
         <div class="section-head">
@@ -886,295 +847,81 @@ permalink: /aktiviteter2/
         </div>
 
         <div class="activity-grid" id="bookingGrid">
+          {% for post in activity_posts %}
+            {% assign is_open = false %}
+            {% if post.kategori == "Åben aktivitet" or post.aaben == true or post.booking == false %}
+              {% assign is_open = true %}
+            {% elsif post.tid and post.start == nil %}
+              {% assign is_open = true %}
+            {% endif %}
 
-          <article class="activity-card" data-access="booking" data-time="formiddag eftermiddag aften" data-want="" data-type="strategi" data-level="tung">
-            <a class="card-media" href="/nyheder/twilight-imperium-iv/" aria-label="Læs mere om Twilight Imperium IV">
-              <img src="/assets/images/nyheder/twilight-imperium-iv.jpg" alt="Twilight Imperium IV sat op på bord" loading="lazy" style="object-position:center" onerror="this.parentElement.hidden=true">
-            </a>
-            <div class="card-body">
-              <div class="card-top"><span class="access-badge booking">Booking</span><span class="card-time">10.30–20.00</span></div>
-              <h3>Twilight Imperium IV</h3>
-              <p>En stor dag med galaktisk strategi, diplomati, handel og konflikt.</p>
-              <div class="host"><strong>Vært:</strong> Anders</div>
-              <div class="card-actions">
-                <a class="card-link primary" href="https://booking.viborgbraetspil.dk/">Book plads →</a>
-                <a class="card-link secondary" href="/nyheder/twilight-imperium-iv/">Læs mere</a>
-              </div>
-            </div>
-          </article>
+            {% unless is_open %}
+              {% assign card_teaser = post.teaser %}
+              {% unless card_teaser %}
+                {% assign card_teaser = post.excerpt | strip_html | strip_newlines | truncate: 180 %}
+              {% endunless %}
 
-          <article class="activity-card" data-access="booking" data-time="formiddag eftermiddag" data-want="compete" data-type="" data-level="let mellem">
-            <a class="card-media" href="/nyheder/heat-championship/" aria-label="Læs mere om Heat Championship">
-              <img src="/assets/images/nyheder/heat-championship.jpg" alt="Heat-brætspillet med biler og racerbane" loading="lazy" style="object-position:center" onerror="this.parentElement.hidden=true">
-            </a>
-            <div class="card-body">
-              <div class="card-top"><span class="access-badge booking">Booking</span><span class="card-time">10.30–14.30</span></div>
-              <h3>Heat Championship</h3>
-              <p>Turnering i Heat med Bruno som vært og præmier til vinderne.</p>
-              <div class="host"><strong>Vært:</strong> Bruno</div>
-              <div class="card-actions">
-                <a class="card-link primary" href="https://booking.viborgbraetspil.dk/">Book plads →</a>
-                <a class="card-link secondary" href="/nyheder/heat-championship/">Læs mere</a>
-              </div>
-            </div>
-          </article>
+              {% if post.start and post.slut %}
+                {% capture card_time %}{{ post.start }}–{{ post.slut }}{% endcapture %}
+              {% elsif post.tid %}
+                {% assign card_time = post.tid %}
+              {% elsif post.start %}
+                {% capture card_time %}Fra {{ post.start }}{% endcapture %}
+              {% else %}
+                {% assign card_time = "Tid kommer" %}
+              {% endif %}
 
-          <article class="activity-card" data-access="booking" data-time="formiddag eftermiddag" data-want="learn" data-type="rollespil social" data-level="let">
-            <a class="card-media" href="/nyheder/dungeons-and-dragons/" aria-label="Læs mere om Dungeons &amp; Dragons">
-              <img src="/assets/images/stemning/stemning5.jpg" alt="Dungeons &amp; Dragons" loading="lazy" style="object-position:center" onerror="this.parentElement.hidden=true">
-            </a>
-            <div class="card-body">
-              <div class="card-top"><span class="access-badge booking">Booking</span><span class="card-time">10.30–15.30</span></div>
-              <h3>Dungeons &amp; Dragons</h3>
-              <p>Prøv Dungeons &amp; Dragons i et begyndervenligt scenarie med færdige karakterer.</p>
-              <div class="host"><strong>Vært:</strong> Peter</div>
-              <div class="card-actions">
-                <a class="card-link primary" href="https://booking.viborgbraetspil.dk/">Book plads →</a>
-                <a class="card-link secondary" href="/nyheder/dungeons-and-dragons/">Læs mere</a>
-              </div>
-            </div>
-          </article>
+              <article
+                class="activity-card"
+                data-access="booking"
+                data-time=""
+                data-want=""
+                data-type=""
+                data-level=""
+                data-category="{{ post.kategori | default: '' | downcase | escape }}"
+                data-niveau="{{ post.niveau | default: '' | escape }}"
+                data-start="{{ post.start | default: '' | escape }}"
+                data-end="{{ post.slut | default: '' | escape }}"
+                data-time-label="{{ card_time | strip | escape }}"
+                data-filter-want="{{ post.filter_oplevelse | default: post.oplevelse | default: '' | downcase | escape }}"
+                data-title="{{ post.title | downcase | escape }}"
+                data-teaser="{{ card_teaser | downcase | escape }}"
+              >
+                {% if post.image %}
+                  <a class="card-media" href="{{ post.url | relative_url }}" aria-label="Læs mere om {{ post.title | escape }}">
+                    <img
+                      src="{{ post.image | relative_url }}"
+                      alt="{{ post.image_alt | default: post.title | escape }}"
+                      loading="lazy"
+                      {% if post.image_position %}style="object-position:{{ post.image_position | escape }}"{% endif %}
+                    >
+                  </a>
+                {% endif %}
 
-          <article class="activity-card" data-access="booking" data-time="eftermiddag" data-want="new" data-type="strategi" data-level="mellem">
-            <a class="card-media" href="/nyheder/timespan/" aria-label="Læs mere om Timespan">
-              <img src="/assets/images/nyheder/timespan.jpg" alt="Timespan-brætspillet sat op på bord" loading="lazy" style="object-position:center" onerror="this.parentElement.hidden=true">
-            </a>
-            <div class="card-body">
-              <div class="card-top"><span class="access-badge booking">Booking</span><span class="card-time">14.00–16.00</span></div>
-              <h3>Timespan</h3>
-              <p>Nyt fra SPIEL Essen 2026: Prøv Timespan</p>
-              <div class="host"><strong>Vært:</strong> Dennis</div>
-              <div class="card-actions">
-                <a class="card-link primary" href="https://booking.viborgbraetspil.dk/">Book plads →</a>
-                <a class="card-link secondary" href="/nyheder/timespan/">Læs mere</a>
-              </div>
-            </div>
-          </article>
+                <div class="card-body">
+                  <div class="card-top">
+                    <span class="access-badge booking">Booking</span>
+                    <span class="card-time">{{ card_time | strip }}</span>
+                  </div>
 
-          <article class="activity-card" data-access="booking" data-time="formiddag eftermiddag" data-want="" data-type="social" data-level="let mellem">
-            <a class="card-media" href="/nyheder/blood-on-the-clocktower/" aria-label="Læs mere om Blood on the Clocktower">
-              <img src="/assets/images/nyheder/blood.jpg" alt="Blood on the Clocktower" loading="lazy" style="object-position:center" onerror="this.parentElement.hidden=true">
-            </a>
-            <div class="card-body">
-              <div class="card-top"><span class="access-badge booking">Booking</span><span class="card-time">10.30–12.30</span></div>
-              <h3>Blood on the Clocktower</h3>
-              <p>Et socialt mysteriespil med hemmelige roller, bluff, mistanke og en dæmon skjult blandt spillerne.</p>
-              <div class="host"><strong>Vært:</strong> Ian</div>
-              <div class="card-actions">
-                <a class="card-link primary" href="https://booking.viborgbraetspil.dk/">Book plads →</a>
-                <a class="card-link secondary" href="/nyheder/blood-on-the-clocktower/">Læs mere</a>
-              </div>
-            </div>
-          </article>
+                  <h3>{{ post.title }}</h3>
 
-          <article class="activity-card" data-access="booking" data-time="formiddag eftermiddag" data-want="learn" data-type="strategi" data-level="tung">
-            <a class="card-media" href="/nyheder/eclipse-second-dawn/" aria-label="Læs mere om Eclipse: Second Dawn for the Galaxy">
-              <img src="/assets/images/nyheder/eclipse-second-dawn.jpg" alt="Eclipse: Second Dawn for the Galaxy sat op på bord" loading="lazy" style="object-position:center" onerror="this.parentElement.hidden=true">
-            </a>
-            <div class="card-body">
-              <div class="card-top"><span class="access-badge booking">Booking</span><span class="card-time">10.30–14.30</span></div>
-              <h3>Eclipse: Second Dawn for the Galaxy</h3>
-              <p>Lær at spille Eclipse: Second Dawn for the Galaxy.</p>
-              <div class="host"><strong>Vært:</strong> Jan</div>
-              <div class="card-actions">
-                <a class="card-link primary" href="https://booking.viborgbraetspil.dk/">Book plads →</a>
-                <a class="card-link secondary" href="/nyheder/eclipse-second-dawn/">Læs mere</a>
-              </div>
-            </div>
-          </article>
+                  {% if card_teaser %}
+                    <p>{{ card_teaser }}</p>
+                  {% endif %}
 
-          <article class="activity-card" data-access="booking" data-time="aften" data-want="compete" data-type="" data-level="let">
-            <a class="card-media" href="/nyheder/klask-turnering/" aria-label="Læs mere om KLASK-turnering">
-              <img src="/assets/images/nyheder/klask.jpg" alt="KLASK-spillet sat op på bord" loading="lazy" style="object-position:center" onerror="this.parentElement.hidden=true">
-            </a>
-            <div class="card-body">
-              <div class="card-top"><span class="access-badge booking">Booking</span><span class="card-time">19.00–20.30</span></div>
-              <h3>KLASK-turnering</h3>
-              <p>Knockout-turnering i KLASK med præmier. Kræver tilmelding.</p>
-              
-              <div class="card-actions">
-                <a class="card-link primary" href="https://booking.viborgbraetspil.dk/">Book plads →</a>
-                <a class="card-link secondary" href="/nyheder/klask-turnering/">Læs mere</a>
-              </div>
-            </div>
-          </article>
+                  {% if post.vaert %}
+                    <div class="host"><strong>Vært:</strong> {{ post.vaert }}</div>
+                  {% endif %}
 
-          <article class="activity-card" data-access="booking" data-time="formiddag eftermiddag" data-want="learn" data-type="strategi" data-level="mellem">
-            <a class="card-media" href="/nyheder/rebirth/" aria-label="Læs mere om Rebirth">
-              <img src="/assets/images/nyheder/rebirth.jpg" alt="Rebirth sat op på bord" loading="lazy" style="object-position:center" onerror="this.parentElement.hidden=true">
-            </a>
-            <div class="card-body">
-              <div class="card-top"><span class="access-badge booking">Booking</span><span class="card-time">10.30–13.30</span></div>
-              <h3>Rebirth</h3>
-              <p>Lær at spille Rebirth med Danni som vært.</p>
-              <div class="host"><strong>Vært:</strong> Danni</div>
-              <div class="card-actions">
-                <a class="card-link primary" href="https://booking.viborgbraetspil.dk/">Book plads →</a>
-                <a class="card-link secondary" href="/nyheder/rebirth/">Læs mere</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="activity-card" data-access="booking" data-time="formiddag eftermiddag" data-want="learn" data-type="strategi social" data-level="mellem">
-            <a class="card-media" href="/nyheder/dead-of-winter/" aria-label="Læs mere om Dead of Winter">
-              <img src="/assets/images/nyheder/dead-of-winter.jpg" alt="Dead of Winter sat op på bord" loading="lazy" style="object-position:center" onerror="this.parentElement.hidden=true">
-            </a>
-            <div class="card-body">
-              <div class="card-top"><span class="access-badge booking">Booking</span><span class="card-time">10.30–13.30</span></div>
-              <h3>Dead of Winter</h3>
-              <p>Lær at spille Dead of Winter.</p>
-              <div class="host"><strong>Vært:</strong> Lynge</div>
-              <div class="card-actions">
-                <a class="card-link primary" href="https://booking.viborgbraetspil.dk/">Book plads →</a>
-                <a class="card-link secondary" href="/nyheder/dead-of-winter/">Læs mere</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="activity-card" data-access="booking" data-time="formiddag eftermiddag" data-want="learn" data-type="strategi" data-level="mellem">
-            <a class="card-media" href="/nyheder/wyrmspan/" aria-label="Læs mere om Wyrmspan">
-              <img src="/assets/images/nyheder/wyrmspan.jpg" alt="Wyrmspan sat op på bord" loading="lazy" style="object-position:center" onerror="this.parentElement.hidden=true">
-            </a>
-            <div class="card-body">
-              <div class="card-top"><span class="access-badge booking">Booking</span><span class="card-time">10.30–13.30</span></div>
-              <h3>Wyrmspan</h3>
-              <p>Lær at spille Wyrmspan.</p>
-              <div class="host"><strong>Vært:</strong> Jim</div>
-              <div class="card-actions">
-                <a class="card-link primary" href="https://booking.viborgbraetspil.dk/">Book plads →</a>
-                <a class="card-link secondary" href="/nyheder/wyrmspan/">Læs mere</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="activity-card" data-access="booking" data-time="formiddag eftermiddag" data-want="learn" data-type="strategi" data-level="tung">
-            <a class="card-media" href="/nyheder/root/" aria-label="Læs mere om Root">
-              <img src="/assets/images/nyheder/root.jpg" alt="Root sat op på bord" loading="lazy" style="object-position:center" onerror="this.parentElement.hidden=true">
-            </a>
-            <div class="card-body">
-              <div class="card-top"><span class="access-badge booking">Booking</span><span class="card-time">10.30–13.30</span></div>
-              <h3>Root</h3>
-              <p>Lær at spille Root.</p>
-              <div class="host"><strong>Vært:</strong> André</div>
-              <div class="card-actions">
-                <a class="card-link primary" href="https://booking.viborgbraetspil.dk/">Book plads →</a>
-                <a class="card-link secondary" href="/nyheder/root/">Læs mere</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="activity-card" data-access="booking" data-time="eftermiddag" data-want="learn" data-type="strategi" data-level="mellem">
-            <a class="card-media" href="/nyheder/the-game-makers/" aria-label="Læs mere om The Game Makers">
-              <img src="/assets/images/nyheder/the-game-makers.jpg" alt="The Game Makers sat op på bord" loading="lazy" style="object-position:center" onerror="this.parentElement.hidden=true">
-            </a>
-            <div class="card-body">
-              <div class="card-top"><span class="access-badge booking">Booking</span><span class="card-time">14.00–17.00</span></div>
-              <h3>The Game Makers</h3>
-              <p>Lær at spille The Game Makers, et strategispil om at udvikle og producere rigtige brætspil.</p>
-              <div class="host"><strong>Vært:</strong> Maria</div>
-              <div class="card-actions">
-                <a class="card-link primary" href="https://booking.viborgbraetspil.dk/">Book plads →</a>
-                <a class="card-link secondary" href="/nyheder/the-game-makers/">Læs mere</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="activity-card" data-access="booking" data-time="eftermiddag" data-want="learn" data-type="strategi" data-level="tung">
-            <a class="card-media" href="/nyheder/luthier/" aria-label="Læs mere om Luthier">
-              <img src="/assets/images/nyheder/luthier.jpg" alt="Luthier sat op på bord" loading="lazy" style="object-position:center" onerror="this.parentElement.hidden=true">
-            </a>
-            <div class="card-body">
-              <div class="card-top"><span class="access-badge booking">Booking</span><span class="card-time">14.00–17.00</span></div>
-              <h3>Luthier</h3>
-              <p>Lær at spille Luthier.</p>
-              <div class="host"><strong>Vært:</strong> Danni</div>
-              <div class="card-actions">
-                <a class="card-link primary" href="https://booking.viborgbraetspil.dk/">Book plads →</a>
-                <a class="card-link secondary" href="/nyheder/luthier/">Læs mere</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="activity-card" data-access="booking" data-time="eftermiddag" data-want="learn" data-type="strategi familie" data-level="let">
-            <a class="card-media" href="/nyheder/ave-caesar/" aria-label="Læs mere om Ave Caesar">
-              <img src="/assets/images/nyheder/ave-caesar.jpg" alt="Ave Caesar sat op på bord" loading="lazy" style="object-position:center" onerror="this.parentElement.hidden=true">
-            </a>
-            <div class="card-body">
-              <div class="card-top"><span class="access-badge booking">Booking</span><span class="card-time">14.00–15.00</span></div>
-              <h3>Ave Caesar</h3>
-              <p>Lær at spille Ave Caesar.</p>
-              <div class="host"><strong>Vært:</strong> Jim</div>
-              <div class="card-actions">
-                <a class="card-link primary" href="https://booking.viborgbraetspil.dk/">Book plads →</a>
-                <a class="card-link secondary" href="/nyheder/ave-caesar/">Læs mere</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="activity-card" data-access="booking" data-time="eftermiddag" data-want="learn" data-type="strategi familie" data-level="let">
-            <a class="card-media" href="/nyheder/viking-raiders/" aria-label="Læs mere om Viking Raiders">
-              <img src="/assets/images/nyheder/viking-raiders.jpg" alt="Viking Raiders sat op på bord" loading="lazy" style="object-position:center" onerror="this.parentElement.hidden=true">
-            </a>
-            <div class="card-body">
-              <div class="card-top"><span class="access-badge booking">Booking</span><span class="card-time">15.15–16.30</span></div>
-              <h3>Viking Raiders</h3>
-              <p>Lær at spille Viking Raiders.</p>
-              <div class="host"><strong>Vært:</strong> Jim</div>
-              <div class="card-actions">
-                <a class="card-link primary" href="https://booking.viborgbraetspil.dk/">Book plads →</a>
-                <a class="card-link secondary" href="/nyheder/viking-raiders/">Læs mere</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="activity-card" data-access="booking" data-time="eftermiddag" data-want="learn" data-type="familie social" data-level="let">
-            <a class="card-media" href="/nyheder/the-gang/" aria-label="Læs mere om The Gang">
-              <img src="/assets/images/nyheder/the-gang.jpg" alt="The Gang sat op på bord" loading="lazy" style="object-position:center" onerror="this.parentElement.hidden=true">
-            </a>
-            <div class="card-body">
-              <div class="card-top"><span class="access-badge booking">Booking</span><span class="card-time">14.00–15.00</span></div>
-              <h3>The Gang</h3>
-              <p>Lær et samarbejdsspil, hvor spillerne arbejder sammen frem for mod hinanden.</p>
-              <div class="host"><strong>Vært:</strong> André</div>
-              <div class="card-actions">
-                <a class="card-link primary" href="https://booking.viborgbraetspil.dk/">Book plads →</a>
-                <a class="card-link secondary" href="/nyheder/the-gang/">Læs mere</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="activity-card" data-access="booking" data-time="eftermiddag" data-want="learn" data-type="familie social" data-level="let">
-            <a class="card-media" href="/nyheder/horrified/" aria-label="Læs mere om Horrified">
-              <img src="/assets/images/nyheder/horrified.jpg" alt="Horrified sat op på bord" loading="lazy" style="object-position:center" onerror="this.parentElement.hidden=true">
-            </a>
-            <div class="card-body">
-              <div class="card-top"><span class="access-badge booking">Booking</span><span class="card-time">15.00–16.00</span></div>
-              <h3>Horrified</h3>
-              <p>Lær et samarbejdsspil, hvor spillerne sammen kæmper mod klassiske monstre.</p>
-              <div class="host"><strong>Vært:</strong> André</div>
-              <div class="card-actions">
-                <a class="card-link primary" href="https://booking.viborgbraetspil.dk/">Book plads →</a>
-                <a class="card-link secondary" href="/nyheder/horrified/">Læs mere</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="activity-card" data-access="booking" data-time="aften" data-want="learn" data-type="strategi" data-level="tung">
-            <a class="card-media" href="/nyheder/queen-alice/" aria-label="Læs mere om Queen Alice">
-              <img src="/assets/images/nyheder/queen-alice.jpg" alt="Queen Alice sat op på bord" loading="lazy" style="object-position:center" onerror="this.parentElement.hidden=true">
-            </a>
-            <div class="card-body">
-              <div class="card-top"><span class="access-badge booking">Booking</span><span class="card-time">17.00–20.00</span></div>
-              <h3>Queen Alice</h3>
-              <p>Lær at spille Queen Alice.</p>
-              <div class="host"><strong>Vært:</strong> Danni</div>
-              <div class="card-actions">
-                <a class="card-link primary" href="https://booking.viborgbraetspil.dk/">Book plads →</a>
-                <a class="card-link secondary" href="/nyheder/queen-alice/">Læs mere</a>
-              </div>
-            </div>
-          </article>
-
+                  <div class="card-actions">
+                    <a class="card-link primary" href="https://booking.viborgbraetspil.dk/">Book plads →</a>
+                    <a class="card-link secondary" href="{{ post.url | relative_url }}">Læs mere</a>
+                  </div>
+                </div>
+              </article>
+            {% endunless %}
+          {% endfor %}
         </div>
       </section>
 
@@ -1218,6 +965,127 @@ permalink: /aktiviteter2/
     type: '',
     level: ''
   };
+
+  function addToken(list, token) {
+    if (token && list.indexOf(token) === -1) list.push(token);
+  }
+
+  function parseClock(value) {
+    var match = String(value || '').match(/(\d{1,2})[.:](\d{2})/);
+    if (!match) return null;
+    return (Number(match[1]) * 60) + Number(match[2]);
+  }
+
+  function hydrateCard(card) {
+    var category = String(card.getAttribute('data-category') || '').toLowerCase();
+    var title = String(card.getAttribute('data-title') || '').toLowerCase();
+    var teaser = String(card.getAttribute('data-teaser') || '').toLowerCase();
+    var text = category + ' ' + title + ' ' + teaser;
+
+    /* Type kommer fra front matter og almindelige ord i titel/teaser. */
+    var types = [];
+    if (text.indexOf('strategi') !== -1) addToken(types, 'strategi');
+    if (text.indexOf('familie') !== -1 || text.indexOf('børn') !== -1) addToken(types, 'familie');
+    if (text.indexOf('rollespil') !== -1 || text.indexOf('dungeons & dragons') !== -1 || text.indexOf('dungeons &amp; dragons') !== -1) addToken(types, 'rollespil');
+    if (text.indexOf('social') !== -1 || text.indexOf('deduction') !== -1 || text.indexOf('samarbejd') !== -1) addToken(types, 'social');
+    if (text.indexOf('prototype') !== -1 || text.indexOf('spiludvik') !== -1) addToken(types, 'prototype');
+    if (text.indexOf('figur') !== -1 || text.indexOf('warhammer') !== -1 || text.indexOf('legion') !== -1) addToken(types, 'figurspil');
+    card.setAttribute('data-type', types.join(' '));
+
+    /* Niveau: 1 = let, 2 = mellem, 3+ = tung. */
+    var levelValue = String(card.getAttribute('data-niveau') || '').toLowerCase();
+    var levels = [];
+    var numericLevel = parseInt(levelValue, 10);
+    if (!isNaN(numericLevel)) {
+      if (numericLevel <= 1) addToken(levels, 'let');
+      else if (numericLevel === 2) addToken(levels, 'mellem');
+      else addToken(levels, 'tung');
+    } else {
+      if (levelValue.indexOf('let') !== -1 || levelValue.indexOf('begynder') !== -1) addToken(levels, 'let');
+      if (levelValue.indexOf('mellem') !== -1) addToken(levels, 'mellem');
+      if (levelValue.indexOf('tung') !== -1 || levelValue.indexOf('erfaren') !== -1) addToken(levels, 'tung');
+    }
+    card.setAttribute('data-level', levels.join(' '));
+
+    /* Oplevelse. Åbne aktiviteter er altid drop-in. Resten kan styres
+       med filter_oplevelse/oplevelse i front matter, men vi har også
+       fornuftige faldbacks for lær-at-spille, turneringer og nye spil. */
+    var wants = String(card.getAttribute('data-want') || '')
+      .split(/\s+/)
+      .filter(Boolean);
+
+    var extraWant = String(card.getAttribute('data-filter-want') || '').toLowerCase();
+    if (extraWant) {
+      extraWant.split(/[\s,;|]+/).forEach(function (token) {
+        if (token === 'lær' || token === 'laer' || token === 'learn') token = 'learn';
+        if (token === 'konkurrence' || token === 'turnering' || token === 'compete') token = 'compete';
+        if (token === 'dropin' || token === 'drop-in' || token === 'åben' || token === 'aaben') token = 'dropin';
+        if (token === 'ny' || token === 'nyt' || token === 'new') token = 'new';
+        addToken(wants, token);
+      });
+    }
+
+    if (text.indexOf('lær') !== -1 || text.indexOf('learn') !== -1 || text.indexOf('begynderven') !== -1) addToken(wants, 'learn');
+    if (text.indexOf('turnering') !== -1 || text.indexOf('konkurrence') !== -1) addToken(wants, 'compete');
+    if (text.indexOf('prototype') !== -1 || text.indexOf('essen') !== -1 || text.indexOf('helt nyt') !== -1 || text.indexOf('nyt fra') !== -1) addToken(wants, 'new');
+    card.setAttribute('data-want', wants.join(' '));
+
+    /* Tid beregnes fra start/slut i front matter. For åbne aktiviteter
+       falder vi tilbage til tid-feltet, så _posts fortsat er sandheden. */
+    var start = parseClock(card.getAttribute('data-start'));
+    var end = parseClock(card.getAttribute('data-end'));
+    var label = String(card.getAttribute('data-time-label') || '').toLowerCase();
+
+    if (start === null) start = parseClock(label);
+
+    if (end === null) {
+      var matches = label.match(/(\d{1,2})[.:](\d{2})/g);
+      if (matches && matches.length > 1) end = parseClock(matches[matches.length - 1]);
+    }
+
+    var times = [];
+
+    if (label.indexOf('hele dagen') !== -1 || label.indexOf('fra ') === 0) {
+      addToken(times, 'formiddag');
+      addToken(times, 'eftermiddag');
+      addToken(times, 'aften');
+    } else if (start !== null) {
+      if (start < 12 * 60) addToken(times, 'formiddag');
+      if ((end !== null && end > 12 * 60 && start < 17 * 60) || (start >= 12 * 60 && start < 17 * 60)) addToken(times, 'eftermiddag');
+      if ((end !== null && end > 17 * 60) || start >= 17 * 60) addToken(times, 'aften');
+    }
+
+    card.setAttribute('data-time', times.join(' '));
+  }
+
+  function sortGrid(grid) {
+    if (!grid) return;
+    var items = Array.prototype.slice.call(grid.querySelectorAll('.activity-card'));
+
+    items.sort(function (a, b) {
+      var aStart = parseClock(a.getAttribute('data-start'));
+      var bStart = parseClock(b.getAttribute('data-start'));
+
+      if (aStart === null) aStart = parseClock(a.getAttribute('data-time-label'));
+      if (bStart === null) bStart = parseClock(b.getAttribute('data-time-label'));
+
+      if (aStart === null) aStart = 99999;
+      if (bStart === null) bStart = 99999;
+
+      if (aStart !== bStart) return aStart - bStart;
+
+      return String(a.getAttribute('data-title') || '').localeCompare(
+        String(b.getAttribute('data-title') || ''),
+        'da'
+      );
+    });
+
+    items.forEach(function (item) { grid.appendChild(item); });
+  }
+
+  cards.forEach(hydrateCard);
+  sortGrid(document.getElementById('openGrid'));
+  sortGrid(document.getElementById('bookingGrid'));
 
   function tokens(card, group) {
     return String(card.getAttribute('data-' + group) || '')
