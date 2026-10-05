@@ -4,6 +4,7 @@ title: Aktiviteter · Viborg Brætspilsdag 2026
 description: Find aktiviteter på Viborg Brætspilsdag 2026. Filtrér efter tidspunkt, oplevelse, type og niveau – fra åbne borde og lær-at-spille til turneringer, rollespil, prototyper og tunge strategispil.
 permalink: /aktiviteter2/
 ---
+
 <style>
   .actv {
     --ink: #17201c;
@@ -112,10 +113,41 @@ permalink: /aktiviteter2/
     font-weight: 800;
   }
 
-  .actv .hero-side {
-    padding: 24px;
-    border: 1px solid rgba(255,255,255,.13);
+  .actv .hero-side-stack {
+    display: grid;
+    gap: 14px;
+  }
+
+  .actv .hero-media {
+    position: relative;
+    min-height: 300px;
+    overflow: hidden;
     border-radius: 24px;
+    background: #28483d;
+    box-shadow: 0 18px 50px rgba(0,0,0,.16);
+  }
+
+  .actv .hero-media img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .actv .hero-media::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(0deg, rgba(11,28,23,.28), transparent 52%);
+    pointer-events: none;
+  }
+
+  .actv .hero-side {
+    padding: 20px 22px;
+    border: 1px solid rgba(255,255,255,.13);
+    border-radius: 20px;
     background: rgba(255,255,255,.07);
     backdrop-filter: blur(12px);
   }
@@ -190,49 +222,62 @@ permalink: /aktiviteter2/
 
   /* FILTERS */
   .actv .filter-section {
-    padding: 36px 0 28px;
+    padding: 24px 0 24px;
     background: var(--paper-2);
   }
 
   .actv .filter-panel {
-    padding: 28px;
     border: 1px solid var(--line);
-    border-radius: 26px;
+    border-radius: 18px;
     background: var(--white);
-    box-shadow: var(--shadow);
+    box-shadow: 0 10px 30px rgba(23,32,28,.06);
+    overflow: hidden;
   }
 
-  .actv .filter-head {
-    display: flex;
-    align-items: end;
-    justify-content: space-between;
-    gap: 24px;
-    margin-bottom: 24px;
+  .actv .filter-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 42px;
+    padding: 0 16px;
+    color: var(--green-dark);
+    font-size: .84rem;
+    font-weight: 850;
+    cursor: pointer;
+    list-style: none;
+    user-select: none;
   }
 
-  .actv .filter-head h2 {
-    margin: 0;
-    color: var(--ink);
-    font-size: clamp(1.9rem, 4vw, 3.1rem);
+  .actv .filter-toggle::-webkit-details-marker { display: none; }
+
+  .actv .filter-toggle::after {
+    content: "+";
+    font-size: 1rem;
     line-height: 1;
-    letter-spacing: -.045em;
+    color: var(--green);
   }
 
-  .actv .filter-head p {
-    max-width: 600px;
-    margin: 10px 0 0;
-    color: var(--muted);
-    line-height: 1.55;
+  .actv .filter-panel[open] .filter-toggle::after { content: "−"; }
+
+  .actv .filter-content {
+    padding: 4px 18px 20px;
+    border-top: 1px solid var(--line);
+  }
+
+  .actv .filter-tools {
+    display: flex;
+    justify-content: flex-end;
+    margin: 12px 0 16px;
   }
 
   .actv .reset-btn {
-    flex: 0 0 auto;
-    min-height: 40px;
-    padding: 0 13px;
+    min-height: 34px;
+    padding: 0 11px;
     border: 1px solid var(--line);
     border-radius: 999px;
     background: transparent;
     color: var(--green);
+    font-size: .8rem;
     font-weight: 800;
     cursor: pointer;
   }
@@ -240,14 +285,14 @@ permalink: /aktiviteter2/
   .actv .filter-groups {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 22px 30px;
+    gap: 20px 30px;
   }
 
   .actv .filter-group-title {
     display: block;
     margin-bottom: 9px;
     color: var(--ink);
-    font-size: .82rem;
+    font-size: .78rem;
     font-weight: 900;
     letter-spacing: .06em;
     text-transform: uppercase;
@@ -260,13 +305,13 @@ permalink: /aktiviteter2/
   }
 
   .actv .filter-chip {
-    min-height: 39px;
+    min-height: 38px;
     padding: 0 13px;
     border: 1px solid rgba(23,32,28,.14);
     border-radius: 999px;
     background: #fff;
     color: #344139;
-    font-size: .9rem;
+    font-size: .88rem;
     font-weight: 800;
     cursor: pointer;
     transition: background .15s ease, border-color .15s ease, color .15s ease, transform .15s ease;
@@ -282,24 +327,6 @@ permalink: /aktiviteter2/
     background: var(--green);
     color: #fff;
   }
-
-  .actv .filter-summary {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 18px;
-    margin-top: 24px;
-    padding-top: 18px;
-    border-top: 1px solid var(--line);
-  }
-
-  .actv .result-count {
-    color: var(--muted);
-    font-size: .94rem;
-    font-weight: 750;
-  }
-
-  .actv .result-count strong { color: var(--ink); }
 
   /* RESULTS */
   .actv .results {
@@ -333,19 +360,6 @@ permalink: /aktiviteter2/
     line-height: 1.55;
   }
 
-  .actv .section-count {
-    flex: 0 0 auto;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 46px;
-    height: 34px;
-    padding: 0 11px;
-    border-radius: 999px;
-    background: var(--green-soft);
-    color: var(--green-dark);
-    font-weight: 900;
-  }
 
   .actv .activity-grid {
     display: grid;
@@ -452,24 +466,6 @@ permalink: /aktiviteter2/
     font-size: .93rem;
   }
 
-  .actv .card-meta {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 7px;
-    margin-top: 16px;
-  }
-
-  .actv .meta-pill {
-    display: inline-flex;
-    align-items: center;
-    min-height: 27px;
-    padding: 0 9px;
-    border-radius: 999px;
-    background: #f1eee7;
-    color: #556159;
-    font-size: .75rem;
-    font-weight: 800;
-  }
 
   .actv .host {
     margin-top: 14px;
@@ -585,8 +581,7 @@ permalink: /aktiviteter2/
     .actv .hero { padding: 56px 0 50px; }
     .actv .hero-grid { gap: 32px; }
     .actv .hero h1 { font-size: clamp(3rem, 15vw, 4.6rem); }
-    .actv .filter-panel { padding: 22px; border-radius: 20px; }
-    .actv .filter-head,
+    .actv .filter-panel { border-radius: 16px; }
     .actv .section-head { align-items: flex-start; flex-direction: column; }
     .actv .filter-groups { grid-template-columns: 1fr; gap: 20px; }
     .actv .activity-grid { grid-template-columns: 1fr; }
@@ -606,29 +601,34 @@ permalink: /aktiviteter2/
         <p class="kicker">Viborg Brætspilsdag · 14. november 2026</p>
         <h1>Hvad har du lyst til at spille?</h1>
         <p class="hero-lead">
-          Du behøver ikke læse dig gennem hele programmet. Filtrér efter tidspunkt,
-          den oplevelse du leder efter, type eller niveau. Nogle aktiviteter kræver booking;
-          andre kan du bare gå hen til på dagen.
+          Her kan du se aktiviteterne på dagen. Nogle er åbne, så du bare kan møde op,
+          mens andre kræver særskilt booking. Brug filteret nedenfor, hvis du vil sortere
+          efter tidspunkt, type, oplevelse eller niveau.
         </p>
         <div class="hero-facts" aria-label="Praktiske oplysninger">
           <span class="hero-fact">Kl. 10.00–00.00</span>
           <span class="hero-fact">Reberbanen 11+13</span>
           <span class="hero-fact">50 kr. for hele dagen</span>
-          <span class="hero-fact">26 aktiviteter</span>
         </div>
       </div>
 
-      <aside class="hero-side">
-        <strong>Booking er kun nødvendig til nogle aktiviteter.</strong>
-        <p>
-          Du skal være tilmeldt selve Viborg Brætspilsdag, før du kan booke en aktivitet.
-          Åbne aktiviteter, biblioteket og drop-in kræver ingen særskilt booking.
-        </p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="https://booking.viborgbraetspil.dk/">Book aktiviteter →</a>
-          <a class="btn btn-secondary" href="/tilmelding/">Tilmeld dig dagen</a>
+      <div class="hero-side-stack">
+        <div class="hero-media" aria-label="Stemning fra brætspilsdagen">
+          <img src="/assets/images/stemning/stemning5.jpg" alt="Brætspillere samlet omkring et bord">
         </div>
-      </aside>
+
+        <aside class="hero-side">
+          <strong>Booking er kun nødvendig til nogle aktiviteter.</strong>
+          <p>
+            Du skal være tilmeldt selve Viborg Brætspilsdag, før du kan booke en aktivitet.
+            Åbne aktiviteter, biblioteket og drop-in kræver ingen særskilt booking.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://booking.viborgbraetspil.dk/">Book aktiviteter →</a>
+            <a class="btn btn-secondary" href="/tilmelding/">Tilmeld dig dagen</a>
+          </div>
+        </aside>
+      </div>
     </div>
   </section>
 
@@ -638,63 +638,58 @@ permalink: /aktiviteter2/
     </div>
   </div>
 
-  <section class="filter-section" aria-labelledby="filterHeading">
+  <section class="filter-section" aria-label="Filtrér aktiviteter">
     <div class="wrap">
-      <div class="filter-panel">
-        <div class="filter-head">
-          <div>
-            <h2 id="filterHeading">Find noget, der passer til dig</h2>
-            <p>Vælg højst ét filter i hver række. Du kan kombinere dem på tværs. Niveau er en grov guide, så du hurtigt kan sortere.</p>
+      <details class="filter-panel" id="filterPanel">
+        <summary class="filter-toggle">filtrer</summary>
+
+        <div class="filter-content">
+          <div class="filter-tools">
+            <button class="reset-btn" id="resetFilters" type="button" hidden>Nulstil filtre</button>
           </div>
-          <button class="reset-btn" id="resetFilters" type="button" hidden>Nulstil filtre</button>
+
+          <div class="filter-groups">
+            <div class="filter-group" aria-label="Filtrér efter tidspunkt">
+              <span class="filter-group-title">Tid</span>
+              <div class="filter-chips">
+                <button class="filter-chip" type="button" data-group="time" data-value="formiddag" aria-pressed="false">Formiddag</button>
+                <button class="filter-chip" type="button" data-group="time" data-value="eftermiddag" aria-pressed="false">Eftermiddag</button>
+                <button class="filter-chip" type="button" data-group="time" data-value="aften" aria-pressed="false">Aften</button>
+              </div>
+            </div>
+
+            <div class="filter-group" aria-label="Filtrér efter hvad du vil">
+              <span class="filter-group-title">Jeg vil</span>
+              <div class="filter-chips">
+                <button class="filter-chip" type="button" data-group="want" data-value="dropin" aria-pressed="false">Bare møde op</button>
+                <button class="filter-chip" type="button" data-group="want" data-value="learn" aria-pressed="false">Lære et spil</button>
+                <button class="filter-chip" type="button" data-group="want" data-value="compete" aria-pressed="false">Konkurrence</button>
+              </div>
+            </div>
+
+            <div class="filter-group" aria-label="Filtrér efter type">
+              <span class="filter-group-title">Type</span>
+              <div class="filter-chips">
+                <button class="filter-chip" type="button" data-group="type" data-value="strategi" aria-pressed="false">Strategi</button>
+                <button class="filter-chip" type="button" data-group="type" data-value="familie" aria-pressed="false">Familie</button>
+                <button class="filter-chip" type="button" data-group="type" data-value="rollespil" aria-pressed="false">Rollespil</button>
+                <button class="filter-chip" type="button" data-group="type" data-value="social" aria-pressed="false">Social</button>
+                <button class="filter-chip" type="button" data-group="type" data-value="prototype" aria-pressed="false">Prototype</button>
+                <button class="filter-chip" type="button" data-group="type" data-value="figurspil" aria-pressed="false">Figurspil</button>
+              </div>
+            </div>
+
+            <div class="filter-group" aria-label="Filtrér efter niveau">
+              <span class="filter-group-title">Niveau</span>
+              <div class="filter-chips">
+                <button class="filter-chip" type="button" data-group="level" data-value="let" aria-pressed="false">Let</button>
+                <button class="filter-chip" type="button" data-group="level" data-value="mellem" aria-pressed="false">Mellem</button>
+                <button class="filter-chip" type="button" data-group="level" data-value="tung" aria-pressed="false">Tung</button>
+              </div>
+            </div>
+          </div>
         </div>
-
-        <div class="filter-groups">
-          <div class="filter-group" aria-label="Filtrér efter tidspunkt">
-            <span class="filter-group-title">Tid</span>
-            <div class="filter-chips">
-              <button class="filter-chip" type="button" data-group="time" data-value="formiddag" aria-pressed="false">Formiddag</button>
-              <button class="filter-chip" type="button" data-group="time" data-value="eftermiddag" aria-pressed="false">Eftermiddag</button>
-              <button class="filter-chip" type="button" data-group="time" data-value="aften" aria-pressed="false">Aften</button>
-            </div>
-          </div>
-
-          <div class="filter-group" aria-label="Filtrér efter hvad du vil">
-            <span class="filter-group-title">Jeg vil</span>
-            <div class="filter-chips">
-              <button class="filter-chip" type="button" data-group="want" data-value="dropin" aria-pressed="false">Bare møde op</button>
-              <button class="filter-chip" type="button" data-group="want" data-value="learn" aria-pressed="false">Lære et spil</button>
-              <button class="filter-chip" type="button" data-group="want" data-value="compete" aria-pressed="false">Konkurrere</button>
-              <button class="filter-chip" type="button" data-group="want" data-value="new" aria-pressed="false">Prøve noget nyt</button>
-            </div>
-          </div>
-
-          <div class="filter-group" aria-label="Filtrér efter type">
-            <span class="filter-group-title">Type</span>
-            <div class="filter-chips">
-              <button class="filter-chip" type="button" data-group="type" data-value="strategi" aria-pressed="false">Strategi</button>
-              <button class="filter-chip" type="button" data-group="type" data-value="familie" aria-pressed="false">Familie</button>
-              <button class="filter-chip" type="button" data-group="type" data-value="rollespil" aria-pressed="false">Rollespil</button>
-              <button class="filter-chip" type="button" data-group="type" data-value="social" aria-pressed="false">Social</button>
-              <button class="filter-chip" type="button" data-group="type" data-value="prototype" aria-pressed="false">Prototype</button>
-              <button class="filter-chip" type="button" data-group="type" data-value="figurspil" aria-pressed="false">Figurspil</button>
-            </div>
-          </div>
-
-          <div class="filter-group" aria-label="Filtrér efter niveau">
-            <span class="filter-group-title">Niveau</span>
-            <div class="filter-chips">
-              <button class="filter-chip" type="button" data-group="level" data-value="let" aria-pressed="false">Let</button>
-              <button class="filter-chip" type="button" data-group="level" data-value="mellem" aria-pressed="false">Mellem</button>
-              <button class="filter-chip" type="button" data-group="level" data-value="tung" aria-pressed="false">Tung</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="filter-summary">
-          <div class="result-count" id="resultCount" aria-live="polite"><strong>26 aktiviteter</strong></div>
-        </div>
-      </div>
+      </details>
     </div>
   </section>
 
@@ -707,7 +702,6 @@ permalink: /aktiviteter2/
             <h2 id="openHeading">Åbne aktiviteter</h2>
             <p>Her kan du bare møde op. Ingen særskilt aktivitetsbooking.</p>
           </div>
-          <span class="section-count" id="openCount">8</span>
         </div>
 
         <div class="activity-grid" id="openGrid">
@@ -720,10 +714,6 @@ permalink: /aktiviteter2/
               <div class="card-top"><span class="access-badge open">Åben aktivitet</span><span class="card-time">10.30–14.00</span></div>
               <h3>Lær solo-brætspil</h3>
               <p>Oplev solobrætspil med hjælp fra Thomas. Der vil være forskellige spil at vælge mellem, og du behøver ikke kende dem på forhånd.</p>
-              <div class="card-meta">
-                <span class="meta-pill">Solo / lær-at-spille</span>
-                <span class="meta-pill">Alle niveauer</span>
-              </div>
               <div class="host"><strong>Vært:</strong> Thomas / The Lone Boardgamer</div>
               <div class="card-actions">
                 <span class="no-booking">Ingen booking nødvendig</span>
@@ -740,10 +730,6 @@ permalink: /aktiviteter2/
               <div class="card-top"><span class="access-badge open">Åben aktivitet</span><span class="card-time">Fra 10.15</span></div>
               <h3>Brætspil for to personer</h3>
               <p>Prøv stærke topersonersspil med hjælp fra Josias. Tag en ven med eller kom alene – så hjælper vi dig med at finde en at spille med.</p>
-              <div class="card-meta">
-                <span class="meta-pill">Åben aktivitet</span>
-                <span class="meta-pill">Alle niveauer</span>
-              </div>
               <div class="host"><strong>Vært:</strong> Josias</div>
               <div class="card-actions">
                 <span class="no-booking">Ingen booking nødvendig</span>
@@ -760,10 +746,6 @@ permalink: /aktiviteter2/
               <div class="card-top"><span class="access-badge open">Åben aktivitet</span><span class="card-time">12.00–14.00</span></div>
               <h3>STEW ORLEANS! Et dansk udviklet spil af Peter Langkjær Møller</h3>
               <p>Mød spiludvikleren, prøv hans spil og kom tættere på processen bag et brætspil. Der vil også være en konkurrence med præmie.</p>
-              <div class="card-meta">
-                <span class="meta-pill">Prototype / spiludvikling</span>
-                <span class="meta-pill">Let–mellem</span>
-              </div>
               <div class="host"><strong>Vært:</strong> Peter Langkjær Møller</div>
               <div class="card-actions">
                 <span class="no-booking">Ingen booking nødvendig</span>
@@ -780,10 +762,6 @@ permalink: /aktiviteter2/
               <div class="card-top"><span class="access-badge open">Åben aktivitet</span><span class="card-time">14.00–16.00</span></div>
               <h3>Space Skirmish - prøv en tidlig prototype</h3>
               <p>Prøv en tidlig prototype af det taktiske duelspil Space Skirmish, hvor to hold robotter kæmper om at ødelægge modstanderens landingsfartøj.</p>
-              <div class="card-meta">
-                <span class="meta-pill">Prototype</span>
-                <span class="meta-pill">Mellem</span>
-              </div>
               <div class="host"><strong>Vært:</strong> Kresten Kjær Sørensen</div>
               <div class="card-actions">
                 <span class="no-booking">Ingen booking nødvendig</span>
@@ -800,10 +778,6 @@ permalink: /aktiviteter2/
               <div class="card-top"><span class="access-badge open">Åben aktivitet</span><span class="card-time">Hele dagen</span></div>
               <h3>Åbent brætspilsbibliotek</h3>
               <p>Gå på opdagelse blandt et par hundrede brætspil, lån et spil og find et ledigt bord. Vi hjælper gerne, hvis du ikke ved, hvad du skal vælge.</p>
-              <div class="card-meta">
-                <span class="meta-pill">Brætspilsbibliotek</span>
-                <span class="meta-pill">Alle niveauer</span>
-              </div>
               
               <div class="card-actions">
                 <span class="no-booking">Ingen booking nødvendig</span>
@@ -820,10 +794,6 @@ permalink: /aktiviteter2/
               <div class="card-top"><span class="access-badge open">Åben aktivitet</span><span class="card-time">Tid kommer</span></div>
               <h3>Warhammer-showcase</h3>
               <p>Warhammer med figurer, terræn og spil på bordet. Kig forbi, se hobbyen på tæt hold og få en snak om både spil og miniaturer.</p>
-              <div class="card-meta">
-                <span class="meta-pill">Figurspil</span>
-                <span class="meta-pill">Let–mellem</span>
-              </div>
               <div class="host"><strong>Vært:</strong> Mithril</div>
               <div class="card-actions">
                 <span class="no-booking">Ingen booking nødvendig</span>
@@ -840,10 +810,6 @@ permalink: /aktiviteter2/
               <div class="card-top"><span class="access-badge open">Åben aktivitet</span><span class="card-time">Tid kommer</span></div>
               <h3>Star Wars: Legion</h3>
               <p>Se Star Wars: Legion i aktion med miniaturer, terræn og kampe på spillebordet. Du behøver ikke kende spillet på forhånd.</p>
-              <div class="card-meta">
-                <span class="meta-pill">Figurspil</span>
-                <span class="meta-pill">Let–mellem</span>
-              </div>
               <div class="host"><strong>Vært:</strong> Mithril</div>
               <div class="card-actions">
                 <span class="no-booking">Ingen booking nødvendig</span>
@@ -860,10 +826,6 @@ permalink: /aktiviteter2/
               <div class="card-top"><span class="access-badge open">Åben aktivitet</span><span class="card-time">En del af dagen</span></div>
               <h3>Klubberne – aktiviteter for børn og unge</h3>
               <p>Klubberne kommer med blandt andet rollespil, figurmaling og andre spilaktiviteter. Der vil både være åbne aktiviteter og aktiviteter med faste tidspunkter. Viborg Brætspilsdag er primært for voksne; deltagere under 15 år skal være i følgeskab med en voksen under hele arrangementet.</p>
-              <div class="card-meta">
-                <span class="meta-pill">Børn &amp; unge</span>
-                <span class="meta-pill">Let–mellem</span>
-              </div>
               <div class="host"><strong>Vært:</strong> Klubberne i Viborg</div>
               <div class="card-actions">
                 <span class="no-booking">Ingen booking nødvendig</span>
@@ -881,7 +843,6 @@ permalink: /aktiviteter2/
             <h2 id="bookingHeading">Aktiviteter med booking</h2>
             <p>De her aktiviteter har begrænsede pladser. Tilmeld dig dagen først, og book derefter din plads.</p>
           </div>
-          <span class="section-count" id="bookingCount">18</span>
         </div>
 
         <div class="activity-grid" id="bookingGrid">
@@ -894,10 +855,6 @@ permalink: /aktiviteter2/
               <div class="card-top"><span class="access-badge booking">Booking</span><span class="card-time">10.30–20.00</span></div>
               <h3>Twilight Imperium IV</h3>
               <p>En stor dag med galaktisk strategi, diplomati, handel og konflikt.</p>
-              <div class="card-meta">
-                <span class="meta-pill">Strategi</span>
-                <span class="meta-pill">Tung</span>
-              </div>
               <div class="host"><strong>Vært:</strong> Anders</div>
               <div class="card-actions">
                 <a class="card-link primary" href="https://booking.viborgbraetspil.dk/">Book plads →</a>
@@ -914,10 +871,6 @@ permalink: /aktiviteter2/
               <div class="card-top"><span class="access-badge booking">Booking</span><span class="card-time">10.30–14.30</span></div>
               <h3>Heat Championship</h3>
               <p>Turnering i Heat med Bruno som vært og præmier til vinderne.</p>
-              <div class="card-meta">
-                <span class="meta-pill">Turnering</span>
-                <span class="meta-pill">Let–mellem</span>
-              </div>
               <div class="host"><strong>Vært:</strong> Bruno</div>
               <div class="card-actions">
                 <a class="card-link primary" href="https://booking.viborgbraetspil.dk/">Book plads →</a>
@@ -934,10 +887,6 @@ permalink: /aktiviteter2/
               <div class="card-top"><span class="access-badge booking">Booking</span><span class="card-time">10.30–15.30</span></div>
               <h3>Dungeons &amp; Dragons</h3>
               <p>Prøv Dungeons &amp; Dragons i et begyndervenligt scenarie med færdige karakterer.</p>
-              <div class="card-meta">
-                <span class="meta-pill">Rollespil</span>
-                <span class="meta-pill">Let</span>
-              </div>
               <div class="host"><strong>Vært:</strong> Peter</div>
               <div class="card-actions">
                 <a class="card-link primary" href="https://booking.viborgbraetspil.dk/">Book plads →</a>
@@ -954,10 +903,6 @@ permalink: /aktiviteter2/
               <div class="card-top"><span class="access-badge booking">Booking</span><span class="card-time">14.00–16.00</span></div>
               <h3>Timespan</h3>
               <p>Nyt fra SPIEL Essen 2026: Prøv Timespan</p>
-              <div class="card-meta">
-                <span class="meta-pill">Strategi</span>
-                <span class="meta-pill">Mellem</span>
-              </div>
               <div class="host"><strong>Vært:</strong> Dennis</div>
               <div class="card-actions">
                 <a class="card-link primary" href="https://booking.viborgbraetspil.dk/">Book plads →</a>
@@ -974,10 +919,6 @@ permalink: /aktiviteter2/
               <div class="card-top"><span class="access-badge booking">Booking</span><span class="card-time">10.30–12.30</span></div>
               <h3>Blood on the Clocktower</h3>
               <p>Et socialt mysteriespil med hemmelige roller, bluff, mistanke og en dæmon skjult blandt spillerne.</p>
-              <div class="card-meta">
-                <span class="meta-pill">Social deduction</span>
-                <span class="meta-pill">Let–mellem</span>
-              </div>
               <div class="host"><strong>Vært:</strong> Ian</div>
               <div class="card-actions">
                 <a class="card-link primary" href="https://booking.viborgbraetspil.dk/">Book plads →</a>
@@ -994,10 +935,6 @@ permalink: /aktiviteter2/
               <div class="card-top"><span class="access-badge booking">Booking</span><span class="card-time">10.30–14.30</span></div>
               <h3>Eclipse: Second Dawn for the Galaxy</h3>
               <p>Lær at spille Eclipse: Second Dawn for the Galaxy.</p>
-              <div class="card-meta">
-                <span class="meta-pill">Strategi</span>
-                <span class="meta-pill">Tung</span>
-              </div>
               <div class="host"><strong>Vært:</strong> Jan</div>
               <div class="card-actions">
                 <a class="card-link primary" href="https://booking.viborgbraetspil.dk/">Book plads →</a>
@@ -1014,10 +951,6 @@ permalink: /aktiviteter2/
               <div class="card-top"><span class="access-badge booking">Booking</span><span class="card-time">19.00–20.30</span></div>
               <h3>KLASK-turnering</h3>
               <p>Knockout-turnering i KLASK med præmier. Kræver tilmelding.</p>
-              <div class="card-meta">
-                <span class="meta-pill">Turnering</span>
-                <span class="meta-pill">Let</span>
-              </div>
               
               <div class="card-actions">
                 <a class="card-link primary" href="https://booking.viborgbraetspil.dk/">Book plads →</a>
@@ -1034,10 +967,6 @@ permalink: /aktiviteter2/
               <div class="card-top"><span class="access-badge booking">Booking</span><span class="card-time">10.30–13.30</span></div>
               <h3>Rebirth</h3>
               <p>Lær at spille Rebirth med Danni som vært.</p>
-              <div class="card-meta">
-                <span class="meta-pill">Strategi</span>
-                <span class="meta-pill">Mellem</span>
-              </div>
               <div class="host"><strong>Vært:</strong> Danni</div>
               <div class="card-actions">
                 <a class="card-link primary" href="https://booking.viborgbraetspil.dk/">Book plads →</a>
@@ -1054,10 +983,6 @@ permalink: /aktiviteter2/
               <div class="card-top"><span class="access-badge booking">Booking</span><span class="card-time">10.30–13.30</span></div>
               <h3>Dead of Winter</h3>
               <p>Lær at spille Dead of Winter.</p>
-              <div class="card-meta">
-                <span class="meta-pill">Strategi</span>
-                <span class="meta-pill">Mellem</span>
-              </div>
               <div class="host"><strong>Vært:</strong> Lynge</div>
               <div class="card-actions">
                 <a class="card-link primary" href="https://booking.viborgbraetspil.dk/">Book plads →</a>
@@ -1074,10 +999,6 @@ permalink: /aktiviteter2/
               <div class="card-top"><span class="access-badge booking">Booking</span><span class="card-time">10.30–13.30</span></div>
               <h3>Wyrmspan</h3>
               <p>Lær at spille Wyrmspan.</p>
-              <div class="card-meta">
-                <span class="meta-pill">Strategi</span>
-                <span class="meta-pill">Mellem</span>
-              </div>
               <div class="host"><strong>Vært:</strong> Jim</div>
               <div class="card-actions">
                 <a class="card-link primary" href="https://booking.viborgbraetspil.dk/">Book plads →</a>
@@ -1094,10 +1015,6 @@ permalink: /aktiviteter2/
               <div class="card-top"><span class="access-badge booking">Booking</span><span class="card-time">10.30–13.30</span></div>
               <h3>Root</h3>
               <p>Lær at spille Root.</p>
-              <div class="card-meta">
-                <span class="meta-pill">Strategi</span>
-                <span class="meta-pill">Tung</span>
-              </div>
               <div class="host"><strong>Vært:</strong> André</div>
               <div class="card-actions">
                 <a class="card-link primary" href="https://booking.viborgbraetspil.dk/">Book plads →</a>
@@ -1114,10 +1031,6 @@ permalink: /aktiviteter2/
               <div class="card-top"><span class="access-badge booking">Booking</span><span class="card-time">14.00–17.00</span></div>
               <h3>The Game Makers</h3>
               <p>Lær at spille The Game Makers, et strategispil om at udvikle og producere rigtige brætspil.</p>
-              <div class="card-meta">
-                <span class="meta-pill">Strategi</span>
-                <span class="meta-pill">Mellem</span>
-              </div>
               <div class="host"><strong>Vært:</strong> Maria</div>
               <div class="card-actions">
                 <a class="card-link primary" href="https://booking.viborgbraetspil.dk/">Book plads →</a>
@@ -1134,10 +1047,6 @@ permalink: /aktiviteter2/
               <div class="card-top"><span class="access-badge booking">Booking</span><span class="card-time">14.00–17.00</span></div>
               <h3>Luthier</h3>
               <p>Lær at spille Luthier.</p>
-              <div class="card-meta">
-                <span class="meta-pill">Strategi</span>
-                <span class="meta-pill">Tung</span>
-              </div>
               <div class="host"><strong>Vært:</strong> Danni</div>
               <div class="card-actions">
                 <a class="card-link primary" href="https://booking.viborgbraetspil.dk/">Book plads →</a>
@@ -1154,10 +1063,6 @@ permalink: /aktiviteter2/
               <div class="card-top"><span class="access-badge booking">Booking</span><span class="card-time">14.00–15.00</span></div>
               <h3>Ave Caesar</h3>
               <p>Lær at spille Ave Caesar.</p>
-              <div class="card-meta">
-                <span class="meta-pill">Strategi</span>
-                <span class="meta-pill">Let</span>
-              </div>
               <div class="host"><strong>Vært:</strong> Jim</div>
               <div class="card-actions">
                 <a class="card-link primary" href="https://booking.viborgbraetspil.dk/">Book plads →</a>
@@ -1174,10 +1079,6 @@ permalink: /aktiviteter2/
               <div class="card-top"><span class="access-badge booking">Booking</span><span class="card-time">15.15–16.30</span></div>
               <h3>Viking Raiders</h3>
               <p>Lær at spille Viking Raiders.</p>
-              <div class="card-meta">
-                <span class="meta-pill">Strategi</span>
-                <span class="meta-pill">Let</span>
-              </div>
               <div class="host"><strong>Vært:</strong> Jim</div>
               <div class="card-actions">
                 <a class="card-link primary" href="https://booking.viborgbraetspil.dk/">Book plads →</a>
@@ -1194,10 +1095,6 @@ permalink: /aktiviteter2/
               <div class="card-top"><span class="access-badge booking">Booking</span><span class="card-time">14.00–15.00</span></div>
               <h3>The Gang</h3>
               <p>Lær et samarbejdsspil, hvor spillerne arbejder sammen frem for mod hinanden.</p>
-              <div class="card-meta">
-                <span class="meta-pill">Familie</span>
-                <span class="meta-pill">Let</span>
-              </div>
               <div class="host"><strong>Vært:</strong> André</div>
               <div class="card-actions">
                 <a class="card-link primary" href="https://booking.viborgbraetspil.dk/">Book plads →</a>
@@ -1214,10 +1111,6 @@ permalink: /aktiviteter2/
               <div class="card-top"><span class="access-badge booking">Booking</span><span class="card-time">15.00–16.00</span></div>
               <h3>Horrified</h3>
               <p>Lær et samarbejdsspil, hvor spillerne sammen kæmper mod klassiske monstre.</p>
-              <div class="card-meta">
-                <span class="meta-pill">Familie</span>
-                <span class="meta-pill">Let</span>
-              </div>
               <div class="host"><strong>Vært:</strong> André</div>
               <div class="card-actions">
                 <a class="card-link primary" href="https://booking.viborgbraetspil.dk/">Book plads →</a>
@@ -1234,10 +1127,6 @@ permalink: /aktiviteter2/
               <div class="card-top"><span class="access-badge booking">Booking</span><span class="card-time">17.00–20.00</span></div>
               <h3>Queen Alice</h3>
               <p>Lær at spille Queen Alice.</p>
-              <div class="card-meta">
-                <span class="meta-pill">Strategi</span>
-                <span class="meta-pill">Tung</span>
-              </div>
               <div class="host"><strong>Vært:</strong> Danni</div>
               <div class="card-actions">
                 <a class="card-link primary" href="https://booking.viborgbraetspil.dk/">Book plads →</a>
@@ -1277,13 +1166,11 @@ permalink: /aktiviteter2/
   var cards = Array.prototype.slice.call(root.querySelectorAll('.activity-card'));
   var chips = Array.prototype.slice.call(root.querySelectorAll('.filter-chip'));
   var reset = document.getElementById('resetFilters');
-  var resultCount = document.getElementById('resultCount');
-  var openCount = document.getElementById('openCount');
-  var bookingCount = document.getElementById('bookingCount');
   var openSection = document.getElementById('openSection');
   var bookingSection = document.getElementById('bookingSection');
   var emptyState = document.getElementById('emptyState');
   var segmentBanner = document.getElementById('segmentBanner');
+  var filterPanel = document.getElementById('filterPanel');
 
   var state = {
     time: '',
@@ -1353,21 +1240,12 @@ permalink: /aktiviteter2/
       }
     });
 
-    openCount.textContent = visibleOpen;
-    bookingCount.textContent = visibleBooking;
     openSection.hidden = visibleOpen === 0;
     bookingSection.hidden = visibleBooking === 0;
     emptyState.hidden = visible !== 0;
 
     var active = Object.keys(state).filter(function (key) { return !!state[key]; }).length;
-
-    if (active) {
-      resultCount.innerHTML = '<strong>Viser ' + visible + ' af ' + cards.length + ' aktiviteter</strong>';
-      reset.hidden = false;
-    } else {
-      resultCount.innerHTML = '<strong>' + cards.length + ' aktiviteter</strong> · vælg filtre, hvis du vil indsnævre listen';
-      reset.hidden = true;
-    }
+    reset.hidden = active === 0;
 
     setChipStates();
 
@@ -1429,7 +1307,7 @@ permalink: /aktiviteter2/
     var params = new URLSearchParams(window.location.search);
     var allowed = {
       time: ['formiddag', 'eftermiddag', 'aften'],
-      want: ['dropin', 'learn', 'compete', 'new'],
+      want: ['dropin', 'learn', 'compete'],
       type: ['strategi', 'familie', 'rollespil', 'social', 'prototype', 'figurspil'],
       level: ['let', 'mellem', 'tung']
     };
@@ -1440,6 +1318,10 @@ permalink: /aktiviteter2/
     });
 
     var segment = params.get('segment') || '';
+
+    if (filterPanel && (params.get('time') || params.get('want') || params.get('type') || params.get('level'))) {
+      filterPanel.open = true;
+    }
 
     if (segment === 'dropin') state.want = 'dropin';
     if (segment === 'heavy') { state.type = 'strategi'; state.level = 'tung'; }
