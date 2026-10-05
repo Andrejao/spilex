@@ -84,7 +84,3 @@ Der er begrænsede pladser. Du skal være tilmeldt selve Viborg Brætspilsdag, f
 
 [**Læs mere om Viva Catrina på BoardGameGeek →**](https://boardgamegeek.com/boardgame/447583/viva-catrina)
 """
-
-path = Path("/mnt/data/2026-10-05-viva-catrina.md")
-path.write_text(content, encoding="utf-8")
-print(path)
