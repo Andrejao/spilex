@@ -8,7 +8,7 @@ image: "/assets/images/nyheder/braetspil-for-to.jpg"
 image_alt: "To personer spiller et moderne brætspil over for hinanden"
 teaser: "Josias står klar med en række stærke topersonersspil. Du behøver ikke kende reglerne, og du behøver heller ikke tage en makker med."
 kategori: "Åben aktivitet"
-tid: "Fra 10.15"
+tid: "Fra 10.15 - 13.30"
 vaert: "Josias"
 booking: false
 filter_type: "strategi"
