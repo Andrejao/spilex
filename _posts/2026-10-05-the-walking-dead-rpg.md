@@ -4,7 +4,7 @@ title: "The Walking Dead RPG – fire timer i zombieapokalypsen"
 date: 2026-10-05
 type: aktivitet
 permalink: /nyheder/the-walking-dead-rpg/
-image: "/assets/images/stemning/the-walking-dead-rpg.jpg"
+image: "/assets/images/nyheder/the-walking-dead-rpg.jpg"
 image_alt: "Rollespil ved bordet på Viborg Brætspilsdag"
 teaser: "Fire spillere. Fire timer. En verden, der allerede er gået under. Carsten tager jer direkte ind i The Walking Dead Universe Roleplaying Game – med færdige karakterer, højt stressniveau og nul krav om rollespilserfaring."
 kategori: "Rollespil"
