@@ -9,6 +9,11 @@ image_alt: "Star Wars Legion-miniaturer og terræn opstillet på et spillebord"
 teaser: "Star Wars: Legion - kig forbi og oplev det taktiske figurspil på tæt hold."
 kategori: "Åben aktivitet"
 tid: "Tid kommer"
+vaert: "Mithril"
+booking: false
+filter_type: "figurspil strategi"
+filter_oplevelse: "dropin"
+filter_niveau: "let"
 ---
 
 ## Star Wars på spillebordet
@@ -30,5 +35,7 @@ Det er en åben aktivitet, og du behøver ikke kende Star Wars: Legion eller fig
 Der kommer mere information om tidspunkt og det konkrete indhold frem mod Viborg Brætspilsdag.
 
 [**Besøg Mithril på Facebook →**](https://www.facebook.com/profile.php?id=61583725081850)
+
+[**Tilmeld dig Viborg Brætspilsdag →**](/tilmelding/)
 
 [**Se alle aktiviteter på Viborg Brætspilsdag →**]({{ '/aktiviteter.html' | relative_url }})

@@ -9,6 +9,11 @@ image_alt: "Warhammer-figurer og terræn opstillet til et spil"
 teaser: "Kom tæt på Warhammer 40k  figurspillet"
 kategori: "Åben aktivitet"
 tid: "Tid kommer"
+vaert: "Mithril"
+booking: false
+filter_type: "figurspil strategi"
+filter_oplevelse: "dropin"
+filter_niveau: "let"
 ---
 
 ## Warhammer på Viborg Brætspilsdag
@@ -29,5 +34,7 @@ Du behøver ikke kende Warhammer på forhånd.
 Der kommer mere information om tidspunkt og det konkrete indhold frem mod Viborg Brætspilsdag.
 
 [**Besøg Mithril på Facebook →**](https://www.facebook.com/profile.php?id=61583725081850)
+
+[**Tilmeld dig Viborg Brætspilsdag →**](/tilmelding/)
 
 [**Se alle aktiviteter på Viborg Brætspilsdag →**]({{ '/aktiviteter.html' | relative_url }})

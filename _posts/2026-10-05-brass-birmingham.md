@@ -13,6 +13,10 @@ start: "14.00"
 slut: "17.00"
 niveau: 3
 niveau_tekst: "Tung strategisk oplevelse"
+booking: true
+filter_type: "strategi"
+filter_oplevelse: ""
+filter_niveau: "tung"
 ---
 
 ## Nummer 1 på BoardGameGeek
@@ -87,4 +91,6 @@ Det er derfor en aktivitet for dig, der gerne vil have noget at tænke over.
 
 Søren står for spillet og hjælper gruppen gennem sessionen.
 
-[**Tilmeld dig Viborg Brætspilsdag →**]({{ site.signup_url }})
+[**Book plads til aktiviteten →**](https://booking.viborgbraetspil.dk/)
+
+[**Tilmeld dig Viborg Brætspilsdag →**](/tilmelding/)

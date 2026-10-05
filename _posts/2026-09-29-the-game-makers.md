@@ -10,9 +10,13 @@ teaser: "Prøv et helt nyt strategispil om at lave brætspil: Byg din egen spilp
 kategori: "Strategi"
 vaert: "Maria"
 start: "14.00"
-slut: "16.00"
+slut: "17.00"
 niveau: 3
 niveau_tekst: "Mellem-tung strategisk oplevelse"
+booking: true
+filter_type: "strategi"
+filter_oplevelse: "learn"
+filter_niveau: "mellem"
 ---
 
 ## Et brætspil om at lave brætspil
@@ -73,7 +77,7 @@ Det er en **lær-at-spille-session**, og Maria gennemgår reglerne og hjælper j
 
 ## The Game Makers på Viborg Brætspilsdag
 
-**Tid:** Offentliggøres  
+**Tid:** 14.00–17.00  
 **Vært:** Maria  
 **Kategori:** Strategi  
 **Format:** Lær at spille  
@@ -84,5 +88,6 @@ Det er en **lær-at-spille-session**, og Maria gennemgår reglerne og hjælper j
 
 Der er begrænsede pladser. Reglerne gennemgås på dagen.
 
-[**Tilmeld dig Viborg Brætspilsdag →**]({{ site.signup_url }})
-```
+[**Book plads til aktiviteten →**](https://booking.viborgbraetspil.dk/)
+
+[**Tilmeld dig Viborg Brætspilsdag →**](/tilmelding/)

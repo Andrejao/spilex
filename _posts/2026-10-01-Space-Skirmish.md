@@ -13,6 +13,10 @@ start: "14.00"
 slut: "16.00"
 niveau: 2
 niveau_tekst: "Let strategisk oplevelse"
+booking: false
+filter_type: "prototype strategi"
+filter_oplevelse: "dropin"
+filter_niveau: "let"
 ---
 
 ## Robotter, en fjern måne og ét meget vigtigt landingsfartøj
@@ -85,7 +89,7 @@ Du behøver ikke kende spillet på forhånd. Kresten introducerer reglerne og hj
 
 Kom forbi i tidsrummet, prøv Space Skirmish og hjælp måske med at gøre næste version endnu bedre.
 
-[**Tilmeld dig Viborg Brætspilsdag →**]({{ site.signup_url }})
+[**Tilmeld dig Viborg Brætspilsdag →**](/tilmelding/)
 
 **Se billeder af spillet her:**
 <img width="356" height="453" alt="skirm2" src="https://github.com/user-attachments/assets/bd1fa763-c698-40a4-8377-4d9fbd348291" />

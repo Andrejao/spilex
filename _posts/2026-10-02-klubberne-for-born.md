@@ -9,6 +9,11 @@ image_alt: "Aktiviteter for børn og unge på Viborg Brætspilsdag"
 teaser: "Klubberne i Viborg kommer med blandt andet rollespil, figurmaling og andre spilaktiviteter for børn og unge. Der bliver både åbne aktiviteter og aktiviteter med faste tidspunkter."
 kategori: "Åben aktivitet"
 tid: "En del af dagen"
+vaert: "Klubberne i Viborg"
+booking: false
+filter_type: "familie rollespil figurspil"
+filter_oplevelse: "dropin"
+filter_niveau: "let"
 ---
 
 Vi er rigtig glade for, at **Klubberne i Viborg** kommer og deltager til Viborg Brætspilsdag.
@@ -35,5 +40,7 @@ Viborg Brætspilsdag er målrettet voksne. Deltagere under 15 år skal fortsat u
 **Tilmelding til aktiviteterne:** Afhænger af den enkelte aktivitet  
 **Målgruppe:** Børn og unge, der deltager i Viborg Brætspilsdag sammen med en voksen  
 **Under 15 år:** Skal være i følgeskab med en voksen under hele arrangementet  
+
+[**Tilmeld dig Viborg Brætspilsdag →**](/tilmelding/)
 
 [**Se alle aktiviteter på Viborg Brætspilsdag →**]({{ '/aktiviteter.html' | relative_url }})
