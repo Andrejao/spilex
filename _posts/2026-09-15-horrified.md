@@ -9,8 +9,8 @@ image_alt: "Horrified-brætspillet på spillebordet"
 teaser: "Dracula, Mumien, Frankenstein og andre klassiske monstre truer byen. Heldigvis behøver du ikke klare dem alene."
 kategori: "Familie"
 vaert: "André"
-start: "15.00"
-slut: "16.00"
+start: "10.30"
+slut: "12.00"
 niveau: 2
 niveau_tekst: "Let at gå til"
 booking: true
