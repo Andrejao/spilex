@@ -9,6 +9,10 @@ image_alt: "Mange forskellige brætspil samlet i et brætspilsbibliotek"
 teaser: "Har du ikke taget et spil med? Intet problem. Gå på opdagelse i brætspilsbiblioteket, lån et spil og find et bord."
 kategori: "Åben aktivitet"
 tid: "Hele dagen"
+booking: false
+filter_type: "strategi familie social"
+filter_oplevelse: "dropin"
+filter_niveau: "let mellem tung"
 ---
 
 ## Hvordan fungerer det?
@@ -30,7 +34,7 @@ Du behøver ikke reservere et spil på forhånd.
 
 Brætspilsbiblioteket lukker kl. 23.30, hvor lånte spil skal være afleveret.
 
-[**Tilmeld dig Viborg Brætspilsdag →**](https://forms.gle/Y7BBFADUbf5gTkfv7)
+[**Tilmeld dig Viborg Brætspilsdag →**](/tilmelding/)
 
 
 ![Et udvalg af spil fra brætspilsbiblioteket]({{ '/assets/images/nyheder/aabentbibliotek.jpg' | relative_url }})

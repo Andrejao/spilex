@@ -13,6 +13,10 @@ start: "10.30"
 slut: "14.30"
 niveau: 4
 niveau_tekst: "Strategisk krævende"
+booking: true
+filter_type: "strategi"
+filter_oplevelse: "learn"
+filter_niveau: "tung"
 ---
 
 ## Fra lille civilisation til galaktisk stormagt
@@ -55,7 +59,7 @@ Det vigtigste er, at du har lyst til et større strategispil og er indstillet p�
 
 ## Eclipse på Viborg Brætspilsdag
 
-**Tid:** 10.30–13.30  
+**Tid:** 10.30–14.30  
 **Vært:** Jan  
 **Kategori:** Strategi  
 **Format:** Lær at spille  
@@ -64,4 +68,6 @@ Det vigtigste er, at du har lyst til et større strategispil og er indstillet p�
 
 Der er begrænsede pladser. Du behøver ikke kende spillet på forhånd.
 
-[**Tilmeld dig Viborg Brætspilsdag →**]({{ site.signup_url }})
+[**Book plads til aktiviteten →**](https://booking.viborgbraetspil.dk/)
+
+[**Tilmeld dig Viborg Brætspilsdag →**](/tilmelding/)

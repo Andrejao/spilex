@@ -12,6 +12,10 @@ niveau: 1
 start: "10.30"
 slut: "15.30"
 niveau_tekst: "For begyndere"
+booking: true
+filter_type: "rollespil"
+filter_oplevelse: "learn"
+filter_niveau: "let"
 --- 
 
 ## Direkte ind i eventyret
@@ -75,4 +79,6 @@ Det her er tænkt som en introduktion til Dungeons & Dragons.
 
 Du får en færdig karakter, reglerne bliver forklaret undervejs, og så er det ellers bare derudaf.
 
-[**Tilmeld dig Viborg Brætspilsdag →**]({{ site.signup_url }})
+[**Book plads til aktiviteten →**](https://booking.viborgbraetspil.dk/)
+
+[**Tilmeld dig Viborg Brætspilsdag →**](/tilmelding/)

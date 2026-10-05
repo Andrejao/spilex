@@ -13,6 +13,10 @@ start: "17.00"
 slut: "20.00"
 niveau: 4
 niveau_tekst: "Tung strategisk oplevelse"
+booking: true
+filter_type: "strategi"
+filter_oplevelse: "learn"
+filter_niveau: "tung"
 ---
 
 ## Alice skal krones – og nogen skal naturligvis styre processen
@@ -64,4 +68,6 @@ Det er en **lær-at-spille-session**, så du behøver ikke kende spillet på for
 
 Der er begrænsede pladser. Reglerne gennemgås på dagen.
 
-[**Tilmeld dig Viborg Brætspilsdag →**]({{ site.signup_url }})
+[**Book plads til aktiviteten →**](https://booking.viborgbraetspil.dk/)
+
+[**Tilmeld dig Viborg Brætspilsdag →**](/tilmelding/)

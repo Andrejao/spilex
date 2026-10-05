@@ -10,6 +10,10 @@ teaser: "Josias står klar med en række stærke topersonersspil. Du behøver ik
 kategori: "Åben aktivitet"
 tid: "Fra 10.15"
 vaert: "Josias"
+booking: false
+filter_type: "strategi"
+filter_oplevelse: "dropin learn"
+filter_niveau: "let mellem"
 ---
 
 ## Nogle spil bliver faktisk bedre, når man kun er to
@@ -45,4 +49,4 @@ Det afhænger af spillet, men aktiviteten er lavet, så du kan **komme uden fork
 **Tilmelding til aktiviteten:** Ikke nødvendig  
 **Forkundskaber:** Ingen
 
-[**Tilmeld dig Viborg Brætspilsdag →**](https://forms.gle/Y7BBFADUbf5gTkfv7)
+[**Tilmeld dig Viborg Brætspilsdag →**](/tilmelding/)

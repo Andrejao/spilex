@@ -13,6 +13,10 @@ start: "15.15"
 slut: "16.30"
 niveau: 2
 niveau_tekst: "Let at gå til"
+booking: true
+filter_type: "strategi"
+filter_oplevelse: "learn"
+filter_niveau: "let"
 ---
 
 ## Der skal bygges en klan. Og helst en større end naboens.
@@ -62,4 +66,6 @@ Sessionen er en **lær-at-spille-aktivitet**, så du behøver ikke kende Viking 
 
 Der er begrænsede pladser, og reglerne gennemgås på dagen.
 
-[**Tilmeld dig Viborg Brætspilsdag →**]({{ site.signup_url }})
+[**Book plads til aktiviteten →**](https://booking.viborgbraetspil.dk/)
+
+[**Tilmeld dig Viborg Brætspilsdag →**](/tilmelding/)

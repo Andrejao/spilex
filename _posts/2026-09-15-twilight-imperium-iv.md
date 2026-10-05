@@ -13,6 +13,10 @@ start: "10.30"
 slut: "20.00"
 niveau: 4
 niveau_tekst: "Tung strategisk oplevelse"
+booking: true
+filter_type: "strategi"
+filter_oplevelse: ""
+filter_niveau: "tung"
 ---
 
 ## En hel galakse på ét bord
@@ -56,4 +60,6 @@ Vi spiller med udvidelserne Prophecy of King og Thunder's Edge.
 
 Der er begrænsede pladser. Du skal være tilmeldt Viborg Brætspilsdag for at kunne booke en plads til aktiviteten.
 
-[**Tilmeld dig Viborg Brætspilsdag →**]({{ site.signup_url }})
+[**Book plads til aktiviteten →**](https://booking.viborgbraetspil.dk/)
+
+[**Tilmeld dig Viborg Brætspilsdag →**](/tilmelding/)

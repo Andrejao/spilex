@@ -13,6 +13,10 @@ start: "14.00"
 slut: "15.00"
 niveau: 1
 niveau_tekst: "Meget let at gå til"
+booking: true
+filter_type: "strategi"
+filter_oplevelse: "learn"
+filter_niveau: "let"
 ---
 
 ## Velkommen til Circus Maximus
@@ -64,4 +68,6 @@ Der er stadig taktiske valg, men du behøver ikke holde styr på lange kæder af
 
 Der er begrænsede pladser, men ingen forkundskaber er nødvendige.
 
-[**Tilmeld dig Viborg Brætspilsdag →**]({{ site.signup_url }})
+[**Book plads til aktiviteten →**](https://booking.viborgbraetspil.dk/)
+
+[**Tilmeld dig Viborg Brætspilsdag →**](/tilmelding/)

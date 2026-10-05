@@ -13,6 +13,10 @@ start: "15.00"
 slut: "16.00"
 niveau: 2
 niveau_tekst: "Let at gå til"
+booking: true
+filter_type: "familie social"
+filter_oplevelse: "learn"
+filter_niveau: "let"
 ---
 
 ## Monstrene er kommet til byen
@@ -64,4 +68,6 @@ Der er forskellige monsterregler at forstå, men I lærer dem sammen, og André 
 
 Der er begrænsede pladser. Reglerne gennemgås på dagen.
 
-[**Tilmeld dig Viborg Brætspilsdag →**]({{ site.signup_url }})
+[**Book plads til aktiviteten →**](https://booking.viborgbraetspil.dk/)
+
+[**Tilmeld dig Viborg Brætspilsdag →**](/tilmelding/)

@@ -13,6 +13,10 @@ start: "10.30"
 slut: "14.30"
 niveau: 2
 niveau_tekst: "Let at lære – med plads til taktik"
+booking: true
+filter_type: "strategi"
+filter_oplevelse: "compete"
+filter_niveau: "let"
 ---
 
 ## Træd speederen ned – men ikke for længe
@@ -62,4 +66,6 @@ Kendskab til Heat er en fordel i en turnering, men spillet er langt mere tilgæn
 
 Der er begrænsede pladser. Du skal være tilmeldt Viborg Brætspilsdag for at kunne booke en plads til Heat Championship.
 
-[**Tilmeld dig Viborg Brætspilsdag →**]({{ site.signup_url }})
+[**Book plads til aktiviteten →**](https://booking.viborgbraetspil.dk/)
+
+[**Tilmeld dig Viborg Brætspilsdag →**](/tilmelding/)

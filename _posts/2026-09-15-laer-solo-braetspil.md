@@ -10,6 +10,10 @@ teaser: "Brætspil behøver ikke et helt bord fuld af mennesker. Thomas fra The 
 kategori: "Åben aktivitet"
 tid: "10.30–14.00"
 vaert: "Thomas / The Lone Boardgamer"
+booking: false
+filter_type: "strategi"
+filter_oplevelse: "dropin learn"
+filter_niveau: "let mellem"
 ---
 
 ## Brætspil for én er meget mere end kabale
@@ -52,7 +56,7 @@ Flere af spillene kan også udforskes sammen med andre.
 
 Du skal blot være tilmeldt Viborg Brætspilsdag.
 
-[**Tilmeld dig Viborg Brætspilsdag →**](https://forms.gle/Y7BBFADUbf5gTkfv7)
+[**Tilmeld dig Viborg Brætspilsdag →**](/tilmelding/)
 
 ## Følg The Lone Boardgamer
 

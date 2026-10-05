@@ -5,13 +5,17 @@ date: 2026-09-20
 type: aktivitet
 permalink: /nyheder/blood-on-the-clocktower/
 image: "/assets/images/nyheder/blood.jpg"
-start: tidspunkt kommer
-slut: tidspunkt kommer
+start: "10.30"
+slut: "12.30"
 teaser: "En dæmon gemmer sig blandt spillerne. Nogle forsøger at afsløre den. Andre lyver, bluffer og sender mistanken i den helt forkerte retning (vi spiller på dansk)."
 kategori: "Social deduction"
 vaert: "Ian"
 niveau: 1
 niveau_tekst: "Begyndervenligt" 
+booking: true
+filter_type: "social"
+filter_oplevelse: "learn"
+filter_niveau: "let"
 ---
 
 ## En dæmon gemmer sig blandt jer
@@ -110,10 +114,12 @@ Erfarne spillere kan stadig få masser ud af spillet, men det er muligt at sætt
 **Niveau:** Begyndervenligt  
 **Tilmelding:** Påkrævet
 
-**Tidspunkt og antal pladser offentliggøres, når aktiviteten er endeligt bekræftet.**
+**Tid:** 10.30–12.30
 
 Hemmelige roller. Modsatrettede oplysninger. En dæmon et sted i gruppen.
 
 **Hvem stoler du på?**
 
-[**Tilmeld dig Viborg Brætspilsdag →**]({{ site.signup_url }})
+[**Book plads til aktiviteten →**](https://booking.viborgbraetspil.dk/)
+
+[**Tilmeld dig Viborg Brætspilsdag →**](/tilmelding/)

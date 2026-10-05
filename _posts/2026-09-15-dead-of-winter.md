@@ -13,6 +13,10 @@ start: "10.30"
 slut: "13.30"
 niveau: 3
 niveau_tekst: "En del at holde styr på"
+booking: true
+filter_type: "strategi social"
+filter_oplevelse: "learn"
+filter_niveau: "mellem"
 ---
 
 ## Vinteren er ikke engang det værste problem
@@ -64,4 +68,6 @@ Det er en **lær-at-spille-session**, og Lynge hjælper gruppen i gang. Du behø
 
 Der er begrænsede pladser, og du behøver ikke kende spillet på forhånd.
 
-[**Tilmeld dig Viborg Brætspilsdag →**]({{ site.signup_url }})
+[**Book plads til aktiviteten →**](https://booking.viborgbraetspil.dk/)
+
+[**Tilmeld dig Viborg Brætspilsdag →**](/tilmelding/)

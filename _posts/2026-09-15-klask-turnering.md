@@ -13,6 +13,10 @@ niveau: 1
 niveau_tekst: "Meget let at gå til"
 regler: "Reglerne forklares på dagen"
 erfaring: "Ingen erfaring nødvendig"
+booking: true
+filter_type: "social"
+filter_oplevelse: "compete"
+filter_niveau: "let"
 ---
 
 ## Magneter, reflekser og en lille smule kaos
@@ -83,4 +87,6 @@ Der er begrænsede pladser til turneringen.
 
 Du skal være tilmeldt Viborg Brætspilsdag for at kunne booke en plads til aktiviteten.
 
-[**Tilmeld dig Viborg Brætspilsdag →**](https://forms.gle/UPNvN1MyRNQc24eW9)
+[**Book plads til aktiviteten →**](https://booking.viborgbraetspil.dk/)
+
+[**Tilmeld dig Viborg Brætspilsdag →**](/tilmelding/)

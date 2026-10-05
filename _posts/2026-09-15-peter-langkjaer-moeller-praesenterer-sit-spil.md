@@ -10,6 +10,10 @@ teaser: "Kom helt tæt på et spil og mennesket bag det. Peter Langkjær Møller
 kategori: "Åben aktivitet"
 tid: "12.00–14.00"
 vaert: "Peter Langkjær Møller"
+booking: false
+filter_type: "familie"
+filter_oplevelse: "dropin compete"
+filter_niveau: "let"
 ---
 
 ## Prøv et spil sammen med personen, der har skabt det
@@ -49,4 +53,4 @@ Mere information følger, når de sidste detaljer er på plads.
 **Konkurrence:** Ja  
 **Præmie:** Ja
 
-[**Tilmeld dig Viborg Brætspilsdag →**](https://forms.gle/Y7BBFADUbf5gTkfv7)
+[**Tilmeld dig Viborg Brætspilsdag →**](/tilmelding/)
