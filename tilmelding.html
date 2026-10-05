@@ -541,6 +541,170 @@ function waitForTurnstile(
     clearError();
     loadTurnstile();
   }, 3000);
-}</script>
+}
+  
+  form.addEventListener('submit', async function (event) {
+    event.preventDefault();
+    clearError();
+
+    if (!form.reportValidity()) {
+      return;
+    }
+
+    if (!turnstileToken) {
+      showError('Gennemfør botkontrollen først.');
+      return;
+    }
+
+    submitButton.disabled = true;
+    submitButton.textContent = 'Tilmeldingen gemmes…';
+
+    var body = {
+      name: clean(document.getElementById('name').value, 120),
+      email: clean(document.getElementById('email').value, 200),
+      phone: clean(document.getElementById('phone').value, 30),
+      website: clean(document.getElementById('company').value, 200),
+      source: tracking.source || tracking.utm_source || 'Website',
+      utm_source: tracking.utm_source || '',
+      utm_medium: tracking.utm_medium || '',
+      utm_campaign: tracking.utm_campaign || '',
+      referrer: tracking.referrer || '',
+      turnstileToken: turnstileToken
+    };
+
+    try {
+      var response = await fetch(API_BASE + '/api/tilmelding', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(body)
+      });
+
+      var data = await response.json().catch(function () {
+        return {};
+      });
+
+      if (!response.ok || !data.ok) {
+        throw new Error(
+          data.error ||
+          'Tilmeldingen kunne ikke gemmes. Prøv igen.'
+        );
+      }
+
+      if (data.alreadyRegistered) {
+        successTitle.textContent = 'Du er allerede tilmeldt.';
+        successText.textContent =
+          'Vi fandt allerede din tilmelding. Du kan gå direkte videre til aktivitetsbookingen.';
+      }
+
+      if (data.mailWarning) {
+        mailWarning.textContent = data.mailWarning;
+        mailWarning.style.display = 'block';
+      }
+
+      formWrap.style.display = 'none';
+      success.classList.add('show');
+      success.focus();
+
+      success.scrollIntoView({
+        behavior: 'smooth',
+        block: 'center'
+      });
+
+    } catch (error) {
+      showError(
+        error.message ||
+        'Noget gik galt. Prøv igen om et øjeblik.'
+      );
+
+      submitButton.disabled = false;
+      submitButton.textContent =
+        'Tilmeld mig Viborg Brætspilsdag';
+
+      turnstileToken = '';
+
+      if (
+        window.turnstile &&
+        turnstileWidgetId !== null
+      ) {
+        window.turnstile.reset(
+          turnstileWidgetId
+        );
+      }
+    }
+  });
+
+  copyButton.addEventListener('click', async function () {
+    try {
+      await navigator.clipboard.writeText('0745GZ');
+      copyStatus.textContent = 'Box-koden er kopieret.';
+    } catch (_) {
+      copyStatus.textContent = 'Box-kode: 0745GZ';
+    }
+  });
+
+  var calendarParams = new URLSearchParams({
+    action: 'TEMPLATE',
+    text: 'Viborg Brætspilsdag 2026',
+    dates: '20261114T100000/20261115T000000',
+    ctz: 'Europe/Copenhagen',
+    location: 'Ungdomsskolen, Reberbanen 11+13, 8800 Viborg',
+    details:
+      'Viborg Brætspilsdag 2026. Program og praktisk information: https://viborgbraetspil.dk/#praktisk'
+  });
+
+  googleCalendar.href =
+    'https://calendar.google.com/calendar/render?' +
+    calendarParams.toString();
+
+  downloadIcs.addEventListener('click', function () {
+    var lines = [
+      'BEGIN:VCALENDAR',
+      'VERSION:2.0',
+      'PRODID:-//Viborg Braetspilsdag//2026//DA',
+      'CALSCALE:GREGORIAN',
+      'METHOD:PUBLISH',
+      'BEGIN:VEVENT',
+      'UID:viborg-braetspilsdag-2026@viborgbraetspil.dk',
+      'DTSTART;TZID=Europe/Copenhagen:20261114T100000',
+      'DTEND;TZID=Europe/Copenhagen:20261115T000000',
+      'SUMMARY:Viborg Brætspilsdag 2026',
+      'LOCATION:Ungdomsskolen\\, Reberbanen 11+13\\, 8800 Viborg',
+      'DESCRIPTION:En hel dag med brætspil\\, aktiviteter og fællesskab. Se mere på https://viborgbraetspil.dk/',
+      'URL:https://viborgbraetspil.dk/',
+      'STATUS:CONFIRMED',
+      'END:VEVENT',
+      'END:VCALENDAR'
+    ];
+
+    var blob = new Blob(
+      [lines.join('\r\n') + '\r\n'],
+      {
+        type: 'text/calendar;charset=utf-8'
+      }
+    );
+
+    var url = URL.createObjectURL(blob);
+    var link = document.createElement('a');
+
+    link.href = url;
+    link.download =
+      'Viborg-Braetspilsdag-2026.ics';
+
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+
+    setTimeout(function () {
+      URL.revokeObjectURL(url);
+    }, 1000);
+  });
+
+  loadTurnstile();
+
+})(); 
+ </script>
 </body>
 </html>
