@@ -13,7 +13,7 @@ vaert: "Josias"
 booking: false
 filter_type: "strategi"
 filter_oplevelse: "dropin learn"
-filter_niveau: "let mellem"
+filter_niveau: "let"
 ---
 
 ## Nogle spil bliver faktisk bedre, når man kun er to
