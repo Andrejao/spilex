@@ -2,36 +2,7 @@
 <html lang="{{ site.lang | default: 'da' }}">
 <head>
 
-<meta property="og:title" content="{{ page.title | default: site.title | escape }}">
-
-<meta property="og:type" content="{% if page.type == 'aktivitet' or page.layout == 'post' %}article{% else %}website{% endif %}">
-
-<meta property="og:url" content="{{ page.url | absolute_url }}">
-
-{% if page.teaser %}
-<meta property="og:description" content="{{ page.teaser | strip_html | escape }}">
-{% elsif page.excerpt %}
-<meta property="og:description" content="{{ page.excerpt | strip_html | strip_newlines | escape }}">
-{% elsif page.description %}
-<meta property="og:description" content="{{ page.description | strip_html | escape }}">
-{% endif %}
-
-{% assign share_image = page.image | default: '/assets/images/delebillede2.jpg' %}
-
-<meta property="og:image" content="{{ share_image | absolute_url }}">
-<meta property="og:image:secure_url" content="{{ share_image | absolute_url }}">
-<meta property="og:image:type" content="image/jpeg">
-<meta property="og:image:alt" content="{{ page.image_alt | default: page.title | escape }}">
-
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="{{ share_image | absolute_url }}">
-
-
-
-
-  
   <meta charset="UTF-8">
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>
@@ -44,15 +15,96 @@
 
   <meta
     name="description"
-    content="{{ page.description | default: site.description }}"
+    content="{{ page.description | default: site.description | escape }}"
+  >
+
+  <meta
+    property="og:title"
+    content="{{ page.title | default: site.title | escape }}"
+  >
+
+  <meta
+    property="og:type"
+    content="{% if page.type == 'aktivitet' or page.layout == 'post' %}article{% else %}website{% endif %}"
+  >
+
+  <meta
+    property="og:url"
+    content="{{ page.url | absolute_url }}"
+  >
+
+  {% if page.teaser %}
+    <meta
+      property="og:description"
+      content="{{ page.teaser | strip_html | escape }}"
+    >
+  {% elsif page.excerpt %}
+    <meta
+      property="og:description"
+      content="{{ page.excerpt | strip_html | strip_newlines | escape }}"
+    >
+  {% elsif page.description %}
+    <meta
+      property="og:description"
+      content="{{ page.description | strip_html | escape }}"
+    >
+  {% endif %}
+
+  {% assign share_image = page.image | default: '/assets/images/delebillede2.jpg' %}
+
+  <meta
+    property="og:image"
+    content="{{ share_image | absolute_url }}"
+  >
+
+  <meta
+    property="og:image:secure_url"
+    content="{{ share_image | absolute_url }}"
+  >
+
+  <meta
+    property="og:image:alt"
+    content="{{ page.image_alt | default: page.title | default: site.title | escape }}"
+  >
+
+  <meta
+    name="twitter:card"
+    content="summary_large_image"
+  >
+
+  <meta
+    name="twitter:title"
+    content="{{ page.title | default: site.title | escape }}"
+  >
+
+  {% if page.teaser %}
+    <meta
+      name="twitter:description"
+      content="{{ page.teaser | strip_html | escape }}"
+    >
+  {% elsif page.excerpt %}
+    <meta
+      name="twitter:description"
+      content="{{ page.excerpt | strip_html | strip_newlines | escape }}"
+    >
+  {% elsif page.description %}
+    <meta
+      name="twitter:description"
+      content="{{ page.description | strip_html | escape }}"
+    >
+  {% endif %}
+
+  <meta
+    name="twitter:image"
+    content="{{ share_image | absolute_url }}"
   >
 
   <link
     rel="stylesheet"
     href="{{ '/assets/css/style.css' | relative_url }}"
   >
-</head>
 
+</head>
 <body>
 
   <!-- Nedtælling -->
