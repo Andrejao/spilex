@@ -3,24 +3,33 @@
 <head>
 
 <meta property="og:title" content="{{ page.title | default: site.title | escape }}">
+
 <meta property="og:type" content="{% if page.type == 'aktivitet' or page.layout == 'post' %}article{% else %}website{% endif %}">
+
 <meta property="og:url" content="{{ page.url | absolute_url }}">
 
 {% if page.teaser %}
 <meta property="og:description" content="{{ page.teaser | strip_html | escape }}">
 {% elsif page.excerpt %}
 <meta property="og:description" content="{{ page.excerpt | strip_html | strip_newlines | escape }}">
+{% elsif page.description %}
+<meta property="og:description" content="{{ page.description | strip_html | escape }}">
 {% endif %}
 
-{% if page.image %}
-<meta property="og:image" content="{{ page.image | absolute_url }}">
-<meta property="og:image:alt" content="{{ page.image_alt | default: page.title | escape }}">
-{% else %}
-<meta property="og:image" content="{{ '/assets/images/delebillede2.jpg' | absolute_url }}">
-{% endif %}  
-  
-  <meta property="og:image:secure_url" content="https://viborgbraetspil.dk/assets/images/delebillede2.jpg">
+{% assign share_image = page.image | default: '/assets/images/delebillede2.jpg' %}
+
+<meta property="og:image" content="{{ share_image | absolute_url }}">
+<meta property="og:image:secure_url" content="{{ share_image | absolute_url }}">
 <meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:alt" content="{{ page.image_alt | default: page.title | escape }}">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="{{ share_image | absolute_url }}">
+
+
+
+
+  
   <meta charset="UTF-8">
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
