@@ -16,7 +16,7 @@ filter_type: "rollespil social"
 filter_oplevelse: "learn"
 filter_niveau: "let"
 start: "14.00"
-slut: "16.00"
+slut: "18.00"
 ---
 
 ## Verden er slut. Historien begynder nu.
