@@ -490,6 +490,55 @@ permalink: /tilmelding/
       background:#fff;
     }
 
+    .meal-box {
+  margin:22px 0 20px;
+  padding:17px;
+  border:1px solid var(--border);
+  border-radius:var(--radius-md);
+  background:var(--green-050);
+}
+
+.meal-title {
+  margin-bottom:11px;
+  font-size:.91rem;
+  font-weight:850;
+  color:var(--green-950);
+}
+
+.meal-choice {
+  display:flex;
+  align-items:flex-start;
+  gap:11px;
+  margin:10px 0;
+  cursor:pointer;
+  font-weight:400;
+}
+
+.meal-choice input {
+  flex:0 0 auto;
+  width:auto;
+  margin:4px 0 0;
+  accent-color:var(--green-800);
+  transform:scale(1.15);
+}
+
+.meal-choice span {
+  display:block;
+}
+
+.meal-choice strong {
+  display:block;
+  color:var(--green-950);
+}
+
+.meal-choice small {
+  display:block;
+  margin-top:2px;
+  color:var(--muted);
+  font-size:.82rem;
+  line-height:1.4;
+}
+    
     .help {
       font-size:.79rem;
       color:var(--muted);
@@ -1162,6 +1211,50 @@ permalink: /tilmelding/
 
               </div>
 
+              <div class="meal-box">
+
+  <div class="meal-title">
+    Mad på dagen
+  </div>
+
+  <label class="meal-choice">
+    <input
+      id="frokost"
+      name="frokost"
+      type="checkbox"
+    >
+
+    <span>
+      <strong>Ja tak til frokost</strong>
+      <small>
+        Rugbrødsbuffet kl. 12.30–14.00.
+        Frokost er inkluderet i entréen.
+      </small>
+    </span>
+  </label>
+
+  <label class="meal-choice">
+    <input
+      id="aftensmad"
+      name="aftensmad"
+      type="checkbox"
+    >
+
+    <span>
+      <strong>Ja tak til aftensmad · +25 kr.</strong>
+      <small>
+        Én varm ret lavet af BBU.
+      </small>
+    </span>
+  </label>
+
+  <div class="help">
+    Vi bruger valgene til at vide,
+    hvor meget mad der skal laves.
+  </div>
+
+</div>
+              
               <!-- BOT-FÆLDE -->
 
               <div
@@ -1274,10 +1367,12 @@ permalink: /tilmelding/
 
             <div class="mobilepay">
 
-              <div class="price-label">
-                Betal 50 kr. til MobilePay Box
-              </div>
-
+<div
+  class="price-label"
+  id="paymentAmountLabel"
+>
+  Betal 50 kr. til MobilePay Box
+</div>
               <div class="mobilepay-code">
                 0745GZ
               </div>
@@ -1496,6 +1591,48 @@ permalink: /tilmelding/
     var tracking = {};
 
 
+var frokostCheckbox =
+  document.getElementById(
+    'frokost'
+  );
+
+var aftensmadCheckbox =
+  document.getElementById(
+    'aftensmad'
+  );
+
+var paymentAmountLabel =
+  document.getElementById(
+    'paymentAmountLabel'
+  );
+
+function currentPaymentAmount() {
+
+  return aftensmadCheckbox.checked
+    ? 75
+    : 50;
+
+}
+
+
+function updatePaymentUi() {
+
+  submitButton.textContent =
+    'Tilmeld mig · ' +
+    currentPaymentAmount() +
+    ' kr.';
+
+}
+
+
+aftensmadCheckbox.addEventListener(
+  'change',
+  updatePaymentUi
+);
+
+
+updatePaymentUi();
+    
     /* -------------------------
        HJÆLPEFUNKTIONER
     ------------------------- */
@@ -1973,6 +2110,24 @@ permalink: /tilmelding/
               30
             ),
 
+
+          frokost:
+  document
+    .getElementById(
+      'frokost'
+    )
+    .checked,
+
+aftensmad:
+  document
+    .getElementById(
+      'aftensmad'
+    )
+    .checked,
+
+
+
+          
           website:
             clean(
               document
