@@ -1015,12 +1015,12 @@ permalink: /tilmelding/
 
               <div>
                 <strong>
-                  Udfyld de tre felter
+                  Udfyld dine oplysninger og madvalg
                 </strong>
 
                 <span>
-                  Vi skal bare bruge dit navn,
-                  din e-mail og dit telefonnummer.
+                  Vi skal bruge dit navn, din e-mail og dit telefonnummer.
+                  Du kan samtidig fortælle os, om du ønsker frokost og aftensmad.
                 </span>
               </div>
             </div>
@@ -1045,12 +1045,12 @@ permalink: /tilmelding/
 
               <div>
                 <strong>
-                  Betal 50 kr. via MobilePay
+                  Betal via MobilePay
                 </strong>
 
                 <span>
-                  Box-koden vises med det samme efter tilmeldingen
-                  og sendes også til dig på e-mail.
+                  Entré koster 50 kr. Frokost er inkluderet.
+                  Vælger du aftensmad, bliver den samlede pris 75 kr.
                 </span>
               </div>
             </div>
@@ -1133,11 +1133,12 @@ permalink: /tilmelding/
                 margin-bottom:10px;
               "
             >
-              Tre felter. Så er du med.
+              Dine oplysninger og mad
             </h2>
 
             <p class="registration-note">
               Tilmeldingen registreres med det samme.
+              Frokost er inkluderet i entréen. Aftensmad koster 25 kr. ekstra.
               Betaling sker bagefter via MobilePay.
             </p>
 
@@ -1243,7 +1244,7 @@ permalink: /tilmelding/
     <span>
       <strong>Ja tak til aftensmad · +25 kr.</strong>
       <small>
-        Én varm ret lavet af BBU.
+        Én varm ret lavet af BBU-eleverne.
       </small>
     </span>
   </label>
@@ -1299,13 +1300,13 @@ permalink: /tilmelding/
                   Betaling sker bagefter.
                 </strong>
                 Når din tilmelding er registreret,
-                viser vi MobilePay-oplysningerne
-                og sender dem til din e-mail.
+                viser vi det samlede beløb og MobilePay-oplysningerne.
+                Du får også oplysningerne på e-mail.
               </div>
 
               <p class="privacy">
                 Vi bruger dit navn,
-                din e-mail og dit telefonnummer
+                din e-mail, dit telefonnummer og dine madvalg
                 til at administrere din tilmelding
                 og sende praktisk information om Viborg Brætspilsdag.
 
@@ -1365,14 +1366,17 @@ permalink: /tilmelding/
               Næste skridt
             </p>
 
-            <div class="mobilepay">
+            <div class="mobilepay" id="mobilePayBox">
 
-<div
-  class="price-label"
-  id="paymentAmountLabel"
->
-  Betal 50 kr. til MobilePay Box
-</div>
+              <div
+                class="price-label"
+                id="paymentAmountLabel"
+              >
+                Betal 50 kr. til MobilePay Box
+              </div>
+
+              <div id="mealSummary" class="help" style="margin:8px 0 10px;"></div>
+
               <div class="mobilepay-code">
                 0745GZ
               </div>
@@ -1604,6 +1608,16 @@ var aftensmadCheckbox =
 var paymentAmountLabel =
   document.getElementById(
     'paymentAmountLabel'
+  );
+
+var mobilePayBox =
+  document.getElementById(
+    'mobilePayBox'
+  );
+
+var mealSummary =
+  document.getElementById(
+    'mealSummary'
   );
 
 function currentPaymentAmount() {
@@ -2219,14 +2233,44 @@ aftensmad:
 
 
           if (
+            !data.alreadyRegistered
+          ) {
+
+            var paymentAmount =
+              Number(data.paymentAmount) ||
+              currentPaymentAmount();
+
+            if (paymentAmountLabel) {
+              paymentAmountLabel.textContent =
+                'Betal ' +
+                paymentAmount +
+                ' kr. til MobilePay Box';
+            }
+
+            if (mealSummary) {
+              mealSummary.textContent =
+                'Frokost: ' +
+                (body.frokost ? 'Ja' : 'Nej') +
+                ' · Aftensmad: ' +
+                (body.aftensmad ? 'Ja' : 'Nej');
+            }
+
+          }
+
+
+          if (
             data.alreadyRegistered
           ) {
+
+            if (mobilePayBox) {
+              mobilePayBox.style.display = 'none';
+            }
 
             successTitle.textContent =
               'Du er allerede tilmeldt.';
 
             successText.textContent =
-              'Vi fandt allerede din tilmelding. Du kan gå direkte videre til aktivitetsbookingen.';
+              'Vi fandt allerede din tilmelding. Du skal ikke tilmelde eller betale igen. Du kan gå direkte videre til aktivitetsbookingen.';
 
           }
 
@@ -2274,8 +2318,7 @@ aftensmad:
           submitButton.disabled =
             false;
 
-          submitButton.textContent =
-            'Tilmeld mig · 50 kr.';
+          updatePaymentUi();
 
 
           turnstileToken =
