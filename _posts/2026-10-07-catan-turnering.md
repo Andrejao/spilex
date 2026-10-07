@@ -8,7 +8,7 @@ image: "/assets/images/nyheder/catan-turnering.jpg"
 image_alt: "Settlers of Catan med spilleplade, bosættelser, veje og råstoffer"
 teaser: "Et klassisk kapløb om øen, hvor du bygger, bytter og blokerer dig frem mod sejren i Catan-turneringen på Viborg Brætspilsdag."
 kategori: "Turnering"
-vaert: "Kenneth"
+vaert: "Kenneth / Mithril"
 start: "12.00"
 slut: ""
 niveau: 2
@@ -81,7 +81,7 @@ Der spilles om to selvstændige spil fra Catan-serien:
 ## Catan-turnering på Viborg Brætspilsdag
 
 **Tid:** Fra kl. 12.00  
-**Vært:** Kenneth  
+**Vært:** Kenneth / Mithril
 **Kategori:** Turnering / strategi  
 **Format:** Turnering  
 **Niveau:** Let at lære – svært at mestre  
