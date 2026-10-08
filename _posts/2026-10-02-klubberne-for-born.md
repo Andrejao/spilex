@@ -16,9 +16,9 @@ filter_oplevelse: "dropin"
 filter_niveau: "let"
 ---
 
-Vi er rigtig glade for, at **Klubberne i Viborg** kommer og deltager til Viborg Brætspilsdag.
+Aktiviteterne på dagen er primært målrettet voksne, så vi er rigtig glade for, at **Klubberne i Viborg** kommer og deltager til Viborg Brætspilsdag med aktiviteter.
 
-De laver deres egne særskilte aktiviteter for børn og unge i løbet fra vi starter og i løbet af dagen, blandt andet:
+De laver deres egne særskilte aktiviteter for børn og unge fra vi starter og i løbet af dagen, blandt andet:
 
 - rollespil
 - figurmaling
