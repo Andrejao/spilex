@@ -16,7 +16,7 @@ filter_oplevelse: "dropin"
 filter_niveau: "let"
 ---
 
-Aktiviteterne på dagen er primært målrettet voksne, så vi er rigtig glade for, at **Klubberne i Viborg** kommer og deltager til Viborg Brætspilsdag med aktiviteter.
+Aktiviteterne til Viborg Brætspilsdag 2026 er primært målrettet voksne, så vi er rigtig glade for, at **Klubberne i Viborg** kommer og deltager til Viborg Brætspilsdag med deres egne aktiviteter målrettet  børn og unge i 4.-7. klasse (8-9. klasse er også velkomne).
 
 De laver deres egne særskilte aktiviteter for børn og unge fra vi starter og i løbet af dagen, blandt andet:
 
@@ -26,14 +26,18 @@ De laver deres egne særskilte aktiviteter for børn og unge fra vi starter og i
 - åbne aktiviteter, hvor man kan kigge forbi
 - aktiviteter med faste tidspunkter og begrænsede pladser
 
+Børn kan derfor gå over til klubområdet og deltage i aktiviteter, der er lavet særligt til deres aldersgruppe.
+
 Der kommer mere information om det konkrete program, aldersgrupper, tidspunkter og eventuel tilmelding.
 
 ## Om klubberne
-Ungdomsklubber er et tilbud til alle unge fra 7. klassetrin til 18 år. Ungdomsklubberne tilbyder udover mulighed for socialt samvær med jævnaldrende en lang række aktiviteter inden for sport, udeliv, musik og lejrture. 
-
-Læs mere om klubberne på https://viborg.dk/oplevelser-og-fritid/aktiviteter-og-faellesskaber/fritidsaktiviteter/ungdomsklubber/.
+De deltagende klubber er primært **fritidsklubber for børn i 4.-7. klasse**.
+De tilbyder børn mulighed for socialt samvær og en lang række forskellige fritidsaktiviteter.
+Læs mere om [klubtilbud for 4.-7. klassetrin i Viborg Kommune](https://viborg.dk/borger/skole-og-uddannelse/sfo-og-fritidsklub/klubtilbud-for-4-7-klassetrin/).
 
 ## Godt at vide
+Klubbernes aktiviteter er et særskilt tilbud til børn og unge.
+
 Deltagere under 15 år skal fortsat under hele arrangementet være i følgeskab med en voksen, der har ansvaret for den unge deltager, også når vedkommende deltager i aktiviteter hos Klubberne. 
 
 ## Praktisk
