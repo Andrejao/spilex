@@ -26,7 +26,7 @@ De laver deres egne særskilte aktiviteter for børn og unge fra vi starter og i
 - åbne aktiviteter, hvor man kan kigge forbi
 - aktiviteter med faste tidspunkter og begrænsede pladser
 
-Børn kan derfor gå over til klubområdet og deltage i aktiviteter, der er lavet særligt til deres aldersgruppe.
+Børn og unge i målgruppen kan derfor gå over til klubområdet og deltage i aktiviteter, der er lavet særligt til dem.
 
 Der kommer mere information om det konkrete program, aldersgrupper, tidspunkter og eventuel tilmelding.
 
