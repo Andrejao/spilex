@@ -31,8 +31,7 @@ Børn og unge i målgruppen kan derfor gå over til klubområdet og deltage i ak
 Der kommer mere information om det konkrete program, aldersgrupper, tidspunkter og eventuel tilmelding.
 
 ## Om klubberne
-De deltagende klubber er primært **fritidsklubber for børn i 4.-7. klasse**.
-De tilbyder børn mulighed for socialt samvær og en lang række forskellige fritidsaktiviteter.
+De deltagende klubber er primært fritidsklubber for børn i 4.-7. klasse. Er man ældre, er man også velkommen.
 Læs mere om [klubtilbud for 4.-7. klassetrin i Viborg Kommune](https://viborg.dk/borger/skole-og-uddannelse/sfo-og-fritidsklub/klubtilbud-for-4-7-klassetrin/).
 
 ## Godt at vide
