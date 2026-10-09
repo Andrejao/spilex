@@ -5,7 +5,7 @@ date: 2026-10-09
 permalink: /præmier/
 sitemap: false
 noindex: true
-image: "/assets/images/nyheder/harmicro.jpg"
+image: "/assets/images/nyheder/harmicro.jfif"
 robots: "noindex, nofollow, noarchive"
 ---
 
