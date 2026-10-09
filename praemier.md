@@ -9,8 +9,6 @@ image: "/assets/images/nyheder/harmicro.jpg"
 robots: "noindex, nofollow, noarchive"
 ---
 
-# Vind MicroMacro og Harmonies til Viborg Brætspilsdag!
-
 **Vi skyder præmieuddelingen i gang allerede nu!**
 
 Vi har samlet en stor pulje af brætspil, som skal finde nye ejere i forbindelse med Viborg Brætspilsdag den 14. november 2026.
