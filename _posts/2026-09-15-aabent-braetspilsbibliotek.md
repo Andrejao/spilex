@@ -48,9 +48,10 @@ Vi har et par hundrede spil til rådighed, og der kan både komme flere til og s
 Et konkret spil kan naturligvis også være udlånt til et andet bord, når du kommer.
 
 ---
-## Nyt & prisbelønnet
 
-Nogle af de spil, der fylder rigtig meget i brætspilsverdenen lige nu:
+## Nyt & aktuelle favoritter
+
+Nye udgivelser og nogle af de mest omtalte spil fra de seneste år. Her finder du både store strategiske oplevelser, hurtige dueller og lettere spil, som alle kan være med til.
 
 - Galactic Cruise
 - Drillers
@@ -63,10 +64,19 @@ Nogle af de spil, der fylder rigtig meget i brætspilsverdenen lige nu:
 - Harmonies
 - The Lord of the Rings: Duel for Middle-earth
 - Captain Flip
+- Heat: Pedal to the Metal
+- Wyrmspan
+- Mindbug: Battlefruit Galaxy
+- Mindbug: Tag Team
+- Toy Battle
+- Radlands Complete Edition
+- Star Wars: The Deckbuilding Game – Mandalorian Faction Pack
 
 ---
 
 ## Store strategiske oplevelser
+
+Til dig, der elsker svære valg, langsigtet planlægning og spil, hvor dine beslutninger får konsekvenser. Her finder du både økonomiske strategispil, store konflikter og tunge eurogames.
 
 - Brass: Birmingham
 - Ark Nova
@@ -92,6 +102,8 @@ Nogle af de spil, der fylder rigtig meget i brætspilsverdenen lige nu:
 
 ## Eventyr, monstre & store fortællinger
 
+Tag på eventyr, bekæmp monstre, udforsk ukendte verdener og oplev spil, hvor tema, karakterer og fortælling fylder mindst lige så meget som reglerne.
+
 - Arkham Horror: The Card Game
 - Marvel Champions: The Card Game
 - Mage Knight
@@ -101,16 +113,19 @@ Nogle af de spil, der fylder rigtig meget i brætspilsverdenen lige nu:
 - Massive Darkness 2: Hellscape
 - Descent: Journeys in the Dark
 - Mice and Mystics
-- Hellboy: The Board Game
 - Castle Panic
 - Forbidden Desert
+- Dead of Winter
 
 ---
 
 ## Moderne favoritter
 
+Her finder du nogle af de spil, der har været med til at gøre moderne brætspil så populære. Fra elegante puslespil og hyggelige naturtemaer til kreative mekanikker og taktiske udfordringer.
+
 - Lost Ruins of Arnak
 - Wingspan
+- Wyrmspan
 - Everdell
 - Everdell Silverfrost
 - Clank!: Catacombs
@@ -134,6 +149,8 @@ Nogle af de spil, der fylder rigtig meget i brætspilsverdenen lige nu:
 
 ## To spillere – ingen steder at gemme sig
 
+Nogle spil fungerer allerbedst, når I kun er to. Her finder du alt fra korte, intense dueller til taktiske opgør, hvor I hele tiden forsøger at gennemskue hinandens planer.
+
 - The Lord of the Rings: Duel for Middle-earth
 - 7 Wonders Duel
 - Sky Team
@@ -150,6 +167,7 @@ Nogle af de spil, der fylder rigtig meget i brætspilsverdenen lige nu:
 - Star Wars: Empire vs. Rebellion
 - Jaipur
 - Star Wars: The Deckbuilding Game
+- Star Wars: The Deckbuilding Game – Mandalorian Faction Pack
 - Hive
 - Stratego
 - Codenames: Duet
@@ -157,12 +175,17 @@ Nogle af de spil, der fylder rigtig meget i brætspilsverdenen lige nu:
 - Tokaido Duo
 - King of Tokyo: Duel
 - Lawyer Up
+- Mindbug: Battlefruit Galaxy
+- Radlands Complete Edition
+- Toy Battle
 
-Har du lyst til specifikt at lære spil for to, har vi også en åben aktivitet på dagen, hvor **Josias hjælper med reglerne og får folk i gang**.
+**Vil du gerne prøve et godt tospillerspil?** Vi har en åben aktivitet på dagen, hvor Josias hjælper med reglerne og får folk i gang.
 
 ---
 
-## Co-op/samarbejdsspil - sammen mod spillet
+## Samarbejdsspil – sammen mod spillet
+
+Her arbejder I sammen i stedet for at konkurrere mod hinanden. Løs mysterier, gennemfør missioner, overlev katastrofer eller forsøg at besejre spillet som et hold.
 
 - The Crew: Mission Deep Sea
 - The Crew: The Quest for Planet Nine
@@ -180,10 +203,17 @@ Har du lyst til specifikt at lære spil for to, har vi også en åben aktivitet 
 - Unlock!: Game Adventures
 - Marvel Champions: The Card Game
 - The Mind
+- Codenames: Duet
+- Sky Team
+- Forbidden Desert
+- Castle Panic
+- Robinson Crusoe
 
 ---
 
 ## Bluff, ballade & socialt kaos
+
+Her handler det mindst lige så meget om menneskene omkring bordet som om selve spillet. Bluff, grin, afslør hemmeligheder og forsøg at overbevise de andre om, at du selvfølgelig taler sandt.
 
 - Decrypto
 - Just One
@@ -205,10 +235,13 @@ Har du lyst til specifikt at lære spil for to, har vi også en åben aktivitet 
 - Rebel Princess
 - Cat in the Box
 - Village Pillage + Surf & Turf
+- The Gang
 
 ---
 
 ## Gode steder at begynde
+
+Du behøver ikke kende moderne brætspil i forvejen. Her finder du spil med overskuelige regler, gode muligheder for at spille sammen og masser af oplevelser uden at skulle bruge en hel eftermiddag på at lære regler.
 
 - Ticket to Ride: Europe
 - Carcassonne
@@ -234,10 +267,18 @@ Har du lyst til specifikt at lære spil for to, har vi også en åben aktivitet 
 - Marrakech
 - The Quest for El Dorado
 - Shear Panic
+- Harmonies
+- Cascadia
+- Rebirth
+- Viva Catrina
+- Flip 7
+- Toy Battle
 
 ---
 
 ## Hurtigt, taktisk & lidt vanedannende
+
+Spil, der er nemme at finde frem, og hvor du ofte får lyst til en runde mere. Nogle handler om held, andre om timing, logik, bluff eller om at træffe den helt rigtige beslutning.
 
 - For Sale
 - Cabo
@@ -264,10 +305,17 @@ Har du lyst til specifikt at lære spil for to, har vi også en åben aktivitet 
 - Can't Stop
 - Bakari
 - Quackle
+- Flip 7
+- SCOUT
+- Trio
+- Toy Battle
+- Mindbug: Battlefruit Galaxy
 
 ---
 
-## Fart, timing & fingerfærdighed
+## Ræs, fart & fingerfærdighed
+
+Biler, cykler, kapløb og spil, hvor hurtige reaktioner eller præcise bevægelser kan være afgørende. Her finder du både taktiske racerløb og spil med fart over feltet.
 
 - KLASK
 - PitchCar
@@ -278,10 +326,14 @@ Har du lyst til specifikt at lære spil for to, har vi også en åben aktivitet 
 - Tumblin-Dice
 - River Dragons
 - Flamme Rouge
+- Heat: Pedal to the Metal
+- The Quest for El Dorado
 
 ---
 
 ## Kortspil & små æsker
+
+Små spil kan sagtens give store oplevelser. Her finder du kortspil og kompakte spil, der er oplagte til en hurtig runde, en pause mellem de store spil eller en hyggelig stund med nye mennesker.
 
 - Flip 7
 - Sea Salt & Paper
@@ -303,10 +355,23 @@ Har du lyst til specifikt at lære spil for to, har vi også en åben aktivitet 
 - That's Pretty Clever!
 - The Mind
 - Village Pillage + Surf & Turf
+- Love Letter
+- Regicide
+- For Sale
+- Cabo
+- Jaipur
+- Port Royal
+- Mindbug: Battlefruit Galaxy
+- Mindbug: Tag Team
+- Radlands Complete Edition
+- Star Wars: The Deckbuilding Game
+- Star Wars: The Deckbuilding Game – Mandalorian Faction Pack
 
 ---
 
 ## Temaet er halvdelen af fornøjelsen
+
+Nogle spil vælger man næsten alene på grund af universet. Her finder du zombier, superhelte, fantasy, science fiction og spil med usædvanlige idéer og masser af personlighed.
 
 - Blood Bowl: Team Manager
 - Last Night on Earth: The Zombie Game
@@ -321,17 +386,77 @@ Har du lyst til specifikt at lære spil for to, har vi også en åben aktivitet 
 - Disney Villainous: The Worst Takes It All
 - Human Punishment: The Beginning
 - Rumble Nation
+- Star Wars: Imperial Assault
+- Cthulhu: Death May Die
+- Dead of Winter
+- Root
+- Wyrmspan
+- Mindbug: Battlefruit Galaxy
+- Toy Battle
+- Star Wars: The Deckbuilding Game – Mandalorian Faction Pack
 
 ---
 
+## Holdspil & alternative dueller
+
+Det behøver ikke altid være alle mod alle. Nogle spil lader jer spille på hold, mens andre giver klassiske dueller et nyt twist.
+
+- Mindbug: Tag Team
+- The Gang
+- Codenames: Duet
+- Sky Team
+- The Crew: Mission Deep Sea
+- The Crew: The Quest for Planet Nine
+
+**Mindbug: Tag Team** er til fire spillere, der kæmper to mod to. 
+---
+
 ## Også når du vil spille alene
+
+Har du lyst til at fordybe dig i dit helt eget spil, er der også muligheder. Flere af spillene har officielle soloregler, hvor du spiller mod spillets egne udfordringer, forsøger at slå din egen rekord eller møder en automatisk modstander.
+
+### Store strategispil
+
+- Galactic Cruise
+- Luthier
+- Queen Alice
+- Ark Nova
+- Dune: Imperium
+- Terraforming Mars
+- Viticulture
+- Agricola
+
+### Eventyr & samarbejdsspil
 
 - Resist!
 - Marvel Champions: The Card Game
 - Arkham Horror: The Card Game
 - Robinson Crusoe
 - Mage Knight
+- Massive Darkness 2: Hellscape
+- Cthulhu: Death May Die
+- Hellboy: The Board Game
+- Mice and Mystics
+- Castle Panic
+- Horrified
+- Magic Maze
+
+### Roligere spil & hyggelige udfordringer
+
+- Wingspan
+- Wyrmspan
+- Everdell
+- Everdell Silverfrost
+- Finspan
+- Harmonies
+- Cascadia
+- Calico
+- Sagrada
+- That's Pretty Clever!
+- Take it Easy!
+
 ---
+
 
 <details class="faq-item">
   <summary>Spillene i alfabetisk rækkefølge</summary>
