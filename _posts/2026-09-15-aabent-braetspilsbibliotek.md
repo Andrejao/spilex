@@ -408,7 +408,6 @@ Det behøver ikke altid være alle mod alle. Nogle spil lader jer spille på hol
 - The Crew: Mission Deep Sea
 - The Crew: The Quest for Planet Nine
 
-**Mindbug: Tag Team** er til fire spillere, der kæmper to mod to. 
 ---
 
 ## Også når du vil spille alene
