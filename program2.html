@@ -6,344 +6,502 @@ description: Hovedprogrammet for Viborg Brætspilsdag 2026.
 ---
 
 <style>
-  /* Alle regler er afgrænset til programsiden */
-  .vbd-program {
-    --ink: #17201c;
-    --muted: #5e6b64;
-    --paper: #f7f3e9;
-    --white: #fffdf8;
-    --green: #245d49;
-    --lime: #d8efb1;
-    --line: rgba(23, 32, 28, .12);
+/* =========================================
+   VIBORG BRÆTSPILSDAG – PROGRAM
+   Alle styles er isoleret til .vbd-program
+   ========================================= */
 
-    color: var(--ink);
-    background: var(--paper);
-    overflow: hidden;
-  }
+.vbd-program {
+  --ink: #17201c;
+  --muted: #5e6b64;
+  --paper: #f7f3e9;
+  --paper-2: #efe8da;
+  --white: #fffdf8;
+  --green: #245d49;
+  --green-2: #34765e;
+  --lime: #d8efb1;
+  --line: rgba(23, 32, 28, .12);
 
-  .vbd-program *,
-  .vbd-program *::before,
-  .vbd-program *::after {
-    box-sizing: border-box;
-  }
+  color: var(--ink);
+  background: var(--paper);
+}
 
-  .vbd-program .program-wrap {
-    width: min(1040px, calc(100% - 40px));
-    margin-inline: auto;
-  }
+.vbd-program *,
+.vbd-program *::before,
+.vbd-program *::after {
+  box-sizing: border-box;
+}
 
-  /* HERO */
+.vbd-program .program-wrap {
+  width: min(1080px, calc(100% - 40px));
+  margin-inline: auto;
+}
+
+/* =========================================
+   HERO
+   ========================================= */
+
+.vbd-program .program-hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  min-height: 410px;
+  padding: 90px 0;
+
+  background-color: #172d31;
+
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(18, 36, 43, .97) 0%,
+      rgba(18, 36, 43, .88) 36%,
+      rgba(18, 36, 43, .54) 73%,
+      rgba(18, 36, 43, .38) 100%
+    ),
+    url("/assets/images/stemning/stemning1.jpg");
+
+  background-position: center, center 44%;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  color: #fff;
+}
+
+.vbd-program .program-hero-content {
+  position: relative;
+  width: 100%;
+}
+
+.vbd-program .program-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+
+  margin: 0 0 23px;
+
+  color: var(--lime);
+  font-size: .78rem;
+  font-weight: 850;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+}
+
+.vbd-program .program-kicker::before {
+  content: "";
+  width: 29px;
+  height: 2px;
+  flex: 0 0 29px;
+  background: currentColor;
+  border-radius: 4px;
+}
+
+.vbd-program .program-hero h1 {
+  max-width: 850px;
+  margin: 0;
+
+  color: #fff;
+
+  font-size: clamp(3.3rem, 7vw, 6rem);
+  line-height: .98;
+  font-weight: 850;
+  letter-spacing: -.055em;
+}
+
+.vbd-program .program-hero-copy {
+  max-width: 650px;
+  margin: 27px 0 0;
+
+  color: rgba(255, 255, 255, .84);
+
+  font-size: clamp(1.05rem, 2vw, 1.22rem);
+  line-height: 1.65;
+}
+
+/* =========================================
+   PROGRAMSEKTION
+   ========================================= */
+
+.vbd-program .program-section {
+  padding: 82px 0 100px;
+
+  background:
+    linear-gradient(
+      180deg,
+      var(--paper) 0%,
+      var(--paper-2) 100%
+    );
+}
+
+.vbd-program .program-heading {
+  margin-bottom: 46px;
+}
+
+.vbd-program .program-section-kicker {
+  margin: 0 0 12px;
+
+  color: var(--green);
+
+  font-size: .75rem;
+  font-weight: 850;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+}
+
+.vbd-program .program-heading h2 {
+  margin: 0;
+
+  color: var(--ink);
+
+  font-size: clamp(2rem, 4.5vw, 3.1rem);
+  line-height: 1.08;
+  font-weight: 850;
+  letter-spacing: -.045em;
+}
+
+/* =========================================
+   TIDSLINJE
+   ========================================= */
+
+.vbd-program .program-list {
+  position: relative;
+  display: grid;
+  gap: 14px;
+
+  padding-left: 38px;
+}
+
+/* Linje gennem programmet */
+.vbd-program .program-list::before {
+  content: "";
+
+  position: absolute;
+  left: 10px;
+  top: 35px;
+  bottom: 35px;
+
+  width: 2px;
+
+  background: rgba(36, 93, 73, .23);
+  border-radius: 4px;
+}
+
+/* Hvert programpunkt */
+.vbd-program .program-item {
+  position: relative;
+
+  display: grid;
+  grid-template-columns: 145px minmax(0, 1fr);
+  gap: 30px;
+  align-items: start;
+
+  min-width: 0;
+  padding: 29px 32px;
+
+  background: var(--white);
+
+  border: 1px solid var(--line);
+  border-radius: 22px;
+
+  box-shadow:
+    0 5px 20px rgba(23, 32, 28, .035);
+
+  transition:
+    transform .2s ease,
+    box-shadow .2s ease,
+    border-color .2s ease;
+}
+
+/* Punkter på tidslinjen */
+.vbd-program .program-item::before {
+  content: "";
+
+  position: absolute;
+
+  left: -35px;
+  top: 36px;
+
+  width: 16px;
+  height: 16px;
+
+  background: var(--green);
+  border: 4px solid var(--paper);
+  border-radius: 50%;
+
+  box-shadow: 0 0 0 2px var(--green);
+}
+
+/* Diskret forbindelse mellem punkt og kort */
+.vbd-program .program-item::after {
+  content: "";
+
+  position: absolute;
+  left: -20px;
+  top: 43px;
+
+  width: 20px;
+  height: 1px;
+
+  background: rgba(36, 93, 73, .22);
+}
+
+.vbd-program .program-item:hover {
+  transform: translateY(-2px);
+
+  border-color: rgba(36, 93, 73, .25);
+
+  box-shadow:
+    0 15px 38px rgba(23, 32, 28, .085);
+}
+
+/* =========================================
+   TID OG INDHOLD
+   ========================================= */
+
+.vbd-program .program-time {
+  min-width: 0;
+  padding-top: 2px;
+
+  color: var(--green);
+
+  font-size: clamp(1.2rem, 2.2vw, 1.5rem);
+  line-height: 1.3;
+  font-weight: 850;
+  letter-spacing: -.035em;
+
+  font-variant-numeric: tabular-nums;
+  overflow-wrap: break-word;
+}
+
+.vbd-program .program-content {
+  min-width: 0;
+}
+
+.vbd-program .program-content h3 {
+  margin: 0;
+
+  color: var(--ink);
+
+  font-size: clamp(1.15rem, 2vw, 1.38rem);
+  line-height: 1.35;
+  font-weight: 800;
+  letter-spacing: -.025em;
+}
+
+.vbd-program .program-content p {
+  margin: 10px 0 0;
+
+  color: var(--muted);
+
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+/* =========================================
+   KNAP
+   ========================================= */
+
+.vbd-program .program-footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 48px;
+}
+
+.vbd-program .program-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  min-height: 56px;
+  padding: 0 30px;
+
+  color: #fff;
+  background: var(--green);
+
+  border: 1px solid transparent;
+  border-radius: 999px;
+
+  font-size: 1rem;
+  font-weight: 800;
+  text-decoration: none;
+
+  transition:
+    transform .2s ease,
+    background .2s ease,
+    box-shadow .2s ease;
+}
+
+.vbd-program .program-button:hover {
+  transform: translateY(-2px);
+  background: #194934;
+  color: #fff;
+
+  box-shadow:
+    0 12px 28px rgba(36, 93, 73, .2);
+}
+
+.vbd-program .program-button:focus-visible {
+  outline: 3px solid var(--green);
+  outline-offset: 4px;
+}
+
+.vbd-program .program-button-arrow {
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 850px) {
+
   .vbd-program .program-hero {
-    position: relative;
-    isolation: isolate;
-    display: flex;
-    align-items: center;
-    min-height: 390px;
-    padding: 85px 0;
-    overflow: hidden;
-    background: #172d31;
-    color: white;
-  }
-
-  .vbd-program .program-hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: -2;
-    background:
-      url("{{ '/assets/images/stemning/stemning1.jpg' | relative_url }}")
-      center 44% / cover no-repeat;
-    opacity: .48;
-    filter: saturate(.8);
-  }
-
-  .vbd-program .program-hero::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: -1;
-    background:
-      linear-gradient(
-        90deg,
-        rgba(18, 36, 43, .98) 0%,
-        rgba(18, 36, 43, .91) 36%,
-        rgba(18, 36, 43, .56) 72%,
-        rgba(18, 36, 43, .36) 100%
-      );
-  }
-
-  .vbd-program .program-kicker {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    margin: 0 0 20px;
-    color: var(--lime);
-    font-size: .78rem;
-    font-weight: 850;
-    letter-spacing: .13em;
-    text-transform: uppercase;
-  }
-
-  .vbd-program .program-kicker::before {
-    content: "";
-    width: 28px;
-    height: 2px;
-    border-radius: 4px;
-    background: currentColor;
-  }
-
-  .vbd-program .program-hero h1 {
-    margin: 0;
-    color: #fff;
-    font-size: clamp(3.2rem, 7vw, 5.8rem);
-    line-height: .98;
-    font-weight: 850;
-    letter-spacing: -.055em;
-  }
-
-  .vbd-program .program-hero-copy {
-    max-width: 620px;
-    margin: 24px 0 0;
-    color: rgba(255, 255, 255, .84);
-    font-size: clamp(1.05rem, 2vw, 1.2rem);
-    line-height: 1.65;
-  }
-
-  /* PROGRAM */
-  .vbd-program .program-section {
-    padding: 76px 0 96px;
-    background:
-      linear-gradient(
-        180deg,
-        #f7f3e9 0%,
-        #efe8da 100%
-      );
-  }
-
-  .vbd-program .program-heading {
-    margin-bottom: 38px;
-  }
-
-  .vbd-program .program-heading h2 {
-    margin: 0;
-    color: var(--ink);
-    font-size: clamp(1.9rem, 4vw, 2.8rem);
-    line-height: 1.1;
-    letter-spacing: -.04em;
-  }
-
-  /* Lodret tidslinje */
-  .vbd-program .program-list {
-    position: relative;
-    display: grid;
-    gap: 12px;
-    padding-left: 36px;
-  }
-
-  .vbd-program .program-list::before {
-    content: "";
-    position: absolute;
-    left: 10px;
-    top: 29px;
-    bottom: 29px;
-    width: 2px;
-    border-radius: 4px;
-    background: rgba(36, 93, 73, .22);
+    min-height: 370px;
+    padding: 75px 0;
   }
 
   .vbd-program .program-item {
-    position: relative;
-    display: grid;
-    grid-template-columns: 135px minmax(0, 1fr);
-    align-items: start;
-    gap: 28px;
-    padding: 27px 30px;
-    background: var(--white);
-    border: 1px solid var(--line);
-    border-radius: 20px;
-    box-shadow: 0 5px 20px rgba(23, 32, 28, .035);
-    transition:
-      transform .2s ease,
-      box-shadow .2s ease,
-      border-color .2s ease;
+    grid-template-columns: 115px minmax(0, 1fr);
+    gap: 22px;
+    padding: 25px;
+  }
+
+  .vbd-program .program-section {
+    padding: 65px 0 80px;
+  }
+
+}
+
+/* =========================================
+   MOBIL
+   ========================================= */
+
+@media (max-width: 650px) {
+
+  .vbd-program .program-wrap {
+    width: calc(100% - 28px);
+  }
+
+  .vbd-program .program-hero {
+    min-height: 340px;
+    padding: 65px 0;
+
+    background-image:
+      linear-gradient(
+        90deg,
+        rgba(18, 36, 43, .95) 0%,
+        rgba(18, 36, 43, .78) 100%
+      ),
+      url("/assets/images/stemning/stemning1.jpg");
+
+    background-position: center, 60% center;
+  }
+
+  .vbd-program .program-kicker {
+    font-size: .72rem;
+    margin-bottom: 19px;
+  }
+
+  .vbd-program .program-hero h1 {
+    font-size: clamp(3rem, 13vw, 4.5rem);
+  }
+
+  .vbd-program .program-hero-copy {
+    margin-top: 20px;
+    font-size: 1.02rem;
+    line-height: 1.6;
+  }
+
+  .vbd-program .program-section {
+    padding: 52px 0 70px;
+  }
+
+  .vbd-program .program-heading {
+    margin-bottom: 34px;
+  }
+
+  .vbd-program .program-heading h2 {
+    font-size: clamp(1.9rem, 8vw, 2.6rem);
+  }
+
+  .vbd-program .program-list {
+    padding-left: 25px;
+    gap: 12px;
+  }
+
+  .vbd-program .program-list::before {
+    left: 7px;
+    top: 30px;
+    bottom: 30px;
+  }
+
+  .vbd-program .program-item {
+    grid-template-columns: 1fr;
+    gap: 10px;
+
+    padding: 22px 20px;
+    border-radius: 18px;
   }
 
   .vbd-program .program-item::before {
-    content: "";
-    position: absolute;
-    width: 14px;
-    height: 14px;
-    left: -33px;
-    top: 31px;
-    border-radius: 50%;
-    background: var(--green);
-    border: 3px solid var(--paper);
-    box-shadow: 0 0 0 2px var(--green);
+    left: -24px;
+    top: 28px;
+
+    width: 13px;
+    height: 13px;
+
+    border-width: 3px;
   }
 
-  .vbd-program .program-item:hover {
-    transform: translateY(-2px);
-    border-color: rgba(36, 93, 73, .25);
-    box-shadow: 0 12px 32px rgba(23, 32, 28, .075);
+  .vbd-program .program-item::after {
+    left: -12px;
+    top: 34px;
+    width: 12px;
   }
 
   .vbd-program .program-time {
-    padding-top: 2px;
-    color: var(--green);
-    font-size: clamp(1.22rem, 2.5vw, 1.55rem);
-    line-height: 1.2;
-    font-weight: 850;
-    letter-spacing: -.035em;
-    font-variant-numeric: tabular-nums;
-  }
-
-  .vbd-program .program-content {
-    min-width: 0;
+    font-size: 1.3rem;
   }
 
   .vbd-program .program-content h3 {
-    margin: 0;
-    color: var(--ink);
-    font-size: clamp(1.15rem, 2.5vw, 1.4rem);
-    line-height: 1.3;
-    font-weight: 800;
-    letter-spacing: -.025em;
+    font-size: 1.16rem;
   }
 
   .vbd-program .program-content p {
-    margin: 9px 0 0;
-    color: var(--muted);
-    font-size: 1rem;
-    line-height: 1.65;
+    font-size: .95rem;
+    margin-top: 7px;
   }
 
-  /* Link til aktiviteter */
   .vbd-program .program-footer {
-    display: flex;
-    justify-content: center;
-    margin-top: 42px;
+    margin-top: 36px;
   }
 
   .vbd-program .program-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 54px;
-    padding: 0 28px;
-    border-radius: 999px;
-    background: var(--green);
-    color: #fff;
-    text-decoration: none;
-    font-weight: 800;
-    transition:
-      transform .2s ease,
-      background .2s ease,
-      box-shadow .2s ease;
+    width: 100%;
   }
 
-  .vbd-program .program-button:hover {
-    transform: translateY(-2px);
-    background: #194934;
-    box-shadow: 0 10px 25px rgba(36, 93, 73, .18);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .vbd-program .program-item,
+  .vbd-program .program-button {
+    transition: none;
   }
-
-  .vbd-program .program-button:focus-visible {
-    outline: 3px solid var(--green);
-    outline-offset: 4px;
-  }
-
-  /* Mobil */
-  @media (max-width: 650px) {
-    .vbd-program .program-wrap {
-      width: calc(100% - 28px);
-    }
-
-    .vbd-program .program-hero {
-      min-height: 340px;
-      padding: 64px 0;
-    }
-
-    .vbd-program .program-hero::before {
-      background-position: 60% center;
-    }
-
-    .vbd-program .program-hero::after {
-      background: linear-gradient(
-        90deg,
-        rgba(18, 36, 43, .94),
-        rgba(18, 36, 43, .72)
-      );
-    }
-
-    .vbd-program .program-hero h1 {
-      font-size: clamp(3rem, 12vw, 4.3rem);
-    }
-
-    .vbd-program .program-section {
-      padding: 54px 0 72px;
-    }
-
-    .vbd-program .program-heading {
-      margin-bottom: 28px;
-    }
-
-    .vbd-program .program-list {
-      padding-left: 24px;
-      gap: 10px;
-    }
-
-    .vbd-program .program-list::before {
-      left: 6px;
-    }
-
-    .vbd-program .program-item {
-      grid-template-columns: 1fr;
-      gap: 9px;
-      padding: 21px 20px;
-      border-radius: 17px;
-    }
-
-    .vbd-program .program-item::before {
-      left: -24px;
-      top: 26px;
-      width: 12px;
-      height: 12px;
-    }
-
-    .vbd-program .program-time {
-      font-size: 1.3rem;
-    }
-
-    .vbd-program .program-content h3 {
-      font-size: 1.16rem;
-    }
-
-    .vbd-program .program-content p {
-      font-size: .95rem;
-    }
-
-    .vbd-program .program-footer {
-      margin-top: 34px;
-    }
-
-    .vbd-program .program-button {
-      width: 100%;
-    }
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .vbd-program .program-item,
-    .vbd-program .program-button {
-      transition: none;
-    }
-  }
+}
 </style>
 
 <div class="vbd-program">
 
-  <!-- HERO -->
+  <!-- ================================
+       HERO
+       ================================ -->
+
   <section class="program-hero">
-    <div class="program-wrap">
+
+    <div class="program-wrap program-hero-content">
+
       <p class="program-kicker">
         14. november 2026
       </p>
@@ -352,19 +510,33 @@ description: Hovedprogrammet for Viborg Brætspilsdag 2026.
 
       <p class="program-hero-copy">
         Her finder du dagens overordnede program.
-        De enkelte spil, turneringer og øvrige aktiviteter
-        finder du under Aktiviteter.
+        De enkelte spil, turneringer og øvrige
+        aktiviteter finder du under Aktiviteter.
       </p>
+
     </div>
+
   </section>
 
-  <!-- HOVEDPROGRAM -->
+
+  <!-- ================================
+       HOVEDPROGRAM
+       ================================ -->
+
   <section class="program-section">
+
     <div class="program-wrap">
 
       <div class="program-heading">
+
+        <p class="program-section-kicker">
+          Lørdag den 14. november
+        </p>
+
         <h2>Programmet fra start til slut</h2>
+
       </div>
+
 
       <div class="program-list">
 
@@ -377,11 +549,13 @@ description: Hovedprogrammet for Viborg Brætspilsdag 2026.
           </div>
 
           <div class="program-content">
+
             <h3>{{ punkt.titel }}</h3>
 
             {% if punkt.beskrivelse %}
             <p>{{ punkt.beskrivelse }}</p>
             {% endif %}
+
           </div>
 
         </div>
@@ -390,16 +564,23 @@ description: Hovedprogrammet for Viborg Brætspilsdag 2026.
 
       </div>
 
+
+      <!-- LINK TIL AKTIVITETER -->
+
       <div class="program-footer">
+
         <a
           class="program-button"
           href="{{ '/aktiviteter.html' | relative_url }}"
         >
-          Se alle aktiviteter →
+          Se alle aktiviteter
+          <span class="program-button-arrow" aria-hidden="true">→</span>
         </a>
+
       </div>
 
     </div>
+
   </section>
 
 </div>
