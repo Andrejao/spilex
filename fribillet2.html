@@ -1417,6 +1417,17 @@ sitemap: false
 
     }
 
+
+    /* Madvalg på fribilletter */
+    .meal-box { margin: 5px 0 3px; padding: 19px; border: 1px solid var(--border); border-radius: var(--radius-md); background: var(--green-050); }
+    .meal-title { margin: 0 0 12px; font-weight: 850; color: var(--green-900); }
+    .meal-choice { display: flex; align-items: flex-start; gap: 11px; margin: 12px 0; font-weight: 400; cursor: pointer; }
+    .meal-choice input { flex: 0 0 auto; width: 19px; height: 19px; margin: 3px 0 0; accent-color: var(--green-800); }
+    .meal-choice span, .meal-choice strong, .meal-choice small { display: block; }
+    .meal-choice strong { color: var(--green-900); }
+    .meal-choice small { margin-top: 3px; font-size: .84rem; line-height: 1.45; color: var(--muted); }
+    .meal-help { margin: 12px 0 0; font-size: .84rem; color: var(--muted); }
+
   </style>
 </head>
 
@@ -1760,6 +1771,25 @@ kontroller link
           </div>
 
 
+
+          <!-- Madvalg: valgfri frokost og aftensmad -->
+          <div class="meal-box" role="group" aria-labelledby="mealHeading">
+            <div class="meal-title" id="mealHeading">Mad på dagen</div>
+            <label class="meal-choice" for="frokost">
+              <input id="frokost" name="frokost" type="checkbox">
+              <span><strong>Ja tak til gratis frokost</strong>
+                <small>Rugbrødsbuffet kl. 12.30–14.00. Frokost er inkluderet i din fribillet.</small>
+              </span>
+            </label>
+            <label class="meal-choice" for="aftensmad">
+              <input id="aftensmad" name="aftensmad" type="checkbox">
+              <span><strong>Ja tak til aftensmad · 25 kr.</strong>
+                <small>Pitabrød med fyld og sunde sager.</small>
+              </span>
+            </label>
+            <p class="meal-help">Sæt kryds, hvis du vil spise med. Vi bruger svarene til at planlægge, hvor meget mad vi skal lave.</p>
+          </div>
+
           <!-- Den eneste obligatoriske bekræftelse -->
           <label class="checkbox">
 
@@ -1850,7 +1880,7 @@ kontroller link
 
         <p>
 
-          Gem gerne datoen med det samme.
+          Gem gerne datoen med det samme. Dine valg af frokost og aftensmad er registreret.
 
           Fra <strong>1. november</strong> kan du booke aktiviteter med
           det telefonnummer, du registrerede.
@@ -2926,6 +2956,9 @@ form.addEventListener(
             .value
         ),
 
+
+      frokost: document.getElementById("frokost").checked,
+      aftensmad: document.getElementById("aftensmad").checked,
 
       attendance_commitment:
         document
