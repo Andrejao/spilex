@@ -3,8 +3,8 @@
   beskrivelse: "Kom bare indenfor."
 
 - tid: "10.05"
-  titel: "Velkomst"
-  beskrivelse: "En kort velkomst og første lodtrækning."
+  titel: "Første lodtrækning og uddeling"
+  beskrivelse: "En kort velkomst og første lodtrækning og uddeling af spil."
 
 - tid: "10.15"
   titel: "Aktiviteterne begynder"
@@ -12,11 +12,11 @@
 
 - tid: "12.30 - 14.00"
   titel: "Frokost - er inkluderet"
-  beskrivelse: "Rugbrød, pålæg og grønt med videre som frokost-buffet. Det er med i prisen for dagen, når du har købt billet."
+  beskrivelse: "Rugbrød, pålæg og grønt med videre som frokost-buffet. Frokost er med kvit og frit, når du er tilmeldt dagen."
 
 - tid: "18.00"
   titel: "Aftensmad"
-  beskrivelse: "Der laves en varm ret til aftensmad. Det koster 25 kroner, og du bestiller blot ved tilmelding og får en madbillet ved check-in på dagen."
+  beskrivelse: "Der laves en varm ret til aftensmad. Det skal bestilles særskilt ved tilmelding. Du får bare en madbillet ved check-in på dagen."
   
 - tid: "19.00 - 20.30"
   titel: "Klask-turnering"
