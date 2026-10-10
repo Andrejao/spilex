@@ -417,8 +417,6 @@ Har du lyst til at fordybe dig i dit helt eget spil, er der også muligheder. Fl
 ### Store strategispil
 
 - Galactic Cruise
-- Luthier
-- Queen Alice
 - Ark Nova
 - Dune: Imperium
 - Terraforming Mars
