@@ -1,3 +1,4 @@
+
 ---
 layout: default
 title: Program
@@ -6,67 +7,176 @@ description: Hovedprogrammet for Viborg Brætspilsdag 2026.
 
 <style>
 /* ==========================================
-   PROGRAMSIDE – VISUELLE FORBEDRINGER
-   Bygger oven på hjemmesidens eksisterende CSS
+   VIBORG BRÆTSPILSDAG
+   PROGRAMSIDE – DESIGN 2026
+
+   Bygger på eksisterende Jekyll-layout.
+   Eksisterende Liquid-struktur er bevaret.
    ========================================== */
 
-/* HERO MED STEMNINGSBILLEDE */
+
+/* ==========================================
+   HERO
+   ========================================== */
 
 .page-hero.program-photo-hero {
   position: relative;
-  min-height: 400px;
-  display: flex;
-  align-items: center;
-  padding: 85px 0;
+  display: block;
+
+  min-height: 440px;
+  padding: 100px 0 105px;
 
   background-color: #172d31;
+
   background-image:
     linear-gradient(
       90deg,
-      rgba(18, 36, 43, .97) 0%,
-      rgba(18, 36, 43, .89) 38%,
-      rgba(18, 36, 43, .55) 72%,
-      rgba(18, 36, 43, .35) 100%
+      rgba(15, 34, 40, .97) 0%,
+      rgba(15, 34, 40, .88) 32%,
+      rgba(15, 34, 40, .56) 65%,
+      rgba(15, 34, 40, .24) 100%
     ),
     url("/assets/images/stemning/stemning1.jpg");
 
-  background-position: center, center 44%;
+  background-position: center, center 43%;
   background-size: cover;
   background-repeat: no-repeat;
 
   color: #fff;
+  overflow: hidden;
 }
 
-.page-hero.program-photo-hero .container {
-  position: relative;
-  width: 100%;
+/* Diskret lys i bunden */
+
+.page-hero.program-photo-hero::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 3px;
+
+  background: linear-gradient(
+    90deg,
+    #d8efb1 0%,
+    rgba(216,239,177,.3) 45%,
+    transparent 100%
+  );
+
+  pointer-events: none;
 }
+
+/* VIGTIGT: KORREKT CENTRERING */
+
+.page-hero.program-photo-hero > .container {
+  position: relative;
+  display: block;
+
+  width: calc(100% - 40px);
+  max-width: 1100px;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  padding-left: 0;
+  padding-right: 0;
+
+  box-sizing: border-box;
+}
+
+/* Dato */
 
 .page-hero.program-photo-hero .eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+
+  margin: 0 0 25px;
+  padding: 0;
+
   color: #d8efb1;
-  font-size: .8rem;
+
+  font-size: .78rem;
   font-weight: 850;
-  letter-spacing: .13em;
+  letter-spacing: .14em;
+  line-height: 1.4;
   text-transform: uppercase;
 }
 
+.page-hero.program-photo-hero .eyebrow::before {
+  content: "";
+
+  display: block;
+  width: 30px;
+  height: 2px;
+  flex: 0 0 30px;
+
+  background: #d8efb1;
+  border-radius: 99px;
+}
+
+/* Hovedoverskrift */
+
 .page-hero.program-photo-hero h1 {
   max-width: 900px;
-  margin: 18px 0 24px;
+
+  margin: 0;
+  padding: 0;
 
   color: #fff;
+
   font-size: clamp(3.3rem, 7vw, 6rem);
-  line-height: 1;
+  font-weight: 850;
+  line-height: .98;
   letter-spacing: -.055em;
+  text-wrap: balance;
 }
+
+/* Introduktion */
 
 .page-hero.program-photo-hero .program-intro {
   max-width: 650px;
-  margin: 0;
 
-  color: rgba(255,255,255,.86);
+  margin: 27px 0 0;
+  padding: 0;
+
+  color: rgba(255,255,255,.84);
+
   font-size: clamp(1.05rem, 2vw, 1.22rem);
+  font-weight: 400;
   line-height: 1.65;
+}
+
+/* Informationslinje */
+
+.page-hero.program-photo-hero .program-hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 20px;
+
+  margin-top: 32px;
+
+  color: rgba(255,255,255,.88);
+  font-size: .94rem;
+  font-weight: 750;
+}
+
+.page-hero.program-photo-hero .program-hero-meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.page-hero.program-photo-hero .program-hero-meta span::before {
+  content: "";
+
+  width: 6px;
+  height: 6px;
+  flex: 0 0 6px;
+
+  background: #d8efb1;
+  border-radius: 50%;
 }
 
 
@@ -75,84 +185,149 @@ description: Hovedprogrammet for Viborg Brætspilsdag 2026.
    ========================================== */
 
 .section.program-designed {
-  padding: 80px 0 100px;
+  position: relative;
 
-  background: linear-gradient(
-    180deg,
-    #f7f3e9 0%,
-    #efe8da 100%
-  );
+  padding: 86px 0 105px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #f7f3e9 0%,
+      #f4efe4 48%,
+      #efe8da 100%
+    );
 }
 
-/* INTRODUKTION */
+.section.program-designed > .container {
+  display: block;
 
-.program-designed .program-heading {
-  margin-bottom: 42px;
-}
+  width: calc(100% - 40px);
+  max-width: 1100px;
 
-.program-designed .program-heading .eyebrow {
-  margin-bottom: 14px;
-  color: #245d49;
+  margin-left: auto;
+  margin-right: auto;
 
-  font-size: .78rem;
-  font-weight: 850;
-  letter-spacing: .13em;
-  text-transform: uppercase;
-}
+  padding-left: 0;
+  padding-right: 0;
 
-.program-designed .program-heading h2 {
-  margin: 0;
-  color: #17201c;
-
-  font-size: clamp(2rem, 4.5vw, 3.1rem);
-  line-height: 1.1;
-  letter-spacing: -.045em;
+  box-sizing: border-box;
 }
 
 
 /* ==========================================
-   PROGRAMLISTE – TIDSLINJE
+   PROGRAMOVERSKRIFT
+   ========================================== */
+
+.program-designed .program-heading {
+  max-width: 780px;
+  margin: 0 0 50px;
+}
+
+.program-designed .program-heading .eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  margin: 0 0 16px;
+
+  color: #245d49;
+
+  font-size: .76rem;
+  font-weight: 850;
+  letter-spacing: .14em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.program-designed .program-heading .eyebrow::before {
+  content: "";
+  display: block;
+
+  width: 25px;
+  height: 2px;
+
+  background: #245d49;
+  border-radius: 99px;
+}
+
+.program-designed .program-heading h2 {
+  margin: 0;
+
+  color: #17201c;
+
+  font-size: clamp(2.2rem, 4.8vw, 3.5rem);
+  font-weight: 850;
+  line-height: 1.07;
+  letter-spacing: -.05em;
+  text-wrap: balance;
+}
+
+
+/* ==========================================
+   TIDSLINJE
    ========================================== */
 
 .program-designed .program-list {
   position: relative;
+
   display: grid;
-  gap: 14px;
-  padding-left: 38px;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 15px;
+
+  margin: 0;
+  padding: 0 0 0 41px;
 }
 
 /* Lodret linje */
 
 .program-designed .program-list::before {
   content: "";
+
   position: absolute;
 
-  left: 10px;
+  left: 11px;
   top: 35px;
   bottom: 35px;
 
   width: 2px;
-  background: rgba(36, 93, 73, .24);
+
+  border-radius: 99px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #245d49 0%,
+      rgba(36,93,73,.3) 38%,
+      rgba(36,93,73,.3) 75%,
+      #245d49 100%
+    );
 }
 
 
-/* HVERT PROGRAMKORT */
+/* ==========================================
+   PROGRAMKORT
+   ========================================== */
 
-.program-designed .program-item {
+.program-designed .program-list .program-item {
   position: relative;
+
   display: grid;
-  grid-template-columns: 145px minmax(0, 1fr);
-  gap: 30px;
+  grid-template-columns: 155px minmax(0, 1fr);
   align-items: start;
+  gap: 30px;
 
   min-width: 0;
-  padding: 28px 30px;
+  margin: 0;
+  padding: 30px 34px;
 
   background: #fffdf8;
-  border: 1px solid rgba(23,32,28,.12);
+
+  border: 1px solid rgba(23,32,28,.11);
   border-radius: 22px;
 
-  box-shadow: 0 8px 28px rgba(23,32,28,.055);
+  box-shadow:
+    0 5px 12px rgba(23,32,28,.025),
+    0 18px 40px rgba(23,32,28,.035);
 
   transition:
     transform .2s ease,
@@ -160,14 +335,30 @@ description: Hovedprogrammet for Viborg Brætspilsdag 2026.
     border-color .2s ease;
 }
 
-/* Prik på tidslinjen */
+/* Lille markering langs kortets venstre kant */
 
-.program-designed .program-item::before {
+.program-designed .program-list .program-item {
+  background-image:
+    linear-gradient(
+      180deg,
+      rgba(36,93,73,.045),
+      rgba(36,93,73,0)
+    );
+
+  background-repeat: no-repeat;
+  background-size: 5px 100%;
+  background-position: left center;
+}
+
+/* Prikker på tidslinjen */
+
+.program-designed .program-list .program-item::before {
   content: "";
+
   position: absolute;
 
-  left: -35px;
-  top: 35px;
+  left: -37px;
+  top: 37px;
 
   width: 16px;
   height: 16px;
@@ -177,107 +368,174 @@ description: Hovedprogrammet for Viborg Brætspilsdag 2026.
   border-radius: 50%;
 
   box-shadow: 0 0 0 2px #245d49;
+
+  z-index: 1;
 }
 
-/* Forbindelse mellem prik og kort */
+/* Forbindelse til kortet */
 
-.program-designed .program-item::after {
+.program-designed .program-list .program-item::after {
   content: "";
+
   position: absolute;
 
-  left: -20px;
-  top: 42px;
+  left: -21px;
+  top: 44px;
 
-  width: 20px;
+  width: 21px;
   height: 1px;
 
-  background: rgba(36,93,73,.24);
+  background: rgba(36,93,73,.3);
 }
 
-.program-designed .program-item:hover {
-  transform: translateY(-2px);
-  border-color: rgba(36,93,73,.3);
+/* Hover */
 
-  box-shadow: 0 16px 36px rgba(23,32,28,.09);
-}
+.program-designed .program-list .program-item:hover {
+  transform: translateY(-3px);
 
+  border-color: rgba(36,93,73,.26);
 
-/* KLOKKESLÆT */
-
-.program-designed .program-time {
-  padding-top: 2px;
-  min-width: 0;
-
-  color: #245d49;
-  font-size: clamp(1.18rem, 2.2vw, 1.5rem);
-  line-height: 1.3;
-  font-weight: 850;
-  letter-spacing: -.035em;
-  font-variant-numeric: tabular-nums;
-
-  overflow-wrap: break-word;
-}
-
-
-/* TITEL OG BESKRIVELSE */
-
-.program-designed .program-content {
-  min-width: 0;
-}
-
-.program-designed .program-content h3 {
-  margin: 0;
-
-  color: #17201c;
-  font-size: clamp(1.15rem, 2vw, 1.38rem);
-  line-height: 1.35;
-  font-weight: 800;
-  letter-spacing: -.025em;
-}
-
-.program-designed .program-content p {
-  margin: 9px 0 0;
-
-  color: #5e6b64;
-  font-size: 1rem;
-  line-height: 1.65;
+  box-shadow:
+    0 12px 25px rgba(23,32,28,.045),
+    0 25px 55px rgba(23,32,28,.075);
 }
 
 
 /* ==========================================
-   KNAP
+   KLOKKESLÆT
+   ========================================== */
+
+.program-designed .program-list .program-time {
+  min-width: 0;
+  margin: 0;
+  padding: 2px 0 0;
+
+  color: #245d49;
+
+  font-size: clamp(1.2rem, 2.25vw, 1.55rem);
+  font-weight: 850;
+  line-height: 1.28;
+  letter-spacing: -.035em;
+
+  font-variant-numeric: tabular-nums;
+  overflow-wrap: break-word;
+}
+
+
+/* ==========================================
+   PROGRAMINDHOLD
+   ========================================== */
+
+.program-designed .program-list .program-content {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.program-designed .program-list .program-content h3 {
+  margin: 0;
+  padding: 0;
+
+  color: #17201c;
+
+  font-size: clamp(1.2rem, 2.1vw, 1.45rem);
+  font-weight: 800;
+  line-height: 1.3;
+  letter-spacing: -.03em;
+}
+
+.program-designed .program-list .program-content p {
+  max-width: 690px;
+
+  margin: 11px 0 0;
+  padding: 0;
+
+  color: #5e6b64;
+
+  font-size: 1rem;
+  line-height: 1.68;
+}
+
+
+/* ==========================================
+   AKTIVITETSKNAP
    ========================================== */
 
 .program-designed .section-action {
   display: flex;
   justify-content: center;
-  margin-top: 48px;
+
+  margin: 53px 0 0;
 }
 
 .program-designed .section-action .button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: 12px;
 
-  min-height: 54px;
-  padding: 0 28px;
+  min-height: 58px;
+  padding: 0 32px;
 
   background: #245d49;
   color: #fff;
 
+  border: 1px solid transparent;
   border-radius: 999px;
+
+  font-size: 1rem;
   font-weight: 800;
   text-decoration: none;
 
+  box-shadow: 0 10px 25px rgba(36,93,73,.12);
+
   transition:
+    background .2s ease,
     transform .2s ease,
-    background .2s ease;
+    box-shadow .2s ease;
 }
 
 .program-designed .section-action .button:hover {
-  transform: translateY(-2px);
   background: #194934;
   color: #fff;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 15px 35px rgba(36,93,73,.2);
+}
+
+.program-designed .section-action .button:focus-visible {
+  outline: 3px solid #245d49;
+  outline-offset: 4px;
+}
+
+.program-designed .program-button-arrow {
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+
+/* ==========================================
+   TABLET
+   ========================================== */
+
+@media (max-width: 850px) {
+
+  .page-hero.program-photo-hero {
+    min-height: 390px;
+    padding: 80px 0;
+  }
+
+  .section.program-designed {
+    padding: 70px 0 85px;
+  }
+
+  .program-designed .program-list .program-item {
+    grid-template-columns: 125px minmax(0, 1fr);
+    gap: 25px;
+    padding: 27px;
+  }
+
 }
 
 
@@ -288,10 +546,29 @@ description: Hovedprogrammet for Viborg Brætspilsdag 2026.
 @media (max-width: 650px) {
 
   .page-hero.program-photo-hero {
-    min-height: 340px;
-    padding: 65px 0;
+    min-height: 365px;
+    padding: 65px 0 72px;
+
+    background-image:
+      linear-gradient(
+        90deg,
+        rgba(15,34,40,.95) 0%,
+        rgba(15,34,40,.83) 60%,
+        rgba(15,34,40,.62) 100%
+      ),
+      url("/assets/images/stemning/stemning1.jpg");
 
     background-position: center, 60% center;
+  }
+
+  .page-hero.program-photo-hero > .container {
+    width: calc(100% - 28px);
+    max-width: none;
+  }
+
+  .page-hero.program-photo-hero .eyebrow {
+    margin-bottom: 21px;
+    font-size: .72rem;
   }
 
   .page-hero.program-photo-hero h1 {
@@ -299,58 +576,83 @@ description: Hovedprogrammet for Viborg Brætspilsdag 2026.
   }
 
   .page-hero.program-photo-hero .program-intro {
+    margin-top: 20px;
     font-size: 1.02rem;
   }
 
+  .page-hero.program-photo-hero .program-hero-meta {
+    margin-top: 25px;
+    gap: 10px 16px;
+    font-size: .85rem;
+  }
+
   .section.program-designed {
-    padding: 52px 0 72px;
+    padding: 55px 0 75px;
+  }
+
+  .section.program-designed > .container {
+    width: calc(100% - 28px);
+    max-width: none;
   }
 
   .program-designed .program-heading {
-    margin-bottom: 32px;
+    margin-bottom: 35px;
+  }
+
+  .program-designed .program-heading h2 {
+    font-size: clamp(2rem, 8vw, 2.8rem);
   }
 
   .program-designed .program-list {
-    padding-left: 25px;
+    padding-left: 26px;
     gap: 12px;
   }
 
   .program-designed .program-list::before {
     left: 7px;
+    top: 30px;
+    bottom: 30px;
   }
 
-  .program-designed .program-item {
-    grid-template-columns: 1fr;
+  .program-designed .program-list .program-item {
+    grid-template-columns: minmax(0, 1fr);
     gap: 9px;
 
-    padding: 22px 20px;
+    padding: 23px 21px;
     border-radius: 18px;
   }
 
-  .program-designed .program-item::before {
-    left: -24px;
+  .program-designed .program-list .program-item::before {
+    left: -25px;
     top: 29px;
+
     width: 13px;
     height: 13px;
     border-width: 3px;
   }
 
-  .program-designed .program-item::after {
-    left: -12px;
+  .program-designed .program-list .program-item::after {
+    left: -13px;
     top: 35px;
-    width: 12px;
+
+    width: 13px;
   }
 
-  .program-designed .program-time {
-    font-size: 1.28rem;
+  .program-designed .program-list .program-time {
+    font-size: 1.3rem;
   }
 
-  .program-designed .program-content h3 {
-    font-size: 1.15rem;
+  .program-designed .program-list .program-content h3 {
+    font-size: 1.16rem;
   }
 
-  .program-designed .program-content p {
+  .program-designed .program-list .program-content p {
+    margin-top: 8px;
     font-size: .95rem;
+  }
+
+  .program-designed .section-action {
+    margin-top: 38px;
   }
 
   .program-designed .section-action .button {
@@ -359,42 +661,72 @@ description: Hovedprogrammet for Viborg Brætspilsdag 2026.
 
 }
 
+
+/* ==========================================
+   REDUCERET BEVÆGELSE
+   ========================================== */
+
 @media (prefers-reduced-motion: reduce) {
+
   .program-designed .program-item,
   .program-designed .section-action .button {
     transition: none;
   }
+
 }
 </style>
 
 
-<!-- HERO -->
+<!-- ======================================
+     HERO
+     ====================================== -->
 
 <section class="page-hero program-photo-hero">
+
   <div class="container">
 
-    <p class="eyebrow">14. november 2026</p>
+    <p class="eyebrow">
+      14. november 2026
+    </p>
 
     <h1>Dagens program</h1>
 
     <p class="program-intro">
-      Her finder du dagens overordnede program. De enkelte spil,
-      turneringer og øvrige aktiviteter finder du under Aktiviteter.
+      Her finder du dagens overordnede program.
+      De enkelte spil, turneringer og øvrige
+      aktiviteter finder du under Aktiviteter.
     </p>
 
+    <div class="program-hero-meta">
+      <span>Kl. 10.00–00.00</span>
+      <span>Reberbanen 11+13, Viborg</span>
+    </div>
+
   </div>
+
 </section>
 
 
-<!-- HOVEDPROGRAM -->
+<!-- ======================================
+     HOVEDPROGRAM
+     ====================================== -->
 
 <section class="section program-designed">
+
   <div class="container">
 
     <div class="program-heading">
-      <p class="eyebrow">Lørdag den 14. november</p>
+
+      <p class="eyebrow">
+        Lørdag den 14. november
+      </p>
+
       <h2>Programmet fra start til slut</h2>
+
     </div>
+
+
+    <!-- PROGRAMLISTE: SAMME LIQUID SOM ORIGINAL -->
 
     <div class="program-list">
 
@@ -420,11 +752,21 @@ description: Hovedprogrammet for Viborg Brætspilsdag 2026.
 
     </div>
 
+
+    <!-- AKTIVITETSKNAP -->
+
     <div class="section-action">
-      <a class="button button-dark" href="{{ '/aktiviteter.html' | relative_url }}">
+
+      <a
+        class="button button-dark"
+        href="{{ '/aktiviteter.html' | relative_url }}"
+      >
         Se alle aktiviteter
+        <span class="program-button-arrow" aria-hidden="true">→</span>
       </a>
+
     </div>
 
   </div>
+
 </section>
