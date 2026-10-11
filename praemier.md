@@ -15,35 +15,11 @@ Vi har samlet en stor pulje af brætspil, som skal finde nye ejere i forbindelse
 
 Og vi synes ikke, vi behøver vente helt til november med at finde de første vindere.
 
-Derfor laver vi to små lodtrækninger blandt de tilmeldte deltagere, hvor du har mulighed for at vinde et af to brætspil.
+Derfor laver vi  små lodtrækninger blandt de tilmeldte deltagere.
 
-- **Søndag den 11. oktober:** Vind MicroMacro: Crime City – Showdown.
-- **Mandag den 12. oktober:** Vind Harmonies.
-
-Vi finder og offentliggør resultatet af begge lodtrækninger på de nævnte dage. Præmierne bliver overrakt på selve Viborg Brætspilsdag.
+Præmierne bliver overrakt på selve Viborg Brætspilsdag.
 
 Det vigtigste er naturligvis stadig selve dagen: at møde nye mennesker, spille sammen og måske finde et helt nyt fællesskab. Præmierne er en ekstra lille anledning til at glæde sig.
-
-## Hvad kan du vinde?
-
-### Søndag den 11. oktober: MicroMacro
-
-MicroMacro: Crime City – Showdown er et anderledes detektivspil, hvor du undersøger et stort, detaljeret bykort, finder spor og forsøger at opklare mysterier og forbrydelser.
-
-Det er et samarbejdsspil, hvor man kan være flere om at lede efter løsningerne.
-
-**Præmie:** 1 eksemplar af MicroMacro: Crime City – Showdown. 
-
-
-### Mandag den 12. oktober: Harmonies
-
-I Harmonies bygger du dit eget lille landskab af skove, bjerge, vand og levesteder til dyr.
-
-Det er et smukt, overskueligt og taktisk brætspil, der kan spilles alene eller sammen med andre. Det er nemt at lære, men der er masser af muligheder for at blive bedre.
-
-**Præmie:** 1 eksemplar af Harmonies.
-
-Der udloddes altså i alt to fysiske brætspil. Præmierne kan ikke ombyttes til kontanter eller andre varer.
 
 ## Sådan deltager du
 
@@ -57,7 +33,7 @@ Hvis du endnu ikke er tilmeldt, kan du læse om dagen og tilmelde dig på:
 
 Du får ét lod pr. person i hver lodtrækning. Flere tilmeldinger eller billetter til samme person giver ikke flere vinderchancer.
 
-For at deltage i søndagens lodtrækning skal din tilmelding være gennemført senest den 11. oktober kl. 19.59. For mandagens lodtrækning er fristen den 12. oktober kl. 19.59.
+For at deltage i lodtrækningerne skal din tilmelding være gennemført inden den enkelte lodtrækningen finder sted i løbet af dagen.
 
 ## Hvordan finder vi vinderne?
 
@@ -67,9 +43,7 @@ Derefter udvælges én vinder tilfældigt blandt de deltagelsesberettigede ved h
 
 Alle deltagere i den enkelte lodtrækning har samme sandsynlighed for at blive udtrukket. Ingen får ekstra lodder for at have købt en almindelig billet, tilmeldt sig tidligt eller delt noget på sociale medier.
 
-Vinderchancen afhænger af det samlede antal deltagere i lodtrækningen. Vi udlodder én præmie ved hver af de to udtrækninger.
-
-Vi registrerer resultatet, så vi kan dokumentere, hvordan vinderne er fundet.
+Vinderchancen afhænger af det samlede antal deltagere i lodtrækningen.
 
 ## Hvornår bliver vinderne offentliggjort?
 
