@@ -27,3 +27,8 @@
   gruppe: "sponsor"
   logo: "/assets/images/logos/asmodee_logo.png"
   url: "https://www.asmodeenordics.com"
+
+- navn: "Viborg Kommune"
+  gruppe: "sponsor"
+  logo: "/assets/images/logos/logo_small.jpg"
+  url: "https://www.bilka.dk"
