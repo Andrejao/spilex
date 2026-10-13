@@ -21,7 +21,7 @@ Viborg Brætspilsdag er et lokalt, frivilligt arrangeret initiativ.
 
 Den dataansvarlige er:
 
-**[INDSÆT NAVN PÅ DEN JURIDISK ANSVARLIGE PERSON, FORENING ELLER ORGANISATION]**
+André Højer
 
 **Kontakt:** [viborgbraetspil@gmail.com](mailto:viborgbraetspil@gmail.com)
 
@@ -92,14 +92,12 @@ Vi anvender eksterne tekniske tjenester til at drive hjemmesiden, administrere t
 Disse omfatter blandt andet:
 
 - **Cloudflare:** Drift, sikkerhed, formularbeskyttelse og tekniske tjenester til hjemmesiden og tilmeldingssystemet.
-- **[INDSÆT MAILTJENESTE]:** Udsendelse af tilmeldingsbekræftelser og praktiske beskeder.
+- **Gmail:** Udsendelse af tilmeldingsbekræftelser og praktiske beskeder.
 - **Eventuelle betalingsudbydere:** Håndtering af betalinger, hvor det er relevant.
 
 Hjemmesidens kildekode administreres via GitHub. Dette betyder ikke i sig selv, at deltagernes registreringsoplysninger offentliggøres på GitHub.
 
 Vi sælger ikke dine oplysninger og videregiver dem ikke til sponsorer eller andre eksterne parter til deres markedsføring.
-
-**Behandling uden for EU/EØS:** [INDSÆT VERIFICEREDE OPLYSNINGER OM EVENTUELLE OVERFØRSLER TIL TREDJELANDE OG DET RELEVANTE OVERFØRSELSGRUNDLAG.]
 
 ## 6. Besøg på hjemmesiden, statistik og cookies
 
@@ -121,7 +119,7 @@ Vi opbevarer kun personoplysninger, så længe det er nødvendigt for de formål
 
 Oplysninger om tilmelding, aktivitetsbooking og mad slettes efter arrangementet og den nødvendige afsluttende administration.
 
-**Den konkrete slettefrist er: [INDSÆT EN DATO ELLER ET PRÆCIST KRITERIUM, SOM I FAKTISK OVERHOLDER].**
+**Den konkrete slettefrist er senest d. 31. december 2026.**
 
 Hvis du har tilmeldt dig en besked om Viborg Brætspilsdag 2027, opbevarer vi din e-mailadresse til dette formål, indtil den aftalte besked er sendt, eller du trækker dit samtykke tilbage.
 
