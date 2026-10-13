@@ -55,6 +55,11 @@ Kendskab til Heat er en fordel i en turnering, men spillet er langt mere tilgæn
 - godt kan lide, at man hele tiden kan se, hvordan man ligger i forhold til de andre
 - gerne vil spille flere løb frem for ét langt strategispil
 
+## Der er præmier på højkant!
+
+**1. præmien:** Sushi Go Party
+**2. præmien:** The Gang
+
 ## Heat Championship på Viborg Brætspilsdag
 
 **Tid:** 10.30–14.30  
