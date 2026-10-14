@@ -23,7 +23,7 @@ Det vigtigste er naturligvis stadig selve dagen: at møde nye mennesker, spille 
 
 ## Sådan deltager du
 
-Begge lodtrækninger foregår blandt de personer, der er tilmeldt Viborg Brætspilsdag.
+Alle lodtrækninger foregår blandt de personer, der er tilmeldt Viborg Brætspilsdag.
 
 Hvis du allerede er tilmeldt, er du automatisk med. Du behøver ikke tilmelde dig konkurrencerne særskilt.
 
