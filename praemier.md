@@ -11,7 +11,7 @@ robots: "noindex, nofollow, noarchive"
 
 **Vi skyder præmieuddelingen i gang allerede nu!**
 
-Vi har samlet en stor pulje af brætspil, som skal finde nye ejere i forbindelse med Viborg Brætspilsdag den 14. november 2026.
+Vi har samlet en stor (synes vi selv) pulje af brætspil, som skal finde nye ejere i forbindelse med Viborg Brætspilsdag den 14. november 2026.
 
 Og vi synes ikke, vi behøver vente helt til november med at finde de første vindere.
 
@@ -59,7 +59,7 @@ Vi kontakter også vinderne direkte på den e-mailadresse, som de har oplyst ved
 
 ## Hvordan får du din præmie?
 
-**Præmierne udleveres personligt på Viborg Brætspilsdag lørdag den 14. november 2026.**
+**Præmierne udleveres personligt på Viborg Brætspilsdag lørdag den 14. november 2026 kl. 10.05**
 
 Arrangementet finder sted på:
 
@@ -67,7 +67,7 @@ Reberbanen 11+13
 8800 Viborg  
 Kl. 10.00–00.00
 
-Vi overrækker de to præmier i forbindelse med dagens fælles lodtrækning.
+Vi overrækker præmierne i forbindelse med dagens fælles lodtrækning kl. 10.05.
 
 Det er en betingelse for at modtage præmien, at du er mødt personligt frem og er til stede ved præmieoverrækkelsen.
 
