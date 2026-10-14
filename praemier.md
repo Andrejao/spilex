@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Vind MicroMacro og Harmonies til Viborg Brætspilsdag"
+title: "Vind spil til Viborg Brætspilsdag"
 date: 2026-10-09
 permalink: /præmier/
 sitemap: false
