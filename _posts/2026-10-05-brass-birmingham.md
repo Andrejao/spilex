@@ -91,6 +91,8 @@ Det er derfor en aktivitet for dig, der gerne vil have noget at tænke over.
 
 Søren står for spillet og hjælper gruppen gennem sessionen.
 
+Aktiviteten er  målrettet unge og voksne over 15 år. Klubberne i Viborg kommer og laver aktiviteter for med et særskilt program for børn. Du kan læse mere [**ved at trykke → her**](https://viborgbraetspil.dk/nyheder/klubberne/).  
+
 [**Book plads til aktiviteten →**](https://booking.viborgbraetspil.dk/)
 
 [**Tilmeld dig Viborg Brætspilsdag →**](/tilmelding/)
