@@ -78,6 +78,8 @@ Du behøver derfor ikke være erfaren brætspiller for at være med.
 
 Der er begrænsede pladser. Du skal være tilmeldt selve Viborg Brætspilsdag, før du kan booke aktiviteten.
 
+Aktiviteten er  målrettet unge og voksne over 15 år. Klubberne i Viborg kommer og laver aktiviteter for med et særskilt program for børn. Du kan læse mere [**ved at trykke → her**](https://viborgbraetspil.dk/nyheder/klubberne/).  
+
 [**Book aktivitet →**](https://booking.viborgbraetspil.dk/)
 
 [**Tilmeld dig Viborg Brætspilsdag →**](/tilmelding/)
