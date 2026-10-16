@@ -46,6 +46,8 @@ Deltagere under 15 år skal fortsat under hele arrangementet være i følgeskab 
 **Målgruppe:** Børn og unge, der deltager i Viborg Brætspilsdag sammen med en voksen  
 **Under 15 år:** Skal være i følgeskab med en voksen under hele arrangementet  
 
+Aktiviteten er  målrettet unge og voksne over 15 år. Klubberne i Viborg kommer og laver aktiviteter for med et særskilt program for børn. Du kan læse mere [**ved at trykke → her**](https://viborgbraetspil.dk/nyheder/klubberne/).  
+
 [**Tilmeld dig Viborg Brætspilsdag →**](/tilmelding/)
 
 [**Se alle aktiviteter på Viborg Brætspilsdag →**]({{ '/aktiviteter.html' | relative_url }})
