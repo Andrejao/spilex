@@ -68,7 +68,7 @@ Det vigtigste er, at du har lyst til et større strategispil og er indstillet p�
 
 Der er begrænsede pladser. Du behøver ikke kende spillet på forhånd.
 
-Aktiviteten er  målrettet unge og voksne over 15 år. Klubberne i Viborg kommer og laver aktiviteter for med et særskilt program for børn. Du kan læse mere [**ved at trykke → her**](https://viborgbraetspil.dk/nyheder/klubberne/))  
+Aktiviteten er  målrettet unge og voksne over 15 år. Klubberne i Viborg kommer og laver aktiviteter for med et særskilt program for børn. Du kan læse mere [**ved at trykke → her**](https://viborgbraetspil.dk/nyheder/klubberne/). 
 
 [**Book plads til aktiviteten →**](https://booking.viborgbraetspil.dk/)
 
