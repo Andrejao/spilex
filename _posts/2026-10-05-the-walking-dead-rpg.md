@@ -123,6 +123,8 @@ Free League angiver selve spillet til **16+**.
 
 Der er kun **fire pladser** ved bordet.
 
+Aktiviteten er  målrettet unge og voksne over 15 år. Klubberne i Viborg kommer og laver aktiviteter for med et særskilt program for børn. Du kan læse mere [**ved at trykke → her**](https://viborgbraetspil.dk/nyheder/klubberne/).  
+
 [**Book aktivitet →**](https://booking.viborgbraetspil.dk/)
 
 [**Tilmeld dig Viborg Brætspilsdag →**](/tilmelding/)
