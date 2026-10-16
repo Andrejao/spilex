@@ -68,6 +68,9 @@ Det er en **lær-at-spille-session**, og Lynge hjælper gruppen i gang. Du behø
 
 Der er begrænsede pladser, og du behøver ikke kende spillet på forhånd.
 
+Aktiviteten er  målrettet unge og voksne over 15 år. Klubberne i Viborg kommer og laver aktiviter for med et særskilt program, du kan finde [**ved at trykke → her
+ **]([https://booking.viborgbraetspil.dk/](https://viborgbraetspil.dk/nyheder/klubberne/))  
+ 
 [**Book plads til aktiviteten →**](https://booking.viborgbraetspil.dk/)
 
 [**Tilmeld dig Viborg Brætspilsdag →**](/tilmelding/)
