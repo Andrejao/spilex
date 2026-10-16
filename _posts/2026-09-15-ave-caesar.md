@@ -68,8 +68,7 @@ Der er stadig taktiske valg, men du behøver ikke holde styr på lange kæder af
 
 Der er begrænsede pladser, men ingen forkundskaber er nødvendige.
 
-Aktiviteten er  målrettet unge og voksne over 15 år. Klubberne i Viborg kommer og laver aktiviter for med et særskilt program, du kan finde [**ved at trykke → her
- **]([https://booking.viborgbraetspil.dk/](https://viborgbraetspil.dk/nyheder/klubberne/))  
+Aktiviteten er  målrettet unge og voksne over 15 år. Klubberne i Viborg kommer og laver aktiviteter for med et særskilt program for børn. Du kan læse mere [**ved at trykke → her**](https://viborgbraetspil.dk/nyheder/klubberne/).  
 
 [**Book plads til aktiviteten →**](https://booking.viborgbraetspil.dk/)
 
