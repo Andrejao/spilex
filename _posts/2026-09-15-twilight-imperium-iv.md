@@ -62,6 +62,8 @@ Det kan anbefales, at du har skimmet reglerne inden dagen, fx her: https://www.y
 
 Der er begrænsede pladser. Du skal være tilmeldt Viborg Brætspilsdag for at kunne booke en plads til aktiviteten.
 
+Aktiviteten er  målrettet unge og voksne over 15 år. Klubberne i Viborg kommer og laver aktiviteter for med et særskilt program for børn. Du kan læse mere [**ved at trykke → her**](https://viborgbraetspil.dk/nyheder/klubberne/).  
+
 [**Book plads til aktiviteten →**](https://booking.viborgbraetspil.dk/)
 
 [**Tilmeld dig Viborg Brætspilsdag →**](/tilmelding/)
