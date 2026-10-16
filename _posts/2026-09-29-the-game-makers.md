@@ -88,6 +88,8 @@ Det er en **lær-at-spille-session**, og Maria gennemgår reglerne og hjælper j
 
 Der er begrænsede pladser. Reglerne gennemgås på dagen.
 
+Aktiviteten er  målrettet unge og voksne over 15 år. Klubberne i Viborg kommer og laver aktiviteter for med et særskilt program for børn. Du kan læse mere [**ved at trykke → her**](https://viborgbraetspil.dk/nyheder/klubberne/).  
+
 [**Book plads til aktiviteten →**](https://booking.viborgbraetspil.dk/)
 
 [**Tilmeld dig Viborg Brætspilsdag →**](/tilmelding/)
