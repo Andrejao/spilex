@@ -57,8 +57,7 @@ Kendskab til Heat er en fordel i en turnering, men spillet er langt mere tilgæn
 
 ## Der er præmier på højkant!
 
-**1. præmien:** Sushi Go Party
-**2. præmien:** The Gang
+**Præmier:** Welcome to Everdell, dnup og Patwork
 
 ## Heat Championship på Viborg Brætspilsdag
 
