@@ -53,7 +53,15 @@
   image: "/assets/images/nyheder/star-wars-legion.jpg"
   image_alt: "Star Wars Legion-miniaturer og terræn opstillet på et spillebord"
   artikel: "/nyheder/star-wars-legion/"
-  
+
+- tid: "Tidspunkt kommer"
+  titel: "Mal din egen Warhammer-figur (og vær med i en lille konkurrence)"
+  vaert: "Jonas"
+  beskrivelse: "Mal din helt egen Warhammer-figur, tag den med hjem og deltag i malekonkurrencer med præmier."
+  image: "/assets/images/nyheder/warhammer-figurmaling.jpg"
+  image_alt: "Mal din helt egen Warhammer-figur"
+  artikel: "/nyheder/warhammer-figurmaleri/"
+
 - tid: "En del af dagen"
   titel: "Klubberne – aktiviteter for børn og unge"
   vaert: "Klubberne i Viborg"
