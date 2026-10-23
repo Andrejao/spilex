@@ -1,0 +1,540 @@
+---
+layout: default
+title: Find aktiviteter · Viborg Brætspilsdag 2026
+description: Find den aktivitet, du har lyst til på Viborg Brætspilsdag. Søg, vælg tidspunkt, eller find turneringer og åbne aktiviteter.
+permalink: /aktiviteter3/
+noindex: true
+---
+
+{% assign activities3 = site.posts | where: 'type', 'aktivitet' %}
+
+<style>
+  /* Testside: al styling er isoleret til .af3. Ingen ændringer i style.css. */
+  .af3 {
+    --af3-ink: #172c27;
+    --af3-muted: #61716a;
+    --af3-green: #1d5946;
+    --af3-dark: #102e2b;
+    --af3-warm: #f8f5ef;
+    --af3-white: #fffefa;
+    --af3-line: #dfe5df;
+    --af3-orange: #ec7040;
+    --af3-radius: 18px;
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    color: var(--af3-ink);
+    background: var(--af3-warm);
+    padding-bottom: 90px;
+  }
+  .af3, .af3 *, .af3 *::before, .af3 *::after { box-sizing: border-box; }
+  .af3 [hidden] { display: none !important; }
+  .af3 button, .af3 input { font: inherit; }
+  .af3 button { cursor: pointer; }
+  .af3 a { color: inherit; }
+  .af3 button:focus-visible, .af3 a:focus-visible, .af3 input:focus-visible,
+  .af3 summary:focus-visible { outline: 3px solid #ef854e; outline-offset: 3px; }
+  .af3-wrap { width: min(1160px, calc(100% - 44px)); margin-inline: auto; }
+
+  /* Rolig, kort hero. Aktiviteterne skal være hovedpersonen. */
+  .af3-hero {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(112deg, rgba(10,35,32,.96) 0%, rgba(15,53,46,.94) 56%, rgba(15,53,46,.68) 100%),
+                url('/assets/images/stemning/stemning1.jpg') center 45% / cover;
+    color: #fff;
+    padding: clamp(54px, 7vw, 82px) 0 108px;
+  }
+  .af3-eyebrow { font-size: .76rem; font-weight: 850; letter-spacing: .15em; text-transform: uppercase; color: #d8efb1; margin: 0 0 14px; }
+  .af3-hero h1 { font-size: clamp(2.55rem, 5.6vw, 4.6rem); letter-spacing: -.055em; line-height: 1.04; max-width: 790px; margin: 0 0 18px; color: #fff; text-wrap: balance; }
+  .af3-intro { color: rgba(255,255,255,.84); font-size: clamp(1rem, 1.7vw, 1.17rem); line-height: 1.65; max-width: 650px; margin: 0; }
+  .af3-hero-meta { display: flex; flex-wrap: wrap; gap: 10px 22px; margin-top: 22px; font-weight: 700; color: #e8f2eb; font-size: .88rem; }
+  .af3-test { display: inline-flex; font-size: .69rem; font-weight: 850; color: #17352b; background: #dcf0cd; padding: 5px 9px; border-radius: 7px; margin-left: 8px; vertical-align: middle; letter-spacing: .04em; }
+
+  /* Valghjælpen er én sammenhængende flade, ikke seks dekorationer. */
+  .af3-controls { position: relative; margin-top: -62px; z-index: 2; }
+  .af3-controls-inner { background: var(--af3-white); border: 1px solid var(--af3-line); border-radius: 23px; box-shadow: 0 18px 45px rgba(13,40,33,.12); padding: clamp(20px, 3.6vw, 32px); }
+  .af3-top-controls { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 18px; align-items: end; }
+  .af3-search-label, .af3-caption { display: block; font-size: .81rem; font-weight: 850; margin-bottom: 9px; }
+  .af3-search-wrap { position: relative; }
+  .af3-search-icon { position: absolute; left: 17px; top: 50%; transform: translateY(-50%); color: var(--af3-muted); width: 20px; height: 20px; pointer-events: none; }
+  .af3-search { background: #fff; border: 1px solid #c9d6cd; border-radius: 13px; display: block; width: 100%; min-height: 52px; padding: 11px 16px 11px 47px; font-size: 1rem; color: var(--af3-ink); }
+  .af3-search::placeholder { color: #77857c; }
+  .af3-quick-intro { margin: 22px 0 11px; font-size: .84rem; font-weight: 850; }
+  .af3-quick { display: flex; flex-wrap: wrap; gap: 8px; }
+  .af3-pill {
+    min-height: 40px; border: 1px solid #d4ded6; border-radius: 100px; background: #fff;
+    color: #304b40; padding: 9px 16px; font-size: .88rem; font-weight: 750; transition: background .15s, border .15s;
+  }
+  .af3-pill:hover { border-color: var(--af3-green); background: #f0f7f0; }
+  .af3-pill[aria-pressed='true'] { background: var(--af3-green); border-color: var(--af3-green); color: #fff; }
+  .af3-advanced { margin-top: 21px; padding-top: 16px; border-top: 1px solid #e7e9e3; }
+  .af3-advanced summary { display: inline-flex; gap: 10px; align-items: center; color: var(--af3-green); font-size: .88rem; font-weight: 800; list-style: none; cursor: pointer; }
+  .af3-advanced summary::-webkit-details-marker { display:none; }
+  .af3-advanced summary::after { content: '+'; font-size: 1.3rem; line-height: 1; }
+  .af3-advanced[open] summary::after { content: '−'; }
+  .af3-advanced-body { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; padding-top: 18px; }
+  .af3-advanced-body .af3-pill { padding: 7px 13px; min-height: 36px; font-size: .83rem; }
+  .af3-hint { color: var(--af3-muted); font-size: .81rem; margin: 9px 0 0; line-height: 1.45; }
+  .af3-reset { border: none; background: none; text-decoration: underline; text-underline-offset: 3px; color: var(--af3-green); font-size: .83rem; font-weight: 850; padding: 10px 0; }
+  .af3-select-row { display: flex; flex-wrap: wrap; gap: 6px; background: #ecf2ed; border-radius: 12px; padding: 5px; }
+  .af3-time-button { background: transparent; border: 0; border-radius: 9px; min-height: 40px; padding: 7px 13px; font-size: .86rem; font-weight: 800; color: #476257; white-space: nowrap; }
+  .af3-time-button[aria-pressed='true'] { color: var(--af3-dark); background: white; box-shadow: 0 2px 7px rgba(0,0,0,.08); }
+
+  /* Resultater */
+  .af3-results { padding-top: 41px; }
+  .af3-results-head { display: flex; gap: 12px; flex-wrap: wrap; align-items: end; justify-content: space-between; margin-bottom: 16px; }
+  .af3-results-head h2 { margin: 0 0 4px; font-size: clamp(1.75rem, 3vw, 2.35rem); line-height: 1.1; letter-spacing: -.04em; color: var(--af3-dark); }
+  .af3-count { font-size: .9rem; color: var(--af3-muted); margin: 0; }
+  .af3-view { display: flex; gap: 3px; padding: 4px; background: #e8eee8; border-radius: 11px; }
+  .af3-view button { border: none; background: transparent; padding: 9px 14px; color: #476257; border-radius: 8px; font-size: .84rem; font-weight: 800; }
+  .af3-view button[aria-pressed='true'] { color: #193d31; background: white; box-shadow: 0 2px 8px rgba(0,0,0,.08); }
+  .af3-list { display: grid; gap: 10px; }
+  .af3-card {
+    display: grid; grid-template-columns: 125px minmax(0,1fr) 180px; gap: 19px; min-width: 0;
+    align-items: center; padding: 12px; border: 1px solid var(--af3-line); border-radius: var(--af3-radius);
+    background: var(--af3-white); box-shadow: 0 4px 16px rgba(21,45,36,.035); transition: border-color .18s, transform .18s;
+  }
+  .af3-card:hover { border-color: #a4c5b3; transform: translateY(-1px); }
+  .af3-thumb { display: block; width: 100%; height: 105px; border-radius: 11px; overflow: hidden; background: #e7e8e1; text-decoration: none; }
+  .af3-thumb img { width: 100%; height: 100%; object-fit: cover; }
+  .af3-empty-photo { height: 100%; display: grid; place-items: center; color: var(--af3-green); font-size: 2rem; }
+  .af3-copy { min-width: 0; padding: 5px 0; }
+  .af3-card-title { display: block; margin: 0 0 6px; font-size: clamp(1.06rem, 1.5vw, 1.23rem); line-height: 1.27; letter-spacing: -.02em; font-weight: 850; color: #142e25; text-decoration: none; }
+  .af3-card-title:hover { color: var(--af3-green); text-decoration: underline; text-underline-offset: 3px; }
+  .af3-desc { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; font-size: .88rem; line-height: 1.5; color: #607168; margin: 0 0 8px; }
+  .af3-tags { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+  .af3-tag { display: inline-flex; align-items: center; min-height: 24px; padding: 3px 9px; font-size: .72rem; line-height: 1.2; font-weight: 750; border-radius: 999px; background: #f1f1ea; color: #405349; }
+  .af3-tag--open { color: #6a4b1c; background: #fff1d4; }
+  .af3-tag--book { color: #1e5741; background: #e2f0e5; }
+  .af3-tag--host { background: transparent; padding-left: 0; font-weight: 650; color: #647069; }
+  .af3-side { align-self: stretch; display: flex; flex-direction: column; justify-content: center; align-items: flex-end; gap: 12px; text-align: right; padding: 5px 3px 5px 0; }
+  .af3-clock { font-size: 1.02rem; font-weight: 850; color: #213c31; font-variant-numeric: tabular-nums; }
+  .af3-actions { display: flex; flex-wrap: wrap; gap: 8px; justify-content: flex-end; }
+  .af3-action { min-height: 36px; display: inline-flex; justify-content: center; align-items: center; border-radius: 10px; padding: 7px 12px; font-size: .79rem; font-weight: 850; text-decoration: none; white-space: nowrap; }
+  .af3-action--primary { background: var(--af3-green); color: white !important; }
+  .af3-action--primary:hover { background: #154632; }
+  .af3-action--secondary { border: 1px solid #d2ddd4; background: #fff; color: var(--af3-green) !important; }
+  .af3-action--secondary:hover { background: #edf4ed; }
+
+  /* Billedtilstand genbruger præcis de samme kort og filtre. */
+  .af3-list[data-view='cards'] { grid-template-columns: repeat(3,minmax(0,1fr)); gap: 16px; }
+  .af3-list[data-view='cards'] .af3-card { display: flex; flex-direction: column; align-items: stretch; padding: 0; overflow: hidden; gap: 0; }
+  .af3-list[data-view='cards'] .af3-thumb { height: auto; aspect-ratio: 16/9; border-radius: 0; }
+  .af3-list[data-view='cards'] .af3-copy { padding: 17px 18px 8px; flex: 1; }
+  .af3-list[data-view='cards'] .af3-side { align-items: flex-start; text-align: left; padding: 7px 18px 18px; }
+  .af3-list[data-view='cards'] .af3-actions { justify-content: flex-start; }
+  .af3-list[data-view='cards'] .af3-clock { font-size: .9rem; }
+  .af3-list[data-view='cards'] .af3-desc { -webkit-line-clamp: 3; }
+
+  .af3-more-area { text-align: center; padding: 26px 0 8px; }
+  .af3-more { display: inline-flex; justify-content: center; align-items: center; min-height: 46px; padding: 11px 25px; border: 1px solid #b9cbc0; border-radius: 11px; background: white; color: var(--af3-green); font-weight: 850; }
+  .af3-more:hover { background: #eef4ee; }
+  .af3-empty { text-align: center; background: white; border: 1px dashed #b9cbc0; border-radius: 18px; padding: 38px 20px; }
+  .af3-empty h3 { font-size: 1.35rem; margin: 0 0 8px; }
+  .af3-empty p { color: var(--af3-muted); margin: 0 0 18px; }
+  .af3-signup-note { margin-top: 40px; padding: 22px 25px; border-radius: 16px; background: #e6efe8; color: #234436; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; }
+  .af3-signup-note strong { display: block; margin-bottom: 5px; }
+  .af3-signup-note p { margin: 0; font-size: .89rem; }
+  .af3-signup-note a { border-radius: 10px; padding: 12px 18px; background: var(--af3-green); color: white; text-decoration: none; font-weight: 850; white-space: nowrap; }
+  .af3-back { display: inline-block; color: var(--af3-muted); margin-top: 22px; font-size: .86rem; text-underline-offset: 3px; }
+
+  @media (max-width: 960px) {
+    .af3-card { grid-template-columns: 110px minmax(0,1fr); gap: 14px; }
+    .af3-thumb { height: 103px; }
+    .af3-side { grid-column: 2; flex-direction: row; justify-content: space-between; align-items: center; padding: 0 0 3px; }
+    .af3-list[data-view='cards'] { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  }
+  @media (max-width: 680px) {
+    .af3-wrap { width: calc(100% - 28px); }
+    .af3 { padding-bottom: 54px; }
+    .af3-hero { padding: 46px 0 100px; }
+    .af3-hero h1 { font-size: clamp(2.35rem, 10vw, 3.5rem); }
+    .af3-controls { margin-top: -56px; }
+    .af3-controls-inner { padding: 20px 15px; border-radius: 18px; }
+    .af3-top-controls { grid-template-columns: 1fr; gap: 17px; }
+    .af3-select-row { width: 100%; display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); }
+    .af3-time-button { padding: 8px 4px; font-size: .76rem; }
+    .af3-advanced-body { grid-template-columns: 1fr; gap: 20px; }
+    .af3-results { padding-top: 32px; }
+    .af3-card { grid-template-columns: 94px minmax(0,1fr); gap: 11px; padding: 10px; }
+    .af3-thumb { height: 93px; border-radius: 10px; align-self: start; }
+    .af3-card-title { font-size: 1.03rem; }
+    .af3-desc { font-size: .81rem; -webkit-line-clamp: 2; }
+    .af3-side { grid-column: 1/-1; padding: 4px 1px 0; }
+    .af3-clock { font-size: .89rem; }
+    .af3-action { font-size: .77rem; }
+    .af3-list[data-view='cards'] { grid-template-columns: 1fr; }
+    .af3-signup-note { padding: 19px; }
+  }
+  @media (max-width: 380px) {
+    .af3-quick .af3-pill { font-size: .78rem; padding: 8px 11px; }
+    .af3-actions { gap: 5px; }
+    .af3-action { padding-inline: 9px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .af3 *, .af3 *::before, .af3 *::after { transition: none !important; scroll-behavior: auto !important; }
+  }
+</style>
+
+<div class="af3" id="activityFinder3">
+  <section class="af3-hero" aria-labelledby="af3Title">
+    <div class="af3-wrap">
+      <p class="af3-eyebrow">Viborg Brætspilsdag · 14. november 2026 <span class="af3-test">TESTSIDE</span></p>
+      <h1 id="af3Title">Hvad skal du spille?</h1>
+      <p class="af3-intro">Fra hyggelige spil og nye bekendtskaber til lange strategiske kampe. Find det, der passer til dig, og se hvornår du kan være med.</p>
+      <div class="af3-hero-meta">
+        <span>Kl. 10.00–00.00</span>
+        <span>Reberbanen 11+13, Viborg</span>
+        <span>50 kr. for hele dagen</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="af3-controls" aria-label="Find og filtrér aktiviteter">
+    <div class="af3-wrap">
+      <div class="af3-controls-inner">
+        <div class="af3-top-controls">
+          <div>
+            <label class="af3-search-label" for="af3Search">Søg efter spil, aktivitet eller vært</label>
+            <div class="af3-search-wrap">
+              <svg class="af3-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m16 16 5 5"></path></svg>
+              <input class="af3-search" type="search" id="af3Search" placeholder="Fx Mindbug, rollespil eller Maja" autocomplete="off">
+            </div>
+          </div>
+          <div>
+            <span class="af3-caption" id="af3TimeLabel">Hvornår passer det?</span>
+            <div class="af3-select-row" role="group" aria-labelledby="af3TimeLabel">
+              <button class="af3-time-button" data-af3-time="all" type="button" aria-pressed="true">Alle</button>
+              <button class="af3-time-button" data-af3-time="morning" type="button" aria-pressed="false">10–12</button>
+              <button class="af3-time-button" data-af3-time="afternoon" type="button" aria-pressed="false">12–17</button>
+              <button class="af3-time-button" data-af3-time="evening" type="button" aria-pressed="false">17–00</button>
+            </div>
+          </div>
+        </div>
+
+        <p class="af3-quick-intro" id="af3PickLabel">Vælg det, du har lyst til</p>
+        <div class="af3-quick" role="group" aria-labelledby="af3PickLabel">
+          <button class="af3-pill" type="button" data-af3-pick="all" aria-pressed="true">Alle aktiviteter</button>
+          <button class="af3-pill" type="button" data-af3-pick="open" aria-pressed="false">Bare mød op</button>
+          <button class="af3-pill" type="button" data-af3-pick="learn" aria-pressed="false">Lær et spil</button>
+          <button class="af3-pill" type="button" data-af3-pick="compete" aria-pressed="false">Turneringer</button>
+          <button class="af3-pill" type="button" data-af3-pick="heavy" aria-pressed="false">Tung strategi</button>
+        </div>
+
+        <details class="af3-advanced" id="af3Advanced">
+          <summary>Flere filtre: spiltype og sværhedsgrad</summary>
+          <div class="af3-advanced-body">
+            <div>
+              <span class="af3-caption" id="af3GenreLabel">Spiltype</span>
+              <div class="af3-quick" role="group" aria-labelledby="af3GenreLabel">
+                <button class="af3-pill" type="button" data-af3-genre="all" aria-pressed="true">Alle</button>
+                <button class="af3-pill" type="button" data-af3-genre="strategi" aria-pressed="false">Strategi</button>
+                <button class="af3-pill" type="button" data-af3-genre="familie" aria-pressed="false">Familie</button>
+                <button class="af3-pill" type="button" data-af3-genre="rollespil" aria-pressed="false">Rollespil</button>
+                <button class="af3-pill" type="button" data-af3-genre="social" aria-pressed="false">Sociale spil</button>
+                <button class="af3-pill" type="button" data-af3-genre="figurspil" aria-pressed="false">Figurer</button>
+                <button class="af3-pill" type="button" data-af3-genre="prototype" aria-pressed="false">Prototyper</button>
+                <button class="af3-pill" type="button" data-af3-genre="kortspil" aria-pressed="false">Kortspil</button>
+              </div>
+            </div>
+            <div>
+              <span class="af3-caption" id="af3LevelLabel">Sværhedsgrad</span>
+              <div class="af3-quick" role="group" aria-labelledby="af3LevelLabel">
+                <button class="af3-pill" type="button" data-af3-level="all" aria-pressed="true">Alle</button>
+                <button class="af3-pill" type="button" data-af3-level="let" aria-pressed="false">Let</button>
+                <button class="af3-pill" type="button" data-af3-level="mellem" aria-pressed="false">Mellem</button>
+                <button class="af3-pill" type="button" data-af3-level="tung" aria-pressed="false">Tung</button>
+              </div>
+              <p class="af3-hint">Vi viser kun en sværhedsgrad, når den er angivet for aktiviteten.</p>
+            </div>
+          </div>
+        </details>
+        <button id="af3Reset" class="af3-reset" type="button" hidden>Nulstil alle filtre</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="af3-results" aria-labelledby="af3ResultsTitle">
+    <div class="af3-wrap">
+      <div class="af3-results-head">
+        <div>
+          <h2 id="af3ResultsTitle">Aktiviteter</h2>
+          <p id="af3Count" class="af3-count" role="status" aria-live="polite">{{ activities3.size }} aktiviteter på programmet</p>
+        </div>
+        <div class="af3-view" role="group" aria-label="Vis aktiviteter som">
+          <button type="button" data-af3-view="list" aria-pressed="true">Liste</button>
+          <button type="button" data-af3-view="cards" aria-pressed="false">Billeder</button>
+        </div>
+      </div>
+
+      <div class="af3-list" id="af3List" data-view="list">
+        {% for post in activities3 %}
+          {% assign open3 = false %}
+          {% if post.booking == false or post.aaben == true or post.kategori == 'Åben aktivitet' %}
+            {% assign open3 = true %}
+          {% elsif post.booking != true and post.tid and post.start == nil %}
+            {% assign open3 = true %}
+          {% endif %}
+
+          {% assign short3 = post.teaser %}
+          {% unless short3 %}{% assign short3 = post.excerpt | strip_html | strip_newlines | truncate: 160 %}{% endunless %}
+          {% assign time3 = post.tid %}
+          {% unless time3 %}
+            {% if post.start and post.slut %}
+              {% capture time3 %}{{ post.start }}–{{ post.slut }}{% endcapture %}
+            {% elsif post.start %}
+              {% capture time3 %}Fra {{ post.start }}{% endcapture %}
+            {% else %}
+              {% assign time3 = 'Tid kommer' %}
+            {% endif %}
+          {% endunless %}
+
+          <article class="af3-card"
+                   data-af3-name="{{ post.title | escape }}"
+                   data-af3-description="{{ short3 | strip_html | escape }}"
+                   data-af3-host="{{ post.vaert | default: '' | escape }}"
+                   data-af3-kind="{% if open3 %}open{% else %}booking{% endif %}"
+                   data-af3-category="{{ post.kategori | default: '' | downcase | escape }}"
+                   data-af3-genres="{{ post.filter_type | default: '' | downcase | escape }}"
+                   data-af3-experience="{{ post.filter_oplevelse | default: post.oplevelse | default: '' | downcase | escape }}"
+                   data-af3-level="{{ post.filter_niveau | default: '' | downcase | escape }}"
+                   data-af3-number="{{ post.niveau | default: '' | escape }}"
+                   data-af3-start="{{ post.start | default: '' | escape }}"
+                   data-af3-end="{{ post.slut | default: '' | escape }}"
+                   data-af3-time-label="{{ time3 | strip | escape }}">
+            {% if post.image %}
+              <a class="af3-thumb" href="{{ post.url | relative_url }}" aria-label="Læs om {{ post.title | escape }}">
+                <img src="{{ post.image | relative_url }}" alt="{{ post.image_alt | default: post.title | escape }}" loading="lazy" {% if post.image_position %}style="object-position: {{ post.image_position | escape }}"{% endif %}>
+              </a>
+            {% else %}
+              <a class="af3-thumb" href="{{ post.url | relative_url }}" aria-label="Læs om {{ post.title | escape }}"><span class="af3-empty-photo" aria-hidden="true">♟</span></a>
+            {% endif %}
+            <div class="af3-copy">
+              <a class="af3-card-title" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+              {% if short3 %}<p class="af3-desc">{{ short3 | strip_html }}</p>{% endif %}
+              <div class="af3-tags">
+                {% if open3 %}
+                  <span class="af3-tag af3-tag--open">Ingen aktivitetsbooking</span>
+                {% else %}
+                  <span class="af3-tag af3-tag--book">Plads skal bookes</span>
+                {% endif %}
+                {% if post.kategori and post.kategori != 'Åben aktivitet' %}<span class="af3-tag">{{ post.kategori }}</span>{% endif %}
+                {% if post.vaert %}<span class="af3-tag af3-tag--host">Vært: {{ post.vaert }}</span>{% endif %}
+              </div>
+            </div>
+            <div class="af3-side">
+              <span class="af3-clock">{{ time3 | strip }}</span>
+              <div class="af3-actions">
+                {% unless open3 %}<a class="af3-action af3-action--primary" href="https://booking.viborgbraetspil.dk/">Book plads</a>{% endunless %}
+                <a class="af3-action af3-action--secondary" href="{{ post.url | relative_url }}">Læs mere →</a>
+              </div>
+            </div>
+          </article>
+        {% endfor %}
+      </div>
+
+      <div id="af3NoResults" class="af3-empty" hidden>
+        <h3>Ingen aktiviteter matcher dine valg</h3>
+        <p>Prøv en anden søgning, eller fjern et filter.</p>
+        <button type="button" id="af3EmptyReset" class="af3-more">Vis alle aktiviteter</button>
+      </div>
+      <div class="af3-more-area" id="af3MoreWrap" hidden>
+        <button type="button" class="af3-more" id="af3More">Vis flere aktiviteter</button>
+      </div>
+
+      <div class="af3-signup-note">
+        <div>
+          <strong>Husk tilmelding til selve dagen</strong>
+          <p>Du skal tilmeldes Viborg Brætspilsdag, også hvis aktiviteten ikke kræver særskilt booking.</p>
+        </div>
+        <a href="/tilmelding/">Tilmeld dig · 50 kr. →</a>
+      </div>
+      <a class="af3-back" href="/aktiviteter/">← Se den nuværende aktivitetsoversigt</a>
+    </div>
+  </section>
+</div>
+
+<script>
+(function () {
+  'use strict';
+  var root = document.getElementById('activityFinder3');
+  if (!root) return;
+  var list = document.getElementById('af3List');
+  var cards = Array.prototype.slice.call(list.querySelectorAll('.af3-card'));
+  var search = document.getElementById('af3Search');
+  var count = document.getElementById('af3Count');
+  var reset = document.getElementById('af3Reset');
+  var noResults = document.getElementById('af3NoResults');
+  var moreWrap = document.getElementById('af3MoreWrap');
+  var more = document.getElementById('af3More');
+  var advanced = document.getElementById('af3Advanced');
+  var state = { q: '', pick: 'all', time: 'all', genre: 'all', level: 'all', view: 'list' };
+  var visibleLimit = 12;
+  var PAGE_SIZE = 12;
+
+  function normalize(value) {
+    return String(value || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim();
+  }
+  function words(value) { return normalize(value).split(/[\s,;|]+/).filter(Boolean); }
+  function clock(value) {
+    var match = String(value || '').match(/(?:^|\D)(\d{1,2})[.:](\d{2})/);
+    if (!match) return null;
+    var hours = Number(match[1]); var minutes = Number(match[2]);
+    return hours <= 24 && minutes < 60 ? hours * 60 + minutes : null;
+  }
+  function timeInfo(card) {
+    var label = normalize(card.dataset.af3TimeLabel);
+    if (label.indexOf('hele dagen') !== -1) return { start: 600, end: 1440, allday: true };
+    var start = clock(card.dataset.af3Start);
+    var end = clock(card.dataset.af3End);
+    if (start === null) start = clock(card.dataset.af3TimeLabel);
+    if (end === null) {
+      var matches = String(card.dataset.af3TimeLabel || '').match(/\d{1,2}[.:]\d{2}/g);
+      if (matches && matches.length > 1) end = clock(matches[matches.length - 1]);
+    }
+    return { start: start, end: end, allday: false };
+  }
+  function isOpen(card) { return card.dataset.af3Kind === 'open'; }
+  function isCompetition(card) {
+    var category = normalize(card.dataset.af3Category);
+    return category.indexOf('turnering') !== -1 || words(card.dataset.af3Experience).indexOf('compete') !== -1;
+  }
+  function hasGenre(card, requested) {
+    var genre = words(card.dataset.af3Genres);
+    var cat = normalize(card.dataset.af3Category);
+    if (genre.indexOf(requested) !== -1) return true;
+    if (requested === 'rollespil' && cat.indexOf('rollespil') !== -1) return true;
+    if (requested === 'familie' && cat.indexOf('familie') !== -1) return true;
+    if (requested === 'social' && cat.indexOf('social') !== -1) return true;
+    if (requested === 'strategi' && cat.indexOf('strategi') !== -1) return true;
+    if (requested === 'figurspil' && cat.indexOf('figur') !== -1) return true;
+    if (requested === 'kortspil' && cat.indexOf('kortspil') !== -1) return true;
+    return requested === 'prototype' && cat.indexOf('prototype') !== -1;
+  }
+  function levels(card) {
+    var values = words(card.dataset.af3Level).map(function(v) {
+      if (v === 'let' || v === 'begynder') return 'let';
+      if (v === 'middel' || v === 'mellem') return 'mellem';
+      if (v === 'tung' || v === 'svaer' || v === 'svær') return 'tung';
+      return v;
+    });
+    if (values.length) return values;
+    var num = parseInt(card.dataset.af3Number, 10);
+    if (isNaN(num)) return [];
+    return [num <= 1 ? 'let' : num === 2 ? 'mellem' : 'tung'];
+  }
+  function matchesTime(card) {
+    if (state.time === 'all') return true;
+    var span = state.time === 'morning' ? [600, 720] : state.time === 'afternoon' ? [720, 1020] : [1020, 1440];
+    var t = card._af3Time;
+    if (t.start === null) return false;
+    if (t.allday) return true;
+    if (t.end !== null && t.end > t.start) return t.start < span[1] && t.end > span[0];
+    // Når slut mangler, kender vi kun starttidspunktet.
+    return t.start >= span[0] && t.start < span[1];
+  }
+  function matches(card) {
+    if (state.q && card._af3Search.indexOf(normalize(state.q)) === -1) return false;
+    if (!matchesTime(card)) return false;
+    if (state.genre !== 'all' && !hasGenre(card, state.genre)) return false;
+    if (state.level !== 'all' && levels(card).indexOf(state.level) === -1) return false;
+    var wants = words(card.dataset.af3Experience);
+    if (state.pick === 'open' && !isOpen(card)) return false;
+    if (state.pick === 'compete' && !isCompetition(card)) return false;
+    if (state.pick === 'learn' && wants.indexOf('learn') === -1 && normalize(card.dataset.af3Name).indexOf('lær') === -1 && normalize(card.dataset.af3Name).indexOf('laer') === -1) return false;
+    if (state.pick === 'heavy' && !(hasGenre(card, 'strategi') && levels(card).indexOf('tung') !== -1)) return false;
+    return true;
+  }
+  function updateButtons() {
+    ['pick', 'time', 'genre', 'level', 'view'].forEach(function(key) {
+      root.querySelectorAll('[data-af3-' + key + ']').forEach(function(button) {
+        button.setAttribute('aria-pressed', button.getAttribute('data-af3-' + key) === state[key] ? 'true' : 'false');
+      });
+    });
+  }
+  function updateUrl() {
+    if (!window.history || !window.history.replaceState) return;
+    var params = new URLSearchParams(window.location.search);
+    ['q', 'pick', 'time', 'genre', 'level', 'view'].forEach(function(key) {
+      if (state[key] && state[key] !== 'all' && !(key === 'view' && state[key] === 'list')) params.set(key, state[key]);
+      else params.delete(key);
+    });
+    params.delete('segment');
+    window.history.replaceState({}, '', window.location.pathname + (params.toString() ? '?' + params.toString() : '') + window.location.hash);
+  }
+  function render(keepLimit, skipUrl) {
+    if (!keepLimit) visibleLimit = PAGE_SIZE;
+    var total = 0, shown = 0;
+    cards.forEach(function(card) {
+      var eligible = matches(card);
+      if (eligible) total++;
+      var show = eligible && total <= visibleLimit;
+      card.hidden = !show;
+      if (show) shown++;
+    });
+    count.textContent = total === 0 ? 'Ingen aktiviteter fundet' :
+      (total <= visibleLimit ? total + ' aktiviteter fundet' : 'Viser ' + shown + ' af ' + total + ' aktiviteter');
+    noResults.hidden = total !== 0;
+    moreWrap.hidden = total <= visibleLimit;
+    if (total > visibleLimit) more.textContent = 'Vis flere aktiviteter (' + (total - shown) + ' tilbage)';
+    reset.hidden = !state.q && state.pick === 'all' && state.time === 'all' && state.genre === 'all' && state.level === 'all';
+    list.dataset.view = state.view;
+    updateButtons();
+    if (!skipUrl) updateUrl();
+  }
+  function clear() {
+    state.q = ''; state.pick = 'all'; state.time = 'all'; state.genre = 'all'; state.level = 'all';
+    search.value = '';
+    render(false, false);
+  }
+  function initFromUrl() {
+    var params = new URLSearchParams(window.location.search);
+    state.q = params.get('q') || '';
+    search.value = state.q;
+    var allowed = {
+      pick: ['all', 'open', 'learn', 'compete', 'heavy'],
+      time: ['all', 'morning', 'afternoon', 'evening'],
+      genre: ['all', 'strategi', 'familie', 'rollespil', 'social', 'figurspil', 'prototype', 'kortspil'],
+      level: ['all', 'let', 'mellem', 'tung'],
+      view: ['list', 'cards']
+    };
+    Object.keys(allowed).forEach(function(key) {
+      var value = params.get(key);
+      if (allowed[key].indexOf(value) !== -1) state[key] = value;
+    });
+    // Nogle eksisterende links bruger ?segment=... på den gamle side.
+    if (!params.has('pick') && !params.has('genre')) {
+      var segment = params.get('segment');
+      if (segment === 'dropin' || segment === 'alone') state.pick = 'open';
+      if (segment === 'beginner') state.pick = 'learn';
+      if (segment === 'heavy') state.pick = 'heavy';
+      if (segment === 'family') state.genre = 'familie';
+    }
+    if (state.genre !== 'all' || state.level !== 'all') advanced.open = true;
+  }
+
+  cards.forEach(function(card) {
+    card._af3Time = timeInfo(card);
+    card._af3Search = normalize([card.dataset.af3Name, card.dataset.af3Description, card.dataset.af3Host, card.dataset.af3Category, card.dataset.af3Genres].join(' '));
+  });
+  cards.sort(function(a, b) {
+    var aTime = a._af3Time.start === null ? 99999 : a._af3Time.start;
+    var bTime = b._af3Time.start === null ? 99999 : b._af3Time.start;
+    return aTime - bTime || a._af3Search.localeCompare(b._af3Search, 'da');
+  });
+  cards.forEach(function(card) { list.appendChild(card); });
+
+  root.querySelectorAll('[data-af3-pick], [data-af3-time], [data-af3-genre], [data-af3-level], [data-af3-view]').forEach(function(button) {
+    button.addEventListener('click', function() {
+      var key = ['pick', 'time', 'genre', 'level', 'view'].filter(function(k) { return button.hasAttribute('data-af3-' + k); })[0];
+      state[key] = button.getAttribute('data-af3-' + key);
+      render(key === 'view', false);
+    });
+  });
+  search.addEventListener('input', function() { state.q = search.value; render(false, false); });
+  reset.addEventListener('click', clear);
+  document.getElementById('af3EmptyReset').addEventListener('click', clear);
+  more.addEventListener('click', function() { visibleLimit += PAGE_SIZE; render(true, true); });
+  initFromUrl();
+  render(false, true);
+})();
+</script>
