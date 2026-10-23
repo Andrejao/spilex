@@ -207,4 +207,13 @@
   image_position: "center"
   artikel: "/nyheder/queen-alice/"
 
-
+- kategori: "Turnering"
+  start: "20.30"
+  slut: "22.30"
+  titel: "Mindbug: Battlefruit Galaxy min-turnering"
+  vaert: "Danni"
+  beskrivelse: "Mindbug: Battlefruit Galaxy mini-turnering"
+  image: "/assets/images/nyheder/mindbug-battlefruit-galaxy.jpg"
+  image_alt: "Mind Bug Galaxy turnering"
+  image_position: "center"
+  artikel: "/nyheder/mindbug-battlefruit-galaxy-turnering/" 
