@@ -208,6 +208,16 @@
   artikel: "/nyheder/queen-alice/"
 
 - kategori: "Turnering"
+  start: "19.00"
+  titel: "Terraforming Mars mini-turnering"
+  vaert: "Maja"
+  beskrivelse: "Terraforming Mars mini-turnering"
+  image: "/assets/images/nyheder/terraforming-mars.jpg"
+  image_alt: "Terraforming Mars turnering"
+  image_position: "center"
+  artikel: "/nyheder/terraforming-mars-turnering/" 
+  
+- kategori: "Turnering"
   start: "20.30"
   slut: "22.30"
   titel: "Mindbug: Battlefruit Galaxy min-turnering"
