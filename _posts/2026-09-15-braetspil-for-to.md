@@ -30,12 +30,19 @@ Du behøver ikke kende spillene på forhånd. Og du kan både tage en ven med **
 Der er allerede planlagt blandt andet:
 
 - **Zenith**
-- - **Star Wars: The Deckbuilding Game**
+- **Star Wars: The Deckbuilding Game**
 - **Splendor Duel**
 - **Mindbug: Beyond Eternity**
 - **Mindbug: First Contact**
 - **The Lord of the Rings: Duel for Middle-earth**
 - **Agent Avenue**
+- **Unmatched: Robin Hood vs. Bigfoot**
+- **Unmatched: Battle of Legends**
+- **Volume One**
+- **Radlands Complete Edition
+- **Star Wars: The Deckbuilding Game – Clone Wars Edition**
+- **Toy Battle**
+- **Mindbug: Battlefruit Galaxy**
 
 Der kan komme flere spil til.
 
