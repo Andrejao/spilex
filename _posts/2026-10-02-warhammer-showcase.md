@@ -17,7 +17,22 @@ filter_niveau: "let"
 ---
 
 ## Warhammer på Viborg Brætspilsdag
-Oplev Warhammer 40k tæt på figurerne, terrænet og selve spillet og få et indblik i en hobby, der både handler om at **bygge og male miniaturer og bruge dem i taktiske kampe på bordet**.
+Oplev Warhammer 40.000 (40k) tæt på figurerne, terrænet og selve spillet og få et indblik i en hobby, der både handler om at **bygge og male miniaturer og bruge dem i taktiske kampe på bordet**.
+
+Warhammer 40.000 er et strategisk figurspil, hvor to spillere styrer hver deres hær af miniaturefigurer på en slagmark fyldt med bygninger, ruiner og andet terræn. Spillerne flytter deres figurer, angriber modstanderen og forsøger at vinde gennem taktik, terningeslag og gode beslutninger.
+
+På dagen kan du opleve to forskellige kampe:
+
+## Den store opvisningskamp
+
+Mia og Oliver spiller en særlig stor kamp, som viser, hvor omfattende og spektakulært Warhammer 40.000 kan være. Her er der skruet op for oplevelsen, så du kan se spillet udfolde sig i en større skala end ved en almindelig kamp.
+
+## Den klassiske Warhammer 40.000-kamp
+
+Samtidig spiller to andre erfarne spillere en mere traditionel kamp efter reglerne i Warhammer 40.000. Her kan du få et indblik i, hvordan spillet normalt foregår, og hvordan strategi, forskellige enheder og taktiske valg afgør slagets gang.
+
+## Skal jeg kende Warhammer på forhånd?
+Nej, slet ikke! Du er velkommen til at kigge med, uanset om du allerede spiller Warhammer, er nysgerrig på miniaturefigurer eller aldrig har hørt om spillet før.
 
 Det er en åben aktivitet, så du kan kigge forbi, se hvad der foregår og tage en snak om spillet og hobbyen.
 
