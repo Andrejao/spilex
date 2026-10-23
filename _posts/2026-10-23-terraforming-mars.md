@@ -15,7 +15,7 @@ booking: true
 filter_type: "turnering strategi"
 filter_oplevelse: "compete"
 filter_niveau: "middel"
-start: "19.00"
+start: "14.00"
 ---
 
 
@@ -105,7 +105,7 @@ Hvert spil udvikler sig forskelligt, og den bedste strategi afhænger både af d
 **Arrangør:** Maja  
 **Kategori:** Strategispil og konkurrence  
 **Dato:** Lørdag den 14. november 2026  
-**Start:** Kl. 19.00  
+**Start:** Kl. 14.00  
 **Antal deltagere:** 8  
 **Kvalifikation:** Spil med 3-4 deltagere pr. bord  
 **Præmier:** Blandt andet et eksemplar af Terraforming Mars  
