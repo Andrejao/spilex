@@ -36,8 +36,6 @@ Nej, slet ikke! Du er velkommen til at kigge med, uanset om du allerede spiller 
 
 Det er en åben aktivitet, så du kan kigge forbi, se hvad der foregår og tage en snak om spillet og hobbyen.
 
-Du behøver ikke kende Warhammer på forhånd.
-
 ## Praktisk
 
 **Aktivitet:** Åben showcase  
