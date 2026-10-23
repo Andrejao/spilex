@@ -125,7 +125,6 @@ noindex: true
   .af3-list[data-view='cards'] .af3-clock { font-size: .9rem; }
   .af3-list[data-view='cards'] .af3-desc { -webkit-line-clamp: 3; }
 
-  .af3-more-area { text-align: center; padding: 26px 0 8px; }
   .af3-more { display: inline-flex; justify-content: center; align-items: center; min-height: 46px; padding: 11px 25px; border: 1px solid #b9cbc0; border-radius: 11px; background: white; color: var(--af3-green); font-weight: 850; }
   .af3-more:hover { background: #eef4ee; }
   .af3-empty { text-align: center; background: white; border: 1px dashed #b9cbc0; border-radius: 18px; padding: 38px 20px; }
@@ -135,7 +134,6 @@ noindex: true
   .af3-signup-note strong { display: block; margin-bottom: 5px; }
   .af3-signup-note p { margin: 0; font-size: .89rem; }
   .af3-signup-note a { border-radius: 10px; padding: 12px 18px; background: var(--af3-green); color: white; text-decoration: none; font-weight: 850; white-space: nowrap; }
-  .af3-back { display: inline-block; color: var(--af3-muted); margin-top: 22px; font-size: .86rem; text-underline-offset: 3px; }
 
   @media (max-width: 960px) {
     .af3-card { grid-template-columns: 110px minmax(0,1fr); gap: 14px; }
@@ -180,7 +178,7 @@ noindex: true
     <div class="af3-wrap">
       <p class="af3-eyebrow">Viborg Brætspilsdag · 14. november 2026 <span class="af3-test">TESTSIDE</span></p>
       <h1 id="af3Title">Hvad skal du spille?</h1>
-      <p class="af3-intro">Fra hyggelige spil og nye bekendtskaber til lange strategiske kampe. Find det, der passer til dig, og se hvornår du kan være med.</p>
+      <p class="af3-intro">Her kan du se aktiviteterne på dagen. Find det, der passer til dig. Nogle aktiviteter er åbne for alle, så du bare kan møde op, mens andre kræver særskilt booking. Brug filteret til at søge og filtrere efter tidspunkt, type og andet.</p>
       <div class="af3-hero-meta">
         <span>Kl. 10.00–00.00</span>
         <span>Reberbanen 11+13, Viborg</span>
@@ -197,11 +195,11 @@ noindex: true
             <label class="af3-search-label" for="af3Search">Søg efter spil, aktivitet eller vært</label>
             <div class="af3-search-wrap">
               <svg class="af3-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m16 16 5 5"></path></svg>
-              <input class="af3-search" type="search" id="af3Search" placeholder="Fx Mindbug, rollespil eller Maja" autocomplete="off">
+              <input class="af3-search" type="search" id="af3Search" placeholder="Fx Mindbug, rollespil eller strategi" autocomplete="off">
             </div>
           </div>
           <div>
-            <span class="af3-caption" id="af3TimeLabel">Hvornår passer det?</span>
+            <span class="af3-caption" id="af3TimeLabel">Hvilket klokkeslæt passer dig?</span>
             <div class="af3-select-row" role="group" aria-labelledby="af3TimeLabel">
               <button class="af3-time-button" data-af3-time="all" type="button" aria-pressed="true">Alle</button>
               <button class="af3-time-button" data-af3-time="morning" type="button" aria-pressed="false">10–12</button>
@@ -313,7 +311,7 @@ noindex: true
               {% if short3 %}<p class="af3-desc">{{ short3 | strip_html }}</p>{% endif %}
               <div class="af3-tags">
                 {% if open3 %}
-                  <span class="af3-tag af3-tag--open">Ingen aktivitetsbooking</span>
+                  <span class="af3-tag af3-tag--open">Åbent for alle</span>
                 {% else %}
                   <span class="af3-tag af3-tag--book">Plads skal bookes</span>
                 {% endif %}
@@ -337,9 +335,6 @@ noindex: true
         <p>Prøv en anden søgning, eller fjern et filter.</p>
         <button type="button" id="af3EmptyReset" class="af3-more">Vis alle aktiviteter</button>
       </div>
-      <div class="af3-more-area" id="af3MoreWrap" hidden>
-        <button type="button" class="af3-more" id="af3More">Vis flere aktiviteter</button>
-      </div>
 
       <div class="af3-signup-note">
         <div>
@@ -348,7 +343,6 @@ noindex: true
         </div>
         <a href="/tilmelding/">Tilmeld dig · 50 kr. →</a>
       </div>
-      <a class="af3-back" href="/aktiviteter/">← Se den nuværende aktivitetsoversigt</a>
     </div>
   </section>
 </div>
@@ -364,12 +358,8 @@ noindex: true
   var count = document.getElementById('af3Count');
   var reset = document.getElementById('af3Reset');
   var noResults = document.getElementById('af3NoResults');
-  var moreWrap = document.getElementById('af3MoreWrap');
-  var more = document.getElementById('af3More');
   var advanced = document.getElementById('af3Advanced');
   var state = { q: '', pick: 'all', time: 'all', genre: 'all', level: 'all', view: 'list' };
-  var visibleLimit = 12;
-  var PAGE_SIZE = 12;
 
   function normalize(value) {
     return String(value || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim();
@@ -461,21 +451,15 @@ noindex: true
     params.delete('segment');
     window.history.replaceState({}, '', window.location.pathname + (params.toString() ? '?' + params.toString() : '') + window.location.hash);
   }
-  function render(keepLimit, skipUrl) {
-    if (!keepLimit) visibleLimit = PAGE_SIZE;
-    var total = 0, shown = 0;
+  function render(skipUrl) {
+    var total = 0;
     cards.forEach(function(card) {
       var eligible = matches(card);
+      card.hidden = !eligible;
       if (eligible) total++;
-      var show = eligible && total <= visibleLimit;
-      card.hidden = !show;
-      if (show) shown++;
     });
-    count.textContent = total === 0 ? 'Ingen aktiviteter fundet' :
-      (total <= visibleLimit ? total + ' aktiviteter fundet' : 'Viser ' + shown + ' af ' + total + ' aktiviteter');
+    count.textContent = total === 0 ? 'Ingen aktiviteter fundet' : total + ' aktiviteter fundet';
     noResults.hidden = total !== 0;
-    moreWrap.hidden = total <= visibleLimit;
-    if (total > visibleLimit) more.textContent = 'Vis flere aktiviteter (' + (total - shown) + ' tilbage)';
     reset.hidden = !state.q && state.pick === 'all' && state.time === 'all' && state.genre === 'all' && state.level === 'all';
     list.dataset.view = state.view;
     updateButtons();
@@ -484,7 +468,7 @@ noindex: true
   function clear() {
     state.q = ''; state.pick = 'all'; state.time = 'all'; state.genre = 'all'; state.level = 'all';
     search.value = '';
-    render(false, false);
+    render(false);
   }
   function initFromUrl() {
     var params = new URLSearchParams(window.location.search);
@@ -527,14 +511,13 @@ noindex: true
     button.addEventListener('click', function() {
       var key = ['pick', 'time', 'genre', 'level', 'view'].filter(function(k) { return button.hasAttribute('data-af3-' + k); })[0];
       state[key] = button.getAttribute('data-af3-' + key);
-      render(key === 'view', false);
+      render(false);
     });
   });
-  search.addEventListener('input', function() { state.q = search.value; render(false, false); });
+  search.addEventListener('input', function() { state.q = search.value; render(false); });
   reset.addEventListener('click', clear);
   document.getElementById('af3EmptyReset').addEventListener('click', clear);
-  more.addEventListener('click', function() { visibleLimit += PAGE_SIZE; render(true, true); });
   initFromUrl();
-  render(false, true);
+  render(true);
 })();
 </script>
