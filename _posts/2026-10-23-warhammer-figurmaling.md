@@ -30,7 +30,7 @@ Det er gratis.
 
 **Aktivitet:** Figurmaleri og malekonkurrencer  
 **Pris:** Gratis  
-**Vært:** Jonas 
+**Vært:** Jonas
 **Tid:** Kommer senere 
 **Alder:** Alle aldre  
 **Udstyr:** Pensler og maling stilles til rådighed  
