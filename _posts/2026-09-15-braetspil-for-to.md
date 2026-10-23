@@ -39,7 +39,7 @@ Der er allerede planlagt blandt andet:
 - **Unmatched: Robin Hood vs. Bigfoot**
 - **Unmatched: Battle of Legends**
 - **Volume One**
-- **Radlands Complete Edition
+- **Radlands Complete Edition**
 - **Star Wars: The Deckbuilding Game – Clone Wars Edition**
 - **Toy Battle**
 - **Mindbug: Battlefruit Galaxy**
