@@ -6,9 +6,9 @@ type: aktivitet
 permalink: /nyheder/terraforming-mars-turnering/
 image: "/assets/images/nyheder/terraforming-mars.jpg"
 image_alt: "Terraforming Mars brætspil med spilleplade, kort og ressourcer"
-teaser: "Maja inviterer til Terraforming Mars-konkurrence, hvor de bedste skal kæmpe om sejren"
+teaser: "Terraforming Mars-konkurrence, hvor de bedste skal kæmpe om sejren"
 kategori: "Turnering"
-vaert: "Maja"
+vaert: "Peter"
 niveau: 3
 niveau_tekst: "For øvede – kendskab til spillet anbefales"
 booking: true
@@ -21,7 +21,7 @@ start: "14.00"
 
 ## Mars skal gøres beboelig. Men hvem gør det bedst?
 
-Lørdag aften inviterer Maja til en konkurrence i **Terraforming Mars**, et af de mest populære strategiske brætspil i verden.
+Lørdag inviterer vi til en lille konkurrence i **Terraforming Mars**, et af de mest populære strategiske brætspil i verden.
 
 Her skal I konkurrere om at udvikle den røde planet, opbygge de mest effektive virksomheder og samle flest sejrspoint.
 
@@ -60,7 +60,7 @@ Først spilles kvalifikationsspil med **3-4 spillere ved hvert bord**. Her gæld
 
 Når kvalifikationen er afgjort, går **de tre bedste deltagere videre til finalespillet**.
 
-Maja står for at arrangere og afvikle konkurrencen.
+Peter står for at arrangere og afvikle konkurrencen.
 
 ## Hvad kan man vinde?
 Der er præmier på spil i finalen!
@@ -102,7 +102,7 @@ Hvert spil udvikler sig forskelligt, og den bedste strategi afhænger både af d
 
 ## Terraforming Mars på Viborg Brætspilsdag
 
-**Arrangør:** Maja  
+**Arrangør:** Peter  
 **Kategori:** Strategispil og konkurrence  
 **Dato:** Lørdag den 14. november 2026  
 **Start:** Kl. 14.00  
