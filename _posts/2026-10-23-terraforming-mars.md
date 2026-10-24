@@ -54,7 +54,7 @@ Du kan bygge den stærkeste økonomi og alligevel tabe, hvis dine modstandere er
 
 ## Hvordan foregår konkurrencen?
 
-Konkurrencen begynder **lørdag den 14. november kl. 19.00**.
+Konkurrencen begynder **lørdag den 14. november kl. 14.00**.
 
 Først spilles kvalifikationsspil med **3-4 spillere ved hvert bord**. Her gælder det om at samle så mange sejrspoint som muligt og sikre sig en plads i finalen.
 
