@@ -10,7 +10,7 @@ kategori: "Rollespil"
 vaert: "Peter"
 niveau: 1
 start: "10.30"
-slut: "15.30"
+slut: "13.30"
 niveau_tekst: "For begyndere"
 booking: true
 filter_type: "rollespil"
