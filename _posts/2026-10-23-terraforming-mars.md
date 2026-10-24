@@ -30,12 +30,12 @@ Der spilles med Preludes-udvidelsen.
 Der er præmier på spil: **Terraforming Mars** og **Codenames Duet**.
 
 **Det anbefales, at du har spillet Terraforming Mars før eller som minimum kender grundreglerne.**
-
 Terraforming Mars er et forholdsvis omfattende strategispil med mange kort, ressourcer og muligheder.
-
 Konkurrencen er derfor især oplagt for dig, der allerede kender spillet og gerne vil prøve kræfter med andre spillere.
 
 Konkurrencens afvikles over to runder: første runde, hvor de bedste fra hvert spil går videre til næste runde: finalen.
+
+Mere information kommer - men tilmeld dig bare allerede nu for sikre dig en plads.
 
 ## Terraforming Mars på Viborg Brætspilsdag
 
