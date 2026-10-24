@@ -18,51 +18,21 @@ start: "14.00"
 ---
 
 
-## Mars skal gøres beboelig. Men hvem gør det bedst?
 
-Lørdag inviterer vi til en lille konkurrence i **Terraforming Mars**, et af de mest populære strategiske brætspil i verden.
 
-Her skal I konkurrere om at udvikle den røde planet, opbygge de mest effektive virksomheder og samle flest sejrspoint.
-
-Men der er mere end sejren på spil. **De tre bedste deltagere går videre til et afgørende finalespil**, hvor der er præmier på højkant.
-
-Blandt præmierne er et eksemplar af **Terraforming Mars**.
-
-Der spilles med Preludes-udvidelsen.
-
-## Hvad er Terraforming Mars?
-
-Året er 2400-tallet. Menneskeheden har sat sig for at gøre Mars beboelig, og verdens største virksomheder konkurrerer om at stå for udviklingen.
-
-I Terraforming Mars leder du en af disse virksomheder. Du investerer i projekter, udvikler teknologi, bygger byer og skove og arbejder på at hæve planetens temperatur, skabe oceaner og øge iltindholdet.
-
-Men du gør det ikke af ren næstekærlighed.
-
-**Du vil være den virksomhed, der får mest ud af Mars.**
-
-Undervejs skal du blandt andet:
-
-- udvikle en effektiv økonomi og produktion
-- investere i de rigtige projektkort
-- udnytte kombinationer mellem kort og ressourcer
-- konkurrere om de bedste placeringer på planeten
-- sikre dig milepæle og priser
-- finde balancen mellem langsigtede investeringer og hurtige sejrspoint
-
-Du kan bygge den stærkeste økonomi og alligevel tabe, hvis dine modstandere er bedre til at omsætte deres ressourcer til point.
 
 ## Hvordan foregår konkurrencen?
 
-Konkurrencen begynder **lørdag den 14. november kl. 14.00**.
+Lørdag inviterer vi til en lille konkurrence i **Terraforming Mars**, et af de mest populære strategiske brætspil i verden.
+
+Der spilles med Preludes-udvidelsen.
 
 Først spilles kvalifikationsspil med **3-4 spillere ved hvert bord**. Her gælder det om at samle så mange sejrspoint som muligt og sikre sig en plads i finalen.
 
-Det vil sige, at der afvikles to runder: første runde og finale.
+Det vil sige, at der afvikles to runder: første runde og én finale.
 
 ## Hvad kan man vinde?
-Der er præmier på spil i finalen!
-
-Blandt præmierne finder du et eksemplar af **Terraforming Mars** og **Codenames Duet** så vinderen eller en af de øvrige præmiemodtagere kan tage den røde planet med hjem.
+Der er præmier på spil: **Terraforming Mars** og **Codenames Duet**.
 
 ## Skal jeg kende spillet på forhånd?
 
