@@ -27,8 +27,6 @@ Lørdag inviterer vi til en lille konkurrence i **Terraforming Mars**, et af de 
 
 Der spilles med Preludes-udvidelsen.
 
-Først spilles kvalifikationsspil med **3-4 spillere ved hvert bord**. Her gælder det om at samle så mange sejrspoint som muligt og sikre sig en plads i finalen.
-
 Det vil sige, at der afvikles to runder: første runde og én finale.
 
 ## Hvad kan man vinde?
