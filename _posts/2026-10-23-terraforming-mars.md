@@ -8,7 +8,6 @@ image: "/assets/images/nyheder/terraforming-mars.jpg"
 image_alt: "Terraforming Mars brætspil med spilleplade, kort og ressourcer"
 teaser: "Terraforming Mars-konkurrence, hvor de bedste skal kæmpe om sejren"
 kategori: "Turnering"
-vaert: "Peter"
 niveau: 3
 niveau_tekst: "For øvede – kendskab til spillet anbefales"
 booking: true
@@ -58,16 +57,12 @@ Konkurrencen begynder **lørdag den 14. november kl. 14.00**.
 
 Først spilles kvalifikationsspil med **3-4 spillere ved hvert bord**. Her gælder det om at samle så mange sejrspoint som muligt og sikre sig en plads i finalen.
 
-Når kvalifikationen er afgjort, går **de tre bedste deltagere videre til finalespillet**.
-
-Peter står for at arrangere og afvikle konkurrencen.
+Det vil sige, at der afvikles to runder: første runde og finale.
 
 ## Hvad kan man vinde?
 Der er præmier på spil i finalen!
 
-Blandt præmierne finder du et eksemplar af **Terraforming Mars**, så vinderen eller en af de øvrige præmiemodtagere kan tage den røde planet med hjem.
-
-De andre præmier annonceres senere.
+Blandt præmierne finder du et eksemplar af **Terraforming Mars** og **Codenames Duet** så vinderen eller en af de øvrige præmiemodtagere kan tage den røde planet med hjem.
 
 ## Skal jeg kende spillet på forhånd?
 
@@ -75,11 +70,8 @@ De andre præmier annonceres senere.
 
 Terraforming Mars er et forholdsvis omfattende strategispil med mange kort, ressourcer og muligheder.
 
-Reglerne er til at lære, men det tager lidt tid at forstå, hvordan de forskellige projekter og strategier spiller sammen.
-
 Konkurrencen er derfor især oplagt for dig, der allerede kender spillet og gerne vil prøve kræfter med andre spillere.
 
-Du behøver ikke være ekspert. Du skal bare være klar til at tænke strategisk og træffe en hel del beslutninger.
 
 ## Hvor krævende er det?
 
@@ -102,7 +94,6 @@ Hvert spil udvikler sig forskelligt, og den bedste strategi afhænger både af d
 
 ## Terraforming Mars på Viborg Brætspilsdag
 
-**Arrangør:** Peter  
 **Kategori:** Strategispil og konkurrence  
 **Dato:** Lørdag den 14. november 2026  
 **Start:** Kl. 14.00    
