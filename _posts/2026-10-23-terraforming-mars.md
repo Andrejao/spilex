@@ -105,8 +105,7 @@ Hvert spil udvikler sig forskelligt, og den bedste strategi afhænger både af d
 **Arrangør:** Peter  
 **Kategori:** Strategispil og konkurrence  
 **Dato:** Lørdag den 14. november 2026  
-**Start:** Kl. 14.00  
-**Antal deltagere:** 8  
+**Start:** Kl. 14.00    
 **Kvalifikation:** Spil med 3-4 deltagere pr. bord  
 **Præmier:** Blandt andet et eksemplar af Terraforming Mars  
 **Niveau:** For øvede  
