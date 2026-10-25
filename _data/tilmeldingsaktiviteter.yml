@@ -216,7 +216,18 @@
   image_alt: "Terraforming Mars turnering"
   image_position: "center"
   artikel: "/nyheder/terraforming-mars-turnering/" 
-  
+
+- kategori: "Strategi"
+  start: "15.00"
+  slut: "18.00" 
+  titel: "Heroes of Might & Magic III – lær brætspillet"
+  vaert: "Nicolaj"
+  beskrivelse: "Lær brætspilsudgaven af Heroes of Might & Magic III "
+  image: "/assets/images/nyheder/heroes-of-might-and-magic.jpg"
+  image_alt: "Heroes of Might & Magic"
+  image_position: "center"
+  artikel: "/nyheder/heroes-of-might-and-magic/" 
+
 - kategori: "Turnering"
   start: "20.30"
   slut: "22.30"
