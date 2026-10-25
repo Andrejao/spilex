@@ -52,6 +52,12 @@ description: En afslappet dag med spil, hygge, fællesskab og masser af forskell
   .vbd2 .vbd-btn-dark { color: #fff; background: var(--green); }
   .vbd2 .vbd-btn-light { color: var(--ink); background: var(--white); border-color: var(--line); }
 
+  .vbd2 .vbd-spotlight-ti { background: #172d31; color: #fff; border-color: transparent; }
+  .vbd2 .vbd-spotlight-clock { background: #d8efb1; color: #173226; border-color: transparent; }
+  .vbd2 .vbd-spotlight-race { background: #f4c463; color: #312818; border-color: transparent; }
+  .vbd2 .vbd-spotlight-card h3, .vbd2 .vbd-spotlight-card p, .vbd2 .vbd-spotlight-link { color: inherit; }
+  .vbd2 .vbd-spotlight-type { display: inline-flex; margin-bottom: 12px; font-size: .72rem; font-weight: 900; text-transform: uppercase; letter-spacing: .12em; opacity: .72; }
+  
   /* HERO */
   .vbd2 .vbd-hero {
     min-height: 720px; display: grid; align-items: center; position: relative; overflow: hidden;
@@ -254,12 +260,12 @@ description: En afslappet dag med spil, hygge, fællesskab og masser af forskell
         <p class="vbd-kicker">14. november 2026 · Viborg</p>
         <h1>Viborg Brætspilsdag 2026</h1>
         <p class="vbd-hero-copy">
-          En afslappet dag for alle, hvor du kan læer et nyt spil, låne fra brætspilsbiblioteket, deltage i konkurrencer, prøve rollepsil, figurmaling og meget mere. 
+          En afslappet dag for alle, hvor du kan lære et nyt spil, låne fra brætspilsbiblioteket, deltage i konkurrencer, prøve rollespil, figurmaling og meget mere. 
         </p>
         <p class="vbd-hero-meta">Ungdomsskolen Viborg, Reberbanen 11+13 · 14. februar · kl. 10.00 – 00.00</p>
         <div class="vbd-hero-extra">
-          <span>Kom og spil med os:</span>
-          <strong>Over 120 deltager allerede på dagen</strong>
+          <span>Kom og vær med:</span>
+          <strong>Over 120 deltager allerede på dagen - vi vil gerne have dig med :-) </strong>
         </div>
         <div class="vbd-hero-actions">
           <a class="vbd-btn vbd-btn-primary" href="https://viborgbraetspil.dk/tilmelding/">Tilmeld dig dagen →</a>
@@ -292,38 +298,36 @@ description: En afslappet dag med spil, hygge, fællesskab og masser af forskell
       <div class="vbd-spotlight-head">
         <h2>Aktiviteter du kan prøve</h2>
       </div>
-
       <div class="vbd-spotlight-grid">
- <a class="vbd-spotlight-card" href="{{ '/nyheder/catan-turnering/' | relative_url }}">
+        <a class="vbd-spotlight-card vbd-spotlight-ti" href="{{ '/nyheder/catan-turnering/' | relative_url }}">
           <img class="vbd-spotlight-image" src="{{ '/assets/images/nyheder/catan-turnering.jpg' | relative_url }}" alt="Catan med spilleplade, bosættelser og veje" loading="lazy">
           <div class="vbd-spotlight-content">
-            <div class="vbd-badges"><span class="vbd-badge">Let at lære</span><span class="vbd-badge alt">Turnering · kl. 12</span></div>
+            <span class="vbd-spotlight-type">Turnering · kl. 12</span>
             <h3>Catan</h3>
             <p>Klassikeren, du nok allerede kender. Byg, byt og bloker dig vej til sejren, og spil om præmier.</p>
             <span class="vbd-spotlight-link">Læs mere →</span>
           </div>
         </a>
 
-        <a class="vbd-spotlight-card" href="{{ '/nyheder/the-gang/' | relative_url }}">
-          <img class="vbd-spotlight-image" src="{{ '/assets/images/nyheder/the-gang.jpg' | relative_url }}" alt="Kortspillet The Gang på et bord" loading="lazy">
+        <a class="vbd-spotlight-card vbd-spotlight-clock" href="{{ '/nyheder/the-gang/' | relative_url }}">
+          <img class="vbd-spotlight-image" src="{{ '/assets/images/nyheder/the-gang.jpg' | relative_url }}" alt="Kortspillet The Gang" loading="lazy">
           <div class="vbd-spotlight-content">
-            <div class="vbd-badges"><span class="vbd-badge">Let at lære</span><span class="vbd-badge alt">Samarbejde · kl. 17</span></div>
+            <span class="vbd-spotlight-type">Samarbejde · kl. 17</span>
             <h3>The Gang</h3>
             <p>Poker, hvor I spiller sammen. I skal rangere jeres hænder uden at sige, hvad I har. Overraskende sjovt.</p>
             <span class="vbd-spotlight-link">Læs mere →</span>
           </div>
         </a>
 
-        <a class="vbd-spotlight-card vbd-spotlight-clock" href="{{ '/nyheder/blood-on-the-clocktower/' | relative_url }}">
-          <img class="vbd-spotlight-image" src="{{ '/assets/images/nyheder/blood.jpg' | relative_url }}" alt="Blood on the Clocktower">
+        <a class="vbd-spotlight-card vbd-spotlight-race" href="{{ '/nyheder/blood-on-the-clocktower/' | relative_url }}">
+          <img class="vbd-spotlight-image" src="{{ '/assets/images/nyheder/blood.jpg' | relative_url }}" alt="Blood on the Clocktower" loading="lazy">
           <div class="vbd-spotlight-content">
             <span class="vbd-spotlight-type">Social deduction</span>
             <h3>Blood on the Clocktower</h3>
-            <p>Social deduction med bluff, mistanke og samtaler rundt om bordet.</p>
+            <p>Bluff, mistanke og samtaler rundt om bordet.</p>
             <span class="vbd-spotlight-link">Læs mere →</span>
           </div>
         </a>
-
       </div>
 
       <div class="vbd-spotlight-all">
