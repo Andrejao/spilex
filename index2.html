@@ -1,12 +1,12 @@
 ---
 layout: default
 title: Viborg Brætspilsdag 2026
-description: Tag vennerne med til en anderledes lørdag i Viborg. Vi lærer jer spillene, og frokosten er med. 50 kr.
+description: En hel dag med brætspil, rollespil og turneringer i Viborg. Lørdag 14. november, kl. 10 til midnat. 50 kr. med frokost.
 permalink: /index2.html
 sitemap: false
 ---
-{% comment %} FORSLAG til ny forside. Opdatér tallet herunder, når tilmeldingerne stiger. Rund NED. {% endcomment %}
-{% assign tilmeldte = "118" %}
+{% comment %} FORSLAG: den nuværende forside med små ændringer (pris inkl. frokost, antal tilmeldte, frokost i værdiboksen, Catan og The Gang fremhævet). Antal tilmeldte styres i _config.yml. {% endcomment %}
+
 <style>
   /* index2.html: isoleret redesign af forsiden. Alt er scoped til .vbd2 */
   .vbd2 {
@@ -248,144 +248,96 @@ sitemap: false
     .vbd2 .vbd-mobile-cta a { min-height: 42px; padding: 0 16px; font-size: .9rem; }
   }
 </style>
-<style>
-  /* index2: tilføjelser oven på det eksisterende forsidedesign */
-  .vbd2 .vbd-hero-grid.vbd-hero-single { grid-template-columns: 1fr; }
-  .vbd2 .vbd-hero h1 { font-size: clamp(2.8rem, 6.2vw, 5.6rem); max-width: 980px; }
-  .vbd2 .vbd-proof { list-style: none; margin: 34px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px; }
-  .vbd2 .vbd-proof li { padding: 10px 16px; border-radius: 999px; background: rgba(255,255,255,.09); border: 1px solid rgba(255,255,255,.16); color: rgba(255,255,255,.78); font-size: .95rem; }
-  .vbd2 .vbd-proof strong { color: var(--lime); margin-right: 4px; }
-  .vbd2 button.vbd-btn { font: inherit; font-weight: 800; cursor: pointer; }
-  .vbd2 .vbd-door-friends { background: #d8efb1; color: #173226; }
-  .vbd2 .vbd-door-casual { background: #f4c463; color: #312818; }
-  .vbd2 .vbd-door-veteran { background: #172d31; color: #fff; }
-  .vbd2 .vbd-spotlight-card h3 { font-size: clamp(1.7rem, 2.6vw, 2.4rem); }
-  .vbd2 .vbd-flow-note { margin: 30px 0 0; text-align: center; color: rgba(255,255,255,.62); font-size: .95rem; }
-  .vbd2 .vbd-value-actions { display: flex; flex-wrap: wrap; gap: 12px; }
-  .vbd2 .vbd-value-section .vbd-btn-ghost { color: #fff; border-color: rgba(255,255,255,.4); background: transparent; }
-  @media (max-width: 620px) { .vbd2 .vbd-proof li { width: 100%; } .vbd2 .vbd-hero h1 { font-size: clamp(2.5rem, 12vw, 3.6rem); } }
-</style>
-
 
 <div class="vbd2">
 
-  <!-- 1. HERO: social anledning + den største barriere (reglerne) løst i overskriften -->
   <section class="vbd-hero">
-    <div class="vbd-wrap vbd-hero-grid vbd-hero-single">
+    <div class="vbd-wrap vbd-hero-grid">
       <div>
-        <p class="vbd-kicker">Lørdag 14. november · Ungdomsskolen, Viborg</p>
-        <h1>Tag vennerne med til en anderledes lørdag. <span>Vi lærer jer spillene.</span></h1>
+        <p class="vbd-kicker">14. november 2026 · Viborg</p>
+        <h1>Viborg Brætspilsdag 2026</h1>
         <p class="vbd-hero-copy">
-          Kig forbi et par timer eller bliv til midnat. Værterne forklarer reglerne og spiller med,
-          så I kan gå direkte i gang. Frokosten er med i prisen.
+          En afslappet dag med brætspil, rollespil, konkurrencer, lær-at-spille,
+          åbne borde, hygge og fællesskab. Book noget på forhånd, eller tag dagen, som den kommer.
+          Kom alene, med en ven eller med hele spillegruppen.
         </p>
-        <div class="vbd-hero-actions">
-          <a class="vbd-btn vbd-btn-primary" href="https://viborgbraetspil.dk/tilmelding/">Tilmeld dig for 50 kr. →</a>
-          <button type="button" class="vbd-btn vbd-btn-ghost vbd-share">Send til vennerne</button>
+        <p class="vbd-hero-meta">50 kr. inkl. frokost · Reberbanen 11+13 · kl. 10.00–00.00</p>
+        <div class="vbd-hero-extra">
+          <span>Også på dagen</span>
+          <strong>Prototyper og spil fra Essen</strong>
+          <p>Prøv prototyper som STEW ORLEANS og Space Skirmish eller spil taget med hjem fra Essen som The Game Makers, Timespan og Queen Alice.</p>
         </div>
-        <ul class="vbd-proof" aria-label="Kort fortalt">
-          <li><strong>{{ tilmeldte }}+</strong> er allerede tilmeldt</li>
-          <li><strong>50 kr.</strong> inkl. frokost</li>
-          <li><strong>10 til midnat</strong> kom og gå som I vil</li>
-        </ul>
+        <div class="vbd-hero-actions">
+          <a class="vbd-btn vbd-btn-primary" href="https://viborgbraetspil.dk/tilmelding/">Tilmeld dig dagen →</a>
+          <a class="vbd-btn vbd-btn-ghost" href="{{ '/aktiviteter.html' | relative_url }}">Se alle aktiviteter</a>
+        </div>
+        <p class="vbd-hero-note">Over {{ site.tilmeldte }} er allerede tilmeldt. Du behøver ikke kende spillene på forhånd.</p>
+      </div>
+
+      <div class="vbd-hero-stack" aria-label="Højdepunkter fra dagen">
+        <div class="vbd-ticket">
+          <small>Store strategispil</small>
+          <strong>Twilight Imperium, Eclipse, Root & flere tunge spil</strong>
+          <p>Book en plads til et af dagens store strategispil.</p>
+        </div>
+        <div class="vbd-ticket">
+          <small>Turneringer</small>
+          <strong>Catan, KLASK & Heat</strong>
+          <p>Konkurrence og præmier.</p>
+        </div>
+        <div class="vbd-ticket">
+          <small>Bluff, samarbejde & rollespil</small>
+          <strong>The Gang, Blood on the Clocktower & D&D</strong>
+          <p>Spil, hvor snakken om bordet er halvdelen af spillet.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- 2. SELVSELEKTION: tre døre i stedet for 30 aktiviteter -->
   <section class="vbd-section vbd-spotlights" id="oplevelser">
     <div class="vbd-wrap">
       <div class="vbd-spotlight-head">
-        <h2>Hvem kommer?</h2>
-        <p class="vbd-lead">Find jer selv her. Resten finder I ud af på dagen.</p>
+        <h2>Aktiviteter du kan prøve</h2>
       </div>
 
       <div class="vbd-spotlight-grid">
-        <a class="vbd-spotlight-card vbd-door-friends" href="{{ '/nyheder/braetspilsbibliotek/' | relative_url }}">
-          <img class="vbd-spotlight-image" src="{{ '/assets/images/nyheder/bibliotek3.jpg' | relative_url }}" alt="Hylder med brætspil">
-          <div class="vbd-spotlight-content">
-            <span class="vbd-spotlight-type">Vennerne, kæresten, kollegerne</span>
-            <h3>"Vi skal bare hygge os"</h3>
-            <p>Find et bord, vælg et spil fra hylderne, og få en vært til at sætte jer i gang. Kaffe og kage kan købes på stedet.</p>
-            <span class="vbd-spotlight-link">Se hvad der står på hylderne →</span>
-          </div>
-        </a>
-
-        <a class="vbd-spotlight-card vbd-door-casual" href="{{ '/nyheder/catan-turnering/' | relative_url }}">
-          <img class="vbd-spotlight-image" src="{{ '/assets/images/nyheder/catan-turnering.jpg' | relative_url }}" alt="Catan på et bord">
-          <div class="vbd-spotlight-content">
-            <span class="vbd-spotlight-type">Ludo og Uno til jul</span>
-            <h3>"Vi spiller ikke så meget"</h3>
-            <p>Så er I præcis dem, dagen er lavet til. Start med et af de lette spil, eller prøv lykken i Catan-turneringen.</p>
-            <span class="vbd-spotlight-link">Læs om Catan-turneringen →</span>
-          </div>
-        </a>
-
-        <a class="vbd-spotlight-card vbd-door-veteran" href="{{ '/aktiviteter.html' | relative_url }}">
+        <a class="vbd-spotlight-card vbd-spotlight-ti" href="{{ '/nyheder/twilight-imperium-iv/' | relative_url }}">
           <img class="vbd-spotlight-image" src="{{ '/assets/images/nyheder/twilight-imperium-iv.jpg' | relative_url }}" alt="Twilight Imperium IV">
           <div class="vbd-spotlight-content">
-            <span class="vbd-spotlight-type">Har en hylde fuld derhjemme</span>
-            <h3>"Vi spiller meget"</h3>
-            <p>Twilight Imperium, Brass, Blood on the Clocktower, D&D og nyheder fra Essen. Pladserne er begrænsede, så book i god tid.</p>
-            <span class="vbd-spotlight-link">Se alle aktiviteter →</span>
+            <span class="vbd-spotlight-type">Episk strategi</span>
+            <h3>Twilight Imperium IV</h3>
+            <p>Et stort strategispil med politik, alliancer, krig og handel.</p>
+            <span class="vbd-spotlight-link">Læs mere →</span>
+          </div>
+        </a>
+
+        <a class="vbd-spotlight-card vbd-spotlight-clock" href="{{ '/nyheder/the-gang/' | relative_url }}">
+          <img class="vbd-spotlight-image" src="{{ '/assets/images/nyheder/the-gang.jpg' | relative_url }}" alt="The Gang">
+          <div class="vbd-spotlight-content">
+            <span class="vbd-spotlight-type">Poker som samarbejdsspil</span>
+            <h3>The Gang</h3>
+            <p>Texas Hold'em, hvor I spiller sammen: Holdet skal rangere jeres hænder uden at sige, hvad I har.</p>
+            <span class="vbd-spotlight-link">Læs mere →</span>
+          </div>
+        </a>
+
+        <a class="vbd-spotlight-card vbd-spotlight-race" href="{{ '/nyheder/catan-turnering/' | relative_url }}">
+          <img class="vbd-spotlight-image" src="{{ '/assets/images/nyheder/catan-turnering.jpg' | relative_url }}" alt="Catan">
+          <div class="vbd-spotlight-content">
+            <span class="vbd-spotlight-type">Turnering</span>
+            <h3>Catan</h3>
+            <p>Handel, held og hårde forhandlinger. Turnering med præmier til de bedste.</p>
+            <span class="vbd-spotlight-link">Læs mere →</span>
           </div>
         </a>
       </div>
-    </div>
-  </section>
 
-  <!-- 3. BARRIERER: svar på det, folk tænker, men ikke spørger om -->
-  <section class="vbd-section vbd-first" id="saadan">
-    <div class="vbd-wrap">
-      <div class="vbd-first-card">
-        <div class="vbd-first-grid">
-          <div>
-            <p class="vbd-kicker">Det tænker de fleste</p>
-            <h2>Fire gode spørgsmål.</h2>
-            <div class="vbd-first-actions">
-              <a class="vbd-btn vbd-btn-dark" href="{{ '/foerste-gang/' | relative_url }}">Første gang? Læs mere →</a>
-            </div>
-          </div>
-
-          <div class="vbd-steps">
-            <div class="vbd-step">
-              <h3>Skal vi kunne reglerne?</h3>
-              <p>Nej. Værterne forklarer spillene og spiller med, til I er i gang. Ingen forventer, at I kan noget på forhånd.</p>
-            </div>
-            <div class="vbd-step">
-              <h3>Skal vi være der hele dagen?</h3>
-              <p>Nej. Kom til frokost og gå efter kaffen, eller bliv til midnat. Kom og gå, som det passer jer.</p>
-            </div>
-            <div class="vbd-step">
-              <h3>Hvad laver man egentlig?</h3>
-              <p>I sætter jer ved et bord og spiller. Undervejs er der turneringer, lodtrækninger og præmier, hvis I har lyst.</p>
-            </div>
-            <div class="vbd-step">
-              <h3>Kan man komme alene?</h3>
-              <p>Ja. Sig det ved check-in, så finder en frivillig et bord og nogen at spille med.</p>
-            </div>
-          </div>
+      <div class="vbd-spotlight-all">
+        <div>
+          <strong>Flere aktiviteter</strong>
+          <span>Se hele oversigten over dagens aktiviteter.</span>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 4. MENTAL GENNEMSPILNING: en konkret lørdag, så beslutningen bliver en plan -->
-  <section class="vbd-section vbd-flow-section" id="program">
-    <div class="vbd-wrap">
-      <p class="vbd-kicker">Et bud på jeres lørdag</p>
-      <h2>Sådan kan dagen se ud.</h2>
-
-      <div class="vbd-flow">
-        <div class="vbd-flow-item"><div class="vbd-flow-dot">10.00</div><div><h3>Dørene åbner</h3><p>Første lodtrækning kl. 10.05. Find et bord.</p></div></div>
-        <div class="vbd-flow-item"><div class="vbd-flow-dot">12.30</div><div><h3>Frokost</h3><p>Rugbrød, pålæg og grønt. Med i prisen.</p></div></div>
-        <div class="vbd-flow-item"><div class="vbd-flow-dot">14.00</div><div><h3>Lær et nyt spil</h3><p>En vært viser jer et spil, I aldrig har prøvet.</p></div></div>
-        <div class="vbd-flow-item"><div class="vbd-flow-dot">19.00</div><div><h3>KLASK-turnering</h3><p>Kræver booking. Begrænsede pladser.</p></div></div>
-        <div class="vbd-flow-item"><div class="vbd-flow-dot">20.30</div><div><h3>Præmier</h3><p>Lodtrækning og præmier til vinderne.</p></div></div>
-      </div>
-      <p class="vbd-flow-note">Varm aftensmad kl. 18 kan tilkøbes for 25 kr. Den bestilles sammen med tilmeldingen.</p>
-      <div class="vbd-program-actions">
-        <a class="vbd-btn vbd-btn-primary" href="{{ '/program.html' | relative_url }}">Se hele programmet →</a>
+        <a class="vbd-btn vbd-btn-dark" href="{{ '/aktiviteter.html' | relative_url }}">Se alle aktiviteter →</a>
       </div>
     </div>
   </section>
@@ -396,17 +348,64 @@ sitemap: false
     </div>
   </section>
 
-  <!-- 5. HANDLING: pris-anker + gør det let at samle flokken -->
+  <section class="vbd-section vbd-flow-section" id="program">
+    <div class="vbd-wrap">
+      <h2>Program</h2>
+
+      <div class="vbd-flow">
+        <div class="vbd-flow-item"><div class="vbd-flow-dot">10.00</div><div><h3>Dørene åbner</h3><p>Check ind og find dagens første spil.</p></div></div>
+        <div class="vbd-flow-item"><div class="vbd-flow-dot">10.15</div><div><h3>Aktiviteterne går i gang</h3><p>Drop-in og planlagte aktiviteter begynder.</p></div></div>
+        <div class="vbd-flow-item"><div class="vbd-flow-dot">Dagen</div><div><h3>Spil, konkurrencer & præmier</h3><p>Bookede sessioner, åbne borde, bibliotek og lodtrækninger.</p></div></div>
+        <div class="vbd-flow-item"><div class="vbd-flow-dot">21.30</div><div><h3>Planlagte aktiviteter slutter</h3><p>Åbne borde og bibliotek fortsætter.</p></div></div>
+        <div class="vbd-flow-item"><div class="vbd-flow-dot">00.00</div><div><h3>Tak for i dag</h3><p>Biblioteket lukker 23.30. Arrangementet slutter ved midnat.</p></div></div>
+      </div>
+      <div class="vbd-program-actions">
+        <a class="vbd-btn vbd-btn-primary" href="{{ '/program.html' | relative_url }}">Se hele programmet →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="vbd-section vbd-first" id="saadan">
+    <div class="vbd-wrap">
+      <div class="vbd-first-card">
+        <div class="vbd-first-grid">
+          <div>
+            <p class="vbd-kicker">Sådan fungerer det</p>
+            <h2>Det er enkelt.</h2>
+            <div class="vbd-first-actions">
+              <a class="vbd-btn vbd-btn-dark" href="{{ '/foerste-gang/' | relative_url }}">Første gang? Læs mere →</a>
+            </div>
+          </div>
+
+          <div class="vbd-steps vbd-steps-three">
+            <div class="vbd-step">
+              <div class="vbd-step-no">1</div>
+              <h3>Tilmeld dig</h3>
+              <p>Din tilmelding gælder hele arrangementet.</p>
+            </div>
+            <div class="vbd-step">
+              <div class="vbd-step-no">2</div>
+              <h3>Book, hvis du vil</h3>
+              <p>Nogle aktiviteter har begrænsede pladser. De åbne aktiviteter kræver ingen booking.</p>
+            </div>
+            <div class="vbd-step">
+              <div class="vbd-step-no">3</div>
+              <h3>Mød op og spil</h3>
+              <p>Check ind ved indgangen og gå til din aktivitet, biblioteket eller et åbent bord.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="vbd-section vbd-value-section">
     <div class="vbd-wrap vbd-value-grid">
       <div>
-        <h2>50 kr. Frokosten er med.</h2>
-        <p>Det er mindre end en biografbillet, og I kan blive til midnat. Tilmeldingen er pr. person, så send linket til dem, I vil have med, og aftal hvornår I mødes.</p>
+        <h2>Én billet. Hele dagen.</h2>
+        <p>Adgang til de åbne spilleborde, brætspilsbiblioteket, aktiviteter, konkurrencer, lodtrækninger og frokostbuffet. Nogle aktiviteter kræver særskilt booking af en plads.</p>
       </div>
-      <div class="vbd-value-actions">
-        <a class="vbd-btn vbd-btn-primary" href="https://viborgbraetspil.dk/tilmelding/">Tilmeld dig →</a>
-        <button type="button" class="vbd-btn vbd-btn-ghost vbd-share">Send til vennerne</button>
-      </div>
+      <a class="vbd-btn vbd-btn-primary" href="https://viborgbraetspil.dk/tilmelding/">Tilmeld dig dagen →</a>
     </div>
   </section>
 
@@ -419,8 +418,8 @@ sitemap: false
         <div class="vbd-practical-card"><span>Sted</span><strong>Ungdomsskolen, Reberbanen 11+13, 8800 Viborg.</strong></div>
         <div class="vbd-practical-card"><span>Parkering</span><strong>Du kan parkere gratis ved Garnisonspladsen, Rødevej, 8800 Viborg.</strong></div>
         <div class="vbd-practical-card"><span>Kontakt</span><strong>Skriv til os på <a href="mailto:viborgbraetspil@gmail.com">viborgbraetspil@gmail.com</a>.</strong></div>
-        <div class="vbd-practical-card"><span>Entré</span><strong>50 kr. pr. person inkl. frokost. Betales ved tilmelding.</strong></div>
-        <div class="vbd-practical-card"><span>In English</span><strong>Many games can be played in English. Just ask a volunteer.</strong></div>
+        <div class="vbd-practical-card"><span>Entré</span><strong>50 kr. pr. person. Betales ved tilmelding.</strong></div>
+        <div class="vbd-practical-card"><span>Oversigtskort</span><strong>Kommer lige om lidt!</strong></div>
       </div>
     <div class="faq">
 
@@ -444,16 +443,16 @@ sitemap: false
     <details class="faq-item">
       <summary>Skal jeg være god til brætspil?</summary>
       <p>
-        Nej. Én af arrangørerne, André, er tilmed pivringe til brætspil, men det stopper ham ikke. Så du behøver hverken være erfaren eller kende spillene på forhånd. Der er flere aktiviteter, hvor du kan lære nye spil samt åbne borde, hvor du kan lære solo-spil, spil for to med videre.
+        Nej. Én af arrangørerne, André, er tilmed pivringe til brætspil, men det stopper ham ikke. Så du behøver hverken være erfaren eller kende spillene på forhånd. Mange aktiviteter er lavet, så man kan lære spillet på stedet, og ved de åbne borde hjælper de frivillige dig gerne i gang.
       </p>
     </details>
 
 
     <details class="faq-item">
-      <summary>Kan jeg lære reglerne til de spil, jeg gerne vil prøve.</summary>
+      <summary>Kan I lære mig reglerne?</summary>
       <p>
-        Muligvis! Flere af aktiviteterne er netop
-        lær-at-spille-sessioner, hvor du bliver hjulpet i gang. Se dem under aktiviteter.
+        Ja. Ved lær-at-spille-aktiviteterne forklarer en vært spillet og spiller med,
+        og ved de åbne borde kan du altid spørge en frivillig.
       </p>
     </details>
 
@@ -467,10 +466,10 @@ sitemap: false
 
 
     <details class="faq-item">
-      <summary>Er dagen kun for hardcore brætspillere?</summary>
+      <summary>Er dagen kun for erfarne brætspillere?</summary>
       <p>
-        Dagen er både for begyndere, hyggespillere og
-        brætspilsentusiaster. Du tilmelder dig bare en aktivitet, der passer bedst til dit ambitionsniveau. 
+        Nej. Der er store strategispil og turneringer, hvis du spiller meget, og spil der
+        er hurtige at gå til, hvis du vil prøve noget nyt. Værterne forklarer reglerne undervejs.
       </p>
     </details>
 
@@ -574,9 +573,9 @@ sitemap: false
 <details class="faq-item">
   <summary>Hvad får jeg for de 50 kr.?</summary>
   <p>
-    Adgang til hele arrangementet, brætspilsbiblioteket,
-    åbne spilleborde, aktiviteter, 
-    hygge og nye bekendtskaber... og måske en præmie?! :-o
+    Adgang hele dagen fra kl. 10 til midnat, frokostbuffet, et par hundrede spil
+    du kan låne, værter der lærer dig spillene, turneringer og lodtrækninger om
+    præmier. Varm aftensmad kan tilkøbes for 25 kr.
   </p>
 </details>
 
@@ -605,8 +604,8 @@ sitemap: false
     Først tilmelder du dig Viborg Brætspilsdag.
   </p>
   <p>
-    Når aktivitetsbookingen åbner, får tilmeldte deltagere adgang til
-    booking af aktiviteter med begrænsede pladser, så sørg for at melde dig til dagen i god tid. Du kan KUN tilmelde dig selve aktiviteterne, når du er tilmeldt dagen.
+    Aktivitetsbookingen er åben. Når du har tilmeldt dig dagen, kan du booke plads på
+    aktiviteter med begrænsede pladser. Du kan kun booke aktiviteter, når du er tilmeldt dagen.
   </p>
   <p>
     De åbne aktiviteter kræver ingen særskilt booking.
@@ -835,27 +834,8 @@ sitemap: false
   </section>
 
   <div class="vbd-mobile-cta" aria-label="Tilmelding">
-    <span>14. nov · 50 kr. inkl. frokost</span>
+    <span>14. november · Viborg</span>
     <a class="vbd-btn vbd-btn-primary" href="https://viborgbraetspil.dk/tilmelding/">Tilmeld dig</a>
   </div>
 
 </div>
-
-<script>
-  (function () {
-    var data = {
-      title: 'Viborg Brætspilsdag 14. november',
-      text: 'Skal vi tage til Viborg Brætspilsdag lørdag d. 14. november? 50 kr. med frokost, og de lærer os spillene.',
-      url: 'https://viborgbraetspil.dk/'
-    };
-    var full = data.text + ' ' + data.url;
-    document.querySelectorAll('.vbd2 .vbd-share').forEach(function (btn) {
-      btn.addEventListener('click', function () {
-        if (navigator.share) { navigator.share(data).catch(function () {}); return; }
-        var done = function () { btn.textContent = 'Kopieret. Sæt ind i jeres chat'; };
-        if (navigator.clipboard) { navigator.clipboard.writeText(full).then(done, function () { window.prompt('Kopiér og send:', full); }); }
-        else { window.prompt('Kopiér og send:', full); }
-      });
-    });
-  })();
-</script>
