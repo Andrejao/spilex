@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "Mal din egen Warhammer-figur – gratis for alle"
+title: "Mal din egen figur – gratis for alle"
 date: 2026-10-23
 type: aktivitet
 permalink: /nyheder/warhammer-figurmaleri/
-image: "/assets/images/nyheder/warhammer-figurmaling.jpg"
+image: "/assets/images/nyheder/figurmaling.jpg"
 image_alt: "Warhammer-figurer og terræn opstillet til et spil"
-teaser: "Mal din helt egen Warhammer-figur, tag den med hjem og deltag i malekonkurrencer med præmier. Det er gratis!"
+teaser: "Mal din helt egen figur, tag den med hjem og deltag i malekonkurrencer med præmier. Det er gratis!"
 kategori: "Åben aktivitet"
 tid: "Tid kommer"
 vaert: "Jonas"
@@ -18,7 +18,7 @@ filter_niveau: "let"
 
 ## Mal din egen Warhammer-figur på Viborg Brætspilsdag
 
-Kom og mal din helt egen Warhammer-figur, som du kan tage med hjem efterfølgende. Få tips og tricks til maleteknikker, deltag i speedpaint konkurrence med præmier, eller medbring dit eget hobbygrej.
+Kom og mal din helt egen figur, som du kan tage med hjem efterfølgende. Få tips og tricks til maleteknikker, deltag i speedpaint konkurrence med præmier, eller medbring dit eget hobbygrej.
 
 Vi laver to malekonkurrencer, en til børn under 15 år, samt en til 15+ år.
 
