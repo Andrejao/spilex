@@ -16,16 +16,8 @@
 
 - tid: "18.00"
   titel: "Aftensmad"
-  beskrivelse: "Der laves en varm ret til aftensmad. Det skal bestilles særskilt ved tilmelding. Du får bare en madbillet ved check-in på dagen."
+  beskrivelse: "Der serveres pitabrød til aftensmad. Det bestilles særskilt ved tilmelding. Du får bare en madbillet ved check-in på dagen."
   
-- tid: "19.00 - 20.30"
-  titel: "Klask-turnering"
-  beskrivelse: "Husk at melde dig til via bookinglinket! Der er et begrænset antal pladser."
-
-- tid: "20.30"
-  titel: "Lodtrækning og præmier"
-  beskrivelse: "Lodtrækning og uddeling af præmier til alle de heldige og vinderne."
-
 - tid: "23.30"
   titel: "Brætspilsbiblioteket og aktiviteter rundes stille og roligt af"
   beskrivelse: "Den sidste runde spilles, vinderen findes og lånte spil afleveres tilbage."
