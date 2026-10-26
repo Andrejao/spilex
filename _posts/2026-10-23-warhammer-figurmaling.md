@@ -16,7 +16,7 @@ filter_oplevelse: "dropin"
 filter_niveau: "let"
 ---
 
-## Mal din egen Warhammer-figur på Viborg Brætspilsdag
+## Mal din egen figur på Viborg Brætspilsdag
 
 Kom og mal din helt egen figur, som du kan tage med hjem efterfølgende. Få tips og tricks til maleteknikker, deltag i speedpaint konkurrence med præmier, eller medbring dit eget hobbygrej.
 
