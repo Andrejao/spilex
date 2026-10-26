@@ -162,8 +162,8 @@ description: En afslappet dag med spil, hygge, fællesskab og masser af forskell
   .vbd2 .vbd-flow-dot { width: 68px; height: 68px; margin: 0 auto 18px; border-radius: 50%; display: grid; place-items: center; background: var(--lime); color: #173226; font-weight: 900; box-shadow: 0 0 0 8px #172d31; position: relative; z-index: 1; }
   .vbd2 .vbd-flow-item h3 { color: white; margin: 0; font-size: 1.05rem; }
   .vbd2 .vbd-flow-item p { margin: 7px 0 0; color: rgba(255,255,255,.62); font-size: .9rem; line-height: 1.45; }
-  .vbd2 .vbd-program-actions { margin-top: 34px; display: flex; justify-content: center; }
-
+  .vbd2 .vbd-program-actions { margin-top: 34px; display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
+  
   /* FIRST TIME */
   .vbd2 .vbd-first { background: linear-gradient(180deg, #f7f3e9 0%, #efe8da 100%); }
   .vbd2 .vbd-first-card { background: var(--white); border: 1px solid var(--line); border-radius: 34px; padding: clamp(28px, 5vw, 54px); box-shadow: var(--shadow); }
@@ -260,12 +260,12 @@ description: En afslappet dag med spil, hygge, fællesskab og masser af forskell
         <p class="vbd-kicker">14. november 2026 · Viborg</p>
         <h1>Viborg Brætspilsdag 2026</h1>
         <p class="vbd-hero-copy">
-          En afslappet dag for alle, hvor du kan lære et nyt spil, låne fra brætspilsbiblioteket, deltage i konkurrencer, prøve rollespil, figurmaling og meget mere. 
+          En afslappet dag hvor du kan lære et nyt spil, låne fra brætspilsbiblioteket, deltage i konkurrencer, prøve rollespil, figurmaling og meget mere. 
         </p>
-        <p class="vbd-hero-meta">Ungdomsskolen Viborg, Reberbanen 11+13 · 14. februar · kl. 10.00 – 00.00</p>
+        <p class="vbd-hero-meta">Ungdomsskolen Viborg, Reberbanen 11+13 · 14. november · kl. 10.00 – 00.00</p>
         <div class="vbd-hero-extra">
           <span>Kom og vær med:</span>
-          <strong>Over 120 deltager allerede på dagen - vi vil gerne have dig med :-) </strong>
+          <strong>Over 120 er allerede tilmeldt</strong>
         </div>
         <div class="vbd-hero-actions">
           <a class="vbd-btn vbd-btn-primary" href="https://viborgbraetspil.dk/tilmelding/">Tilmeld dig dagen →</a>
@@ -350,16 +350,16 @@ description: En afslappet dag med spil, hygge, fællesskab og masser af forskell
   <!-- DAGENS GANG -->
   <section class="vbd-section vbd-flow-section" id="program">
     <div class="vbd-wrap">
-      <p class="vbd-kicker">Sådan kan din dag se ud</p>
+      <p class="vbd-kicker">Din dag</p>
       <h2>Hvordan kunne du sætte din dag sammen? </h2>
       <p class="vbd-lead">Du kan komme og gå, som det passer dig. Din billet gælder hele dagen. Du kunne:</p>
 
       <div class="vbd-flow">
         <div class="vbd-flow-item"><div class="vbd-flow-dot">10.00</div><div><h3>Dørene åbner</h3><p>Check ind, få en kop kaffe og kig på hylderne.</p></div></div>
-        <div class="vbd-flow-item"><div class="vbd-flow-dot">10.30</div><div><h3>Lær et nyt spil</h3><p>Tilmeld dig et af de første lær-at-spille-borde, som går i gang.</p></div></div>
-        <div class="vbd-flow-item"><div class="vbd-flow-dot">12.00</div><div><h3>Få lidt frokost</h3><p>Spis frokost, inkluderet i billetten.</p></div></div>
-        <div class="vbd-flow-item"><div class="vbd-flow-dot">Efterm.</div><div><h3>Deltag i Catan-turnering</h3><p>Bank alle i Catan, vind en præmie og vær med i lodtrækninger</p></div></div>
-        <div class="vbd-flow-item"><div class="vbd-flow-dot">Aften</div><div><h3>Aftensmad</h3><p>Spis med til aftensmad og spil noget nyt i brætspilsbiblioteket sammen med andre </p></div></div>
+        <div class="vbd-flow-item"><div class="vbd-flow-dot">10.30</div><div><h3>Lær et nyt spil</h3><p>Book et af de første lær-at-spille-borde, som går i gang.</p></div></div>
+        <div class="vbd-flow-item"><div class="vbd-flow-dot">12.30</div><div><h3>Få lidt frokost</h3><p>Spis frokost, inkluderet i billetten</p></div></div>
+        <div class="vbd-flow-item"><div class="vbd-flow-dot">14.00</div><div><h3>Lær at spille Root</h3><p>Lær at spille Root med os andre </p></div></div>
+        <div class="vbd-flow-item"><div class="vbd-flow-dot">18.00</div><div><h3>Aftensmad</h3><p>Spis med til aftensmad (bestilles ved tilmelding) og spil noget nyt fra brætspilsbiblioteket </p></div></div>
       </div>
       <div class="vbd-program-actions">
         <a class="vbd-btn vbd-btn-primary" data-signup href="{{ signup }}">Tilmeld dig →</a>
