@@ -48,7 +48,7 @@ Mere information kommer - men tilmeld dig bare allerede nu for sikre dig en plad
 **Forkundskaber:** Kendskab til grundreglerne anbefales. Der spilles desuden med Preludes-udvidelsen.  
 **Tilmelding:** Påkrævet
 
-Viborg Brætspilsdag henvender sig primært til unge og voksne. Deltagere under 15 år skal være ledsaget af en voksen.
+Aktiviteten er  målrettet unge og voksne over 15 år. Klubberne i Viborg kommer og laver aktiviteter for med et særskilt program for børn. Du kan læse mere [**ved at trykke → her**](https://viborgbraetspil.dk/nyheder/klubberne/). 
 
 [**Book plads i konkurrencen →**](https://booking.viborgbraetspil.dk/)
 
