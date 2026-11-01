@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Twilight Imperium IV – en hel dag i galaksens centrum"
+title: "Lær at spille Twilight Imperium IV – en hel dag i galaksens centrum"
 date: 2026-09-15
 type: aktivitet
 permalink: /nyheder/twilight-imperium-iv/
@@ -38,7 +38,7 @@ Galaksen bygges op forskelligt fra spil til spil, og de asymmetriske civilisatio
 
 Twilight Imperium er blandt dagens mest krævende spil. Der er mange regler, mange muligheder og en meget lang spilletid. Du behøver ikke have spillet Twillight Imperium før, men du skal have lyst til at investere både mange timer og koncentration i én stor oplevelse.
 
-Du behøver ikke være ekspert, men det er en fordel, hvis du tidligere har spillet moderne strategispil og er komfortabel med at lære et omfattende regelsæt.
+Det er en lær-at-spille-session, så du behøver ikke være ekspert, men det er en fordel, hvis du tidligere har spillet moderne strategispil og er komfortabel med at lære et omfattende regelsæt.
 
 Vi spiller med udvidelserne Prophecy of King og Thunder's Edge.
 
