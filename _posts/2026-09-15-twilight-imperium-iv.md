@@ -42,7 +42,7 @@ Det er en lær-at-spille-session, så du behøver ikke være ekspert, men det er
 
 Vi spiller med udvidelserne Prophecy of King og Thunder's Edge, og Anders vil guide jer igennem spillet og have gjort et kort samt faktioner med videre klar til jer, så vi kan gå direkte igang. 
 
-Vi spiller også til 6vp, så vi kan nå igennem et helt spil.
+Vi spiller  til færre VP, så vi kan nå igennem et helt spil.
 
 Det kan anbefales, at du har skimmet reglerne inden dagen, fx her: https://www.youtube.com/watch?v=_u2xEap5hBM
 
