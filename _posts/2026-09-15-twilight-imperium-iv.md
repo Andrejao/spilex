@@ -40,7 +40,7 @@ Twilight Imperium er blandt dagens mest krævende spil. Der er mange regler, man
 
 Det er en lær-at-spille-session, så du behøver ikke være ekspert, men det er en fordel, hvis du tidligere har spillet moderne strategispil og er komfortabel med at lære et omfattende regelsæt.
 
-Vi spiller med udvidelserne Prophecy of King og Thunder's Edge, og Anders vil guide jer igennem spillet og have gjort et kort samt faktioner med videre klar til jer, så vi kommer bedst muligt igennem regler og i gang med selve spillet. 
+Vi planlgægger at spille med udvidelserne Prophecy of King og Thunder's Edge, og Anders vil guide jer igennem spillet og have gjort et kort samt faktioner med videre klar til jer, så vi kommer bedst muligt igennem regler og i gang med selve spillet. 
 
 Vi spiller  til færre VP, så vi kan nå igennem et helt spil.
 
