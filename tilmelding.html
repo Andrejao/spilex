@@ -1117,11 +1117,26 @@ permalink: /tilmelding/
                 </div>
 
                 <div class="price">
-                  50 kr.
+                  <span id="entrePrice">50 kr.</span>
                   <small>pr. person</small>
                 </div>
               </div>
             </div>
+
+            <label class="meal-choice" style="margin:10px 0 18px;">
+              <input
+                id="fribillet"
+                name="fribillet"
+                type="checkbox"
+              >
+
+              <span>
+                <strong>Jeg har fribillet</strong>
+                <small>
+                  Entré og frokost er gratis. Aftensmad koster stadig 25 kr.
+                </small>
+              </span>
+            </label>
 
             <p class="section-label">
               Tilmeld dig
@@ -1605,6 +1620,11 @@ var aftensmadCheckbox =
     'aftensmad'
   );
 
+var fribilletCheckbox =
+  document.getElementById(
+    'fribillet'
+  );
+
 var paymentAmountLabel =
   document.getElementById(
     'paymentAmountLabel'
@@ -1622,14 +1642,28 @@ var mealSummary =
 
 function currentPaymentAmount() {
 
-  return aftensmadCheckbox.checked
-    ? 75
-    : 50;
+  var entre =
+    fribilletCheckbox && fribilletCheckbox.checked
+      ? 0
+      : 50;
+
+  return entre +
+    (aftensmadCheckbox.checked ? 25 : 0);
 
 }
 
 
 function updatePaymentUi() {
+
+  var entrePrice =
+    document.getElementById('entrePrice');
+
+  if (entrePrice) {
+    entrePrice.textContent =
+      fribilletCheckbox && fribilletCheckbox.checked
+        ? '0 kr.'
+        : '50 kr.';
+  }
 
   submitButton.textContent =
     'Tilmeld mig · ' +
@@ -1643,6 +1677,13 @@ aftensmadCheckbox.addEventListener(
   'change',
   updatePaymentUi
 );
+
+if (fribilletCheckbox) {
+  fribilletCheckbox.addEventListener(
+    'change',
+    updatePaymentUi
+  );
+}
 
 
 updatePaymentUi();
@@ -2139,6 +2180,13 @@ aftensmad:
     )
     .checked,
 
+fribillet:
+  document
+    .getElementById(
+      'fribillet'
+    )
+    .checked,
+
 
 
           
@@ -2237,10 +2285,17 @@ aftensmad:
           ) {
 
             var paymentAmount =
-              Number(data.paymentAmount) ||
-              currentPaymentAmount();
+              typeof data.paymentAmount === 'number'
+                ? data.paymentAmount
+                : currentPaymentAmount();
 
-            if (paymentAmountLabel) {
+            if (paymentAmount === 0) {
+
+              if (mobilePayBox) {
+                mobilePayBox.style.display = 'none';
+              }
+
+            } else if (paymentAmountLabel) {
               paymentAmountLabel.textContent =
                 'Betal ' +
                 paymentAmount +
