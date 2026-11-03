@@ -538,6 +538,31 @@ permalink: /tilmelding/
   font-size:.82rem;
   line-height:1.4;
 }
+
+.free-choice {
+  margin:12px 0 20px;
+  padding:15px 16px;
+  border:2px dashed var(--gold);
+  border-radius:var(--radius-md);
+  background:var(--gold-soft);
+  transition:background .15s, border-color .15s;
+}
+
+.free-choice strong {
+  font-size:1.08rem;
+  font-weight:850;
+}
+
+.free-choice strong::before {
+  content:"🎲 ";
+}
+
+.free-choice:has(input:checked) {
+  border-style:solid;
+  border-color:var(--success);
+  background:var(--success-bg);
+}
+
     
     .help {
       font-size:.79rem;
@@ -1098,30 +1123,35 @@ permalink: /tilmelding/
                   Entré · hele dagen
                 </div>
 
-                <div class="price">
-                  <span id="entrePrice">50 kr.</span>
-                  <small>pr. person</small><p></p>
-                  <small>Beløbet bruges alene på at afholde dagen.</small>
-                  
-                </div>
+<div class="price">
+  <span id="entrePrice">50 kr.</span>
+  <small>pr. person</small>
+</div>
               </div>
             </div>
 
-            <label class="meal-choice" style="margin:10px 0 18px;">
-              <input
-                id="fribillet"
-                name="fribillet"
-                type="checkbox"
-              >
+     
 
-              <span>
-                <strong>Jeg vil gerne deltage gratis</strong>
-                <small>
-                  Vi vil gerne have så mange med som muligt og én halvtredser skal ikke skille os!
-                </small>
-              </span>
-            </label>
 
+
+
+
+              <label class="meal-choice free-choice">
+  <input
+    id="fribillet"
+    name="fribillet"
+    type="checkbox"
+  >
+
+  <span>
+    <strong>Jeg vil gerne deltage gratis</strong>
+    <small>
+      Vi vil gerne have så mange med som muligt, så det skal ikke være en halvtredser, der skiller os!
+    </small>
+  </span>
+</label>
+              
+            
             <p class="section-label">
               Tilmeld dig
             </p>
