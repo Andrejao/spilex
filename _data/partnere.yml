@@ -13,6 +13,11 @@
   logo: "/assets/images/logos/ungdomsskole_logo.png"
   url: ""
 
+- navn: "Nerdlab Games"
+  gruppe: "sponsor"
+  logo: "/assets/images/logos/nerdlabs.png"
+  url: "https://shop.nerdlab-games.com/"
+
 - navn: "Bilka"
   gruppe: "sponsor"
   logo: "/assets/images/logos/bilka_logo.png"
@@ -31,4 +36,4 @@
 - navn: "Peter Larsen Kaffe"
   gruppe: "sponsor"
   logo: "/assets/images/logos/peter-larsen-kaffe.png"
-  url: "https://www.viborg.dk"
+  url: "https://www.peterlarsenkaffe.dk/"
