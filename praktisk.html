@@ -69,7 +69,6 @@ redirect_from:
   .vbdp .vbd-hero h1 { color: #fff; margin: 0; font-size: clamp(3rem, 6.6vw, 6rem); line-height: .91; letter-spacing: -.065em; }
   .vbdp .vbd-hero h1 span { display: block; color: var(--lime); }
   .vbdp .vbd-hero-copy { margin: 26px 0 0; color: rgba(255,255,255,.88); font-size: clamp(1.1rem, 2vw, 1.34rem); line-height: 1.55; }
-  .vbdp .vbd-hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
 
   /* HOP-NAVIGATION */
   .vbdp .vbd-jump {
@@ -86,27 +85,17 @@ redirect_from:
   .vbdp .vbd-jump a:hover { background: var(--green); color: #fff; border-color: var(--green); }
 
   /* KORTE FAKTA */
-  .vbdp .vbd-facts-section { background: linear-gradient(180deg, #f7f3e9 0%, #efe8da 100%); padding: 56px 0; }
-  .vbdp .vbd-facts { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+  .vbdp .vbd-facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 36px; }
   .vbdp .vbd-fact { padding: 22px 24px; border-radius: 20px; background: var(--white); border: 1px solid var(--line); box-shadow: var(--shadow); }
-  .vbdp .vbd-fact:last-child { background: var(--amber); border-color: transparent; }
   .vbdp .vbd-fact span { display: block; font-size: .74rem; text-transform: uppercase; letter-spacing: .11em; font-weight: 900; color: var(--green); margin-bottom: 8px; }
-  .vbdp .vbd-fact:last-child span { color: #5a4512; }
   .vbdp .vbd-fact strong { display: block; line-height: 1.4; font-size: 1.04rem; }
+  .vbdp .vbd-fact p a { color: var(--green); font-weight: 800; }
   .vbdp .vbd-fact p { margin: 6px 0 0; color: var(--muted); line-height: 1.5; font-size: .94rem; }
-  .vbdp .vbd-fact:last-child p { color: #4a3f22; }
   .vbdp a.vbd-fact { display: block; text-decoration: none; transition: transform .18s ease, box-shadow .18s ease; }
   .vbdp a.vbd-fact:hover { transform: translateY(-3px); box-shadow: 0 26px 60px rgba(23,32,28,.16); }
   .vbdp .vbd-fact em { display: inline-block; margin-top: 12px; font-style: normal; font-weight: 900; font-size: .9rem; color: var(--green); border-bottom: 1px solid currentColor; padding-bottom: 2px; }
-  .vbdp .vbd-fact:last-child em { color: #2c2718; }
   .vbdp a:focus-visible { outline: 3px solid var(--amber); outline-offset: 3px; border-radius: 8px; }
   .vbdp .vbd-more { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; }
-  .vbdp .vbd-pill { display: inline-flex; align-items: center; gap: 6px; padding: 10px 16px; border-radius: 999px; background: var(--white); border: 1px solid var(--line); font-weight: 800; font-size: .92rem; text-decoration: none; }
-  .vbdp .vbd-pill:hover { background: var(--green); color: #fff; border-color: var(--green); }
-  .vbdp .vbd-food-section .vbd-pill { background: rgba(255,255,255,.1); border-color: rgba(255,255,255,.25); color: #fff; }
-  .vbdp .vbd-food-section .vbd-pill:hover { background: var(--lime); color: #173226; }
-  .vbdp .vbd-timeline a { color: #fff; text-decoration: none; border-bottom: 1px solid rgba(216,239,177,.5); }
-  .vbdp .vbd-timeline a:hover { color: var(--lime); }
 
   /* INDHOLDSKORT */
   .vbdp .vbd-card-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 36px; }
@@ -122,17 +111,6 @@ redirect_from:
   .vbdp .vbd-map-frame { display: block; margin-top: 36px; border-radius: 30px; overflow: hidden; background: #fff; border: 1px solid var(--line); box-shadow: var(--shadow); }
   .vbdp .vbd-map-frame img { display: block; width: 100%; height: auto; }
   .vbdp .vbd-map-note { margin: 12px 4px 0; color: var(--muted); font-size: .92rem; }
-
-  /* PROGRAM (mørk) */
-  .vbdp .vbd-flow-section { background: #172d31; color: #fff; }
-  .vbdp .vbd-flow-section .vbd-kicker { color: var(--lime); }
-  .vbdp .vbd-flow-section h2 { color: #fff; }
-  .vbdp .vbd-flow-section .vbd-lead { color: rgba(255,255,255,.72); }
-  .vbdp .vbd-timeline { list-style: none; margin: 38px 0 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 4px 40px; }
-  .vbdp .vbd-timeline li { display: grid; grid-template-columns: 118px 1fr; gap: 18px; align-items: center; padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,.1); }
-  .vbdp .vbd-time { display: inline-flex; justify-content: center; padding: 8px 12px; border-radius: 999px; background: var(--lime); color: #173226; font-weight: 900; font-size: .9rem; white-space: nowrap; }
-  .vbdp .vbd-timeline strong { color: #fff; line-height: 1.35; }
-  .vbdp .vbd-actions { margin-top: 32px; display: flex; flex-wrap: wrap; gap: 12px; }
 
   /* AKTIVITETER OG BIBLIOTEK */
   .vbdp .vbd-play-section { background: linear-gradient(180deg, #f7f3e9 0%, #efe8da 100%); }
@@ -165,7 +143,7 @@ redirect_from:
 
   @media (max-width: 900px) {
     .vbdp .vbd-facts, .vbdp .vbd-food-grid { grid-template-columns: 1fr 1fr; }
-    .vbdp .vbd-card-grid, .vbdp .vbd-spotlight-grid, .vbdp .vbd-timeline, .vbdp .vbd-help { grid-template-columns: 1fr; }
+    .vbdp .vbd-card-grid, .vbdp .vbd-spotlight-grid, .vbdp .vbd-help { grid-template-columns: 1fr; }
     .vbdp .vbd-help { gap: 28px; }
     .vbdp .vbd-hero::before { inset: 30% -8% 0 20%; opacity: .32; }
   }
@@ -175,8 +153,6 @@ redirect_from:
     .vbdp .vbd-hero-inner { padding: 64px 0 64px; }
     .vbdp .vbd-hero h1 { font-size: clamp(2.9rem, 15vw, 4.4rem); }
     .vbdp .vbd-facts, .vbdp .vbd-food-grid, .vbdp .vbd-card-grid.two { grid-template-columns: 1fr; }
-    .vbdp .vbd-timeline li { grid-template-columns: 1fr; gap: 8px; }
-    .vbdp .vbd-time { justify-self: start; }
     .vbdp .vbd-spotlight-card, .vbdp .vbd-map-frame, .vbdp .vbd-help { border-radius: 24px; }
     .vbdp .vbd-help-photo { min-height: 220px; }
   }
@@ -192,12 +168,8 @@ redirect_from:
         <h1>Praktisk info <span>til dagen</span></h1>
         <p class="vbd-hero-copy">
           Det er første gang, vi holder Viborg Brætspilsdag! Sammen med dig er dagen skabt af frivillige,
-          og vi hjælper hinanden med at gøre dagen afslappet og sprede rigtig god stemnning.
+          og vi hjælper hinanden med at gøre dagen afslappet og sprede rigtig god stemning.
         </p>
-        <div class="vbd-hero-actions">
-          <a class="vbd-btn vbd-btn-primary" href="#ankomst">Ankomst og parkering ↓</a>
-          <a class="vbd-btn vbd-btn-ghost" href="#kort">Oversigtskort</a>
-        </div>
       </div>
     </div>
   </section>
@@ -209,7 +181,6 @@ redirect_from:
       <nav aria-label="Indhold på siden">
         <a href="#ankomst">Ankomst</a>
         <a href="#kort">Oversigtskort</a>
-        <a href="#program">Program</a>
         <a href="#aktiviteter">Aktiviteter</a>
         <a href="#bibliotek">Brætspilsbibliotek</a>
         <a href="#mad">Mad og kaffe</a>
@@ -219,15 +190,19 @@ redirect_from:
   </div>
 
 
-  <!-- DET VIGTIGSTE -->
-  <section class="vbd-facts-section" aria-label="Det vigtigste">
+  <!-- ANKOMST: tid, sted, parkering, check-in, adgang -->
+  <section id="ankomst" class="vbd-section vbd-arrive-section">
     <div class="vbd-wrap">
+      <p class="vbd-kicker">Ankomst</p>
+      <h2>Ankomst og parkering</h2>
+      <p class="vbd-lead">Første gang til en brætspilsdag? <a class="vbd-textlink" href="{{ '/foerste-gang/' | relative_url }}">Se hvordan dagen fungerer</a>.</p>
+
       <div class="vbd-facts">
-        <a class="vbd-fact" href="#program">
+        <a class="vbd-fact" href="{{ '/program.html' | relative_url }}">
           <span>Tid</span>
-          <strong>Kl. 09.45 til 00.00</strong>
+          <strong>Dørene åbner kl. 09.45. Vi starter kl. 10.00 og slutter kl. 00.00.</strong>
           <p>Kom og gå, som det passer.</p>
-          <em>Se programmet ↓</em>
+          <em>Se programmet →</em>
         </a>
         <a class="vbd-fact" href="https://www.google.com/maps/search/?api=1&amp;query=Ungdomsskolen%2C+Reberbanen+11%2C+8800+Viborg" target="_blank" rel="noopener">
           <span>Sted</span>
@@ -236,42 +211,19 @@ redirect_from:
         </a>
         <a class="vbd-fact" href="https://www.google.com/maps/search/?api=1&amp;query=Garnisonspladsen%2C+R%C3%B8devej%2C+8800+Viborg" target="_blank" rel="noopener">
           <span>Parkering</span>
-          <strong>Garnisonspladsen, Rødevej</strong>
-          <p>Gratis og tæt på.</p>
+          <strong>Gratis ved Garnisonspladsen, Rødevej</strong>
+          <p>Skriv "Garnisonspladsen" i GPS'en.</p>
           <em>Vej i Google Maps →</em>
         </a>
-        <a class="vbd-fact" href="#hjaelp">
-          <span>Brug for hjælp?</span>
-          <strong>Spørg en frivillig i t-shirt</strong>
-          <p>Så er der hjælp.</p>
-          <em>Mere om hjælp ↓</em>
-        </a>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ANKOMST -->
-  <section id="ankomst" class="vbd-section vbd-arrive-section">
-    <div class="vbd-wrap">
-      <p class="vbd-kicker">Ankomst</p>
-      <h2>Ankomst og parkering</h2>
-      <p class="vbd-lead">Første gang til en brætspilsdag? <a class="vbd-textlink" href="{{ '/foerste-gang/' | relative_url }}">Se hvordan dagen fungerer</a>.</p>
-
-      <div class="vbd-card-grid">
-        <div class="vbd-item">
-          <h3>Parkér ved Garnisonspladsen</h3>
-          <p>Gratis parkering på Rødevej, 8800 Viborg. Skriv "Garnisonspladsen" i GPS'en.</p>
-          <a class="vbd-textlink" href="https://www.google.com/maps/search/?api=1&amp;query=Garnisonspladsen%2C+R%C3%B8devej%2C+8800+Viborg" target="_blank" rel="noopener">Vej til Garnisonspladsen i Google Maps →</a>
+        <div class="vbd-fact">
+          <span>Check-in</span>
+          <strong>Start ved indgangen (0 på <a class="vbd-textlink" href="#kort">oversigtskortet</a>)</strong>
+          <p>Her siger vi hej og svarer på spørgsmål. Du behøver ikke vise billet. Jakker hænger vi ved de pladser, vi tager.</p>
         </div>
-        <div class="vbd-item">
-          <h3>Start ved check-in</h3>
-          <p>Ved indgangen (0 på <a class="vbd-textlink" href="#kort">oversigtskortet</a>) siger vi hej og svarer på spørgsmål. Derfra går vi videre til aktiviteter, biblioteket eller et ledigt bord.</p>
-          <a class="vbd-textlink" href="https://www.google.com/maps/search/?api=1&amp;query=Ungdomsskolen%2C+Reberbanen+11%2C+8800+Viborg" target="_blank" rel="noopener">Vej til Ungdomsskolen i Google Maps →</a>
-        </div>
-        <div class="vbd-item">
-          <h3>Adgang for alle</h3>
-          <p>Lokalerne kan bruges af kørestolsbrugere og personer med nedsat mobilitet. Særlige behov? Skriv til <a class="vbd-textlink" href="mailto:viborgbraetspil@gmail.com">viborgbraetspil@gmail.com</a>.</p>
+        <div class="vbd-fact">
+          <span>Adgang for alle</span>
+          <strong>Lokalerne kan bruges af kørestolsbrugere og personer med nedsat mobilitet</strong>
+          <p>Særlige behov? <a href="#hjaelp">Skriv til os før dagen</a>.</p>
         </div>
       </div>
     </div>
@@ -283,6 +235,7 @@ redirect_from:
     <div class="vbd-wrap">
       <p class="vbd-kicker">Oversigtskort</p>
       <h2>Oversigtskort over Ungdomsskolen</h2>
+      <p class="vbd-lead">Hvor de enkelte aktiviteter foregår, fremgår af oversigten på dagen.</p>
 
       <a class="vbd-map-frame" href="{{ '/assets/images/oversigtskort.png' | relative_url }}" target="_blank" rel="noopener">
         <img
@@ -291,36 +244,7 @@ redirect_from:
           width="1493" height="809"
         >
       </a>
-      <p class="vbd-map-note">Tryk på kortet for at se det i fuld størrelse. Toiletter er markeret med toiletsymbolet. <a class="vbd-textlink" href="https://www.google.com/maps/search/?api=1&amp;query=Ungdomsskolen%2C+Reberbanen+11%2C+8800+Viborg" target="_blank" rel="noopener">Vej til Ungdomsskolen →</a></p>
-    </div>
-  </section>
-
-
-  <!-- PROGRAM -->
-  <section id="program" class="vbd-section vbd-flow-section">
-    <div class="vbd-wrap">
-      <p class="vbd-kicker">Program</p>
-      <h2>Program for dagen</h2>
-      <p class="vbd-lead">Hver aktivitet har sit eget tidspunkt. Se dem under aktiviteter.</p>
-
-      <ol class="vbd-timeline">
-        {% for punkt in site.data.hovedprogram %}
-        <li>
-          <span class="vbd-time">{{ punkt.tid }}</span>
-          {% assign t = punkt.titel | downcase %}
-          {% if t contains 'lodtrækning' %}<strong><a href="#aktiviteter">{{ punkt.titel }}</a></strong>
-          {% elsif t contains 'frokost' %}<strong><a href="#mad">{{ punkt.titel }}</a></strong>
-          {% elsif t contains 'aftensmad' %}<strong><a href="#mad">{{ punkt.titel }}</a></strong>
-          {% elsif t contains 'biblioteket' %}<strong><a href="#bibliotek">{{ punkt.titel }}</a></strong>
-          {% else %}<strong>{{ punkt.titel }}</strong>{% endif %}
-        </li>
-        {% endfor %}
-      </ol>
-
-      <div class="vbd-actions">
-        <a class="vbd-btn vbd-btn-primary" href="{{ '/program.html' | relative_url }}">Hele programmet →</a>
-        <a class="vbd-btn vbd-btn-ghost" href="{{ '/aktiviteter.html' | relative_url }}">Alle aktiviteter</a>
-      </div>
+      <p class="vbd-map-note">Tryk på kortet for at se det i fuld størrelse. Toiletter er markeret med toiletsymbolet.</p>
     </div>
   </section>
 
@@ -340,8 +264,7 @@ redirect_from:
             <li>Mange aktiviteter har et begrænset antal pladser.</li>
             <li>Åbne aktiviteter kræver ingen booking.</li>
             <li>Booking kræver tilmelding til dagen. <a href="https://viborgbraetspil.dk/tilmelding/" style="color: var(--lime); font-weight: 800;">Tilmelding her</a>.</li>
-            <li>Der er mange præmier. Tak til Hyggeonkel.</li>
-            <li>Første lodtrækning er kl. 10.00.</li>
+            <li>Der er mange præmier. Tak til Hyggeonkel. Første lodtrækning er kl. 10.00. Husk at være til stede, hvis du vil vinde!</li>
           </ul>
           <div class="vbd-spotlight-links">
             <a class="vbd-btn vbd-btn-primary" href="https://booking.viborgbraetspil.dk/" target="_blank" rel="noopener">Book en aktivitet →</a>
@@ -353,7 +276,7 @@ redirect_from:
           <span class="vbd-spotlight-type">Brætspilsbiblioteket</span>
           <h3>Lån et spil og find et bord</h3>
           <ul>
-            <li>Et par hundrede spil fra Hyggeonkel og private. Pas godt på dem.</li>
+            <li>Et par hundrede spil af forskellige slags stillet rådighed af private. Pas godt på dem.</li>
             <li>Ingen mad ved spillebordene.</li>
             <li>Frivillige i biblioteket foreslår spil og hjælper i gang.</li>
             <li>Lånte spil afleveres senest kl. 23.30.</li>
@@ -373,18 +296,17 @@ redirect_from:
     <div class="vbd-wrap">
       <p class="vbd-kicker">Mad og kaffe</p>
       <h2>Mad og kaffe</h2>
-      <p class="vbd-lead">Mød op ved maden på de tidspunkter, der er betalt for.</p>
 
       <div class="vbd-food-grid">
         <div class="vbd-food-card">
           <small>Kl. 12.30 til 14.00</small>
           <h3>Frokost</h3>
-          <p>Rugbrød, pålæg og grønt. Med i billetten.</p>
+          <p>Rugbrød, pålæg og grønt til alle, der har krydset af ved tilmelding. Mød bare op ved maden.</p>
         </div>
         <div class="vbd-food-card">
           <small>Kl. 18.00</small>
           <h3>Aftensmad</h3>
-          <p>Pitabrød for dem, der har bestilt aftensmad ved tilmelding.</p>
+          <p>Pitabrød til dem, der har bestilt aftensmad ved tilmelding. Mød bare op ved maden.</p>
         </div>
         <div class="vbd-food-card">
           <small>Hele dagen</small>
@@ -396,10 +318,6 @@ redirect_from:
           <h3>Sodavand, snacks og kage</h3>
           <p>Betal med MobilePay eller lige penge. Egen mad er også velkommen.</p>
         </div>
-      </div>
-      <div class="vbd-more">
-        <a class="vbd-pill" href="{{ '/program.html' | relative_url }}">Spisetider i programmet →</a>
-        <a class="vbd-pill" href="{{ '/#praktisk' | relative_url }}">Spørgsmål om mad på forsiden →</a>
       </div>
     </div>
   </section>
@@ -413,8 +331,8 @@ redirect_from:
           <p class="vbd-kicker">Hjælp på dagen</p>
           <h2>Spørg en frivillig i t-shirt</h2>
           <p class="vbd-lead">
-            Spørgsmål, brug for et spil, nogen at spille med, eller føles noget forkert?
-            Find en frivillig i t-shirt. Så er der hjælp.
+            Spørgsmål, brug for et spil, nogen at spille med, eller andet?
+            Find en frivillig i t-shirt. Så er der hjælp og vejledning.
           </p>
           <div class="vbd-more">
             <a class="vbd-btn vbd-btn-dark" href="{{ '/#praktisk' | relative_url }}">Flere svar i FAQ'en på forsiden →</a>
@@ -433,8 +351,8 @@ redirect_from:
               <p>Vi spørger først. Et nej er altid okay. <a class="vbd-textlink" href="/privatliv/">Om privatliv</a>.</p>
             </div>
             <div class="vbd-item">
-              <h3>Kæledyr</h3>
-              <p>Bliver hjemme denne gang.</p>
+              <h3>Hvor kan jeg stille flere spørgsmål??</h3>
+              <p>Skriv til os på <a class="vbd-textlink" href="mailto:viborgbraetspil@gmail.com">viborgbraetspil@gmail.com</a>.</p>.</p>
             </div>
           </div>
         </div>
