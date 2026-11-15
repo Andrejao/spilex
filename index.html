@@ -77,31 +77,51 @@ description: Tak for en fantastisk første Viborg Brætspilsdag. Skriv dig op, o
   .vbd2 .vbd-hero-copy { max-width: 750px; margin: 24px 0 0; color: rgba(255,255,255,.82); font-size: clamp(1.08rem, 2vw, 1.34rem); line-height: 1.55; }
   .vbd2 .vbd-hero-note { margin: 16px 0 0; color: rgba(255,255,255,.66); font-size: .94rem; line-height: 1.5; }
 
-  /* SKRIV DIG OP TIL 2027 (i heroen) */
+  /* SKRIV DIG OP TIL 2027 (i heroen): sidens blikfang */
   .vbd2 .vbd-signup-form {
-    padding: 30px; border-radius: 28px; background: rgba(255,253,248,.97); color: var(--ink);
-    border: 1px solid rgba(255,255,255,.2); box-shadow: 0 24px 70px rgba(0,0,0,.28); scroll-margin-top: 24px;
+    position: relative; padding: 38px 30px 28px; border-radius: 30px; color: #173226;
+    background: linear-gradient(160deg, #eaf8cd 0%, #d8efb1 52%, #c6e596 100%);
+    box-shadow: 0 0 0 7px rgba(216,239,177,.16), 0 0 110px rgba(216,239,177,.28), 0 34px 80px rgba(0,0,0,.5);
+    scroll-margin-top: 40px;
   }
-  .vbd2 .vbd-signup-form .vbd-kicker { margin-bottom: 10px; }
-  .vbd2 .vbd-signup-form h2 { margin: 0; font-size: clamp(1.8rem, 3.2vw, 2.5rem); line-height: 1; letter-spacing: -.04em; }
-  .vbd2 .vbd-signup-intro { margin: 12px 0 22px; color: var(--muted); line-height: 1.55; }
-  .vbd2 .vbd-field label { display: block; font-weight: 800; margin: 0 0 7px; }
-  .vbd2 .vbd-field label span { font-weight: 500; color: var(--muted); }
+  .vbd2 .vbd-badge {
+    position: absolute; top: -17px; right: 24px; padding: 10px 17px; border-radius: 999px;
+    background: var(--amber); color: #2c2718; font-size: .76rem; font-weight: 900; letter-spacing: .11em;
+    text-transform: uppercase; transform: rotate(3deg); box-shadow: 0 10px 24px rgba(0,0,0,.28);
+  }
+  .vbd2 .vbd-signup-form .vbd-kicker { margin-bottom: 10px; color: var(--green); }
+  .vbd2 .vbd-signup-form h2 { margin: 0; color: #12242b; font-size: clamp(2.1rem, 3.7vw, 3.1rem); line-height: .96; letter-spacing: -.05em; }
+  .vbd2 .vbd-signup-intro { margin: 14px 0 22px; color: #2c4a3a; line-height: 1.5; font-size: 1.04rem; font-weight: 600; }
+  .vbd2 .vbd-field label { display: block; font-weight: 850; margin: 0 0 7px; color: #12242b; }
+  .vbd2 .vbd-field label span { font-weight: 600; color: #47624f; }
   .vbd2 .vbd-field input {
-    width: 100%; min-height: 54px; padding: 0 18px; font-size: 1rem; font-family: inherit;
-    color: var(--ink); background: #fff; border: 1px solid rgba(23,32,28,.22); border-radius: 16px;
+    width: 100%; min-height: 58px; padding: 0 18px; font-size: 1.05rem; font-family: inherit;
+    color: var(--ink); background: #fff; border: 2px solid transparent; border-radius: 16px;
+    box-shadow: 0 2px 0 rgba(23,50,38,.12), 0 8px 20px rgba(23,50,38,.08);
   }
-  .vbd2 .vbd-field input:focus { outline: 3px solid rgba(36,93,73,.22); border-color: var(--green); }
-  .vbd2 .vbd-or { margin: 12px 0; text-align: center; color: var(--muted); font-size: .8rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+  .vbd2 .vbd-field input:focus { outline: none; border-color: #12242b; box-shadow: 0 0 0 4px rgba(18,36,43,.16); }
+  .vbd2 .vbd-or { margin: 12px 0; text-align: center; color: #47624f; font-size: .78rem; font-weight: 900; letter-spacing: .12em; text-transform: uppercase; }
   .vbd2 .vbd-hp { position: absolute; left: -9999px; }
-  .vbd2 .vbd-signup-form .vbd-btn { width: 100%; margin-top: 20px; }
+  .vbd2 .vbd-signup-form .vbd-btn {
+    width: 100%; min-height: 64px; margin-top: 22px; font-size: 1.16rem; font-weight: 900; letter-spacing: -.01em;
+    color: #fff; background: #12242b; box-shadow: 0 16px 34px rgba(18,36,43,.38);
+  }
+  .vbd2 .vbd-signup-form .vbd-btn .vbd-arrow { display: inline-block; transition: transform .18s ease; }
+  .vbd2 .vbd-signup-form .vbd-btn:hover { background: #0b181d; box-shadow: 0 20px 40px rgba(18,36,43,.46); }
+  .vbd2 .vbd-signup-form .vbd-btn:hover .vbd-arrow { transform: translateX(6px); }
   .vbd2 .vbd-signup-form .vbd-btn:disabled { opacity: .6; cursor: wait; transform: none; }
-  .vbd2 .vbd-form-error { margin: 14px 0 0; color: var(--rust); font-weight: 800; }
-  .vbd2 .vbd-form-small { margin: 14px 0 0; color: var(--muted); font-size: .84rem; line-height: 1.5; }
-  .vbd2 .vbd-form-small a { color: var(--green); }
-  .vbd2 .vbd-done { text-align: center; padding: 40px 8px; }
-  .vbd2 .vbd-done h2 { font-size: 1.9rem; }
-  .vbd2 .vbd-done p { margin: 12px 0 0; color: var(--muted); line-height: 1.55; }
+  .vbd2 .vbd-btn-note { margin: 12px 0 0; text-align: center; color: #2c4a3a; font-size: .92rem; font-weight: 700; }
+  .vbd2 .vbd-form-error { margin: 14px 0 0; padding: 12px 14px; border-radius: 12px; background: #fff; color: #9c3d24; font-weight: 800; }
+  .vbd2 .vbd-form-small { margin: 14px 0 0; color: #47624f; font-size: .8rem; line-height: 1.5; text-align: center; }
+  .vbd2 .vbd-form-small a { color: #173226; font-weight: 700; }
+  .vbd2 .vbd-done { text-align: center; padding: 46px 8px; }
+  .vbd2 .vbd-done-check { width: 68px; height: 68px; margin: 0 auto 18px; display: grid; place-items: center; border-radius: 50%; background: #12242b; color: var(--lime); font-size: 2rem; font-weight: 900; }
+  .vbd2 .vbd-done p { margin: 12px 0 0; color: #2c4a3a; line-height: 1.55; font-weight: 600; }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .vbd2 .vbd-signup-form { animation: vbd-rise .7s cubic-bezier(.2,.8,.2,1) both; }
+    @keyframes vbd-rise { from { opacity: 0; transform: translateY(22px) scale(.98); } to { opacity: 1; transform: none; } }
+  }
 
   .vbd2 .vbd-mobile-cta { display: none; }
 
@@ -116,7 +136,8 @@ description: Tak for en fantastisk første Viborg Brætspilsdag. Skriv dig op, o
     .vbd2 .vbd-hero { min-height: auto; }
     .vbd2 .vbd-hero-grid { gap: 36px; padding: 70px 0 78px; }
     .vbd2 .vbd-hero h1 { font-size: clamp(3rem, 16vw, 4.6rem); }
-    .vbd2 .vbd-signup-form { padding: 22px; border-radius: 22px; }
+    .vbd2 .vbd-signup-form { padding: 34px 20px 22px; border-radius: 24px; }
+    .vbd2 .vbd-badge { right: 16px; }
     .vbd2 { padding-bottom: 70px; }
     .vbd2 .vbd-mobile-cta {
       position: fixed; left: 12px; right: 12px; bottom: 12px; z-index: 999; display: flex;
@@ -143,10 +164,11 @@ description: Tak for en fantastisk første Viborg Brætspilsdag. Skriv dig op, o
       </div>
 
       <div class="vbd-signup-form" id="2027">
+        <span class="vbd-badge">Få besked først</span>
         <div id="vbd-signup-box">
-          <p class="vbd-kicker">Næste gang</p>
+          <p class="vbd-kicker">Viborg Brætspilsdag 2027</p>
           <h2>Skriv dig op til 2027</h2>
-          <p class="vbd-signup-intro">Vi er gået i gang med at se på 2027. Skriv dig op, så får du besked, så snart vi ved mere.</p>
+          <p class="vbd-signup-intro">Alle aktiviteter blev fuldt booket i år. Står du på listen, får du besked, før tilmeldingen åbner.</p>
 
           <form id="vbd-signup" novalidate>
             <div class="vbd-field">
@@ -166,9 +188,10 @@ description: Tak for en fantastisk første Viborg Brætspilsdag. Skriv dig op, o
               <input type="text" id="vbd-website" name="website" tabindex="-1" autocomplete="off">
             </div>
 
-            <button type="submit" class="vbd-btn vbd-btn-dark" id="vbd-submit">Skriv mig op →</button>
+            <button type="submit" class="vbd-btn vbd-btn-dark" id="vbd-submit">Skriv mig op <span class="vbd-arrow">→</span></button>
+            <p class="vbd-btn-note">Tager 10 sekunder. Kun besked om 2027, ingen spam.</p>
             <p class="vbd-form-error" id="vbd-error" role="alert" hidden></p>
-            <p class="vbd-form-small">Udfyld det ene felt eller begge. Vi bruger kun dine oplysninger til at give besked om Viborg Brætspilsdag, og du kan altid få dem slettet ved at skrive til <a href="mailto:viborgbraetspil@gmail.com">viborgbraetspil@gmail.com</a>.</p>
+            <p class="vbd-form-small">Udfyld det ene felt eller begge. Du kan altid få dine oplysninger slettet ved at skrive til <a href="mailto:viborgbraetspil@gmail.com">viborgbraetspil@gmail.com</a>.</p>
           </form>
         </div>
       </div>
@@ -185,11 +208,19 @@ description: Tak for en fantastisk første Viborg Brætspilsdag. Skriv dig op, o
 <script>
   (function () {
     // Indsæt webapp-adressen fra Apps Script her:
-    var ENDPOINT = "https://script.google.com/macros/s/AKfycbx6iCIx4qsnpyR_V2GZANI8RoVswZo_IbOwINuLxW7aVoehLi0-y6k0xiiJEZ218jGf1g/exec";
+    var ENDPOINT = "INDSÆT_DIN_APPS_SCRIPT_URL_HER";
 
     var form = document.getElementById("vbd-signup");
     var btn = document.getElementById("vbd-submit");
     var error = document.getElementById("vbd-error");
+
+    // Skjul den faste mobilknap, når formularen er i syne, så den ikke dækker felterne
+    var cta = document.querySelector(".vbd-mobile-cta");
+    if (cta && "IntersectionObserver" in window) {
+      new IntersectionObserver(function (entries) {
+        cta.style.display = entries[0].isIntersecting ? "none" : "";
+      }).observe(document.getElementById("2027"));
+    }
 
     function fail(text, field) {
       error.textContent = text;
@@ -220,12 +251,12 @@ description: Tak for en fantastisk første Viborg Brætspilsdag. Skriv dig op, o
         body: new URLSearchParams({ email: email, phone: phone, website: form.website.value })
       }).then(function () {
         document.getElementById("vbd-signup-box").innerHTML =
-          '<div class="vbd-done"><h2>Du er skrevet op</h2>' +
-          '<p>Tak. Du hører fra os, når vi ved mere om 2027.</p></div>';
+          '<div class="vbd-done"><div class="vbd-done-check">✓</div><h2>Du er på listen</h2>' +
+          '<p>Tak. Du får besked, før tilmeldingen til 2027 åbner.</p></div>';
       }).catch(function () {
         fail("Noget gik galt. Prøv igen om lidt.", null);
         btn.disabled = false;
-        btn.textContent = "Skriv mig op →";
+        btn.innerHTML = 'Skriv mig op <span class="vbd-arrow">→</span>';
       });
     });
   })();
