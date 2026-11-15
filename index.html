@@ -1,11 +1,11 @@
 ---
 layout: default
-title: Viborg Brætspilsdag 2026
-description: En afslappet dag med spil, hygge, fællesskab og masser af forskellige aktiviteter i Viborg.
+title: Tak for Viborg Brætspilsdag 2026
+description: Tak for en fantastisk første Viborg Brætspilsdag. Skriv dig op, og få besked om 2027.
 ---
 
 <style>
-  /* index2.html: isoleret redesign af forsiden. Alt er scoped til .vbd2 */
+  /* Forside efter dagen: tak for 2026 + opskrivning til 2027. Alt er scoped til .vbd2 */
   .vbd2 {
     --ink: #17201c;
     --muted: #5e6b64;
@@ -43,21 +43,15 @@ description: En afslappet dag med spil, hygge, fællesskab og masser af forskell
   .vbd2 .vbd-btn {
     display: inline-flex; align-items: center; justify-content: center; gap: 9px;
     min-height: 52px; padding: 0 22px; border-radius: 999px; text-decoration: none;
-    font-weight: 800; border: 1px solid transparent; transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+    font-weight: 800; border: 1px solid transparent; cursor: pointer; font-size: 1rem; font-family: inherit;
+    transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
   }
   .vbd2 .vbd-btn:hover { transform: translateY(-2px); }
   .vbd2 .vbd-btn-primary { background: var(--lime); color: #183323; box-shadow: 0 12px 32px rgba(216,239,177,.18); }
   .vbd2 .vbd-btn-primary:hover { box-shadow: 0 16px 36px rgba(216,239,177,.26); }
-  .vbd2 .vbd-btn-ghost { color: #fff; border-color: rgba(255,255,255,.32); background: rgba(255,255,255,.08); }
   .vbd2 .vbd-btn-dark { color: #fff; background: var(--green); }
-  .vbd2 .vbd-btn-light { color: var(--ink); background: var(--white); border-color: var(--line); }
+  .vbd2 .vbd-btn-dark:hover { background: var(--green-2); }
 
-  .vbd2 .vbd-spotlight-ti { background: #172d31; color: #fff; border-color: transparent; }
-  .vbd2 .vbd-spotlight-clock { background: #d8efb1; color: #173226; border-color: transparent; }
-  .vbd2 .vbd-spotlight-race { background: #f4c463; color: #312818; border-color: transparent; }
-  .vbd2 .vbd-spotlight-card h3, .vbd2 .vbd-spotlight-card p, .vbd2 .vbd-spotlight-link { color: inherit; }
-  .vbd2 .vbd-spotlight-type { display: inline-flex; margin-bottom: 12px; font-size: .72rem; font-weight: 900; text-transform: uppercase; letter-spacing: .12em; opacity: .72; }
-  
   /* HERO */
   .vbd2 .vbd-hero {
     min-height: 720px; display: grid; align-items: center; position: relative; overflow: hidden;
@@ -85,7 +79,6 @@ description: En afslappet dag med spil, hygge, fællesskab og masser af forskell
   .vbd2 .vbd-hero h1 { color: #fff; margin: 0; font-size: clamp(3.25rem, 7vw, 6.5rem); line-height: .91; letter-spacing: -.065em; max-width: 820px; }
   .vbd2 .vbd-hero h1 span { display: block; color: var(--lime); }
   .vbd2 .vbd-hero-copy { max-width: 750px; margin: 24px 0 0; color: rgba(255,255,255,.82); font-size: clamp(1.08rem, 2vw, 1.34rem); line-height: 1.55; }
-  .vbd2 .vbd-hero-meta { margin: 16px 0 0; color: rgba(255,255,255,.9); font-weight: 800; letter-spacing: -.01em; }
   .vbd2 .vbd-hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
   .vbd2 .vbd-hero-note { margin: 14px 0 0; color: rgba(255,255,255,.66); font-size: .94rem; line-height: 1.5; }
 
@@ -102,125 +95,36 @@ description: En afslappet dag med spil, hygge, fællesskab og masser af forskell
   .vbd2 .vbd-ticket strong { display: block; font-size: clamp(1.3rem, 3vw, 2rem); line-height: 1.05; letter-spacing: -.035em; }
   .vbd2 .vbd-ticket p { margin: 8px 0 0; line-height: 1.45; opacity: .78; }
 
-
-
-  .vbd2 .vbd-hero-extra {
-    max-width: 720px; margin-top: 24px; padding: 18px 20px 19px;
-    border: 1px solid rgba(255,255,255,.15); border-radius: 18px;
-    background: rgba(255,255,255,.07); backdrop-filter: blur(10px);
+  /* SKRIV DIG OP TIL 2027 */
+  .vbd2 .vbd-signup { background: linear-gradient(180deg, #f7f3e9 0%, #efe8da 100%); scroll-margin-top: 20px; }
+  .vbd2 .vbd-signup-card { background: var(--white); border: 1px solid var(--line); border-radius: 34px; padding: clamp(28px, 5vw, 54px); box-shadow: var(--shadow); }
+  .vbd2 .vbd-signup-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+  .vbd2 .vbd-signup-form { padding: 28px; border-radius: 24px; background: #f8f5ee; border: 1px solid var(--line); }
+  .vbd2 .vbd-field label { display: block; font-weight: 800; margin: 0 0 7px; }
+  .vbd2 .vbd-field label span { font-weight: 500; color: var(--muted); }
+  .vbd2 .vbd-field input {
+    width: 100%; min-height: 54px; padding: 0 18px; font-size: 1rem; font-family: inherit;
+    color: var(--ink); background: var(--white); border: 1px solid rgba(23,32,28,.22); border-radius: 16px;
   }
-  .vbd2 .vbd-hero-extra span {
-    display: block; margin-bottom: 6px; color: var(--lime); font-size: .72rem;
-    font-weight: 900; letter-spacing: .12em; text-transform: uppercase;
-  }
-  .vbd2 .vbd-hero-extra strong { display: block; color: #fff; font-size: 1.12rem; letter-spacing: -.02em; }
-  .vbd2 .vbd-hero-extra p { margin: 6px 0 0; color: rgba(255,255,255,.7); line-height: 1.5; font-size: .94rem; }
-
-  /* THREE FEATURED ACTIVITIES */
-  .vbd2 .vbd-spotlights { background: linear-gradient(180deg, #f7f3e9 0%, #efe8da 100%); }
-  .vbd2 .vbd-spotlight-head { max-width: 760px; }
-  .vbd2 .vbd-spotlight-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 34px; }
-  .vbd2 .vbd-spotlight-card {
-    min-height: 520px; border-radius: 30px; text-decoration: none; overflow: hidden;
-    display: flex; flex-direction: column; box-shadow: 0 24px 60px rgba(23,32,28,.11);
-    transition: transform .2s ease, box-shadow .2s ease;
-  }
-  .vbd2 .vbd-spotlight-card:hover { transform: translateY(-6px); box-shadow: 0 30px 70px rgba(23,32,28,.17); }
-  .vbd2 .vbd-spotlight-image { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; display: block; }
-  .vbd2 .vbd-spotlight-content { padding: 26px 28px 28px; display: flex; flex-direction: column; flex: 1; }
-  .vbd2 .vbd-spotlight-ti { background: #172d31; color: #fff; }
-  .vbd2 .vbd-spotlight-clock { background: #d8efb1; color: #173226; }
-  .vbd2 .vbd-spotlight-race { background: #f4c463; color: #312818; }
-  .vbd2 .vbd-spotlight-type { display: inline-flex; margin-bottom: 12px; font-size: .72rem; font-weight: 900; text-transform: uppercase; letter-spacing: .12em; opacity: .72; }
-  .vbd2 .vbd-spotlight-card h3 { margin: 0; font-size: clamp(2rem, 3.2vw, 3rem); line-height: .95; letter-spacing: -.055em; color: inherit; }
-  .vbd2 .vbd-spotlight-card p { margin: 18px 0 26px; line-height: 1.62; opacity: .78; }
-  .vbd2 .vbd-spotlight-link { display: inline-flex; align-self: flex-start; margin-top: auto; font-weight: 900; border-bottom: 1px solid currentColor; padding-bottom: 3px; }
-  .vbd2 .vbd-spotlight-all {
-    margin-top: 18px; padding: 22px 24px; border-radius: 22px; background: var(--white); border: 1px solid var(--line);
-    display: flex; align-items: center; justify-content: space-between; gap: 24px;
-  }
-  .vbd2 .vbd-spotlight-all strong { display: block; font-size: 1.12rem; }
-  .vbd2 .vbd-spotlight-all span { display: block; margin-top: 5px; color: var(--muted); line-height: 1.5; }
-
-  .vbd2 .vbd-people-photo {
-    background: var(--paper-2); padding: 0 0 92px;
-  }
-  .vbd2 .vbd-people-photo-frame {
-    min-height: 410px; border-radius: 34px; overflow: hidden; box-shadow: var(--shadow);
-    background: linear-gradient(90deg, rgba(23,32,28,.08), rgba(23,32,28,0)),
-                url("{{ '/assets/images/stemning/stemning1.jpg' | relative_url }}") center 46% / cover no-repeat;
-  }
-
-  /* DAY FLOW */
-  .vbd2 .vbd-flow-section { background: #172d31; color: white; }
-  .vbd2 .vbd-flow-section .vbd-kicker { color: var(--lime); }
-  .vbd2 .vbd-flow-section h2 { color: white; }
-  .vbd2 .vbd-flow-section .vbd-lead { color: rgba(255,255,255,.7); }
-  .vbd2 .vbd-flow { margin-top: 46px; display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; position: relative; }
-  .vbd2 .vbd-flow::before { content: ""; position: absolute; left: 8%; right: 8%; top: 34px; height: 2px; background: rgba(255,255,255,.14); }
-  .vbd2 .vbd-flow-item { position: relative; padding: 0 16px; text-align: center; }
-  .vbd2 .vbd-flow-dot { width: 68px; height: 68px; margin: 0 auto 18px; border-radius: 50%; display: grid; place-items: center; background: var(--lime); color: #173226; font-weight: 900; box-shadow: 0 0 0 8px #172d31; position: relative; z-index: 1; }
-  .vbd2 .vbd-flow-item h3 { color: white; margin: 0; font-size: 1.05rem; }
-  .vbd2 .vbd-flow-item p { margin: 7px 0 0; color: rgba(255,255,255,.62); font-size: .9rem; line-height: 1.45; }
-  .vbd2 .vbd-program-actions { margin-top: 34px; display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
-  
-  /* FIRST TIME */
-  .vbd2 .vbd-first { background: linear-gradient(180deg, #f7f3e9 0%, #efe8da 100%); }
-  .vbd2 .vbd-first-card { background: var(--white); border: 1px solid var(--line); border-radius: 34px; padding: clamp(28px, 5vw, 54px); box-shadow: var(--shadow); }
-  .vbd2 .vbd-first-grid { display: grid; grid-template-columns: .72fr 1.28fr; gap: 60px; }
-  .vbd2 .vbd-steps { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
-  .vbd2 .vbd-steps-three { grid-template-columns: repeat(3, 1fr); }
-  .vbd2 .vbd-step { padding: 22px; border-radius: 20px; background: #f8f5ee; border: 1px solid var(--line); }
-  .vbd2 .vbd-step-no { width: 34px; height: 34px; display: grid; place-items: center; border-radius: 50%; background: var(--green); color: white; font-weight: 900; margin-bottom: 16px; }
-  .vbd2 .vbd-step h3 { margin: 0; font-size: 1.06rem; }
-  .vbd2 .vbd-step p { margin: 8px 0 0; color: var(--muted); line-height: 1.55; font-size: .94rem; }
-  .vbd2 .vbd-first-actions { margin-top: 24px; }
-
-
-  /* VALUE */
-  .vbd2 .vbd-value-section { background: var(--green); color: #fff; }
-  .vbd2 .vbd-value-grid { display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: center; }
-  .vbd2 .vbd-value-section h2 { color: #fff; margin: 0; }
-  .vbd2 .vbd-value-section p { max-width: 760px; margin: 14px 0 0; color: rgba(255,255,255,.76); line-height: 1.6; font-size: 1.02rem; }
-
-  /* PRACTICAL */
-  .vbd2 .vbd-practical-section { background: #e8e0d1; }
-  .vbd2 .vbd-practical-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 40px; }
-  .vbd2 .vbd-practical-card { padding: 22px 24px; border-radius: 18px; background: rgba(255,253,248,.8); border: 1px solid rgba(23,32,28,.1); }
-  .vbd2 .vbd-practical-card span { display: block; font-size: .75rem; text-transform: uppercase; letter-spacing: .11em; font-weight: 850; color: var(--green); margin-bottom: 7px; }
-  .vbd2 .vbd-practical-card strong { display: block; line-height: 1.45; }
-
-  /* FAQ uses old markup, new styling */
-  .vbd2 .faq { margin-top: 86px; }
-  .vbd2 .faq-heading { max-width: 760px; margin-bottom: 28px; }
-  .vbd2 .faq-heading .eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: .78rem; font-weight: 850; letter-spacing: .13em; text-transform: uppercase; color: var(--green); }
-  .vbd2 .faq-heading h2 { margin-top: 8px; }
-  .vbd2 .faq-heading p { color: var(--muted); line-height: 1.65; }
-  .vbd2 .faq-list { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 14px; align-items: start; }
-  .vbd2 .faq-item { background: rgba(255,253,248,.78); border: 1px solid rgba(23,32,28,.1); border-radius: 16px; overflow: hidden; }
-  .vbd2 .faq-item summary { cursor: pointer; list-style: none; padding: 18px 48px 18px 20px; font-weight: 800; position: relative; }
-  .vbd2 .faq-item summary::-webkit-details-marker { display: none; }
-  .vbd2 .faq-item summary::after { content: "+"; position: absolute; right: 18px; top: 50%; transform: translateY(-50%); width: 26px; height: 26px; display: grid; place-items: center; border-radius: 50%; background: rgba(36,93,73,.1); color: var(--green); font-size: 1.15rem; }
-  .vbd2 .faq-item[open] summary::after { content: "−"; }
-  .vbd2 .faq-item > p { margin: 0; padding: 0 20px 16px; color: var(--muted); line-height: 1.62; }
-  .vbd2 .faq-item a { color: var(--green); }
-
+  .vbd2 .vbd-field input:focus { outline: 3px solid rgba(36,93,73,.22); border-color: var(--green); }
+  .vbd2 .vbd-or { margin: 14px 0; text-align: center; color: var(--muted); font-size: .86rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+  .vbd2 .vbd-hp { position: absolute; left: -9999px; }
+  .vbd2 .vbd-signup-form .vbd-btn { width: 100%; margin-top: 20px; }
+  .vbd2 .vbd-signup-form .vbd-btn:disabled { opacity: .6; cursor: wait; transform: none; }
+  .vbd2 .vbd-form-error { margin: 14px 0 0; color: var(--rust); font-weight: 800; }
+  .vbd2 .vbd-form-small { margin: 14px 0 0; color: var(--muted); font-size: .86rem; line-height: 1.5; }
+  .vbd2 .vbd-form-small a { color: var(--green); }
+  .vbd2 .vbd-done { text-align: center; padding: 26px 8px; }
+  .vbd2 .vbd-done h3 { margin: 0; font-size: 1.7rem; letter-spacing: -.03em; }
+  .vbd2 .vbd-done p { margin: 10px 0 0; color: var(--muted); line-height: 1.55; }
 
   .vbd2 .vbd-mobile-cta { display: none; }
 
   @media (max-width: 900px) {
-    .vbd2 .vbd-hero-grid, .vbd2 .vbd-spotlight-head, .vbd2 .vbd-first-grid, .vbd2 .vbd-value-grid { grid-template-columns: 1fr; }
+    .vbd2 .vbd-hero-grid, .vbd2 .vbd-signup-grid { grid-template-columns: 1fr; }
+    .vbd2 .vbd-signup-grid { gap: 34px; }
     .vbd2 .vbd-hero-stack { min-height: 390px; max-width: 560px; }
     .vbd2 .vbd-hero::before { inset: 36% -8% 0 24%; opacity: .3; }
-    .vbd2 .vbd-spotlight-grid { grid-template-columns: 1fr; }
-    .vbd2 .vbd-spotlight-card { min-height: 380px; }
-    .vbd2 .vbd-spotlight-all { align-items: flex-start; flex-direction: column; }
-    .vbd2 .vbd-flow { grid-template-columns: 1fr; gap: 22px; }
-    .vbd2 .vbd-flow::before { display: none; }
-    .vbd2 .vbd-flow-item { display: grid; grid-template-columns: 70px 1fr; text-align: left; gap: 16px; align-items: center; padding: 0; }
-    .vbd2 .vbd-flow-dot { margin: 0; }
-    .vbd2 .faq-list { grid-template-columns: 1fr; }
-    .vbd2 .vbd-steps-three { grid-template-columns: 1fr; }
   }
 
   @media (max-width: 620px) {
@@ -234,12 +138,8 @@ description: En afslappet dag med spil, hygge, fællesskab og masser af forskell
     .vbd2 .vbd-ticket:nth-child(1) { right: 7%; }
     .vbd2 .vbd-ticket:nth-child(2) { top: 108px; }
     .vbd2 .vbd-ticket:nth-child(3) { top: 220px; right: 8%; }
-    .vbd2 .vbd-spotlight-card { min-height: 0; border-radius: 24px; }
-    .vbd2 .vbd-spotlight-content { padding: 22px 22px 24px; }
-    .vbd2 .vbd-people-photo-frame { min-height: 280px; border-radius: 24px; }
-    .vbd2 .vbd-spotlight-all { padding: 20px; }
-    .vbd2 .vbd-steps, .vbd2 .vbd-practical-grid { grid-template-columns: 1fr; }
-    .vbd2 .vbd-first-card { border-radius: 24px; }
+    .vbd2 .vbd-signup-card { border-radius: 24px; }
+    .vbd2 .vbd-signup-form { padding: 20px; border-radius: 20px; }
     .vbd2 { padding-bottom: 70px; }
     .vbd2 .vbd-mobile-cta {
       position: fixed; left: 12px; right: 12px; bottom: 12px; z-index: 999; display: flex;
@@ -257,357 +157,128 @@ description: En afslappet dag med spil, hygge, fællesskab og masser af forskell
   <section class="vbd-hero">
     <div class="vbd-wrap vbd-hero-grid">
       <div>
-        <p class="vbd-kicker">14. november 2026 · Ungdomsskolen Viborg · 10.00 - 00.00 </p>
-        <h1>Viborg Brætspilsdag 2026</h1>
+        <p class="vbd-kicker">14. november 2026 · Ungdomsskolen Viborg</p>
+        <h1>Tak for Viborg Brætspilsdag <span>2026</span></h1>
         <p class="vbd-hero-copy">
-          En afslappet dag hvor du kan lære et nyt spil, låne fra brætspilsbiblioteket, deltage i konkurrencer, prøve rollespil, figurmaling og meget mere. 
+          Vi holdt dagen for første gang, og omkring 300 var med i løbet af dagen. Tak til alle, der kom og spillede, til de frivillige, til alle, der stod for en aktivitet, og til alle, der bakkede op.
         </p>
-        
-        <p class="vbd-hero-meta">Dagen er målrettet voksne og unge. Er du under 15 år har Klubberne i Viborg rollespil, figurmaling og andre spilaktiviteter for børn og unge samme tid og sted. Læs mere <a href="https://viborgbraetspil.dk/nyheder/klubberne/">her</a></p>
-        <div class="vbd-hero-extra">
-          <span>Kom og vær med:</span>
-          <strong>+100 personer deltager allerede </strong>
-        </div>
         <div class="vbd-hero-actions">
-          <a class="vbd-btn vbd-btn-primary" href="https://viborgbraetspil.dk/tilmelding/">Tilmeld dig dagen →</a>
-          <a class="vbd-btn vbd-btn-ghost" href="{{ '/aktiviteter.html' | relative_url }}">Se alle aktiviteter</a>
+          <a class="vbd-btn vbd-btn-primary" href="#2027">Skriv dig op til 2027 →</a>
         </div>
+        <p class="vbd-hero-note">Vi deler billeder fra dagen i den kommende tid.</p>
       </div>
 
-      <div class="vbd-hero-stack" aria-label="Højdepunkter fra dagen">
+      <div class="vbd-hero-stack" aria-label="Dagen i tal">
         <div class="vbd-ticket">
-          <small>Lån et spil</small>
-          <strong>Vi har flere hundrede spil til udlåns</strong>
-          <p>Alt fra party-spil til tunge strategispil</p>
-        </div>
-        <div class="vbd-ticket">
-          <small>Catan + KLASK + Heat Championship</small>
-          <strong>Vind brætspil, deltag i turneringer, konkurrer med andre</strong>
-          <p>Tempo, konkurrence og præmier.</p>
+          <small>Deltagere</small>
+          <strong>Omkring 300 var med i løbet af dagen</strong>
+          <p>Gæster, frivillige og værter ved bordene.</p>
         </div>
         <div class="vbd-ticket">
-          <small>D&D + Warhammer 40k + Blood on the Clocktower</small>
-          <strong>Prøv rollespil, figurmaling og sociale spil med andre</strong>
-          <p>Helt andre måder at spille sammen på.</p>
+          <small>Aktiviteter</small>
+          <strong>Over 30 aktiviteter og spil, og fuldt booket</strong>
+          <p>Turneringer, lær-at-spille, rollespil og figurmaling.</p>
+        </div>
+        <div class="vbd-ticket">
+          <small>Brætspilsbiblioteket</small>
+          <strong>Flere hundrede spil til udlån hele dagen</strong>
+          <p>Fra party-spil til tunge strategispil.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="vbd-section vbd-spotlights" id="oplevelser">
+  <section class="vbd-section vbd-signup" id="2027">
     <div class="vbd-wrap">
-      <div class="vbd-spotlight-head">
-        <h2>Vi har over 30 aktiviteter og spil, du kan prøve, fx:</h2>
-      </div>
-      <div class="vbd-spotlight-grid">
-        <a class="vbd-spotlight-card vbd-spotlight-ti" href="{{ '/nyheder/catan-turnering/' | relative_url }}">
-          <img class="vbd-spotlight-image" src="{{ '/assets/images/nyheder/catan-turnering.jpg' | relative_url }}" alt="Catan med spilleplade, bosættelser og veje" loading="lazy">
-          <div class="vbd-spotlight-content">
-            <span class="vbd-spotlight-type">Turnering · kl. 12</span>
-            <h3>Catan</h3>
-            <p>Klassikeren, du nok allerede kender. Byg, byt og bloker dig vej til sejren, og spil om præmier.</p>
-            <span class="vbd-spotlight-link">Læs mere →</span>
-          </div>
-        </a>
-
-        <a class="vbd-spotlight-card vbd-spotlight-clock" href="{{ '/nyheder/the-gang/' | relative_url }}">
-          <img class="vbd-spotlight-image" src="{{ '/assets/images/nyheder/the-gang.jpg' | relative_url }}" alt="Kortspillet The Gang" loading="lazy">
-          <div class="vbd-spotlight-content">
-            <span class="vbd-spotlight-type">Samarbejde · kl. 17</span>
-            <h3>The Gang</h3>
-            <p>Poker, hvor I spiller sammen. I skal rangere jeres hænder uden at sige, hvad I har. Overraskende sjovt.</p>
-            <span class="vbd-spotlight-link">Læs mere →</span>
-          </div>
-        </a>
-
-        <a class="vbd-spotlight-card vbd-spotlight-race" href="{{ '/nyheder/blood-on-the-clocktower/' | relative_url }}">
-          <img class="vbd-spotlight-image" src="{{ '/assets/images/nyheder/blood.jpg' | relative_url }}" alt="Blood on the Clocktower" loading="lazy">
-          <div class="vbd-spotlight-content">
-            <span class="vbd-spotlight-type">Social deduction</span>
-            <h3>Blood on the Clocktower</h3>
-            <p>Bluff, mistanke og samtaler rundt om bordet.</p>
-            <span class="vbd-spotlight-link">Læs mere →</span>
-          </div>
-        </a>
-      </div>
-
-      <div class="vbd-spotlight-all">
-        <div>
-          <strong>Flere aktiviteter</strong>
-          <span>Se hele oversigten over dagens aktiviteter.</span>
-        </div>
-        <a class="vbd-btn vbd-btn-dark" href="{{ '/aktiviteter.html' | relative_url }}">Se alle aktiviteter →</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="vbd-people-photo" aria-label="Stemning fra brætspil">
-    <div class="vbd-wrap">
-      <div class="vbd-people-photo-frame" role="img" aria-label="Mennesker samlet omkring brætspil"></div>
-    </div>
-  </section>
-
-
-  <!-- DAGENS GANG -->
-  <section class="vbd-section vbd-flow-section" id="program">
-    <div class="vbd-wrap">
-      <p class="vbd-kicker">Din dag</p>
-      <h2>Hvordan kunne du sætte din dag sammen? </h2>
-      <p class="vbd-lead">Du kan komme og gå, som det passer dig. Din billet gælder hele dagen. Du kunne:</p>
-
-      <div class="vbd-flow">
-        <div class="vbd-flow-item"><div class="vbd-flow-dot">10.00</div><div><h3>Dørene åbner</h3><p>Check ind, få en kop kaffe og kig på hylderne.</p></div></div>
-        <div class="vbd-flow-item"><div class="vbd-flow-dot">10.30</div><div><h3>Lær et nyt spil</h3><p>Book et af de første lær-at-spille-borde, som går i gang.</p></div></div>
-        <div class="vbd-flow-item"><div class="vbd-flow-dot">12.30</div><div><h3>Få lidt frokost</h3><p>Spis frokost (husk at krydse af ved tilmelding). </p></div></div>
-        <div class="vbd-flow-item"><div class="vbd-flow-dot">14.00</div><div><h3>Lær at spille Root</h3><p>Lær at spille Root med os andre </p></div></div>
-        <div class="vbd-flow-item"><div class="vbd-flow-dot">18.00</div><div><h3>Aftensmad</h3><p>Spis med til aftensmad (bestilles ved tilmelding) og spil noget nyt fra brætspilsbiblioteket </p></div></div>
-      </div>
-      <div class="vbd-program-actions">
-        <a class="vbd-btn vbd-btn-primary" data-signup href="{{ signup }}">Tilmeld dig →</a>
-        <a class="vbd-btn vbd-btn-ghost" href="{{ '/program.html' | relative_url }}">Se hele programmet</a>
-      </div>
-    </div>
-  </section>
-
-
-  <section class="vbd-section vbd-first" id="saadan">
-    <div class="vbd-wrap">
-      <div class="vbd-first-card">
-        <div class="vbd-first-grid">
+      <div class="vbd-signup-card">
+        <div class="vbd-signup-grid">
           <div>
-            <p class="vbd-kicker">Sådan fungerer det</p>
-            <h2>Det er enkelt.</h2>
-            <div class="vbd-first-actions">
-              <a class="vbd-btn vbd-btn-dark" href="{{ '/foerste-gang/' | relative_url }}">Første gang? Læs mere →</a>
-            </div>
+            <p class="vbd-kicker">Næste gang</p>
+            <h2>Skriv dig op til 2027</h2>
+            <p class="vbd-lead">Vi er gået i gang med at se på 2027. Skriv dig op, så får du besked, så snart vi ved mere.</p>
           </div>
 
-          <div class="vbd-steps vbd-steps-three">
-            <div class="vbd-step">
-              <div class="vbd-step-no">1</div>
-              <h3>Tilmeld dig</h3>
-              <p>Din tilmelding gælder hele arrangementet.</p>
-            </div>
-            <div class="vbd-step">
-              <div class="vbd-step-no">2</div>
-              <h3>Book, hvis du vil</h3>
-              <p>Nogle aktiviteter har begrænsede pladser. De åbne aktiviteter kræver ingen booking.</p>
-            </div>
-            <div class="vbd-step">
-              <div class="vbd-step-no">3</div>
-              <h3>Mød op og spil</h3>
-              <p>Check ind ved indgangen og gå til din aktivitet, biblioteket eller et åbent bord.</p>
-            </div>
+          <div class="vbd-signup-form" id="vbd-signup-box">
+            <form id="vbd-signup" novalidate>
+              <div class="vbd-field">
+                <label for="vbd-email">E-mail <span>(valgfrit)</span></label>
+                <input type="email" id="vbd-email" name="email" autocomplete="email" placeholder="dig@eksempel.dk">
+              </div>
+
+              <p class="vbd-or">og/eller</p>
+
+              <div class="vbd-field">
+                <label for="vbd-phone">Telefon <span>(valgfrit, vi sender en sms)</span></label>
+                <input type="tel" id="vbd-phone" name="phone" autocomplete="tel" placeholder="12 34 56 78">
+              </div>
+
+              <div class="vbd-hp" aria-hidden="true">
+                <label for="vbd-website">Udfyld ikke dette felt</label>
+                <input type="text" id="vbd-website" name="website" tabindex="-1" autocomplete="off">
+              </div>
+
+              <button type="submit" class="vbd-btn vbd-btn-dark" id="vbd-submit">Skriv mig op →</button>
+              <p class="vbd-form-error" id="vbd-error" role="alert" hidden></p>
+              <p class="vbd-form-small">Udfyld det ene felt eller begge, alt efter hvordan du helst vil have besked. Vi bruger kun dine oplysninger til at give besked om Viborg Brætspilsdag, og du kan altid få dem slettet ved at skrive til <a href="mailto:viborgbraetspil@gmail.com">viborgbraetspil@gmail.com</a>.</p>
+            </form>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="vbd-section vbd-value-section">
-    <div class="vbd-wrap vbd-value-grid">
-      <div>
-        <h2>Én billet. Hele dagen.</h2>
-        <p>Adgang til de åbne spilleborde, brætspilsbiblioteket, aktiviteter, konkurrencer og lodtrækninger. Nogle aktiviteter kræver særskilt booking af en plads.</p>
-      </div>
-      <a class="vbd-btn vbd-btn-primary" href="https://viborgbraetspil.dk/tilmelding/">Tilmeld dig dagen →</a>
-    </div>
-  </section>
-
-  <section class="vbd-section vbd-practical-section" id="praktisk">
-    <div class="vbd-wrap">
-      <h2>Praktisk information</h2>
-
-      <div class="vbd-practical-grid">
-        <div class="vbd-practical-card"><span>Dato</span><strong>Lørdag 14. november 2026. Vi åbner kl. 10.00 og slutter kl. 00.00.</strong></div>
-        <div class="vbd-practical-card"><span>Sted</span><strong>Ungdomsskolen, Reberbanen 11+13, 8800 Viborg.</strong></div>
-        <div class="vbd-practical-card"><span>Parkering</span><strong>Du kan parkere gratis ved Garnisonspladsen, Rødevej, 8800 Viborg.</strong></div>
-        <div class="vbd-practical-card"><span>Kontakt</span><strong>Skriv til os på <a href="mailto:viborgbraetspil@gmail.com">viborgbraetspil@gmail.com</a>.</strong></div>
-      </div>
-    <div class="faq">
-
-  <div class="faq-heading">
-    <p class="eyebrow">Spørgsmål & svar</p>
-    <h2>Ofte stillede spørgsmål</h2>
-    <p>Her finder du svar på de mest almindelige spørgsmål om dagen.</p>
-  </div>
-
-
-      <div class="faq-list">
-
-          <details class="faq-item">
-            <summary>Kan jeg komme alene eller med en gruppe?</summary>
-            <p>Ja. Du er meget velkommen til at komme alene og med en gruppe. Vi hjælper med at finde andre deltagere, et åbent bord eller en aktivitet, man kan gå med i.</p>
-          </details>
-
-          <details class="faq-item">
-            <summary>Skal jeg være god til brætspil?</summary>
-            <p>Nej. Én af arrangørerne, André, er tilmed pivringe til brætspil, men det stopper ham ikke. Så du behøver hverken være erfaren eller kende spillene på forhånd. Mange aktiviteter er lavet, så man kan lære spillet på stedet, og ved de åbne borde hjælper de frivillige dig gerne i gang.</p>
-          </details>
-
-          <details class="faq-item">
-            <summary>Kan I lære mig reglerne?</summary>
-            <p>Ja. Ved lær-at-spille-aktiviteterne forklarer en vært spillet og spiller med, og ved de åbne borde kan du altid spørge en frivillig.</p>
-          </details>
-
-          <details class="faq-item">
-            <summary>Skal jeg være der hele dagen?</summary>
-            <p>Kom i et par timer eller bliv hele dagen. Du kan også komme og gå, som du vil... men vi vil så gerne have du bli'r lidt længere (Fakta&#8482;).</p>
-          </details>
-
-          <details class="faq-item">
-            <summary>Er dagen kun for erfarne brætspillere?</summary>
-            <p>Dagen er både for begyndere, hyggespillere og brætspilsentusiaster. Du tilmelder dig bare en aktivitet, der passer bedst til dit ambitionsniveau.</p>
-          </details>
-
-          <details class="faq-item">
-            <summary>Hvad er med i billetten?</summary>
-            <p>Adgang til hele arrangementet, frokost, brætspilsbiblioteket, åbne spilleborde, aktiviteter, hygge og nye bekendtskaber... og måske en præmie?! :-o</p>
-          </details>
-
-          <details class="faq-item">
-            <summary>Kan jeg købe mad og drikke?</summary>
-            <p>Frokost består af rugbrød, pålæg og grønt. Frokost er inkluderet. Du skal huske at tilmelde dig frokost ved tilmelding til dagen.</p>
-            <p>Aftensmad er en varm ret, som kan købes for 25 kroner. Du bestiller aftensmad ved tilmelding.</p>
-            <p>Der vil desuden være mulighed for at købe kaffe, sodavand, snacks, kage med videre på dagen. Du kan betale med MobilePay eller i lige beløb i kontanter.</p>
-          </details>
-
-          <details class="faq-item">
-            <summary>Må jeg selv tage mad og drikke med?</summary>
-            <p>Ja. Vi vil også forsøge at sælge snacks, sodavand og kaffe til favorable priser (for dig, forstås, da vi ikke skal tjene penge på arrangementet). Du kan betale med MobilePay eller i lige beløb i kontanter, da vi ikke kan garantere byttepenge.</p>
-          </details>
-
-          <details class="faq-item">
-            <summary>Må jeg spise snacks og andet ved spillene?</summary>
-            <p>Nej. Desværre ikke. Årsagen er helt enkelt, at spillene venligst er stillet til rådighed af private personer, så pas godt på dem! Mad og drikke kan og må indtages i uanede mængder i andre områder.</p>
-          </details>
-
-          <details class="faq-item">
-            <summary>Kan jeg låne brætspil på dagen?</summary>
-            <p>Ja. Vi har et åbent brætspilsbibliotek med et par hundrede spil, som du kan låne og tage med hen til et ledigt bord.</p>
-            <p>Når du er færdig, afleverer du blot spillet igen, så andre kan få glæde af det. Pas godt på spillene, da de er stillet til rådighed af privatpersoner!</p>
-          </details>
-
-          <details class="faq-item">
-            <summary>Hvad hvis jeg ikke ved, hvad jeg skal spille?</summary>
-            <p>Så spørg os. Fortæl gerne, hvor mange I er, hvor lang tid I har, og om I vil have noget let, strategisk, samarbejdende eller konkurrencepræget.</p>
-            <p>Vi hjælper gerne med at finde noget fra brætspilsbiblioteket eller pege dig i retning af en aktivitet.</p>
-          </details>
-
-          <details class="faq-item">
-            <summary>Må jeg tage mine egne brætspil med?</summary>
-            <p>Ja, meget gerne. Du må gerne tage dine egne spil med og spille dem ved de åbne borde.</p>
-            <p>Medbragte spil er dog på eget ansvar.</p>
-          </details>
-
-          <details class="faq-item">
-            <summary>Kan jeg tage en ven med?</summary>
-            <p>Ja. Du kan komme alene, som par, med en ven eller sammen med en hel spillegruppe. Alle deltagere skal blot være tilmeldt Viborg Brætspilsdag og have betalt entré.</p>
-          </details>
-
-          <details class="faq-item">
-            <summary>Hvordan booker jeg en aktivitet?</summary>
-            <p>Først tilmelder du dig Viborg Brætspilsdag.</p>
-            <p>Når aktivitetsbookingen åbner, får tilmeldte deltagere adgang til booking af aktiviteter med begrænsede pladser, så sørg for at melde dig til dagen i god tid. Du kan KUN tilmelde dig selve aktiviteterne, når du er tilmeldt dagen.</p>
-            <p>De åbne aktiviteter kræver ingen særskilt booking. Her kan du bare møde op, når du er tilmeldt dagen.</p>
-          </details>
-
-          <details class="faq-item">
-            <summary>Kan jeg spille uden at have booket en aktivitet?</summary>
-            <p>Ja, bestemt. Du kan bruge brætspilsbiblioteket, de åbne spilleborde og de åbne aktiviteter uden at have booket en bestemt aktivitet.</p>
-            <p>Booking er kun nødvendig ved aktiviteter, hvor der er et begrænset antal pladser.</p>
-          </details>
-
-          <details class="faq-item">
-            <summary>Hvordan kan jeg vinde en præmie på dagen?</summary>
-            <p>Nogle spil bliver udloddet blandt deltagerne alene ved fremmøde. Du kan også vinde spil i flere af dagens konkurrencer. Og vi har ikke få præmier til dagen.</p>
-          </details>
-
-          <details class="faq-item">
-            <summary>Hvad gør jeg, når jeg kommer?</summary>
-            <p>Start ved check-in ved indgangen til Ungdomsskolen på Reberbanen 11 + 13. Her melder du din ankomst.</p>
-            <p>Derefter kan du gå til en aktivitet, du har booket, besøge brætspilsbiblioteket, finde et åbent bord eller spørge en frivillig om hjælp.</p>
-          </details>
-
-          <details class="faq-item">
-            <summary>Må jeg gå fra arrangementet og komme tilbage senere?</summary>
-            <p>Ja. Når du først er checket ind, må du gerne forlade arrangementet og komme tilbage senere samme dag.</p>
-          </details>
-
-          <details class="faq-item">
-            <summary>Hvor foregår Viborg Brætspilsdag?</summary>
-            <p>Viborg Brætspilsdag foregår på Ungdomsskolen, Reberbanen 11 + 13, 8800 Viborg.</p>
-            <p>Der er gratis parkering tæt ved (smæk "Garnisonspladsen" i GPS'en.)</p>
-          </details>
-
-          <details class="faq-item">
-            <summary>Er der en aldersgrænse?</summary>
-            <p>Alle er velkomne, og børn er meget velkomne sammen med voksne. Klubberne i Viborg kommer og laver aktiviteter for børn og unge og har et særskilt program, hvor man kan være med. Vores aktiviteter er primært målrettet unge og voksne. Alle kan dog sammen med en voksen låne spil, eksempelvis familiespil, fra brætspilsbiblioteket og finde plads ved de åbne spillebord. </p>
-            <p>Børn under 15 år skal følges med en voksen, som har ansvaret for dem under arrangementet, da vi ikke tilbyder særskilt opsyn med børn.</p>
-          </details>
-
-          <details class="faq-item">
-            <summary>Er arrangementet tilgængeligt for kørestolsbrugere og personer med nedsat mobilitet?</summary>
-            <p>Ja. Lokalerne kan benyttes af kørestolsbrugere og personer med nedsat mobilitet.</p>
-            <p>Har du særlige behov eller brug for hjælp i forbindelse med dit besøg, er du meget velkommen til at kontakte os på forhånd på <a href="mailto:viborgbraetspil@gmail.com">viborgbraetspil@gmail.com</a>.</p>
-          </details>
-
-          <details class="faq-item">
-            <summary>Hvordan arbejder I med tryghed på dagen?</summary>
-            <p>Viborg Brætspilsdag skal være et rart og trygt sted at være.</p>
-            <p>Vi forventer, at deltagere behandler hinanden respektfuldt. Chikane, truende adfærd, diskrimination eller anden adfærd, der gør andre deltagere utrygge, accepteres ikke.</p>
-            <p>Du må altid stoppe med at deltage i et spil eller en aktivitet, hvis du ikke længere har lyst til at være med.</p>
-            <p>Hvis du oplever noget ubehageligt eller føler dig utryg, kan du altid henvende dig til arrangørerne eller en frivillig. Vi hjælper med at håndtere situationen og sørge for, at du er tryg og har en god dag.</p>
-          </details>
-
-          <details class="faq-item">
-            <summary>Må jeg have kæledyr med?</summary>
-            <p>Vi elsker dyr, men nej. Ingen kæledyr til arrangementet.</p>
-          </details>
-
-          <details class="faq-item">
-            <summary>Hvem står bag Viborg Brætspilsdag?</summary>
-            <p>Viborg Brætspilsdag er et lokalt og frivilligt arrangeret initiativ, skabt af private personer med interesse for brætspil, rollespil og fællesskab.</p>
-            <p>På dagen hjælper en række frivillige værter med blandt andet aktiviteter, lær-at-spille-sessioner, turneringer, brætspilsbibliotek, praktiske opgaver og med at hjælpe deltagere med at finde nogen at spille med.</p>
-            <p>Arrangementet er ikke en kommerciel messe. Entréindtægterne bruges på arrangementet, de frivillige og på at udvikle Viborg Brætspilsdag.</p>
-            <p>Anders og André Højer er hovedarrangører på dagen. Har du spørgsmål til dem, kan du kontakte os på <a href="mailto:viborgbraetspil@gmail.com">viborgbraetspil@gmail.com</a>.</p>
-          </details>
-
-          <details class="faq-item">
-            <summary>Hvordan bruger I mine personoplysninger?</summary>
-            <p>Når du tilmelder dig Viborg Brætspilsdag, indsamler vi de oplysninger, der er nødvendige for at administrere din tilmelding, eventuelle aktivitetsbookinger og praktisk kommunikation om arrangementet.</p>
-            <p>Oplysningerne bruges kun i forbindelse med Viborg Brætspilsdag og deles ikke med sponsorer eller andre eksterne parter til markedsføring.</p>
-            <p>Kun personer, der har brug for oplysningerne i forbindelse med administrationen af arrangementet, har adgang til dem.</p>
-            <p>Oplysningerne slettes, når de ikke længere er nødvendige for administration og opfølgning på arrangementet (herunder en påmindelse om næste års arrangement).</p>
-            <p>Ønsker du indsigt i dine oplysninger eller ønsker dem slettet, kan du kontakte os på <a href="mailto:viborgbraetspil@gmail.com">viborgbraetspil@gmail.com</a>.</p>
-          </details>
-
-          <details class="faq-item">
-            <summary>Bliver der taget billeder på dagen?</summary>
-            <p>Vi kan ikke udelukke, at folk tager billeder under Viborg Brætspilsdag. Vi kunne måske også godt tænke os et billede til arrangementets hjemmeside, Facebook-side og fremtidig information om Viborg Brætspilsdag.</p>
-            <p>Så spørger vi inden, vi tager billeder, hvor enkeltpersoner tydeligt er motivet.</p>
-            <p>Du kan altid sige nej til at blive fotograferet eller bede os om ikke at bruge et billede af dig.</p>
-            <p>Hvis du efter arrangementet opdager et billede af dig, som du ønsker fjernet, kan du kontakte os på <a href="mailto:viborgbraetspil@gmail.com">viborgbraetspil@gmail.com</a>, så fjerner vi det mæ' det vuns!</p>
-          </details>
-
-          <details class="faq-item">
-            <summary>Jeg har flere spørgsmål</summary>
-            <p>Kontakt os endelig på <a href="mailto:viborgbraetspil@gmail.com">viborgbraetspil@gmail.com</a> med alle spørgsmål, ideer, feedback og andet, du har!</p>
-          </details>
-
-    
+  <div class="vbd-mobile-cta" aria-label="Skriv dig op til 2027">
+    <span>Få besked om 2027</span>
+    <a class="vbd-btn vbd-btn-primary" href="#2027">Skriv dig op</a>
   </div>
 
 </div>
-  </div>
 
+<script>
+  (function () {
+    // Indsæt webapp-adressen fra Apps Script her:
+    var ENDPOINT = "INDSÆT_DIN_APPS_SCRIPT_URL_HER";
 
-    </div>
-  </section>
+    var form = document.getElementById("vbd-signup");
+    var btn = document.getElementById("vbd-submit");
+    var error = document.getElementById("vbd-error");
 
-  <div class="vbd-mobile-cta" aria-label="Tilmelding">
-    <span>14. november · Viborg</span>
-    <a class="vbd-btn vbd-btn-primary" href="https://viborgbraetspil.dk/tilmelding/">Tilmeld dig</a>
-  </div>
+    function fail(text, field) {
+      error.textContent = text;
+      error.hidden = false;
+      if (field) field.focus();
+    }
 
-</div>
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      error.hidden = true;
+
+      var email = form.email.value.trim();
+      var phone = form.phone.value.trim();
+      var emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+      var phoneOk = phone.replace(/\D/g, "").length >= 8;
+
+      if (!email && !phone) return fail("Skriv enten din e-mail eller dit telefonnummer.", form.email);
+      if (email && !emailOk) return fail("E-mailadressen ser ikke rigtig ud.", form.email);
+      if (phone && !phoneOk) return fail("Telefonnummeret skal have mindst 8 cifre.", form.phone);
+      if (ENDPOINT.indexOf("https://") !== 0) return fail("Formularen er ikke koblet til endnu.", null);
+
+      btn.disabled = true;
+      btn.textContent = "Sender...";
+
+      fetch(ENDPOINT, {
+        method: "POST",
+        mode: "no-cors",
+        body: new URLSearchParams({ email: email, phone: phone, website: form.website.value })
+      }).then(function () {
+        document.getElementById("vbd-signup-box").innerHTML =
+          '<div class="vbd-done"><h3>Du er skrevet op</h3>' +
+          '<p>Tak. Du hører fra os, når vi ved mere om 2027.</p></div>';
+      }).catch(function () {
+        fail("Noget gik galt. Prøv igen om lidt.", null);
+        btn.disabled = false;
+        btn.textContent = "Skriv mig op →";
+      });
+    });
+  })();
+</script>
