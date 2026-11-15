@@ -81,6 +81,7 @@
     margin: 18px 0 6px;
   }
   label span { font-weight: 400; color: var(--muted); }
+  label.tight { margin-top: 8px; }
   input[type="email"], input[type="tel"] {
     width: 100%;
     padding: 14px;
@@ -93,6 +94,12 @@
   input:focus {
     outline: 3px solid rgba(200, 69, 44, 0.25);
     border-color: var(--accent);
+  }
+  .or {
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.9rem;
+    margin: 16px 0 0;
   }
   .hp { position: absolute; left: -9999px; }
   button {
@@ -134,13 +141,15 @@
 
   <div class="card" id="card">
     <h2>Få besked om 2027</h2>
-    <p>Skriv dig op, så hører du fra os, så snart vi ved mere.</p>
+    <p>Skriv din e-mail, dit telefonnummer eller begge dele. Du vælger selv, hvordan du helst vil have besked.</p>
 
     <form id="signup" novalidate>
-      <label for="email">E-mail</label>
-      <input type="email" id="email" name="email" autocomplete="email" required placeholder="dig@eksempel.dk">
+      <label for="email">E-mail <span>(valgfrit)</span></label>
+      <input type="email" id="email" name="email" autocomplete="email" placeholder="dig@eksempel.dk">
 
-      <label for="phone">Telefon <span>(valgfrit)</span></label>
+      <p class="or">og/eller</p>
+
+      <label for="phone" class="tight">Telefon <span>(valgfrit, vi sender en sms)</span></label>
       <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="12 34 56 78">
 
       <div class="hp" aria-hidden="true">
@@ -156,23 +165,34 @@
 </main>
 
 <script>
-  // Indsæt adressen fra Apps Script (trin 2) her:
-  const ENDPOINT = "https://script.google.com/macros/s/AKfycbweSizr2ZcyezWebsiayBOuevVGRRYTcJHV7PfRAcK3mT8b1arfpoNLF_nPB0KnQSKAVA/exec";
+  // Indsæt webapp-adressen fra Apps Script her:
+  const ENDPOINT = "INDSÆT_DIN_APPS_SCRIPT_URL_HER";
 
   const form = document.getElementById("signup");
   const btn = document.getElementById("btn");
   const error = document.getElementById("error");
+
+  function fail(text, field) {
+    error.textContent = text;
+    error.hidden = false;
+    if (field) field.focus();
+  }
 
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
     error.hidden = true;
 
     const email = form.email.value.trim();
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      error.textContent = "Skriv en gyldig e-mailadresse.";
-      error.hidden = false;
-      form.email.focus();
-      return;
+    const phone = form.phone.value.trim();
+    const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    const phoneOk = phone.replace(/\D/g, "").length >= 8;
+
+    if (!email && !phone) return fail("Skriv enten din e-mail eller dit telefonnummer.", form.email);
+    if (email && !emailOk) return fail("E-mailadressen ser ikke rigtig ud.", form.email);
+    if (phone && !phoneOk) return fail("Telefonnummeret skal have mindst 8 cifre.", form.phone);
+
+    if (ENDPOINT.indexOf("https://") !== 0) {
+      return fail("Formularen er ikke koblet til endnu.", null);
     }
 
     btn.disabled = true;
@@ -182,18 +202,13 @@
       await fetch(ENDPOINT, {
         method: "POST",
         mode: "no-cors",
-        body: new URLSearchParams({
-          email: email,
-          phone: form.phone.value.trim(),
-          website: form.website.value
-        })
+        body: new URLSearchParams({ email: email, phone: phone, website: form.website.value })
       });
       document.getElementById("card").innerHTML =
         '<div class="done"><h2>Du er skrevet op</h2>' +
         '<p>Tak. Du hører fra os, når vi ved mere om 2027.</p></div>';
     } catch (err) {
-      error.textContent = "Noget gik galt. Prøv igen om lidt.";
-      error.hidden = false;
+      fail("Noget gik galt. Prøv igen om lidt.", null);
       btn.disabled = false;
       btn.textContent = "Skriv mig op";
     }
