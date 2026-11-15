@@ -4,36 +4,36 @@
   url: "https://www.hyggeonkel.dk"
 
 - navn: "FGU Viborg"
-  gruppe: "samarbejdspartner"
+  gruppe: "tak"
   logo: "/assets/images/logos/fgu_logo.png"
   url: ""
 
 - navn: "Viborg Ungdomsskole"
-  gruppe: "samarbejdspartner"
+  gruppe: "tak"
   logo: "/assets/images/logos/ungdomsskole_logo.png"
   url: ""
 
 - navn: "Nerdlab Games"
-  gruppe: "sponsor"
+  gruppe: "tak"
   logo: "/assets/images/logos/nerdlabs.webp"
   url: "https://shop.nerdlab-games.com/"
 
 - navn: "Bilka"
-  gruppe: "sponsor"
+  gruppe: "tak"
   logo: "/assets/images/logos/bilka_logo.png"
   url: "https://www.bilka.dk"
 
 - navn: "Asmodee Nordics"
-  gruppe: "sponsor"
+  gruppe: "tak"
   logo: "/assets/images/logos/asmodee_logo.png"
   url: "https://www.asmodeenordics.com"
 
 - navn: "Viborg Kommune"
-  gruppe: "sponsor"
+  gruppe: "tak"
   logo: "/assets/images/logos/logo_small.png"
   url: "https://www.viborg.dk"
 
 - navn: "Peter Larsen Kaffe"
-  gruppe: "sponsor"
+  gruppe: "tak"
   logo: "/assets/images/logos/peter-larsen-kaffe.png"
   url: "https://www.peterlarsenkaffe.dk/"
