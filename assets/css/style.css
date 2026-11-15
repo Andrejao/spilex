@@ -3610,3 +3610,21 @@ a.logo-card:hover {
   }
 
 }
+
+.partner-group-featured .logo-grid {
+  display: flex !important;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 18px;
+}
+
+.partner-group-featured .logo-card {
+  flex: 0 1 240px;
+  min-height: 150px;
+  padding: 24px;
+}
+
+.partner-group-featured .logo-card img {
+  max-width: 190px;
+  max-height: 90px;
+}
