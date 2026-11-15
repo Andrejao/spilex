@@ -2458,7 +2458,8 @@ a.logo-card:hover {
 }
 
 .partner-group-featured .logo-grid {
-  grid-template-columns: minmax(260px, 420px);
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
 }
 
 .partner-group-featured .logo-card {
@@ -2482,7 +2483,7 @@ a.logo-card:hover {
 @media (max-width: 760px) {
 
   .partner-group-featured .logo-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 2fr;
   }
 
   .partner-group-featured .logo-card {
