@@ -1,6 +1,9 @@
 ---
 layout: default
 title: Nyheder
+permalink: /nyheder/
+redirect_from:
+  - /nyheder.html
 description: Nyheder om brætspil og spilarrangementer i Viborg fra Viborg Brætspil, samt programmet fra Viborg Brætspilsdag 2026.
 ---
 
@@ -20,13 +23,14 @@ description: Nyheder om brætspil og spilarrangementer i Viborg fra Viborg Bræt
 </section>
 
 
+{% assign nye = site.posts | where_exp: "p", "p.braetspilsdag == nil" %}
+{% assign arkiv = site.posts | where: "braetspilsdag", 2026 %}
+
 <section class="section">
   <div class="container">
-
+    {% if nye.size > 0 %}
     <div class="news-grid">
-
-      {% for post in site.posts %}
-
+      {% for post in nye %}
       <article class="news-card">
 
         {% if post.image %}
@@ -42,7 +46,7 @@ description: Nyheder om brætspil og spilarrangementer i Viborg fra Viborg Bræt
         <div class="news-card-content">
 
           <p class="news-type">
-            {{ post.type | default: "Nyhed" }}
+            {% if post.braetspilsdag %}Viborg Brætspilsdag {{ post.braetspilsdag }}{% else %}{{ post.type | default: "Nyhed" }}{% endif %}
           </p>
 
           <h2>
@@ -69,8 +73,62 @@ description: Nyheder om brætspil og spilarrangementer i Viborg fra Viborg Bræt
       </article>
 
       {% endfor %}
-
     </div>
+    {% else %}
+    <p>Der kommer snart nyt om Viborg Brætspilsdag 2027 og andre spilarrangementer. <a href="{{ '/#2027' | relative_url }}">Skriv dig op</a>, så hører du det først.</p>
+    {% endif %}
+  </div>
+</section>
 
+<section class="section">
+  <div class="container">
+    <p class="eyebrow">Arkiv</p>
+    <h2>Fra Viborg Brætspilsdag 2026</h2>
+    <p>Programmet fra dagen den 14. november 2026. <a href="{{ '/braetspilsdag/' | relative_url }}">Læs om dagen</a>.</p>
+    <div class="news-grid">
+      {% for post in arkiv %}
+      <article class="news-card">
+
+        {% if post.image %}
+        <a href="{{ post.url | relative_url }}">
+          <img
+            class="news-card-image"
+            src="{{ post.image | relative_url }}"
+            alt="{{ post.title }}"
+          >
+        </a>
+        {% endif %}
+
+        <div class="news-card-content">
+
+          <p class="news-type">
+            {% if post.braetspilsdag %}Viborg Brætspilsdag {{ post.braetspilsdag }}{% else %}{{ post.type | default: "Nyhed" }}{% endif %}
+          </p>
+
+          <h2>
+            <a href="{{ post.url | relative_url }}">
+              {{ post.title }}
+            </a>
+          </h2>
+
+          {% if post.teaser %}
+          <p>
+            {{ post.teaser }}
+          </p>
+          {% endif %}
+
+          <a
+            class="news-read"
+            href="{{ post.url | relative_url }}"
+          >
+            Læs mere →
+          </a>
+
+        </div>
+
+      </article>
+
+      {% endfor %}
+    </div>
   </div>
 </section>

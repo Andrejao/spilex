@@ -15,5 +15,19 @@ url: "https://viborgbraetspil.dk"
 
 signup_url: "https://viborgbraetspil.dk/tilmelding/"
 
+# Indlæg i _posts/braetspilsdag-2026/ hører til Viborg Brætspilsdag 2026.
+# Nye nyheder lægges direkte i _posts/ og vises på forsiden og under Nyheder.
+defaults:
+  - scope:
+      path: "_posts/braetspilsdag-2026"
+      type: posts
+    values:
+      braetspilsdag: 2026
+  - scope:
+      path: "_posts"
+      type: posts
+    values:
+      permalink: /nyheder/:title/
+
 plugins:
   - jekyll-redirect-from

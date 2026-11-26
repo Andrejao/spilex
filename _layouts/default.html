@@ -136,7 +136,7 @@
 <nav aria-label="Hovedmenu">
         <a href="{{ '/braetspilsdag/' | relative_url }}">Brætspilsdag 2026</a>
         <a href="{{ '/nyheder/' | relative_url }}">Nyheder</a>
-        <a href="{{ '/#om' | relative_url }}">Om os</a>
+        <a href="#om">Om os</a>
         <a href="{{ '/en/' | relative_url }}" lang="en">English</a>
         <a class="nav-signup" href="{{ '/#2027' | relative_url }}">Få besked om 2027</a>
       </nav>
@@ -341,9 +341,9 @@
   {% endif %}
 
   <!-- Footer -->
-  <footer class="site-footer">
+  <footer class="site-footer" id="om">
     <div class="container">
-      <strong>VIBORG BRÆTSPIL</strong>
+      <strong>OM VIBORG BRÆTSPIL</strong>
       <p>
         Et frivilligt initiativ under {{ site.forening }} · CVR {{ site.cvr }} · {{ site.forening_by }}<br>
         Siden drives af {{ site.ansvarlig }}.

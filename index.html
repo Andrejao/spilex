@@ -5,7 +5,8 @@ description: Viborg Brætspil holder brætspilsarrangementer i Viborg og står b
 ---
 
 {% include vbd-style.html %}
-{% assign aktiviteter = site.posts | where: "type", "aktivitet" %}
+{% assign aktiviteter = site.posts | where: "braetspilsdag", 2026 %}
+{% assign nye = site.posts | where_exp: "p", "p.braetspilsdag == nil" %}
 
 <div class="vbd2">
 
@@ -15,9 +16,8 @@ description: Viborg Brætspil holder brætspilsarrangementer i Viborg og står b
         <p class="vbd-kicker vbd-hero-kicker">Brætspil i Viborg</p>
         <h1>Viborg <span>Brætspil</span></h1>
         <p class="vbd-hero-copy">
-          Vi holder brætspilsarrangementer i Viborg for alle, der kan lide at spille. I november 2026 kom omkring 300 til Viborg Brætspilsdag på Ungdomsskolen. Nu planlægger vi 2027.
+          Vi holder brætspilsarrangementer i Viborg for alle, der kan lide at spille. I november 2026 kom omkring 300 til Viborg Brætspilsdag. Nu planlægger vi 2027.
         </p>
-        <p class="vbd-hero-note">Viborg Brætspil er et frivilligt initiativ under {{ site.forening }}.</p>
       </div>
 
       <div class="vbd-signup-form" id="2027">
@@ -70,23 +70,23 @@ description: Viborg Brætspil holder brætspilsarrangementer i Viborg og står b
       <div class="vbd-card vbd-card-dark">
         <p class="vbd-kicker">14. november 2026</p>
         <h2>Viborg Brætspilsdag 2026</h2>
-        <p>Den første Viborg Brætspilsdag på Ungdomsskolen Viborg.</p>
+        <p>Den første Viborg Brætspilsdag.</p>
         <ul class="vbd-stats">
           <li><strong>ca. 300</strong><span>deltagere</span></li>
           <li><strong>{{ aktiviteter.size }}</strong><span>aktiviteter</span></li>
-          <li><strong>{{ site.data.partnere.size }}</strong><span>partnere</span></li>
         </ul>
         <a class="vbd-btn vbd-btn-primary" href="{{ '/braetspilsdag/' | relative_url }}">Se hvad der skete</a>
       </div>
     </div>
   </section>
 
+  {% if nye.size > 0 %}
   <section class="vbd-section">
     <div class="vbd-wrap">
       <p class="vbd-kicker">Nyheder</p>
       <h2>Seneste indlæg</h2>
       <div class="vbd-posts">
-        {% for post in site.posts limit: 3 %}
+        {% for post in nye limit: 3 %}
         <a class="vbd-post" href="{{ post.url | relative_url }}">
           {% if post.image %}<img src="{{ post.image | relative_url }}" alt="" loading="lazy">{% endif %}
           <h3>{{ post.title }}</h3>
@@ -97,17 +97,8 @@ description: Viborg Brætspil holder brætspilsarrangementer i Viborg og står b
       <a class="vbd-more" href="{{ '/nyheder/' | relative_url }}">Alle indlæg →</a>
     </div>
   </section>
+  {% endif %}
 
-  <section class="vbd-section" id="om">
-    <div class="vbd-wrap">
-      <p class="vbd-kicker">Om os</p>
-      <h2>Hvem står bag?</h2>
-      <p class="vbd-lead">
-        Viborg Brætspil er et frivilligt initiativ under {{ site.forening }}{% if site.cvr and site.cvr != "" %} (CVR {{ site.cvr }}){% endif %}. Siden drives af {{ site.ansvarlig }}.
-        Skriv til <a href="mailto:{{ site.email }}">{{ site.email }}</a>, hvis du vil holde en aktivitet, være frivillig eller har spørgsmål.
-      </p>
-    </div>
-  </section>
 
   <div class="vbd-mobile-cta" aria-label="Få besked om 2027">
     <span>Få besked om 2027</span>
