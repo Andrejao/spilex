@@ -110,7 +110,7 @@
 {% endif %}
   
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Organization","name":"Viborg Brætspil","url":"{{ site.url }}","email":"{{ site.email }}","logo":"{{ '/assets/images/Viborg-br-Logo.png' | absolute_url }}","parentOrganization":{"@type":"Organization","name":"{{ site.forening }}"{% if site.cvr and site.cvr != "" %},"taxID":"{{ site.cvr }}"{% endif %}}}
+  {"@context":"https://schema.org","@type":"Organization","name":"Viborg Brætspil","url":"{{ site.url }}","email":"{{ site.email }}","logo":"{{ '/assets/images/Viborg-br-Logo.png' | absolute_url }}","parentOrganization":{"@type":"Organization","name":"{{ site.forening }}","email":"{{ site.forening_email }}","address":{"@type":"PostalAddress","addressLocality":"{{ site.forening_by }}","addressCountry":"DK"}{% if site.cvr and site.cvr != "" %},"taxID":"{{ site.cvr }}"{% endif %}}}
   </script>
 </head>
 <body>
@@ -138,6 +138,7 @@
         <a href="{{ '/nyheder/' | relative_url }}">Nyheder</a>
         <a href="{{ '/#om' | relative_url }}">Om os</a>
         <a href="{{ '/en/' | relative_url }}" lang="en">English</a>
+        <a class="nav-signup" href="{{ '/#2027' | relative_url }}">Få besked om 2027</a>
       </nav>
       
     </div>
@@ -344,11 +345,12 @@
     <div class="container">
       <strong>VIBORG BRÆTSPIL</strong>
       <p>
-        Et frivilligt initiativ under {{ site.forening }}{% if site.cvr and site.cvr != "" %}, CVR {{ site.cvr }}{% endif %}.<br>
+        Et frivilligt initiativ under {{ site.forening }} · CVR {{ site.cvr }} · {{ site.forening_by }}<br>
         Siden drives af {{ site.ansvarlig }}.
       </p>
       <p>
         Kontakt: <a href="mailto:{{ site.email }}">{{ site.email }}</a><br>
+        Foreningen: <a href="mailto:{{ site.forening_email }}">{{ site.forening_email }}</a><br>
         Facebook: <a href="https://www.facebook.com/viborgbraetspilsdag">Viborg Brætspilsdag</a>
       </p>
       <p><a href="{{ '/privatliv/' | relative_url }}">Privatliv og personoplysninger</a></p>

@@ -4,7 +4,9 @@ lang: da
 
 # Afsender og kontakt (bruges i footer, privatlivspolitik og strukturerede data)
 forening: Foreningen Hygge
-cvr: ""   # indsæt CVR-nummer
+cvr: "46943937"
+forening_by: Viborg
+forening_email: foreningenhygge@gmail.com
 ansvarlig: André Jao Højer
 email: viborgbraetspil@gmail.com
 

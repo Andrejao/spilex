@@ -37,8 +37,14 @@ layout: default
   <div class="container post-content">
     {{ content }}
 
+    <aside class="post-signup" style="margin:48px 0 24px;padding:28px 24px;border-radius:20px;background:#d8efb1;color:#173226">
+      <p style="margin:0 0 6px;font-weight:900;font-size:1.25rem">Viborg Brætspilsdag 2027</p>
+      <p style="margin:0 0 16px;line-height:1.5">Skriv dig op, så får du besked, før tilmeldingen åbner.</p>
+      <a href="{{ '/#2027' | relative_url }}" style="display:inline-block;padding:12px 20px;border-radius:999px;background:#12242b;color:#fff;font-weight:800;text-decoration:none">Få besked om 2027 →</a>
+    </aside>
+
     <div class="post-back">
-      <a href="{{ '/nyheder.html' | relative_url }}">
+      <a href="{{ '/nyheder/' | relative_url }}">
         ← Se alle nyheder
       </a>
     </div>

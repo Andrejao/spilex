@@ -21,6 +21,9 @@ Viborg Brætspil er et frivilligt initiativ under {{ site.forening }}{% if site.
 
 Den dataansvarlige er {{ site.forening }} ved {{ site.ansvarlig }}.
 
+{{ site.forening }} · CVR {{ site.cvr }} · {{ site.forening_by }}  
+Foreningens e-mail: [{{ site.forening_email }}](mailto:{{ site.forening_email }})
+
 **Kontakt:** [viborgbraetspil@gmail.com](mailto:viborgbraetspil@gmail.com)
 
 Du kan altid skrive til os, hvis du har spørgsmål om dine oplysninger eller ønsker at gøre brug af dine rettigheder.

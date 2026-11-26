@@ -3628,3 +3628,9 @@ a.logo-card:hover {
   max-width: 190px;
   max-height: 90px;
 }
+
+/* Mobil: menuen må ikke løbe ud over kanten. Opskrivningen har egen knap på forsiden og i indlæg. */
+@media (max-width: 620px) {
+  .nav nav .nav-signup,
+  .nav nav a[lang="en"] { display: none; }
+}
