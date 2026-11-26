@@ -1,6 +1,12 @@
-title: Viborg Brætspilsdag
-description: Brætspil, rollespil og fællesskab i Viborg
+title: Viborg Brætspil
+description: Brætspilsarrangementer i Viborg. Bag Viborg Brætspilsdag.
 lang: da
+
+# Afsender og kontakt (bruges i footer, privatlivspolitik og strukturerede data)
+forening: Foreningen Hygge
+cvr: ""   # indsæt CVR-nummer
+ansvarlig: André Jao Højer
+email: viborgbraetspil@gmail.com
 
 baseurl: ""
 url: "https://viborgbraetspil.dk"

@@ -1,27 +1,25 @@
 ---
 layout: default
 title: Privatliv og personoplysninger
-description: Sådan behandler Viborg Brætspilsdag dine oplysninger ved tilmelding, aktivitetsbooking og besøg på hjemmesiden.
+description: Sådan behandler Viborg Brætspil dine oplysninger ved tilmelding, aktivitetsbooking og besøg på hjemmesiden.
 permalink: /privatliv/
 ---
 
 # Privatliv og personoplysninger
 
-*Senest opdateret: 13. oktober 2026*
+*Senest opdateret: 26. november 2026*
 
-Når du besøger Viborg Brætspilsdags hjemmeside eller tilmelder dig arrangementet, skal du kunne vide, hvad vi bruger dine oplysninger til.
+Når du besøger Viborg Brætspils hjemmeside eller tilmelder dig et arrangement, skal du kunne vide, hvad vi bruger dine oplysninger til.
 
-Vi indsamler kun de oplysninger, vi har brug for til at planlægge og gennemføre Viborg Brætspilsdag og kommunikere med deltagerne.
+Vi indsamler kun de oplysninger, vi har brug for til at planlægge og gennemføre vores arrangementer, herunder Viborg Brætspilsdag, og kommunikere med deltagerne.
 
 Her kan du læse, hvordan vi behandler oplysningerne.
 
 ## 1. Hvem er ansvarlig?
 
-Viborg Brætspilsdag er et lokalt, frivilligt arrangeret initiativ.
+Viborg Brætspil er et frivilligt initiativ under {{ site.forening }}{% if site.cvr and site.cvr != "" %}, CVR {{ site.cvr }}{% endif %}. Viborg Brætspil står bag Viborg Brætspilsdag.
 
-Den dataansvarlige er:
-
-André Højer
+Den dataansvarlige er {{ site.forening }} ved {{ site.ansvarlig }}.
 
 **Kontakt:** [viborgbraetspil@gmail.com](mailto:viborgbraetspil@gmail.com)
 
@@ -64,7 +62,7 @@ Vi behandler personoplysninger på følgende grundlag, afhængigt af formålet:
 - **Tilmelding og billetter:** For at administrere den aftale, du indgår med os om deltagelse, jf. GDPR artikel 6, stk. 1, litra b.
 - **Praktisk planlægning og koordinering:** På baggrund af vores legitime interesse i at afholde et velfungerende arrangement, jf. artikel 6, stk. 1, litra f, når dette behandlingsgrundlag er relevant.
 - **Regnskab og eventuelle lovpligtige oplysninger:** For at overholde gældende lovgivning, jf. artikel 6, stk. 1, litra c.
-- **Frivilligt tilvalg af information om 2027:** På baggrund af dit særskilte samtykke, jf. artikel 6, stk. 1, litra a.
+- **Frivilligt tilvalg af besked om kommende arrangementer:** På baggrund af dit særskilte samtykke, jf. artikel 6, stk. 1, litra a.
 
 Du behøver ikke give samtykke til fremtidige invitationer for at deltage i Viborg Brætspilsdag 2026.
 
@@ -79,7 +77,7 @@ Når du tilmelder dig, kan vi sende dig:
 
 Disse beskeder vedrører din deltagelse i arrangementet.
 
-Hvis du særskilt har valgt at få én e-mail, når tilmeldingen til Viborg Brætspilsdag 2027 åbner, bruger vi din e-mailadresse til netop dette formål.
+Hvis du har skrevet dig op til at få besked, bruger vi din e-mail eller dit telefonnummer til at fortælle, når tilmeldingen til Viborg Brætspilsdag 2027 åbner, og når vi holder andre spilarrangementer i Viborg. Skrev du dig op før 26. november 2026, får du kun besked om Viborg Brætspilsdag 2027.
 
 Du kan altid trække dette samtykke tilbage ved at skrive til os.
 

@@ -1,0 +1,46 @@
+---
+layout: default
+title: Viborg Brætspilsdag 2026
+description: Viborg Brætspilsdag 2026 samlede omkring 300 til brætspil, rollespil og figurspil på Ungdomsskolen Viborg. Se programmet og partnerne.
+permalink: /braetspilsdag/
+partners: true
+redirect_from:
+  - /2027/
+  - /2027.html
+---
+
+{% include vbd-style.html %}
+{% assign aktiviteter = site.posts | where: "type", "aktivitet" %}
+
+<div class="vbd2">
+
+  <section class="vbd-hero" style="min-height:560px">
+    <div class="vbd-wrap" style="padding:90px 0 80px;position:relative;z-index:1">
+      <p class="vbd-kicker vbd-hero-kicker">14. november 2026 · Ungdomsskolen Viborg</p>
+      <h1>Viborg Brætspilsdag <span>2026</span></h1>
+      <p class="vbd-hero-copy">Vi holdt dagen for første gang, og omkring 300 var med i løbet af dagen. Tak til alle, der kom og spillede, til de frivillige, til alle, der stod for en aktivitet, og til alle, der bakkede op.</p>
+      <p class="vbd-hero-note">Viborg Brætspilsdag blev holdt af Viborg Brætspil under {{ site.forening }}.</p>
+      <div class="vbd-hero-actions">
+        <a class="vbd-btn vbd-btn-primary" href="{{ '/#2027' | relative_url }}">Få besked om 2027</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="vbd-section">
+    <div class="vbd-wrap">
+      <p class="vbd-kicker">Programmet</p>
+      <h2>{{ aktiviteter.size }} aktiviteter på dagen</h2>
+      <p class="vbd-lead">Brætspil, rollespil, figurspil, turneringer og spildesignere. Her er hele programmet fra 2026.</p>
+      <div class="vbd-posts">
+        {% for post in aktiviteter %}
+        <a class="vbd-post" href="{{ post.url | relative_url }}">
+          {% if post.image %}<img src="{{ post.image | relative_url }}" alt="" loading="lazy">{% endif %}
+          <h3>{{ post.title }}</h3>
+          {% if post.teaser %}<p>{{ post.teaser }}</p>{% endif %}
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+</div>

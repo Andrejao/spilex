@@ -1,174 +1,31 @@
 ---
 layout: default
-title: Tak for Viborg Brætspilsdag 2026
-description: Tak for en fantastisk første Viborg Brætspilsdag. Skriv dig op, og få besked om 2027.
+title: Brætspilsarrangementer i Viborg
+description: Viborg Brætspil holder brætspilsarrangementer i Viborg og står bag Viborg Brætspilsdag. Skriv dig op, og få besked om 2027.
 ---
 
-<style>
-  /* Forside efter dagen: tak for 2026 + opskrivning til 2027 i heroen. Alt er scoped til .vbd2 */
-  .vbd2 {
-    --ink: #17201c;
-    --muted: #5e6b64;
-    --paper: #f7f3e9;
-    --paper-2: #efe8da;
-    --white: #fffdf8;
-    --green: #245d49;
-    --green-2: #34765e;
-    --lime: #d8efb1;
-    --amber: #f4c463;
-    --rust: #b95135;
-    --navy: #1a2c34;
-    --line: rgba(23, 32, 28, .12);
-    --shadow: 0 20px 55px rgba(23, 32, 28, .12);
-    --radius: 26px;
-    color: var(--ink);
-    background: var(--paper);
-    overflow: hidden;
-  }
-
-  .vbd2 *, .vbd2 *::before, .vbd2 *::after { box-sizing: border-box; }
-  .vbd2 a { color: inherit; }
-  .vbd2 .vbd-wrap { width: min(1180px, calc(100% - 40px)); margin: 0 auto; }
-  .vbd2 .vbd-kicker {
-    display: inline-flex; align-items: center; gap: 8px; margin: 0 0 14px;
-    font-size: .78rem; line-height: 1; font-weight: 850; letter-spacing: .13em;
-    text-transform: uppercase; color: var(--green);
-  }
-  .vbd2 .vbd-kicker::before { content: ""; width: 28px; height: 2px; background: currentColor; border-radius: 99px; }
-  .vbd2 h1, .vbd2 h2, .vbd2 h3 { color: var(--ink); text-wrap: balance; }
-
-  .vbd2 .vbd-btn {
-    display: inline-flex; align-items: center; justify-content: center; gap: 9px;
-    min-height: 52px; padding: 0 22px; border-radius: 999px; text-decoration: none;
-    font-weight: 800; border: 1px solid transparent; cursor: pointer; font-size: 1rem; font-family: inherit;
-    transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
-  }
-  .vbd2 .vbd-btn:hover { transform: translateY(-2px); }
-  .vbd2 .vbd-btn-primary { background: var(--lime); color: #183323; box-shadow: 0 12px 32px rgba(216,239,177,.18); }
-  .vbd2 .vbd-btn-dark { color: #fff; background: var(--green); }
-  .vbd2 .vbd-btn-dark:hover { background: var(--green-2); }
-
-  /* HERO */
-  .vbd2 .vbd-hero {
-    min-height: 720px; display: grid; align-items: center; position: relative; overflow: hidden;
-    background:
-      radial-gradient(circle at 82% 16%, rgba(216,239,177,.22) 0 2px, transparent 3px) 0 0 / 24px 24px,
-      radial-gradient(circle at 90% 24%, rgba(244,196,99,.24), transparent 24%),
-      radial-gradient(circle at 12% 82%, rgba(52,118,94,.55), transparent 30%),
-      linear-gradient(135deg, #12242b 0%, #1a343a 52%, #163e32 100%);
-    color: white;
-  }
-  .vbd2 .vbd-hero::before {
-    content: ""; position: absolute; inset: 0 0 0 40%; pointer-events: none;
-    background:
-      linear-gradient(90deg, rgba(18,36,43,1) 0%, rgba(18,36,43,.55) 24%, rgba(18,36,43,.14) 66%, rgba(18,36,43,.24) 100%),
-      url("{{ '/assets/images/stemning/stemning1.jpg' | relative_url }}") center 44% / cover no-repeat;
-    opacity: .42;
-    filter: saturate(.82) contrast(.98);
-  }
-  .vbd2 .vbd-hero::after {
-    content: ""; position: absolute; inset: auto -6vw -160px auto; width: 430px; height: 430px;
-    border: 1px solid rgba(255,255,255,.1); border-radius: 38% 62% 55% 45%; transform: rotate(18deg);
-  }
-  .vbd2 .vbd-hero-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 64px; align-items: center; padding: 90px 0 80px; position: relative; z-index: 1; }
-  .vbd2 .vbd-hero .vbd-hero-kicker { color: var(--lime); }
-  .vbd2 .vbd-hero h1 { color: #fff; margin: 0; font-size: clamp(3.25rem, 7vw, 6.5rem); line-height: .91; letter-spacing: -.065em; max-width: 820px; }
-  .vbd2 .vbd-hero h1 span { display: block; color: var(--lime); }
-  .vbd2 .vbd-hero-copy { max-width: 750px; margin: 24px 0 0; color: rgba(255,255,255,.82); font-size: clamp(1.08rem, 2vw, 1.34rem); line-height: 1.55; }
-  .vbd2 .vbd-hero-note { margin: 16px 0 0; color: rgba(255,255,255,.66); font-size: .94rem; line-height: 1.5; }
-
-  /* SKRIV DIG OP TIL 2027 (i heroen): sidens blikfang */
-  .vbd2 .vbd-signup-form {
-    position: relative; padding: 38px 30px 28px; border-radius: 30px; color: #173226;
-    background: linear-gradient(160deg, #eaf8cd 0%, #d8efb1 52%, #c6e596 100%);
-    box-shadow: 0 0 0 7px rgba(216,239,177,.16), 0 0 110px rgba(216,239,177,.28), 0 34px 80px rgba(0,0,0,.5);
-    scroll-margin-top: 40px;
-  }
-  .vbd2 .vbd-badge {
-    position: absolute; top: -17px; right: 24px; padding: 10px 17px; border-radius: 999px;
-    background: var(--amber); color: #2c2718; font-size: .76rem; font-weight: 900; letter-spacing: .11em;
-    text-transform: uppercase; transform: rotate(3deg); box-shadow: 0 10px 24px rgba(0,0,0,.28);
-  }
-  .vbd2 .vbd-signup-form .vbd-kicker { margin-bottom: 10px; color: var(--green); }
-  .vbd2 .vbd-signup-form h2 { margin: 0; color: #12242b; font-size: clamp(2.1rem, 3.7vw, 3.1rem); line-height: .96; letter-spacing: -.05em; }
-  .vbd2 .vbd-signup-intro { margin: 14px 0 22px; color: #2c4a3a; line-height: 1.5; font-size: 1.04rem; font-weight: 600; }
-  .vbd2 .vbd-field label { display: block; font-weight: 850; margin: 0 0 7px; color: #12242b; }
-  .vbd2 .vbd-field label span { font-weight: 600; color: #47624f; }
-  .vbd2 .vbd-field input {
-    width: 100%; min-height: 58px; padding: 0 18px; font-size: 1.05rem; font-family: inherit;
-    color: var(--ink); background: #fff; border: 2px solid transparent; border-radius: 16px;
-    box-shadow: 0 2px 0 rgba(23,50,38,.12), 0 8px 20px rgba(23,50,38,.08);
-  }
-  .vbd2 .vbd-field input:focus { outline: none; border-color: #12242b; box-shadow: 0 0 0 4px rgba(18,36,43,.16); }
-  .vbd2 .vbd-or { margin: 12px 0; text-align: center; color: #47624f; font-size: .78rem; font-weight: 900; letter-spacing: .12em; text-transform: uppercase; }
-  .vbd2 .vbd-hp { position: absolute; left: -9999px; }
-  .vbd2 .vbd-signup-form .vbd-btn {
-    width: 100%; min-height: 64px; margin-top: 22px; font-size: 1.16rem; font-weight: 900; letter-spacing: -.01em;
-    color: #fff; background: #12242b; box-shadow: 0 16px 34px rgba(18,36,43,.38);
-  }
-  .vbd2 .vbd-signup-form .vbd-btn .vbd-arrow { display: inline-block; transition: transform .18s ease; }
-  .vbd2 .vbd-signup-form .vbd-btn:hover { background: #0b181d; box-shadow: 0 20px 40px rgba(18,36,43,.46); }
-  .vbd2 .vbd-signup-form .vbd-btn:hover .vbd-arrow { transform: translateX(6px); }
-  .vbd2 .vbd-signup-form .vbd-btn:disabled { opacity: .6; cursor: wait; transform: none; }
-  .vbd2 .vbd-btn-note { margin: 12px 0 0; text-align: center; color: #2c4a3a; font-size: .92rem; font-weight: 700; }
-  .vbd2 .vbd-form-error { margin: 14px 0 0; padding: 12px 14px; border-radius: 12px; background: #fff; color: #9c3d24; font-weight: 800; }
-  .vbd2 .vbd-form-small { margin: 14px 0 0; color: #47624f; font-size: .8rem; line-height: 1.5; text-align: center; }
-  .vbd2 .vbd-form-small a { color: #173226; font-weight: 700; }
-  .vbd2 .vbd-done { text-align: center; padding: 46px 8px; }
-  .vbd2 .vbd-done-check { width: 68px; height: 68px; margin: 0 auto 18px; display: grid; place-items: center; border-radius: 50%; background: #12242b; color: var(--lime); font-size: 2rem; font-weight: 900; }
-  .vbd2 .vbd-done p { margin: 12px 0 0; color: #2c4a3a; line-height: 1.55; font-weight: 600; }
-
-  @media (prefers-reduced-motion: no-preference) {
-    .vbd2 .vbd-signup-form { animation: vbd-rise .7s cubic-bezier(.2,.8,.2,1) both; }
-    @keyframes vbd-rise { from { opacity: 0; transform: translateY(22px) scale(.98); } to { opacity: 1; transform: none; } }
-  }
-
-  .vbd2 .vbd-mobile-cta { display: none; }
-
-  @media (max-width: 900px) {
-    .vbd2 .vbd-hero-grid { grid-template-columns: 1fr; gap: 44px; }
-    .vbd2 .vbd-signup-form { max-width: 560px; }
-    .vbd2 .vbd-hero::before { inset: 36% -8% 0 24%; opacity: .3; }
-  }
-
-  @media (max-width: 620px) {
-    .vbd2 .vbd-wrap { width: min(100% - 24px, 1180px); }
-    .vbd2 .vbd-hero { min-height: auto; }
-    .vbd2 .vbd-hero-grid { gap: 36px; padding: 70px 0 78px; }
-    .vbd2 .vbd-hero h1 { font-size: clamp(3rem, 16vw, 4.6rem); }
-    .vbd2 .vbd-signup-form { padding: 34px 20px 22px; border-radius: 24px; }
-    .vbd2 .vbd-badge { right: 16px; }
-    .vbd2 { padding-bottom: 70px; }
-    .vbd2 .vbd-mobile-cta {
-      position: fixed; left: 12px; right: 12px; bottom: 12px; z-index: 999; display: flex;
-      align-items: center; justify-content: space-between; gap: 12px; padding: 10px 10px 10px 16px;
-      border-radius: 18px; background: rgba(23,45,49,.96); color: #fff; box-shadow: 0 16px 45px rgba(0,0,0,.28);
-      backdrop-filter: blur(12px);
-    }
-    .vbd2 .vbd-mobile-cta span { font-size: .88rem; font-weight: 800; }
-    .vbd2 .vbd-mobile-cta a { min-height: 42px; padding: 0 16px; font-size: .9rem; }
-  }
-</style>
+{% include vbd-style.html %}
+{% assign aktiviteter = site.posts | where: "type", "aktivitet" %}
 
 <div class="vbd2">
 
   <section class="vbd-hero">
     <div class="vbd-wrap vbd-hero-grid">
       <div>
-        <p class="vbd-kicker vbd-hero-kicker">14. november 2026 · Ungdomsskolen Viborg</p>
-        <h1>Tak for Viborg Brætspilsdag <span>2026</span></h1>
+        <p class="vbd-kicker vbd-hero-kicker">Brætspil i Viborg</p>
+        <h1>Viborg <span>Brætspil</span></h1>
         <p class="vbd-hero-copy">
-          Vi holdt dagen for første gang, og omkring 300 var med i løbet af dagen. Tak til alle, der kom og spillede, til de frivillige, til alle, der stod for en aktivitet, og til alle, der bakkede op.
+          Vi holder brætspilsarrangementer i Viborg for alle, der kan lide at spille. I november 2026 kom omkring 300 til Viborg Brætspilsdag på Ungdomsskolen. Nu planlægger vi 2027.
         </p>
-        <p class="vbd-hero-note">Vi deler billeder fra dagen i den kommende tid.</p>
+        <p class="vbd-hero-note">Viborg Brætspil er et frivilligt initiativ under {{ site.forening }}.</p>
       </div>
 
       <div class="vbd-signup-form" id="2027">
-        <span class="vbd-badge">Få besked først</span>
+        <span class="vbd-badge">Næste arrangement</span>
         <div id="vbd-signup-box">
           <p class="vbd-kicker">Viborg Brætspilsdag 2027</p>
-          <h2>Skriv dig op til 2027</h2>
-          <p class="vbd-signup-intro">Alle aktiviteter blev fuldt booket i år. Står du på listen, får du besked, før tilmeldingen åbner.</p>
+          <h2>Få besked om 2027</h2>
+          <p class="vbd-signup-intro">Skriv dig op, så får du besked, før tilmeldingen til Viborg Brætspilsdag 2027 åbner, og når vi holder andre spilarrangementer i Viborg.</p>
 
           <form id="vbd-signup" novalidate>
             <div class="vbd-field">
@@ -189,7 +46,7 @@ description: Tak for en fantastisk første Viborg Brætspilsdag. Skriv dig op, o
             </div>
 
             <button type="submit" class="vbd-btn vbd-btn-dark" id="vbd-submit">Skriv mig op <span class="vbd-arrow">→</span></button>
-            <p class="vbd-btn-note">Tager 10 sekunder. Kun besked om 2027, ingen spam.</p>
+            <p class="vbd-btn-note">Vi skriver kun, når vi har et arrangement at fortælle om.</p>
             <p class="vbd-form-error" id="vbd-error" role="alert" hidden></p>
             <p class="vbd-form-small">Udfyld det ene felt eller begge. Du kan altid få dine oplysninger slettet ved at skrive til <a href="mailto:viborgbraetspil@gmail.com">viborgbraetspil@gmail.com</a>.</p>
           </form>
@@ -198,7 +55,61 @@ description: Tak for en fantastisk første Viborg Brætspilsdag. Skriv dig op, o
     </div>
   </section>
 
-  <div class="vbd-mobile-cta" aria-label="Skriv dig op til 2027">
+  </section>
+
+  <section class="vbd-section">
+    <div class="vbd-wrap vbd-grid-2">
+      <div class="vbd-card">
+        <p class="vbd-kicker">2027</p>
+        <h2>Det sker i 2027</h2>
+        <p>Viborg Brætspilsdag 2027 er det næste store arrangement. Dato og sted er ikke fastlagt.</p>
+        <p>I løbet af året kommer der også mindre spilarrangementer. Datoerne bliver sat på siden her, og står du på listen, får du dem først.</p>
+        <a class="vbd-btn vbd-btn-dark" href="#2027">Skriv dig op</a>
+      </div>
+
+      <div class="vbd-card vbd-card-dark">
+        <p class="vbd-kicker">14. november 2026</p>
+        <h2>Viborg Brætspilsdag 2026</h2>
+        <p>Den første Viborg Brætspilsdag på Ungdomsskolen Viborg.</p>
+        <ul class="vbd-stats">
+          <li><strong>ca. 300</strong><span>deltagere</span></li>
+          <li><strong>{{ aktiviteter.size }}</strong><span>aktiviteter</span></li>
+          <li><strong>{{ site.data.partnere.size }}</strong><span>partnere</span></li>
+        </ul>
+        <a class="vbd-btn vbd-btn-primary" href="{{ '/braetspilsdag/' | relative_url }}">Se hvad der skete</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="vbd-section">
+    <div class="vbd-wrap">
+      <p class="vbd-kicker">Nyheder</p>
+      <h2>Seneste indlæg</h2>
+      <div class="vbd-posts">
+        {% for post in site.posts limit: 3 %}
+        <a class="vbd-post" href="{{ post.url | relative_url }}">
+          {% if post.image %}<img src="{{ post.image | relative_url }}" alt="" loading="lazy">{% endif %}
+          <h3>{{ post.title }}</h3>
+          {% if post.teaser %}<p>{{ post.teaser }}</p>{% endif %}
+        </a>
+        {% endfor %}
+      </div>
+      <a class="vbd-more" href="{{ '/nyheder/' | relative_url }}">Alle indlæg →</a>
+    </div>
+  </section>
+
+  <section class="vbd-section" id="om">
+    <div class="vbd-wrap">
+      <p class="vbd-kicker">Om os</p>
+      <h2>Hvem står bag?</h2>
+      <p class="vbd-lead">
+        Viborg Brætspil er et frivilligt initiativ under {{ site.forening }}{% if site.cvr and site.cvr != "" %} (CVR {{ site.cvr }}){% endif %}. Siden drives af {{ site.ansvarlig }}.
+        Skriv til <a href="mailto:{{ site.email }}">{{ site.email }}</a>, hvis du vil holde en aktivitet, være frivillig eller har spørgsmål.
+      </p>
+    </div>
+  </section>
+
+  <div class="vbd-mobile-cta" aria-label="Få besked om 2027">
     <span>Få besked om 2027</span>
     <a class="vbd-btn vbd-btn-primary" href="#2027">Skriv dig op</a>
   </div>
@@ -252,7 +163,7 @@ description: Tak for en fantastisk første Viborg Brætspilsdag. Skriv dig op, o
       }).then(function () {
         document.getElementById("vbd-signup-box").innerHTML =
           '<div class="vbd-done"><div class="vbd-done-check">✓</div><h2>Du er på listen</h2>' +
-          '<p>Tak. Du får besked, før tilmeldingen til 2027 åbner.</p></div>';
+          '<p>Tak. Du hører fra os, når der er nyt om 2027 og andre arrangementer.</p></div>';
       }).catch(function () {
         fail("Noget gik galt. Prøv igen om lidt.", null);
         btn.disabled = false;

@@ -5,10 +5,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  {% if page.url != "/" %}
-<meta http-equiv="refresh" content="0; url={{ '/' | relative_url }}">
-<script>location.replace("{{ '/' | relative_url }}");</script>
-{% endif %}
   
   <title>
     {% if page.title %}
@@ -113,6 +109,9 @@
   <meta name="robots" content="noindex, nofollow, noarchive">
 {% endif %}
   
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Organization","name":"Viborg Brætspil","url":"{{ site.url }}","email":"{{ site.email }}","logo":"{{ '/assets/images/Viborg-br-Logo.png' | absolute_url }}","parentOrganization":{"@type":"Organization","name":"{{ site.forening }}"{% if site.cvr and site.cvr != "" %},"taxID":"{{ site.cvr }}"{% endif %}}}
+  </script>
 </head>
 <body>
 
@@ -125,18 +124,21 @@
      <a
   class="logo"
   href="{{ '/' | relative_url }}"
-  aria-label="Viborg Brætspilsdag"
+  aria-label="Viborg Brætspil – forside"
 >
   <img
     src="{{ '/assets/images/Viborg-br-Logo.png' | relative_url }}"
-    alt="Viborg Brætspilsdag"
+    alt="Viborg Brætspil"
   >
 </a>
 
        
- <b></b><a href="{{ '/en/' | relative_url }}">English</a></b>
-       
-</nav>
+<nav aria-label="Hovedmenu">
+        <a href="{{ '/braetspilsdag/' | relative_url }}">Brætspilsdag 2026</a>
+        <a href="{{ '/nyheder/' | relative_url }}">Nyheder</a>
+        <a href="{{ '/#om' | relative_url }}">Om os</a>
+        <a href="{{ '/en/' | relative_url }}" lang="en">English</a>
+      </nav>
       
     </div>
   </header>
@@ -147,7 +149,8 @@
     {{ content }}
   </main>
 
-  <!-- Partnere -->
+  <!-- Partnere (kun på sider med partners: true) -->
+  {% if page.partners %}
   <section class="partners-section">
 
   <div class="container">
@@ -334,25 +337,22 @@
 
 </section>
 
+  {% endif %}
+
   <!-- Footer -->
   <footer class="site-footer">
     <div class="container">
-
-      <strong>
-        VIBORG BRÆTSPILSDAG
-      </strong>
-
+      <strong>VIBORG BRÆTSPIL</strong>
       <p>
-        Find os på Facebook: <a href="https://www.facebook.com/viborgbraetspilsdag">Viborg Brætspilsdag</a>
+        Et frivilligt initiativ under {{ site.forening }}{% if site.cvr and site.cvr != "" %}, CVR {{ site.cvr }}{% endif %}.<br>
+        Siden drives af {{ site.ansvarlig }}.
       </p>
-
-  <p>
-    
-    <a href="/privatliv/">Privatliv og personoplysninger</a>
+      <p>
+        Kontakt: <a href="mailto:{{ site.email }}">{{ site.email }}</a><br>
+        Facebook: <a href="https://www.facebook.com/viborgbraetspilsdag">Viborg Brætspilsdag</a>
       </p>
-      
+      <p><a href="{{ '/privatliv/' | relative_url }}">Privatliv og personoplysninger</a></p>
     </div>
-    
   </footer>
 
 
